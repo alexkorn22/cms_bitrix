@@ -3,6 +3,10 @@ www/bitrix
 www/bitrix/*.php
 www/bitrix/*.log
 www/robots.txt
+www/local/templates/wedo/css/dist
+www/local/templates/wedo/js/dist
+www/local/templates/wedo/html/dist
+/package-lock.json
 
 www/sitemap.xml
 www/sitemap_files.xml
