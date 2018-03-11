@@ -72,9 +72,9 @@ gulp.task('js:dist', function () {
     gulp.src(path.src.js) 
         .pipe(rigger())
         .pipe(sourcemaps.init())
-        .pipe(babel({
-            presets: ['env']
-        }))
+        // .pipe(babel({
+        //     presets: ['env']
+        // }))
         .pipe(uglify())
         .pipe(sourcemaps.write()) 
         .pipe(gulp.dest(path.dist.js))
