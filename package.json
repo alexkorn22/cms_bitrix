@@ -23,14 +23,5 @@
     "gulp-uglify": "^3.0.0",
     "gulp-watch": "^4.3.11",
     "imagemin-pngquant": "^5.0.1",
-    "rimraf": "^2.6.2"
-  },
-  "dependencies": {
-    "bootstrap": "^4.0.0",
-    "bootstrap-tabcollapse": "^0.2.6",
-    "gulp-rimraf": "^0.2.2",
-    "imagemin-pngquant": "^5.0.1",
-    "nunjucks": "^3.0.1",
-    "owl.carousel": "^2.2.0"
   }
 }
