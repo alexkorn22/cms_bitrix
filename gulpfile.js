@@ -35,7 +35,7 @@ var path = {
     },
     watch: {
         html: 'www/local/templates/wedo/html/src/**/*.html',
-        js: 'www/local/templates/wedo/js/src/js/**/*.js',
+        js: 'www/local/templates/wedo/js/src/**/*.js',
         style: 'www/local/templates/wedo/css/src/**/*.scss',
         // img: 'src/img/**/*.*',
         // fonts: 'src/fonts/**/*.*'
