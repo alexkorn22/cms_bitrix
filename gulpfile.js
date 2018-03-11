@@ -1,5 +1,6 @@
 'use strict';
-
+const babel = require('gulp-babel');
+const concat = require('gulp-concat');
 var gulp = require('gulp'),
     watch = require('gulp-watch'),
     prefixer = require('gulp-autoprefixer'),
@@ -15,6 +16,7 @@ var gulp = require('gulp'),
     htmlmin = require('gulp-htmlmin'),
     data = require('gulp-data'),
     reload = browserSync.reload;
+
 
 var path = {
     dist: {
@@ -69,7 +71,10 @@ gulp.task('html:dist', function () {
 gulp.task('js:dist', function () {
     gulp.src(path.src.js) 
         .pipe(rigger())
-        .pipe(sourcemaps.init()) 
+        .pipe(sourcemaps.init())
+        .pipe(babel({
+            presets: ['env']
+        }))
         .pipe(uglify())
         .pipe(sourcemaps.write()) 
         .pipe(gulp.dest(path.dist.js))
