@@ -9,6 +9,9 @@
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/libs/bootstrap/bootstrap.min.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/dist/main.css');
 
+    if (App::$config->debug) {
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/libs/dump.css');
+    }
     // JS
     //JSCore::Init(array("jquery"));
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH .'/js/libs/jquery-3.3.1.min.js');

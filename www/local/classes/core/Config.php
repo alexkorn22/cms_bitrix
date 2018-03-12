@@ -8,13 +8,14 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 class Config
 {
     protected $data = [];
-    public $debug = false;
+    public $debug = true;
     protected $default = [
 
     ];
 
     public function __construct(){
         $debug = COption::GetOptionString("grain.customsettings", 'debug');
+
         if ($debug == 'Y') {
             $this->debug = true;
         }

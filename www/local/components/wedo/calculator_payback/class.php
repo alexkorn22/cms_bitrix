@@ -1,8 +1,18 @@
 <?
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
-class CTestComponent extends CBitrixComponent{
-	
+class CCalculatorPaybackComponent extends CBitrixComponent{
+
+    public function getPriceCoffee(){
+        return 600;
+    }
+
+    public function getPriceSale(){
+        return 12;
+    }
+
+
+
 	public function generateArOrder(){
 		$this->arParams["AR_ORDER"] = Array();
 	}
@@ -38,13 +48,32 @@ class CTestComponent extends CBitrixComponent{
 		}
 	}
 
+	protected function getDataCoffeMachine() {
+        if ($this->arParams['PRODUCT_ID'] != 0) {
+            $id = $this->arParams['PRODUCT_ID'];
+        } else {
+            $id = 329;
+        }
+        $filter = [
+            'IBLOCK_ID' => $this->arParams['IBLOCK_ID'],
+            'ID' => $id
+        ];
+        $res = CIBlockElement::GetList([],$filter);
+        dd($res->GetNextElement()->GetProperties());
+    }
+
 	public function executeComponent(){
-		$this->generateArOrder();
-		$this->generateArFilter();
-		$this->generateArSelect();
+        \Bitrix\Main\Loader::includeModule('iblock');
+		//$this->generateArOrder();
+		//$this->generateArFilter();
+		//$this->generateArSelect();
+        $this->getDataCoffeMachine();
+        $this->arResult['priceCofee'] = $this->getPriceCoffee();
+        $this->arResult['priceSale'] = $this->getPriceSale();
 
 		if ($this->startResultCache()){
 			$this->getItems();
+
 			$this->includeComponentTemplate();
 		}
 	}
