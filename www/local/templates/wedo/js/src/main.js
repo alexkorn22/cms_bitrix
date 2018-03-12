@@ -2,10 +2,9 @@ $( document ).ready(function() {
 
 
     $('.burger').on('click',function() {
-
-        $(this).toggleClass('open');
+        $('.top-fixed-line').toggleClass('open');
+        $('.burger').toggleClass('open');
         $('.overlay').toggleClass('open');
-
     });
 
 });
