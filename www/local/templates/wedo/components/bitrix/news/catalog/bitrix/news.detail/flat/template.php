@@ -16,8 +16,8 @@ $this->addExternalCss("/bitrix/css/main/font-awesome.css");
 $this->addExternalCss($this->GetFolder().'/themes/'.$arParams['TEMPLATE_THEME'].'/style.css');
 CUtil::InitJSCore(array('fx'));
 ?>
-<div class="bx-newsdetail">
-	<div class="bx-newsdetail-block" id="<?echo $this->GetEditAreaId($arResult['ID'])?>">
+<div class="container">
+	<div  id="<?echo $this->GetEditAreaId($arResult['ID'])?>">
 
 	<?if($arParams["DISPLAY_PICTURE"]!="N"):?>
 		<?if(is_array($arResult["DETAIL_PICTURE"])):?>
@@ -34,7 +34,7 @@ CUtil::InitJSCore(array('fx'));
 	<?endif;?>
 
 	<?if($arParams["DISPLAY_NAME"]!="N" && $arResult["NAME"]):?>
-		<h3 class="bx-newsdetail-title"><?=$arResult["NAME"]?></h3>
+		<h3><?=$arResult["NAME"]?></h3>
 	<?endif;?>
         <b>Характеристики:</b><br/>
         <?foreach($arResult['properties'] as $prop):?>
@@ -43,10 +43,6 @@ CUtil::InitJSCore(array('fx'));
             <?endif;?>
         <?endforeach;?>
 
-	<div class="row">
-		<div class="col-xs-5">
-		</div>
-	</div>
 	</div>
 </div>
 
