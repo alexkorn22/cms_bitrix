@@ -13,7 +13,6 @@
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/libs/dump.css');
     }
     // JS
-    //JSCore::Init(array("jquery"));
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH .'/js/libs/jquery-3.3.1.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH .'/js/libs/bootstrap.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH .'/js/dist/main.js');
