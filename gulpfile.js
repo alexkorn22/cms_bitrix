@@ -1,5 +1,6 @@
 'use strict';
-
+const babel = require('gulp-babel');
+const concat = require('gulp-concat');
 var gulp = require('gulp'),
     watch = require('gulp-watch'),
     prefixer = require('gulp-autoprefixer'),
@@ -10,13 +11,12 @@ var gulp = require('gulp'),
     cssmin = require('gulp-minify-css'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
-    rimraf = require('rimraf'),
     browserSync = require("browser-sync"),
     nunjucks = require('gulp-nunjucks-html'),
     htmlmin = require('gulp-htmlmin'),
     data = require('gulp-data'),
-    rimrafGulp = require('gulp-rimraf'),
     reload = browserSync.reload;
+
 
 var path = {
     dist: {
@@ -35,7 +35,7 @@ var path = {
     },
     watch: {
         html: 'www/local/templates/wedo/html/src/**/*.html',
-        js: 'www/local/templates/wedo/js/src/js/**/*.js',
+        js: 'www/local/templates/wedo/js/src/**/*.js',
         style: 'www/local/templates/wedo/css/src/**/*.scss',
         // img: 'src/img/**/*.*',
         // fonts: 'src/fonts/**/*.*'
@@ -57,14 +57,6 @@ gulp.task('webserver', function () {
     browserSync(config);
 });
 
-gulp.task('clean', function (cb) {
-    rimraf(path.clean, cb);
-});
-
-gulp.task('pre-clean', function() {
-    return gulp.src('./www/local/templates/wedo/**/dist', { read: false })
-        .pipe(rimrafGulp());
-});
 
 gulp.task('html:dist', function () {
     gulp.src(path.src.html)
@@ -79,7 +71,10 @@ gulp.task('html:dist', function () {
 gulp.task('js:dist', function () {
     gulp.src(path.src.js) 
         .pipe(rigger())
-        .pipe(sourcemaps.init()) 
+        .pipe(sourcemaps.init())
+        // .pipe(babel({
+        //     presets: ['env']
+        // }))
         .pipe(uglify())
         .pipe(sourcemaps.write()) 
         .pipe(gulp.dest(path.dist.js))
@@ -103,23 +98,6 @@ gulp.task('style:dist', function () {
         .pipe(gulp.dest(path.dist.css))
         .pipe(reload({stream: true}));
 });
-
-// gulp.task('image:dist', function () {
-//     gulp.src(path.src.img)
-//         .pipe(imagemin({
-//             progressive: true,
-//             svgoPlugins: [{removeViewBox: false}],
-//             use: [pngquant()],
-//             interlaced: true
-//         }))
-//         .pipe(gulp.dest(path.dist.img))
-//         .pipe(reload({stream: true}));
-// });
-
-// gulp.task('fonts:dist', function() {
-//     gulp.src(path.src.fonts)
-//         .pipe(gulp.dest(path.dist.fonts))
-// });
 
 gulp.task('dist', [
     'html:dist',
@@ -150,3 +128,4 @@ gulp.task('watch', function(){
 
 
 gulp.task('default', ['dist', 'webserver', 'watch']);
+gulp.task('cssjs', ['dist', 'watch']);
