@@ -11,8 +11,6 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-$this->addExternalCss("/bitrix/css/main/bootstrap.css");
-$this->addExternalCss("/bitrix/css/main/font-awesome.css");
 ?>
 <div class="bx-newslist">
 <?if($arParams["DISPLAY_TOP_PAGER"]):?>
@@ -30,7 +28,6 @@ $this->addExternalCss("/bitrix/css/main/font-awesome.css");
                 <?if (is_array($arItem["PREVIEW_PICTURE"])):?>
                     <div>
                         <img
-                            style="width: 100%; height: 100%;"
                             src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>"
                             alt="<?=$arItem["PREVIEW_PICTURE"]["ALT"]?>"
                             title="<?=$arItem["PREVIEW_PICTURE"]["TITLE"]?>"
@@ -38,31 +35,20 @@ $this->addExternalCss("/bitrix/css/main/font-awesome.css");
                     </div>
                 <?endif;?>
             <?endif;?>
-            <?if($arParams["DISPLAY_NAME"]!="N" && $arItem["NAME"]):?>
-                <h3 class="bx-newslist-title">
-                    <?if(!$arParams["HIDE_LINK_WHEN_NO_DETAIL"] || ($arItem["DETAIL_TEXT"] && $arResult["USER_HAVE_ACCESS"])):?>
-                        <a href="<?echo $arItem["DETAIL_PAGE_URL"]?>"><?echo $arItem["NAME"]?></a>
-                    <?else:?>
-                        <?echo $arItem["NAME"]?>
-                    <?endif;?>
+
+                <h3>
+                        <a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$arItem["NAME"]?></a>
                     <div>
                         Цена : <?=$arResult[$arItem['ID']]['PRICE']?> EUR
                     </div>
                 </h3>
-            <?endif;?>
             <div class="row">
                 <div class="col-xs-5">
-                <?if(!$arParams["HIDE_LINK_WHEN_NO_DETAIL"] || ($arItem["DETAIL_TEXT"] && $arResult["USER_HAVE_ACCESS"])):?>
                     <div class="bx-newslist-more"><a class="btn btn-primary btn-xs" href="<?echo $arItem["DETAIL_PAGE_URL"]?>"><?echo GetMessage("CT_BNL_GOTO_DETAIL")?></a></div>
-                <?endif;?>
                 </div>
             </div>
 	    </div>
 	</div>
 <?endforeach;?>
 </div>
-
-<?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
-	<br /><?=$arResult["NAV_STRING"]?>
-<?endif;?>
 </div>

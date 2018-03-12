@@ -4,3 +4,5 @@
 </h1>
 
 <a href="contacts/index.php">Contacts</a>
+
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

@@ -3,3 +3,5 @@
 <h1>
     News Pgae
 </h1>
+
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

@@ -94,3 +94,5 @@ $APPLICATION->SetTitle("");
 	),
 	false
 );?>
+
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

@@ -11,9 +11,6 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-$this->addExternalCss("/bitrix/css/main/bootstrap.css");
-$this->addExternalCss("/bitrix/css/main/font-awesome.css");
-$this->addExternalCss($this->GetFolder().'/themes/'.$arParams['TEMPLATE_THEME'].'/style.css');
 CUtil::InitJSCore(array('fx'));
 ?>
 <div class="container">
@@ -32,10 +29,8 @@ CUtil::InitJSCore(array('fx'));
 			</div>
 		<?endif;?>
 	<?endif;?>
-
-	<?if($arParams["DISPLAY_NAME"]!="N" && $arResult["NAME"]):?>
 		<h3><?=$arResult["NAME"]?></h3>
-	<?endif;?>
+
         <b>Характеристики:</b><br/>
         <?foreach($arResult['properties'] as $prop):?>
             <?if(!empty($prop['VALUE'])):?>
