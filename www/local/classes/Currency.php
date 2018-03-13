@@ -6,16 +6,17 @@ class Currency
 {
     private $currency;
     private $id;
+    private $code;
     private $rate ;
     private $multiplicity ;
 
-    const EUR = 5;
-    const USD = 6;
-    const UAH = 7;
+    const EUR = 'UF_EUR';
+    const USD = 'UF_USD';
+    const UAH = 'UF_UAH';
 
-    public function __construct($idCurrency)
+    public function __construct($currencyCode)
     {
-        $this->id   = $idCurrency;
+        $this->code   = $currencyCode;
         $this->setCurrencyData();
     }
 
@@ -35,14 +36,15 @@ class Currency
     }
 
     public function setCurrencyData(){
-        $arHLBlock          = HighloadBlockTable::getById(1)->fetch();
+        $arHLBlock          = HighloadBlockTable::getById(App::$config->PRICES_HLBLOCK)->fetch();
         $obEntity           = HighloadBlockTable::compileEntity($arHLBlock);
         // git list :
         $strEntityDataClass = $obEntity->getDataClass();
         $rsData             = $strEntityDataClass::getList();
         while ($arItem = $rsData->Fetch()) {
-            if($arItem['ID'] == $this->id){
+            if($arItem['UF_CODE'] == $this->code){
                 $this->rate         = $arItem['UF_RATE'];
+                $this->id           = $arItem['ID'];
                 $this->multiplicity = $arItem['UF_MULTIPLICITY'];
             }
         }
