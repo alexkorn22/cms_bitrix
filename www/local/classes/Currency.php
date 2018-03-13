@@ -30,8 +30,8 @@ class Currency
 
 
     public static function convert($amount= 1,$from,$to){
-       $ConvertedPrice = $amount * ( ($from->rate/$from->multiplicity) / ($to->rate/$to->multiplicity) );
-       return $ConvertedPrice;
+       $convertedPrice = $amount * ( ($from->rate/$from->multiplicity) / ($to->rate/$to->multiplicity) );
+       return $convertedPrice;
     }
 
     public function setCurrencyData(){
