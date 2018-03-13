@@ -4,13 +4,15 @@ $request = \Bitrix\Main\Application::getInstance()->getContext()->getRequest();
 if (!$request->isAjaxRequest()) {
     return;
 }
-$APPLICATION->IncludeComponent(
-    "wedo:calculator_payback",
-    "ajax",
-    Array(
-        "IBLOCK_ID" => "12",
-        "IBLOCK_TYPE" => "catalogs",
-        "PRODUCT_ID" => "329"
-    )
-);
-die();
+if ($request->getPost('action') == 'recalculate') {
+    $APPLICATION->IncludeComponent(
+        "wedo:calculator_payback",
+        "ajax",
+        Array(
+            "IBLOCK_ID" => App::$config->coffeeMachineIblockId,
+            "IBLOCK_TYPE" => "catalogs",
+            "PRODUCT_ID" => $request->getPost('productId')
+        )
+    );
+    die();
+}

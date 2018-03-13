@@ -33,6 +33,26 @@ extract($arResult);
                 <div class="row justify-content-center">
                     <div class="col-6">
                         <form>
+                            <br>
+                            <div class="form-group">
+                                <? if (isset($arResult['products'])):?>
+                                    <select class="custom-select" id="productId">
+                                        <? foreach($arResult['products'] as $item):?>
+                                            <option
+                                                    value="<?=$item['ID']?>"
+                                                <? if ($item['ID'] == $product['ID']):?>
+                                                    selected
+                                                <? endif;?>
+                                                    data-servings="<?=$item['servings']?>"
+                                            >
+                                                <?=$item['NAME']?>
+                                            </option>
+                                        <? endforeach;?>
+
+                                    </select>
+                                <? endif;?>
+
+                            </div>
                             <div class="form-group">
                                 <label for="priceCofee">Цена за 1 кг. кофе</label>
                                 <input type="text" class="form-control" id="priceCofee" value="<?=$priceCofee?>">

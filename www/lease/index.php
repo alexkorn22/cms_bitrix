@@ -7,9 +7,9 @@ $APPLICATION->SetTitle("Аренда");
 	"wedo:calculator_payback",
 	"",
 	Array(
-		"IBLOCK_ID" => "12",
+		"IBLOCK_ID" => App::$config->coffeeMachineIblockId,
 		"IBLOCK_TYPE" => "catalogs",
-		"PRODUCT_ID" => "329"
+		"PRODUCT_ID" => 0
 	)
 );?>
 

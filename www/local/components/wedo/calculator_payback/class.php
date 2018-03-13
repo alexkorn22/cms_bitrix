@@ -9,17 +9,17 @@ class CCalculatorPaybackComponent extends CBitrixComponent{
     protected $request;
 
     public function getPriceCoffee(){
-        $res = 600;
+        $res = App::$config->priceCofeeKg;
         if ($this->request->isPost() && $this->request->getPost('priceCofee')) {
-            $res = $this->request->getPost('priceCofee');
+            $res = (int)$this->request->getPost('priceCofee');
         }
         return $res;
     }
 
     public function getPriceSale(){
-        $res = 12;
+        $res = App::$config->priceSaleCoffee;
         if ($this->request->isPost() && $this->request->getPost('priceSale')) {
-            $res = $this->request->getPost('priceSale');
+            $res = (int)$this->request->getPost('priceSale');
         }
         return $res;
     }
@@ -61,11 +61,32 @@ class CCalculatorPaybackComponent extends CBitrixComponent{
 		}
 	}
 
+	protected function getIdOneProduct() {
+        $filter = [
+            'IBLOCK_ID' => $this->arParams['IBLOCK_ID'],
+            'ACTIVE'=> 'Y'
+        ];
+        $res = CIBlockElement::GetList([],$filter,false,false);
+        $id = 0;
+        while ($prod = $res->GetNextElement()) {
+            if (!$id) {
+                $id = $prod->fields['ID'];
+            }
+            $product['ID'] = $prod->fields['ID'];
+            $product['NAME'] = $prod->fields['NAME'];
+            $props = $prod->GetProperties(false,[]);
+            $product['servings'] = $props['NUM_SERVINGS']['VALUE'];
+            $this->arResult['products'][] = $product;
+        }
+
+        return $id;
+    }
+
 	protected function getDataCoffeMachine() {
         if ($this->arParams['PRODUCT_ID'] != 0) {
             $id = $this->arParams['PRODUCT_ID'];
         } else {
-            $id = 329;
+            $id = $this->getIdOneProduct();
         }
         $filter = [
             'IBLOCK_ID' => $this->arParams['IBLOCK_ID'],
@@ -101,7 +122,7 @@ class CCalculatorPaybackComponent extends CBitrixComponent{
     }
 
     protected function getKoeffForCostPrice() {
-        $koeff = 120;
+        $koeff = App::$config->koeffForCostPriceCoffee;
         return $koeff;
     }
 
