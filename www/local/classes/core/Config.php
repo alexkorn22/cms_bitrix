@@ -4,17 +4,26 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /**
  * Class Config
  * @property bool debug;
+ * @property string priceCofeeKg;
+ * @property string priceSaleCoffee;
+ * @property string koeffForCostPriceCoffee;
+ * @property string coffeeMachineIblockId;
  */
 class Config
 {
     protected $data = [];
-    public $debug = false;
+    public $debug = true;
     protected $default = [
+        'coffeeMachineIblockId' => 12,
+        'priceCofeeKg' => 600, // цена за 1 кг. кофе
+        'priceSaleCoffee' => 12, // цена реализации напитка
+        'koeffForCostPriceCoffee' => 120, // коэффициент для расчета себестоимости одной чашки кофе
 
     ];
 
     public function __construct(){
         $debug = COption::GetOptionString("grain.customsettings", 'debug');
+
         if ($debug == 'Y') {
             $this->debug = true;
         }
