@@ -10,9 +10,9 @@ class Currency
     private $rate ;
     private $multiplicity ;
 
-    const EUR = 'UF_EUR';
-    const USD = 'UF_USD';
-    const UAH = 'UF_UAH';
+    const EUR = 'EUR';
+    const USD = 'USD';
+    const UAH = 'UAH';
 
     public function __construct($currencyCode)
     {
@@ -36,7 +36,7 @@ class Currency
     }
 
     public function setCurrencyData(){
-        $arHLBlock          = HighloadBlockTable::getById(App::$config->PRICES_HLBLOCK)->fetch();
+        $arHLBlock          = HighloadBlockTable::getById(App::$config->pricesHighBlockId)->fetch();
         $obEntity           = HighloadBlockTable::compileEntity($arHLBlock);
         // git list :
         $strEntityDataClass = $obEntity->getDataClass();
