@@ -3,12 +3,25 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
 class CCalculatorPaybackComponent extends CBitrixComponent{
 
+    /**
+     * @var \Bitrix\Main\HttpRequest
+     */
+    protected $request;
+
     public function getPriceCoffee(){
-        return 600;
+        $res = 600;
+        if ($this->request->isPost() && $this->request->getPost('priceCofee')) {
+            $res = $this->request->getPost('priceCofee');
+        }
+        return $res;
     }
 
     public function getPriceSale(){
-        return 12;
+        $res = 12;
+        if ($this->request->isPost() && $this->request->getPost('priceSale')) {
+            $res = $this->request->getPost('priceSale');
+        }
+        return $res;
     }
 
 
@@ -58,24 +71,72 @@ class CCalculatorPaybackComponent extends CBitrixComponent{
             'IBLOCK_ID' => $this->arParams['IBLOCK_ID'],
             'ID' => $id
         ];
-        $res = CIBlockElement::GetList([],$filter);
-        dd($res->GetNextElement()->GetProperties());
+        $price = 0;
+        $servings = 0;
+        $res = CIBlockElement::GetList([],$filter,false,false);
+        $product = $res->GetNextElement();
+        $props = $product->GetProperties(false,[]);
+        $keys = ['ID','NAME'];
+        foreach ($keys as $key) {
+            $this->arResult['product'][$key] = $product->fields[$key];
+        }
+
+        if (isset($props['PRICE']['VALUE'])) {
+            $price = (int)$props['PRICE']['VALUE'];
+        }
+        if (isset($props['NUM_SERVINGS']['VALUE'])) {
+            $servings = (int)$props['NUM_SERVINGS']['VALUE'];
+        }
+        if ($this->request->isPost() && $this->request->getPost('cmServings')) {
+            $servings = (int)$this->request->getPost('cmServings');
+        }
+        $this->arResult['cmPriceService'] = 0;
+
+        if ($props['RENT']['VALUE_ENUM_ID'] != '1') {
+            $this->arResult['cmPriceService'] = $props['SERVICE_PRICE']['VALUE'];
+        }
+        $this->arResult['cmPrice'] = $price;
+        $this->arResult['cmServings'] = $servings;
+
     }
 
+    protected function getKoeffForCostPrice() {
+        $koeff = 120;
+        return $koeff;
+    }
+
+    protected function getMargin() {
+        $margin = 0;
+        $margin =  ($this->arResult['priceSale'] - $this->arResult['costPrice'])* $this->arResult['cmServings'] - $this->arResult['cmPriceService'];
+        return $margin;
+    }
+
+    public function formatCurrency($value) {
+        return $value;
+    }
+
+    /**
+     *  http://dl3.joxi.net/drive/2018/03/07/0000/0874/13162/62/e2d3446c3d.jpg
+     */
 	public function executeComponent(){
         \Bitrix\Main\Loader::includeModule('iblock');
+        $this->request = \Bitrix\Main\Application::getInstance()->getContext()->getRequest();
 		//$this->generateArOrder();
 		//$this->generateArFilter();
 		//$this->generateArSelect();
         $this->getDataCoffeMachine();
         $this->arResult['priceCofee'] = $this->getPriceCoffee();
         $this->arResult['priceSale'] = $this->getPriceSale();
-
-		if ($this->startResultCache()){
-			$this->getItems();
-
-			$this->includeComponentTemplate();
-		}
+        $this->arResult['costPrice'] = $this->arResult['priceCofee'] / $this->getKoeffForCostPrice();
+        $this->arResult['marga'] = $this->getMargin();
+        $this->arResult['paybackPeriod'] = $this->arResult['cmPrice'] / $this->arResult['marga'];
+        // round
+        $this->arResult['paybackPeriod'] = round($this->arResult['paybackPeriod']);
+        $this->includeComponentTemplate();
+//		if ($this->startResultCache()){
+//			$this->getItems();
+//			$this->includeComponentTemplate();
+//		}
 	}
 }
 ?>
