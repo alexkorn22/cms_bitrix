@@ -572,3 +572,29 @@ header {
   }
 }
 //END section wmf-cms
+
+
+//section clients
+#clients {
+  .wrap-slider {
+    width: 100%;
+    height: auto;
+    .center {
+      .slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 155px;
+        img {
+          filter: grayscale(1);
+        }
+      }
+      & .slick-center {
+        img {
+          filter: grayscale(0);
+        }
+      }
+    }
+  }
+}
+//END section clients
