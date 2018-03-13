@@ -1,6 +1,9 @@
 <?php
 require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_before.php");
-
+$request = \Bitrix\Main\Application::getInstance()->getContext()->getRequest();
+if (!$request->isAjaxRequest()) {
+    return;
+}
 $APPLICATION->IncludeComponent(
     "wedo:calculator_payback",
     "ajax",
@@ -10,3 +13,4 @@ $APPLICATION->IncludeComponent(
         "PRODUCT_ID" => "329"
     )
 );
+die();
