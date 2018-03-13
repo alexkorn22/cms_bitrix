@@ -34,8 +34,5 @@ CalculatorPayback = function (urlAjax, productId) {
             }
         });
     };
-
-
-
     this.constructor();
 };
