@@ -512,14 +512,21 @@ header {
       background-repeat: no-repeat;
       transition: 0.5s;
       &:hover {
-        width: 100%;
+        width: 200%;
+        .block-title{
+          margin: 20px 0;
+          transition: all 0.5s;
+        }
         .content-wmf-cmf {
           display: flex;
+          width: 100%;
+          transition: all 0.5s;
         }
       }
 
       .block-title {
         //height: 100%;
+        max-width: 690px;
         width: 100%;
         display: flex;
         align-items: center;
@@ -541,7 +548,7 @@ header {
 
       .content-wmf-cmf {
         display: none;
-        width: 100%;
+        width: 0;
         .c-image {
           width: 40%;
           img {
@@ -567,8 +574,6 @@ header {
       background-image: url("../../images/cms-bg.png"); /* fallback */
       background-image: url("../../images/cms-bg.png"), radial-gradient(#c96363, #cf3838); /* W3C */
     }
-    .block.wmf:hover ~ .block.cms .block-title { opacity: 0;}
-    .block.cms:hover ~ .block.wmf .block-title { opacity: 0;}
   }
 }
 //END section wmf-cms
@@ -598,3 +603,23 @@ header {
   }
 }
 //END section clients
+
+// MENU SCROLL
+.container-line-menu {
+  height: 115px;
+  #line-menu {
+    overflow: hidden;
+    background-color: #ffffff;
+    z-index: 11;
+  }
+  .sticky {
+    transition: all 0.5s;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .none {
+    display: none !important;
+  }
+}
+
