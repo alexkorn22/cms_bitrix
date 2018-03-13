@@ -1,0 +1,4 @@
+<?
+dump($help);
+dump($arResult);
+?>

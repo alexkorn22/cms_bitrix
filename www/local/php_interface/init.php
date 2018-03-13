@@ -22,6 +22,8 @@ require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/epilog_afte
 ?>
  */
 
+define('ROOT', $_SERVER['DOCUMENT_ROOT']);
+
 //***** AUTOLOAD CLASSES *****
 $pathArtorgClasses = '/local/classes/';
 $arClasses = getArClasses($pathArtorgClasses);
