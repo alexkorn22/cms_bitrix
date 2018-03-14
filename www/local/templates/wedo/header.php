@@ -26,7 +26,9 @@
     
 </head>
 <body>
+
 <?$APPLICATION->ShowPanel();?>
+<div id="main">
 <header>
     <?$APPLICATION->IncludeComponent(
         "bitrix:menu",
@@ -48,5 +50,5 @@
         false
     );?>
 </header>
-
+<div id="wrap">
 	
