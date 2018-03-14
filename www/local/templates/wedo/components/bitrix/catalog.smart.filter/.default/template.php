@@ -29,7 +29,7 @@ if (isset($templateData['TEMPLATE_THEME']))
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Сервис подбора кофемашины</h5>
+                            <h2 class="modal-title" id="exampleModalLabel">Сервис подбора кофемашины</h2>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -61,7 +61,7 @@ if (isset($templateData['TEMPLATE_THEME']))
                                         <div class="<?if ($arParams["FILTER_VIEW_MODE"] == "HORIZONTAL"):?>col-sm-6 col-md-4<?else:?>col-lg-12<?endif?> bx-filter-parameters-box <?if ($arItem["DISPLAY_EXPANDED"]== "Y"):?>bx-active<?endif?>">
                                             <span class="bx-filter-container-modef"></span>
                                             <div class="bx-filter-parameters-box-title" onclick="smartFilter.hideFilterProps(this)">
-							<span class="bx-filter-parameters-box-hint"><?=$arItem["NAME"]?>
+							<h4><?=$arItem["NAME"]?>
                                 <?if ($arItem["FILTER_HINT"] <> ""):?>
                                     <i id="item_title_hint_<?echo $arItem["ID"]?>" class="fa fa-question-circle"></i>
                                     <script type="text/javascript">
@@ -76,8 +76,7 @@ if (isset($templateData['TEMPLATE_THEME']))
                                         });
 									</script>
                                 <?endif?>
-                                <i data-role="prop_angle" class="fa fa-angle-<?if ($arItem["DISPLAY_EXPANDED"]== "Y"):?>up<?else:?>down<?endif?>"></i>
-							</span>
+							</h4>
                                             </div>
 
                                             <div class="bx-filter-block" data-role="bx_filter_block">
@@ -89,7 +88,7 @@ if (isset($templateData['TEMPLATE_THEME']))
                                                     case "A"://NUMBERS_WITH_SLIDER
                                                         ?>
                                                         <div class="col-xs-6 bx-filter-parameters-box-container-block bx-left">
-                                                            <i class="bx-ft-sub"><?=GetMessage("CT_BCSF_FILTER_FROM")?></i>
+                                                            <h4><?=GetMessage("CT_BCSF_FILTER_FROM")?></h4>
                                                             <div class="bx-filter-input-container">
                                                                 <input
                                                                         class="min-price"
@@ -103,7 +102,7 @@ if (isset($templateData['TEMPLATE_THEME']))
                                                             </div>
                                                         </div>
                                                         <div class="col-xs-6 bx-filter-parameters-box-container-block bx-right">
-                                                            <i class="bx-ft-sub"><?=GetMessage("CT_BCSF_FILTER_TO")?></i>
+                                                            <h4 ><?=GetMessage("CT_BCSF_FILTER_TO")?></h4>
                                                             <div class="bx-filter-input-container">
                                                                 <input
                                                                         class="max-price"
@@ -173,7 +172,7 @@ if (isset($templateData['TEMPLATE_THEME']))
                                                     case "B"://NUMBERS
                                                     ?>
                                                         <div class="col-xs-6 bx-filter-parameters-box-container-block bx-left">
-                                                            <i class="bx-ft-sub"><?=GetMessage("CT_BCSF_FILTER_FROM")?></i>
+                                                            <h4><?=GetMessage("CT_BCSF_FILTER_FROM")?></h4>
                                                             <div class="bx-filter-input-container">
                                                                 <input
                                                                         class="min-price"
@@ -187,7 +186,7 @@ if (isset($templateData['TEMPLATE_THEME']))
                                                             </div>
                                                         </div>
                                                         <div class="col-xs-6 bx-filter-parameters-box-container-block bx-right">
-                                                            <i class="bx-ft-sub"><?=GetMessage("CT_BCSF_FILTER_TO")?></i>
+                                                            <h4><?=GetMessage("CT_BCSF_FILTER_TO")?></h4>
                                                             <div class="bx-filter-input-container">
                                                                 <input
                                                                         class="max-price"
