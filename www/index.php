@@ -1,7 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Кофемашины");
-?>
-Главная
+?>Главная <br>
 
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+
+    <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
