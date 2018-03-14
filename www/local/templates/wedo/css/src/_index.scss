@@ -178,13 +178,30 @@ header {
   &.normal-top {
     top: 0;
   }
+  &.footer {
+    position: inherit;
+  }
   .social-icons {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    .phone {
+    &.footer {
+      align-items: flex-end;
+      flex-direction: column;
+      .email {
+        font-size: 18px;
+      }
+      .phone {
+        letter-spacing: -0.2px;
+      }
+    }
+    .icon {
+      display: flex;
+      padding-top: 5px;
+    }
+    .phone, .email {
       margin: 0 10px;
       text-decoration: none;
       color: $white;
@@ -510,7 +527,8 @@ header {
       background: #424242;
       background-position: center;
       background-repeat: no-repeat;
-      transition: 0.5s;
+      transition: 0.5s ease;
+      //transition-delay: 0.2s;
       &:hover {
         width: 200%;
         .block-title{
@@ -526,7 +544,7 @@ header {
 
       .block-title {
         //height: 100%;
-        max-width: 690px;
+        max-width: 800px;
         width: 100%;
         display: flex;
         align-items: center;
@@ -551,6 +569,9 @@ header {
         width: 0;
         .c-image {
           width: 40%;
+          display: flex;
+          align-items: end;
+          justify-content: center;
           img {
             max-width: 300px;
           }
@@ -561,6 +582,48 @@ header {
             li {
               font-size: 27px;
               color: $white;
+              padding: 15px 0;
+            }
+          }
+          .wrap-link {
+            text-align: center;
+            padding-top: 30px;
+            .more-info {
+              text-decoration: none;
+              text-transform: uppercase;
+              color: $white;
+              font-size: 18px;
+              font-family: $Bold;
+            }
+            .wrap-arrow {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              .scroll-arrow {
+                width: 10px;
+                height: 10px;
+                transform: rotate(-45deg);
+                border-right: 2px solid $white;
+                border-bottom: 2px solid $white;
+                animation: arrow-wave 1s infinite;
+                animation-direction: alternate;
+                @for $i from 1 through 3 {
+                  &:nth-child(#{$i}) {
+                    animation-delay: 0.1s*$i;
+                  }
+                }
+              }
+              @keyframes arrow-wave {
+                0% {
+                  opacity: 0;
+                }
+                50% {
+                  opacity: .5;
+                }
+                100% {
+                  opacity: 1;
+                }
+              }
             }
           }
         }
@@ -590,6 +653,7 @@ header {
         align-items: center;
         justify-content: center;
         height: 155px;
+        outline: none;
         img {
           filter: grayscale(1);
         }
@@ -598,6 +662,17 @@ header {
         img {
           filter: grayscale(0);
         }
+      }
+
+      .slick-prev{
+        left: 0;
+      }
+      .slick-next {
+        right: 0;
+      }
+      .slick-prev:before, .slick-next:before {
+        font-size: 30px;
+        color: $black;
       }
     }
   }
@@ -622,4 +697,78 @@ header {
     display: none !important;
   }
 }
+
+
+//footer
+footer {
+  min-height: 450px;
+  background-color: $black;
+  color: $white;
+  display: flex;
+  align-items: center;
+  .wrap-content-footer {
+    display: flex;
+    align-items: center;
+  }
+
+  .f-logo {
+    img {
+      max-width: 110px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+  }
+  
+  .f-menu {
+    ul {
+      li {
+        a {
+          text-decoration: none;
+          color: $white;
+          font-size: 24px;
+          transition: 0.5s;
+          &:hover {
+            color: $red;
+          }
+        }
+      }
+    }
+    &.left {
+      text-align: right;
+      font-family: $Light;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 10px;
+    }
+    &.right {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 10px;
+    }
+  }
+
+  .wrap-copyright {
+    position: absolute;
+    width: 100%;
+    padding-top: 50px;
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      a {
+        text-decoration: none;
+        color: $gray;
+        font-size: 12px;
+        width: 100%;
+      }
+    }
+  }
+
+}
+//END footer
 
