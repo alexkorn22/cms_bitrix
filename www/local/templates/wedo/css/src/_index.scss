@@ -3,15 +3,39 @@
 header {
   width: 100%;
   height: 100vh;
-  background-image: url(../../images/bg_photo_9000s.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  //background-image: url(../../images/bg_photo_9000s.jpg);
+  //background-position: center;
+  //background-size: cover;
+  //background-repeat: no-repeat;
+  #container-video {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+
+    video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .mask-color {
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(28,28,28,.75);
+      z-index: 1;
+    }
+  }
   .container-fluid {
     width: 100%;
     height: 100%;
     background: $bgHead;
     .top-fixed-line {
+      position: relative;
+      z-index: 10;
       .top-line {
         padding-top: 15px;
         display: flex;
@@ -41,6 +65,7 @@ header {
       }
     }
     .bottom-line {
+      z-index: 2;
       bottom: -19px;
       position: absolute;
       width: 100%;
@@ -664,14 +689,27 @@ header {
         }
       }
 
+      .slick-prev:before {
+        content: '\2039';
+      }
+      .slick-next:before {
+        content: '\203A';
+      }
+      .slick-prev,
+      .slick-next {
+        width: 70px;
+        background-color: $white;
+        height: 100%;
+        z-index: 10;
+      }
       .slick-prev{
-        left: 0;
+        left: -10px;
       }
       .slick-next {
-        right: 0;
+        right: -10px;
       }
       .slick-prev:before, .slick-next:before {
-        font-size: 30px;
+        font-size: 40px;
         color: $black;
       }
     }
@@ -685,7 +723,7 @@ header {
   #line-menu {
     overflow: hidden;
     background-color: #ffffff;
-    z-index: 11;
+    z-index: 1;
   }
   .sticky {
     transition: all 0.5s;

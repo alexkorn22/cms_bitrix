@@ -36,7 +36,8 @@ $( document ).ready(function() {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1
+                    slidesToShow: 1,
+                    centerMode: false
                 }
             }
             // You can unslick at a given breakpoint now by adding:
@@ -59,9 +60,9 @@ $( document ).ready(function() {
         $( '.block.wmf .block-title' ).css({'opacity':'1', 'transition':'0.5s', 'transition-delay':'0.8s'});
     });
 
-    $('.burger').on('click', function () {
-        $('#line-menu').toggleClass("none")
-    })
+    // $('.burger').on('click', function () {
+    //     $('#line-menu').toggleClass("none")
+    // })
 });
 /*END section wmf-cms*/
 
@@ -90,3 +91,20 @@ function myFunction() {
     prevScrollpos = currentScrollPos;
 }
 // END SCROLL
+
+//  Responsice VIDEO background
+var video = document.querySelector('video');
+
+function setVideoDimensions () {
+    if (window.innerWidth / window.innerHeight > 16 / 9) {
+        video.style.width = '100vw';
+        video.style.height = 'calc(100vw * 9 / 16)';
+    } else {
+        video.style.width = 'calc(100vh * 16 / 9)';
+        video.style.height = '100vh';
+    }
+}
+
+window.onresize = setVideoDimensions;
+setVideoDimensions();
+//  END OF VIDEO background
