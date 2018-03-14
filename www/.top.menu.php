@@ -23,21 +23,21 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Ремонт", 
-		"", 
+		"/repair/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Сервис", 
-		"", 
+		"/news/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Комплексные решения", 
-		"", 
+		"/news/", 
 		Array(), 
 		Array(), 
 		"" 
