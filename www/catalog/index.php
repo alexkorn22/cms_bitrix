@@ -8,7 +8,7 @@ $APPLICATION->SetTitle("");
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"CACHE_TIME" => "3600",
 		"CACHE_TYPE" => "A",
-		"IBLOCK_ID" => App::$config->CM_IBLOCK_ID ,
+		"IBLOCK_ID" => App::$config->coffeeMachineIblockId ,
 		"IBLOCK_TYPE" => "catalogs",
 		"NEWS_COUNT" => "20",
 		"SEF_FOLDER" => "/catalog/",
