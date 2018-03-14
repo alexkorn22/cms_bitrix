@@ -48,6 +48,12 @@ $arUrlRewrite = array(
 		"ID" => "bitrix:news",
 		"PATH" => "/catalog/index.php",
 	),
+	array(
+		"CONDITION" => "#^\\??(.*)#",
+		"RULE" => "&\$1",
+		"ID" => "bitrix:catalog.smart.filter",
+		"PATH" => "/catalog/index.php",
+	),
 );
 
 ?>
