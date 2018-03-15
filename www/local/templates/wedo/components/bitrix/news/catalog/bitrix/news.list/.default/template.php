@@ -42,13 +42,6 @@ $this->setFrameMode(true);
                     <div>
                         Цена : <?=$arResult[$arItem['ID']]['PRICE']?> EUR
                     </div>
-                    <div>
-                        Количество порций в день : <?=$arResult[$arItem['ID']]['NUM_SERVINGS']?>
-                    </div>
-                    <div>
-                        Производительность в часы пик, порций/час : <?=$arResult[$arItem['ID']]['NUM_SERVINGS_HOUR']?>
-                    </div>
-
                 </h3>
             <div class="row">
                 <div class="col-xs-5">
