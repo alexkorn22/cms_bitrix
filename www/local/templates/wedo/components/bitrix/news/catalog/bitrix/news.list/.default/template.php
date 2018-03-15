@@ -18,7 +18,8 @@ $this->setFrameMode(true);
 	<?=$arResult["NAV_STRING"]?>
 <?endif;?><br/>
 
-    <? $counter = 1 ; ?>
+    <? $countCMachines = 1 ;
+       $countBanners   = 1 ; ?>
 <?foreach($arResult["ITEMS"] as $arItem):?>
     <div class="row">
         <div class="container">
@@ -50,14 +51,13 @@ $this->setFrameMode(true);
             </div>
         </div>
     </div>
-
-    <?if($counter%2 == 0 ):?>
+    <?if($countCMachines %2 == 0 ):?>
         <div class="row text-center">
             <div class="col-md-12">
-            <?  include 'banners/banner_'.($counter/2).'.php'?>
+            <?  include ROOT.$this->GetFolder() .'/banners/'.($countBanners).'.php' ?>
             </div>
         </div>
+        <? $countBanners++; ?>
     <?endif;?>
-
-    <? $counter++;?>
+    <? $countCMachines++; ?>
 <?endforeach;?>
