@@ -49,13 +49,13 @@ $( document ).ready(function() {
 
 /*section wmf-cms*/
     $( ".block.wmf" ).hover(function() {
-        $( '.block.cms .block-title' ).css({'opacity':'0','transition':'0.1s'});
+        $( '.block.cms .block-title' ).css({'opacity':'0','transition':'0.5s'});
      }, function(){
             $( '.block.cms .block-title' ).css({'opacity':'1', 'transition':'0.5s', 'transition-delay':'0.8s'});
     });
 
     $( ".block.cms" ).hover(function() {
-        $( '.block.wmf .block-title' ).css({'opacity':'0', 'transition':'0.1s'});
+        $( '.block.wmf .block-title' ).css({'opacity':'0', 'transition':'0.5s'});
     },  function(){
         $( '.block.wmf .block-title' ).css({'opacity':'1', 'transition':'0.5s', 'transition-delay':'0.8s'});
     });

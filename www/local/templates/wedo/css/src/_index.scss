@@ -51,6 +51,9 @@ header {
             width: 100%;
             height: 100%;
           }
+          @include media-breakpoint-down(sm) {
+            max-width: 50px;
+          }
         }
       }
       &.open {
@@ -69,6 +72,9 @@ header {
       bottom: -19px;
       position: absolute;
       width: 100%;
+      @include media-breakpoint-down(sm){
+        bottom: 10px;
+      }
       .wrap-title {
         .title-header {
           font-size: 100px;
@@ -82,6 +88,13 @@ header {
             color: $red;
             font-style: italic;
             font-size: 116px;
+          }
+          @include media-breakpoint-down(sm) {
+            font-size: 26px;
+            line-height: 26px;
+            span {
+              font-size: 30px;
+            }
           }
         }
       }
@@ -144,6 +157,9 @@ header {
           width: 100%;
           height: 100%;
         }
+        @include media-breakpoint-down(sm){
+          max-width: 50px;
+        }
       }
       .wrap-menu-item {
         display: flex;
@@ -183,6 +199,20 @@ header {
               width: 100%;
               &:hover {
                 color: $red;
+              }
+            }
+          }
+        }
+        @include media-breakpoint-down(sm){
+          flex-direction: column-reverse;
+          height: 100%;
+          .left-menu,
+          .right-menu {
+            text-align: left;
+            padding: 0;
+            .item {
+              a {
+                font-size: 20px;
               }
             }
           }
@@ -288,6 +318,9 @@ header {
       position: relative;
       top: 0;
       height: 30px;
+    }
+    @include media-breakpoint-down(sm) {
+      top: -10px;
     }
     .burger_global {
       position: absolute;
