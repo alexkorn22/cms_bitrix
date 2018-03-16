@@ -5,6 +5,7 @@
 	<?
     $APPLICATION->ShowHead();
     use Bitrix\Main\Page\Asset;
+    Asset::getInstance()->addString('<link rel="shortcut icon" href="' . SITE_TEMPLATE_PATH .'/images/favicon.png" type="image/x-icon">');
     // CSS
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/libs/bootstrap/bootstrap.min.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/libs/jqueryui/jquery-ui.min.css');
