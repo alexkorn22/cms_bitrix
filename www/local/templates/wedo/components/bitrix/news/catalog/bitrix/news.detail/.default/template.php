@@ -110,5 +110,23 @@ CUtil::InitJSCore(array('fx'));
         <?endif;?>
 	</div>
 
+    <? if($arResult['PROPERTIES']['SIMILAR_PRODUCTS']['VALUE'] != FALSE):?>
+    <!-- Similar products component -->
+    <h1 class="text-center alert alert-dark">
+        Похожые Товары
+    </h1>
+    <?$APPLICATION->IncludeComponent(
+        "wedo:similar_products",
+        ".default",
+        array(
+            "COMPONENT_TEMPLATE" => ".default",
+            "IBLOCK_TYPE" => "catalogs",
+            "IBLOCK_ID" => App::$config->coffeeMachineIblockId,
+            "PRODUCT_ID" => $arResult['ID']
+        ),
+        false
+    );?>
+    <!-- -->
+    <hr/>
+    <? endif;?>
 </div>
-
