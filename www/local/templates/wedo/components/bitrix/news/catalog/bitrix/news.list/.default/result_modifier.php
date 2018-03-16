@@ -6,8 +6,6 @@
 /** @global CDatabase $DB */
 /** @var CBitrixComponentTemplate $this */
 
-use Bitrix\Highloadblock\HighloadBlockTable;
-
 // получить свойства элемента :
 foreach ($arResult['ITEMS'] as $item){
     $props = CIBlockElement::GetByID($item['ID'])->GetNextElement()->GetProperties();

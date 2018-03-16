@@ -9,7 +9,6 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
  * @property string koeffForCostPriceCoffee;
  * @property string coffeeMachineIblockId;
  * @property string pricesHighBlockId;
- * @property string bannersHighBlockId;
  */
 class Config
 {
@@ -18,7 +17,6 @@ class Config
     protected $default = [
         'coffeeMachineIblockId' => 12,
         'pricesHighBlockId' => 1,
-        'bannersHighBlockId' => 2,
         'priceCofeeKg' => 600, // цена за 1 кг. кофе
         'priceSaleCoffee' => 12, // цена реализации напитка
         'koeffForCostPriceCoffee' => 120, // коэффициент для расчета себестоимости одной чашки кофе
