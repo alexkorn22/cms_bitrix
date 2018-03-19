@@ -45,7 +45,7 @@ var path = {
 
 var config = {
     server: {
-        baseDir: "./www/local/templates/wedo"
+        baseDir: "./www"
     },
    // tunnel: true,
     host: 'localhost',
