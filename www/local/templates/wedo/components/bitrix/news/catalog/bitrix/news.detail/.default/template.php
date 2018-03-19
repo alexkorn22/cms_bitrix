@@ -113,7 +113,7 @@ CUtil::InitJSCore(array('fx'));
     <? if($arResult['PROPERTIES']['SIMILAR_PRODUCTS']['VALUE'] != FALSE):?>
     <!-- Similar products component -->
     <h1 class="text-center alert alert-dark">
-        Похожые Товары
+        Похожие товары
     </h1>
     <?$APPLICATION->IncludeComponent(
         "wedo:similar_products",

@@ -14,7 +14,7 @@ while ($property = $similarProductsOb->GetNext())
 {
     $similarProductsID[] = $property['VALUE'];
 }
-// получить похожые товары по ID !
+// получить похожие товары по ID !
 $arFilter = array(
     'IBLOCK_ID ' =>$arParams['IBLOCK_ID'],
     'ID' => $similarProductsID
