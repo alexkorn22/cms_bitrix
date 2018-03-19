@@ -88,9 +88,20 @@ CUtil::InitJSCore(array('fx'));
                 <?foreach ($arResult['PROPERTIES']['VIDEO']['VALUE'] as $video):?>
                 <div class="col-md-6">
                     <h2>Title  :<?=$video['title']?></h2>
-                    <video width="320" height="240" controls>
-                        <source src="<?=$video['path']?>" type="video/mp4">
-                    </video>
+                    <? if(strpos($video['path'], 'youtube') !== false): ?> <!-- youtube video -->
+                        <?php
+                            $src         = $video['path'];
+                            $youtubeSrc  =  'https://www.youtube.com/embed/';
+                            $youtubeSrc .= substr($src, strpos($src, "=") + 1);
+                        ?>
+                        <iframe width="320" height="240"
+                                src="<?=$youtubeSrc?>">
+                        </iframe>
+                    <?else: ?> <!-- Video from site -->
+                        <video width="320" height="240" controls>
+                            <source src="<?=$video['path']?>" type="video/mp4">
+                        </video>
+                    <?endif;?>
                     <h2>Description  : <?=$video['desc']?></h2>
                 </div>
                 <?endforeach;?>
