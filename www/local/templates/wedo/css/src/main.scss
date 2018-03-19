@@ -1,3 +1,6 @@
+@import "../../../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../../../node_modules/bootstrap/scss/mixins/breakpoints";
 @import "fonts";
 @import "variable";
 @import "index";
@@ -23,6 +26,12 @@ body {
   }
   a {
     text-decoration: none;
+  }
+  section {
+    padding: 150px 0;
+    @include media-breakpoint-down(sm) {
+      padding: 50px 0;
+    }
   }
 }
 #main {

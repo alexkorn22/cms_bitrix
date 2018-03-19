@@ -47,3 +47,13 @@
   font-weight: bold;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'ProximaNovaBlack';
+  src: url('../../fonts/ProximaNova-Black.eot');
+  src: url('../../fonts/ProximaNova-Black.eot?#iefix') format('embedded-opentype'),
+  url('../../fonts/ProximaNova-Black.woff') format('woff'),
+  url('../../fonts/ProximaNova-Black.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
