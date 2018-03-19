@@ -16,7 +16,7 @@ $this->setFrameMode(true);
 <div class="bx-newslist">
 <?if($arParams["DISPLAY_TOP_PAGER"]):?>
 	<?=$arResult["NAV_STRING"]?>
-<?endif;?><br/>
+<?endif;?>
 
     <? $countCMachines = 1 ;
        $countBanners   = 1 ; ?>

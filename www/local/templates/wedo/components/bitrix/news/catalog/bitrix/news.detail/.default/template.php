@@ -35,10 +35,10 @@ CUtil::InitJSCore(array('fx'));
                 <?endif;?>
             </div>
             <div class="col-md-offset-1 col-md-4">
-                <div><b>Характеристики:</b></div><br/>
+                <div><b>Характеристики:</b></div>
                 <?foreach($arResult['PROPERTIES'] as $prop):?>
                     <?if(!empty($prop['VALUE']) && $prop['SORT'] < 5000 ):?>
-                       <div> <?=$prop['NAME']?> : <?=$prop['VALUE']?><br/></div>
+                       <div> <?=$prop['NAME']?> : <?=$prop['VALUE']?></div>
                     <?endif;?>
                 <?endforeach;?>
             </div>
@@ -53,7 +53,7 @@ CUtil::InitJSCore(array('fx'));
         </div><hr/>
         <div class="row">
             <div class="col-md-6">
-                <div>ОПИСАНИЕ </div>
+                <div>Описание </div>
                 <div><?=$arResult['PROPERTIES']['DESCRIPTION']['VALUE']?></div>
             </div>
         </div>
@@ -61,7 +61,7 @@ CUtil::InitJSCore(array('fx'));
         <?if($arResult['PROPERTIES']['RENT']['VALUE'] == 'Да'):?>
         <div class="row">
             <div class="col-md-6">
-                <div>АРЕНДА </div>
+                <div>Аренда </div>
                 <div>Возможность арендовать  : <?=$arResult['PROPERTIES']['RENT']['VALUE']?></div>
             </div>
         </div>
@@ -70,7 +70,7 @@ CUtil::InitJSCore(array('fx'));
         <?if(!empty($arResult['PROPERTIES']['DOCUMENTS']['VALUE'])):?>
             <div class="row">
                 <div class="col-md-12">
-                    <div>ДОКУМЕНТЫ</div>
+                    <div>Документы</div>
                     <?foreach($arResult['PROPERTIES']['DOCUMENTS']['VALUE'] as $IdDoc):?>
                         <? $file = CFile::GetFileArray($IdDoc); ?>
                         <div>
@@ -83,7 +83,7 @@ CUtil::InitJSCore(array('fx'));
             <hr/>
         <?endif;?>
         <?if(!empty($arResult['PROPERTIES']['VIDEO']['VALUE'][0])):?>
-            <div>ВИДЕО</div>
+            <div>Видео</div>
             <div class="row">
                 <?foreach ($arResult['PROPERTIES']['VIDEO']['VALUE'] as $video):?>
                 <div class="col-md-6">
@@ -125,9 +125,8 @@ CUtil::InitJSCore(array('fx'));
     <!-- Similar products component -->
     <?$APPLICATION->IncludeComponent(
         "wedo:similar_products",
-        ".default",
+        "",
         array(
-            "COMPONENT_TEMPLATE" => ".default",
             "IBLOCK_TYPE" => "catalogs",
             "IBLOCK_ID" => App::$config->coffeeMachineIblockId,
             "PRODUCT_ID" => $arResult['ID']
