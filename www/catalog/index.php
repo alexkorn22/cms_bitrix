@@ -1,7 +1,10 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("");
-?><?$APPLICATION->IncludeComponent(
+?>
+
+<? if($APPLICATION->GetCurPage() == '/catalog/'):?>
+	<?$APPLICATION->IncludeComponent(
 	"bitrix:catalog.smart.filter",
 	"",
 	Array(
@@ -27,7 +30,10 @@ $APPLICATION->SetTitle("");
 		"TEMPLATE_THEME" => "blue",
 		"XML_EXPORT" => "N"
 	)
-);?><?$APPLICATION->IncludeComponent(
+);?>
+<?endif;?>
+
+<?$APPLICATION->IncludeComponent(
 	"bitrix:news",
 	"catalog",
 	Array(
