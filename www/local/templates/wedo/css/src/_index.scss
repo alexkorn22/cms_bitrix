@@ -3,10 +3,10 @@
 header {
   width: 100%;
   height: 100vh;
-  //background-image: url(../../images/bg_photo_9000s.jpg);
-  //background-position: center;
-  //background-size: cover;
-  //background-repeat: no-repeat;
+  background-image: url(../../images/bg_photo_9000s.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   #container-video {
     position: absolute;
     top: 0;
@@ -74,7 +74,9 @@ header {
       width: 100%;
       @include media-breakpoint-down(sm){
         bottom: 10px;
-      }
+      }@include media-breakpoint-between(sm, md){
+         bottom: -10px;
+       }
       .wrap-title {
         .title-header {
           font-size: 100px;
@@ -94,6 +96,13 @@ header {
             line-height: 26px;
             span {
               font-size: 30px;
+            }
+          }
+          @include media-breakpoint-between(sm, md) {
+            font-size: 64px;
+            line-height: 64px;
+            span {
+              font-size: 64px;
             }
           }
         }
@@ -156,8 +165,12 @@ header {
           height: 100%;
         }
         @include media-breakpoint-down(sm){
+          max-width: 70px;
+        }
+        @include media-breakpoint-down(xs){
           max-width: 50px;
         }
+
       }
       .wrap-menu-item {
         display: flex;
@@ -188,6 +201,8 @@ header {
         .right-menu {
           .item {
             width: 100%;
+            line-height: 30px;
+            padding: 10px 0;
             a {
               text-decoration: none;
               color: $white;
@@ -201,12 +216,30 @@ header {
           }
         }
         @include media-breakpoint-down(sm){
+          .left-menu,
+          .right-menu {
+            .item {
+              line-height: 22px;
+              padding: 10px 0;
+              a {
+                font-size: 30px;
+              }
+            }
+          }
+          .right-menu {
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+          }
+        }
+        @include media-breakpoint-down(xs){
           flex-direction: column-reverse;
           .left-menu,
           .right-menu {
             text-align: left;
             padding: 0;
             .item {
+              padding: 5px 0;
               a {
                 font-size: 20px;
               }
@@ -417,6 +450,23 @@ header {
   @include media-breakpoint-down(sm) {
     height: 80px;
     .wrap-logo {
+      max-width: 70px;
+    }
+    .wrap-social-icons {
+      .social-icons {
+        .phone {
+          margin: 0 10px;
+        }
+        .social {
+          margin: 0 15px;
+        }
+
+      }
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    height: 80px;
+    .wrap-logo {
       max-width: 50px;
     }
   }
@@ -491,6 +541,21 @@ header {
               opacity: 1;
             }
             bottom: 50%;
+          }
+        }
+        @include media-breakpoint-down(sm){
+          .wrap {
+            top: 10%;
+            img {  opacity: 1;  }
+            div {
+              span {
+                color: $white;
+              }
+              .meta {
+                opacity: 1;
+              }
+              bottom: 0;
+            }
           }
         }
       }
@@ -602,6 +667,24 @@ header {
       &.fourth {
         background-image: url(../../images/m-card-bg4.png);
       }
+
+      @include media-breakpoint-down(sm){
+        margin: 5px 0;
+        .wrap {
+          top: 10%;
+          img {
+            width: 15%;
+          }
+          div {
+            .meta {
+              opacity: 1;
+              .more-info {
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -617,7 +700,7 @@ header {
     height: 580px;
     @include media-breakpoint-down(sm){
       flex-direction: column;
-      height: 1000px;
+      height: 900px;
     }
 
     .block {
@@ -660,6 +743,12 @@ header {
           margin: 0;
           span {
             font-family: $Bold;
+          }
+        }
+        @include media-breakpoint-down(md) {
+          p {
+            font-size: 30px;
+            line-height: 36px;
           }
         }
         @include media-breakpoint-down(sm) {
@@ -737,11 +826,10 @@ header {
           }
         }
       }
-      @include media-breakpoint-down(sm){
+      @include media-breakpoint-down(md){
         width: 100%;
-        background-size: contain;
         &:hover {
-          width: 100%;
+          width: 200%;
         }
         .content-wmf-cmf {
           padding: 0 10px;
@@ -752,10 +840,44 @@ header {
             width:100%;
             ul {
               li {
-                font-size: 20px;
-                line-height: 24px;
+                font-size: 18px;
+                line-height: 20px;
                 color: $white;
-                padding: 10px 0;
+                padding: 10px 10px;
+                text-align: center;
+              }
+            }
+            .wrap-link {
+              justify-content: center;
+              .more-info {
+                padding: 0;
+              }
+            }
+          }
+        }
+      }
+      @include media-breakpoint-down(sm){
+        width: 100%;
+        background-size: contain;
+        margin: 5px 0;
+        &:hover {
+          width: 100%;
+        }
+        .content-wmf-cmf {
+          display: flex;
+          padding: 0 10px;
+          .c-image {
+            width: 0;
+          }
+          .c-text {
+            width:100%;
+            ul {
+              li {
+                font-size: 18px;
+                line-height: 20px;
+                color: $white;
+                padding: 10px 10px;
+                text-align: center;
               }
             }
             .wrap-link {
@@ -817,7 +939,7 @@ header {
         width: 70px;
         background-color: $white;
         height: 100%;
-        z-index: 10;
+        z-index: 1;
         @include media-breakpoint-down(sm){
           background-color: transparent;
         }
@@ -882,6 +1004,8 @@ footer {
   .f-menu {
     ul {
       li {
+        line-height: 20px;
+        padding: 5px 0;
         a {
           text-decoration: none;
           color: $white;
