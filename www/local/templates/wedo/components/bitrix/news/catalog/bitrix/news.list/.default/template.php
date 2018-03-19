@@ -38,12 +38,12 @@ $this->setFrameMode(true);
             </div>
 	        <div class="col-md-4">
                     <div class="row">
-                        <h3>
+                        <div>
                                 <a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$arItem["NAME"]?></a>
                             <div>
                                 Цена : <?=$arResult[$arItem['ID']]['PRICE']?> EUR
                             </div>
-                        </h3>
+                        </div>
                          <div class="col-xs-5">
                               <div class="bx-newslist-more"><a class="btn btn-primary btn-lg" href="<?echo $arItem["DETAIL_PAGE_URL"]?>"><?echo GetMessage("CT_BNL_GOTO_DETAIL")?></a></div>
                           </div>
