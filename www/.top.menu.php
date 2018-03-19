@@ -8,29 +8,36 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Профиль", 
-		"/personal/", 
+		"Кофемашины", 
+		"/catalog/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Контент", 
-		"/content/", 
+		"Аренда", 
+		"/lease/index.php", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Магазин", 
-		"/e-store/", 
+		"Ремонт", 
+		"/repair/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Типовые примеры", 
-		"/examples/", 
+		"Сервис", 
+		"/news/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Комплексные решения", 
+		"/news/", 
 		Array(), 
 		Array(), 
 		"" 
