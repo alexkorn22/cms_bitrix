@@ -16,7 +16,7 @@ CUtil::InitJSCore(array('fx'));
 <div class="container">
 	<div  id="<?echo $this->GetEditAreaId($arResult['ID'])?>">
         <div class="row text-center">
-            <h2><?=$arResult["NAME"]?></h2>
+            <div><?=$arResult["NAME"]?></div>
         </div>
         <div class="row">
             <div class="col-md-4">
@@ -35,15 +35,15 @@ CUtil::InitJSCore(array('fx'));
                 <?endif;?>
             </div>
             <div class="col-md-offset-1 col-md-4">
-                <h2><b>Характеристики:</b></h2><br/>
+                <div><b>Характеристики:</b></div>
                 <?foreach($arResult['PROPERTIES'] as $prop):?>
                     <?if(!empty($prop['VALUE']) && $prop['SORT'] < 5000 ):?>
-                       <h3> <?=$prop['NAME']?> : <?=$prop['VALUE']?><br/></h3>
+                       <div> <?=$prop['NAME']?> : <?=$prop['VALUE']?></div>
                     <?endif;?>
                 <?endforeach;?>
             </div>
             <div class="col-md-3">
-                <h1>  Цена : <?=$arResult['PROPERTIES']['PRICE']['VALUE']?> EUR</h1>
+                <div>  Цена : <?=$arResult['PROPERTIES']['PRICE']['VALUE']?> EUR</div>
                 <div>
                     <button class="btn btn-primary btn-lg">
                         Заказать консультацию
@@ -53,16 +53,16 @@ CUtil::InitJSCore(array('fx'));
         </div><hr/>
         <div class="row">
             <div class="col-md-6">
-                <h1>ОПИСАНИЕ </h1>
-                <h2><?=$arResult['PROPERTIES']['DESCRIPTION']['VALUE']?></h2>
+                <div>Описание </div>
+                <div><?=$arResult['PROPERTIES']['DESCRIPTION']['VALUE']?></div>
             </div>
         </div>
         <hr/>
         <?if($arResult['PROPERTIES']['RENT']['VALUE'] == 'Да'):?>
         <div class="row">
             <div class="col-md-6">
-                <h1>АРЕНДА </h1>
-                <h2>Возможность арендовать  : <?=$arResult['PROPERTIES']['RENT']['VALUE']?></h2>
+                <div>Аренда </div>
+                <div>Возможность арендовать  : <?=$arResult['PROPERTIES']['RENT']['VALUE']?></div>
             </div>
         </div>
         <hr/>
@@ -70,12 +70,12 @@ CUtil::InitJSCore(array('fx'));
         <?if(!empty($arResult['PROPERTIES']['DOCUMENTS']['VALUE'])):?>
             <div class="row">
                 <div class="col-md-12">
-                    <h1>ДОКУМЕНТЫ</h1>
+                    <div>Документы</div>
                     <?foreach($arResult['PROPERTIES']['DOCUMENTS']['VALUE'] as $IdDoc):?>
                         <? $file = CFile::GetFileArray($IdDoc); ?>
                         <div>
-                            <div class="col-md-6"> <h2> Название : <?=$file['FILE_NAME']?> </h2></div>
-                            <div class="col-md-4"> <h2><a target="_blank" href="<?=$file['SRC']?>">Открыть</a></h2></div>
+                            <div class="col-md-6"> <div> Название : <?=$file['FILE_NAME']?> </div></div>
+                            <div class="col-md-4"> <div><a target="_blank" href="<?=$file['SRC']?>">Открыть</a></div></div>
                         </div>
                     <?endforeach;?>
                 </div>
@@ -83,15 +83,26 @@ CUtil::InitJSCore(array('fx'));
             <hr/>
         <?endif;?>
         <?if(!empty($arResult['PROPERTIES']['VIDEO']['VALUE'][0])):?>
-            <h1>ВИДЕО</h1>
+            <div>Видео</div>
             <div class="row">
                 <?foreach ($arResult['PROPERTIES']['VIDEO']['VALUE'] as $video):?>
                 <div class="col-md-6">
-                    <h2>Title  :<?=$video['title']?></h2>
-                    <video width="320" height="240" controls>
-                        <source src="<?=$video['path']?>" type="video/mp4">
-                    </video>
-                    <h2>Description  : <?=$video['desc']?></h2>
+                    <div>Title  :<?=$video['title']?></div>
+                    <? if(strpos($video['path'], 'youtube') !== false): ?> <!-- youtube video -->
+                        <?php
+                            $src         = $video['path'];
+                            $youtubeSrc  =  'https://www.youtube.com/embed/';
+                            $youtubeSrc .= substr($src, strpos($src, "=") + 1);
+                        ?>
+                        <iframe width="320" height="240"
+                                src="<?=$youtubeSrc?>">
+                        </iframe>
+                    <?else: ?> <!-- Video from site -->
+                        <video width="320" height="240" controls>
+                            <source src="<?=$video['path']?>" type="video/mp4">
+                        </video>
+                    <?endif;?>
+                    <div>Description  : <?=$video['desc']?></div>
                 </div>
                 <?endforeach;?>
             </div>
@@ -100,7 +111,7 @@ CUtil::InitJSCore(array('fx'));
         <?if (!empty($arResult['PROPERTIES']['SCHEDULE']['VALUE'])):?>
             <div class="row">
                 <div class="col-md-6">
-                    <h1>График замены запчастей кофемашины</h1>
+                    <div>График замены запчастей кофемашины</div>
                     <? foreach($arResult['PROPERTIES']['SCHEDULE']['VALUE'] as $id):?>
                         <img src="<?=CFile::GetPath($id);?>" height="500" width="500">
                     <?endforeach;?>
@@ -110,5 +121,19 @@ CUtil::InitJSCore(array('fx'));
         <?endif;?>
 	</div>
 
+    <? if($arResult['PROPERTIES']['SIMILAR_PRODUCTS']['VALUE'] != FALSE):?>
+    <!-- Similar products component -->
+    <?$APPLICATION->IncludeComponent(
+        "wedo:similar_products",
+        "",
+        array(
+            "IBLOCK_TYPE" => "catalogs",
+            "IBLOCK_ID" => App::$config->coffeeMachineIblockId,
+            "PRODUCT_ID" => $arResult['ID']
+        ),
+        false
+    );?>
+    <!-- -->
+    <hr/>
+    <? endif;?>
 </div>
-
