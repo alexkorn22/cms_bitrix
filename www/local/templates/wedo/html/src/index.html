@@ -1,26 +1,6 @@
-<!doctype html>
-<html lang="ru">
-<head>
-    <title>CMS</title>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+//= layouts/header_main.html
 
-    <link rel="stylesheet" href="/local/templates/wedo/css/libs/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="/local/templates/wedo/css/libs/slick/slick.css">
-    <link rel="stylesheet" href="/local/templates/wedo/css/libs/slick/slick-theme.css">
-    <link rel="stylesheet" href="/local/templates/wedo/css/dist/main.css">
-    <script
-            src="http://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-            crossorigin="anonymous"></script>
-
-</head>
-<body>
-
-<div id="main">
-    <header>
+    <section id="header-main">
         <div class="container-fluid">
             <div id='container-video' class="d-none d-sm-block">
                 <div class="mask-color"></div>
@@ -46,7 +26,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="row bottom-line">
                 <div class="col-12 col-lg-11">
                     <div class="wrap-title">
@@ -61,7 +40,43 @@
                     </div>
                 </div>
             </div>
-            <div class="overlay">
+        </div>
+    </section>
+
+    <div id="wrap">
+        <div class="container-line-menu">
+        <div id="line-menu">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col col-sm-2 col-md-2 col-lg-2">
+                        <div class="wrap-logo">
+                            <img src="../../images/logo_black.png" class="d-none d-sm-block" alt="CMS">
+                            <img src="../../images/logo-small.png" class="d-block d-sm-none" alt="CMS">
+                        </div>
+                    </div>
+                    <div class="col col-sm-10 col-md-10 col-lg-10">
+                        <div class="wrap-social-icons normal-top">
+                            <div class="social-icons">
+                                <a class="phone black d-none d-sm-block" href="tel:+38 (050) 449-06-00">+38 (050) 449-06-00</a>
+                                <a href="#" class="social facebook d-none d-sm-block"></a>
+                                <a href="#" class="social insta d-none d-sm-block"></a>
+                                <a href="#" class="social youtube d-none d-sm-block"></a>
+                                <div class="burger-menu">
+                                    <div class="navigation after-head">
+                                        <div class="burger after-head">
+                                            <span class="burger_global top_bun black"></span>
+                                            <span class="burger_global patty black"></span>
+                                            <span class="burger_global bottom_bun black"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="overlay">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="wrap-logo">
@@ -103,43 +118,7 @@
                         </div>
                     </div>
                 </div>
-            </div> <!-- //overlay -->
-        </div>
-    </header>
-
-    <div id="wrap">
-        <div class="container-line-menu">
-        <div id="line-menu">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col col-sm-2 col-md-2 col-lg-2">
-                        <div class="wrap-logo">
-                            <img src="../../images/logo_black.png" class="d-none d-sm-block" alt="CMS">
-                            <img src="../../images/logo-small.png" class="d-block d-sm-none" alt="CMS">
-                        </div>
-                    </div>
-                    <div class="col col-sm-10 col-md-10 col-lg-10">
-                        <div class="wrap-social-icons normal-top">
-                            <div class="social-icons">
-                                <a class="phone black d-none d-sm-block" href="tel:+38 (050) 449-06-00">+38 (050) 449-06-00</a>
-                                <a href="#" class="social facebook d-none d-sm-block"></a>
-                                <a href="#" class="social insta d-none d-sm-block"></a>
-                                <a href="#" class="social youtube d-none d-sm-block"></a>
-                                <div class="burger-menu">
-                                    <div class="navigation after-head">
-                                        <div class="burger after-head">
-                                            <span class="burger_global top_bun black"></span>
-                                            <span class="burger_global patty black"></span>
-                                            <span class="burger_global bottom_bun black"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </div>
     </div>
         <section id="cards-section">
         <div class="container-fluid">
@@ -359,63 +338,4 @@
     </section>
     </div>
 
-    <footer>
-        <div class="container-fluid">
-            <div class="row wrap-content-footer">
-                <div class="col-sm-12 order-1 order-sm-1 col-md-3">
-                    <div class="f-logo">
-                        <img src="../../images/logo.png" alt="CMS">
-                    </div>
-                </div>
-                <div class="col-sm-12 order-3 order-sm-2 col-md-3">
-                    <div class="f-menu left">
-                        <ul>
-                            <li class="item"><a href="#">Контакты</a></li>
-                            <li class="item"><a href="#">Сервисные центры</a></li>
-                            <li class="item"><a href="#">Блог</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-12 order-2 order-sm-3 col-md-3">
-                    <div class="f-menu right">
-                        <ul>
-                            <li class="item"><a href="#">Кофемашины</a></li>
-                            <li class="item"><a href="#">Аренда</a></li>
-                            <li class="item"><a href="#">Ремонт</a></li>
-                            <li class="item"><a href="#">Сервис</a></li>
-                            <li class="item"><a href="#">Комплексные решения</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-12 order-4 order-sm-4 col-md-3">
-                    <div class="f-contact">
-                        <div class="wrap-social-icons footer">
-                            <div class="social-icons footer">
-                                <a class="phone d-none d-sm-block" href="tel:+38 (050) 449-06-00">+38 (050) 449-06-00</a>
-                                <a class="email d-none d-sm-block" href="mailto:cms@cms.com.ua">cms@cms.com.ua</a>
-                                <div class="icon">
-                                    <a href="#" class="social facebook"></a>
-                                    <a href="#" class="social insta"></a>
-                                    <a href="#" class="social youtube"></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row wrap-copyright">
-                <div class="col">
-                    <div class="copyright">
-                        <a href="http://wedo.com.ua" target="_blank">Сайт разработан и поддерживается компанией WEDO</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-</div>
-
-<script src="/local/templates/wedo/js/libs/bootstrap.min.js"></script>
-<script src="/local/templates/wedo/js/libs/slick.min.js"></script>
-<script src="/local/templates/wedo/js/dist/main.js"></script>
-</body>
-</html>
+//= layouts/footer.html

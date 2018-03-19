@@ -73,13 +73,13 @@ $( document ).ready(function() {
 /*END section wmf-cms*/
 
 // SCROLL NAVBAR
-window.onscroll = function() {myFunction()};
+window.onscroll = function() {stickyMenu()};
 
 var navbar = document.getElementById("line-menu");
 var sticky = navbar.offsetTop;
 var prevScrollpos = window.pageYOffset;
 
-function myFunction() {
+function stickyMenu() {
     if (window.pageYOffset >= sticky) {
         navbar.classList.add("sticky")
     } else {
@@ -100,8 +100,10 @@ function myFunction() {
 
 //  Responsice VIDEO background
 var video = document.querySelector('video');
-
 function setVideoDimensions () {
+    if (!video) {
+        return;
+    }
     if (window.innerWidth / window.innerHeight > 16 / 9) {
         video.style.width = '100vw';
         video.style.height = 'calc(100vw * 9 / 16)';
