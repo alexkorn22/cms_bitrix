@@ -1,0 +1,49 @@
+.catalog-text{
+  text-align: left;
+  .heading{
+    font-weight: 900;
+  }
+  @media only screen and (max-width : 480px) {
+      text-align: center;
+  }
+}
+
+.detail-btn{
+  color: red;
+  border: 1px solid red;
+}
+
+.price{
+  font-size: 30px;
+  padding-bottom: 20px;
+  padding-left: 5px;
+}
+
+.center-vertical{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sub-heading{
+  font-size: 20px;
+  font-weight: 900;
+  padding-bottom: 20px;
+}
+
+.heading{
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.product:hover{
+    padding: 3px;
+    box-shadow: 2px 2px 2px 2px lightgray;
+    border-radius: 3px;
+}
+
+.product{
+  margin: 10px;
+}
