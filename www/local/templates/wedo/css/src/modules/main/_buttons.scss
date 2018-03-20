@@ -1,0 +1,63 @@
+/*Пример написания html
+<button type="button" class="btn btn_red btn_font-small"><a href="#">Узнать подробности</a></button>
+<button type="button" class="btn btn_black btn_font-small">Узнать подробности</button>
+<button type="button" class="btn btn_none-fill">Подробнее</button>
+<button type="button" class="btn btn_red btn_big">Подобрать кофемашину</button>
+<button type="button" class="btn btn_red btn_fix-size btn_font-small">Отправить</button> */
+
+.btn:focus {
+  box-shadow: none;
+}
+.btn a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn {
+  padding: 15px 40px;
+  font-size: 24px;
+  border-radius: 5px;
+  font-family: $Regular;
+  transition: 0.4s;
+  
+  &_red {
+    background-color: $red;
+    color: $white;
+    &:hover {
+      background-color: $light-black;
+    }
+  }
+  
+  &_black {
+    background-color: $light-black;
+    color: $white;
+    &:hover {
+      background-color: $red;
+    }
+  }
+  
+  &_none-fill {
+    background-color: transparent;
+    color: $red;
+    border: 2px solid $red;
+    &:hover {
+      background-color: $red;
+      color: $white;
+    }
+  }
+
+  &_big {
+    text-transform: uppercase;
+    font-family: $Semibold;
+  }
+
+  &_fix-size {
+    width: 300px;
+    height: 50px;
+    padding: 0;
+  }
+
+  &_font-small{
+    font-size:20px;
+  }
+}
