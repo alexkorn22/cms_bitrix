@@ -54,7 +54,23 @@
         font-family: $Semibold;
       }
     }
+    @include media-breakpoint-down(sm){
+      .title-banner {
+        font-size: 30px;
+        line-height: 30px;
+      }
+      ul li{
+        font-size: 20px;
+        line-height: 22px;
+      }
+      .descr-banner {
+        font-size: 26px;
+        line-height: 26px;
+      }
+    }
   }
+
+
   .wrap-banner-img {
     width: 100%;
     height: 100%;
