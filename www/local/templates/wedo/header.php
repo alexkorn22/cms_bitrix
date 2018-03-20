@@ -30,20 +30,19 @@
     
 </head>
 <body>
-
 <?$APPLICATION->ShowPanel();?>
 <? if($APPLICATION->GetCurPage() == '/'):?>
     <section id="header-main">
     <div class="container-fluid">
         <div id='container-video' class="d-none d-sm-block">
             <div class="mask-color"></div>
-            <video src="<?=SITE_TEMPLATE_PATH?>/images/cms_video1.mp4" autoplay muted loop></video>
+            <video src="<?=IMAGES_PATH?>/cms_video1.mp4" autoplay muted loop></video>
         </div>
         <div class="top-fixed-line">
             <div class="row top-line">
                 <div class="col">
                     <div class="wrap-logo">
-                        <img src="<?=SITE_TEMPLATE_PATH?>/images/logo.png" alt="CMS">
+                        <img src="<?=IMAGES_PATH?>/logo.png" alt="CMS">
                     </div>
                 </div>
                 <div class="col">
@@ -69,7 +68,7 @@
             </div>
             <div class="col-lg-1 d-none d-lg-block">
                 <div class="scroll-indicator">
-                    <img src="<?=SITE_TEMPLATE_PATH?>/images/mouse.png" alt="scroll">
+                    <img src="<?=IMAGES_PATH?>/mouse.png" alt="scroll">
                 </div>
             </div>
         </div>
@@ -81,17 +80,17 @@
             <div class="row">
                 <div class="col col-sm-2 col-md-2 col-lg-2">
                     <div class="wrap-logo">
-                        <img src="<?=SITE_TEMPLATE_PATH?>/images/logo_black.png" class="d-none d-sm-block" alt="CMS">
-                        <img src="<?=SITE_TEMPLATE_PATH?>/images/logo-small.png" class="d-block d-sm-none" alt="CMS">
+                        <img src="<?=IMAGES_PATH?>/logo_black.png" class="d-none d-sm-block" alt="CMS">
+                        <img src="<?=IMAGES_PATH?>/logo-small.png" class="d-block d-sm-none" alt="CMS">
                     </div>
                 </div>
                 <div class="col col-sm-10 col-md-10 col-lg-10">
                     <div class="wrap-social-icons normal-top">
                         <div class="social-icons">
-                            <a class="phone black d-none d-sm-block" href="tel:+38 (050) 449-06-00">+38 (050) 449-06-00</a>
-                            <a href="#" class="social facebook d-none d-sm-block"></a>
-                            <a href="#" class="social insta d-none d-sm-block"></a>
-                            <a href="#" class="social youtube d-none d-sm-block"></a>
+                            <a class="phone" href="tel:<?=App::$config->telephone?>"><?=App::$config->telephone?></a>
+                            <a href="<?=App::$config->facebook_link?>" class="social facebook"></a>
+                            <a href="<?=App::$config->instagram_link?>" class="social insta"></a>
+                            <a href="<?=App::$config->youtube_link?>" class="social youtube"></a>
                             <div class="burger-menu">
                                 <div class="navigation after-head">
                                     <div class="burger after-head">
@@ -111,8 +110,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="wrap-logo">
-                    <img src="<?=SITE_TEMPLATE_PATH?>/images/logo.png" class="d-none d-sm-block" alt="CMS">
-                    <img src="<?=SITE_TEMPLATE_PATH?>/images/logo-small.png" class="d-block d-sm-none" alt="CMS">
+                    <img src="<?=IMAGES_PATH?>/logo.png" class="d-none d-sm-block" alt="CMS">
+                    <img src="<?=IMAGES_PATH?>/logo-small.png" class="d-block d-sm-none" alt="CMS">
                 </div>
                 <div class="burger-menu in-menu">
                     <div class="navigation">
@@ -175,10 +174,10 @@
                 <div class="wrap-social-icons">
                     <div class="col col-lg-6">
                         <div class="social-icons">
-                            <a class="phone" href="tel:+38 (050) 449-06-00">+38 (050) 449-06-00</a>
-                            <a href="#" class="social facebook"></a>
-                            <a href="#" class="social insta"></a>
-                            <a href="#" class="social youtube"></a>
+                            <a class="phone" href="tel:<?=App::$config->telephone?>"><?=App::$config->telephone?></a>
+                            <a href="<?=App::$config->facebook_link?>" class="social facebook"></a>
+                            <a href="<?=App::$config->instagram_link?>" class="social insta"></a>
+                            <a href="<?=App::$config->youtube_link?>" class="social youtube"></a>
                         </div>
                     </div>
                 </div>
@@ -195,17 +194,17 @@
                     <div class="row">
                         <div class="col col-sm-2 col-md-2 col-lg-2">
                             <div class="wrap-logo">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/images/logo_black.png" class="d-none d-sm-block" alt="CMS">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/images/logo-small.png" class="d-block d-sm-none" alt="CMS">
+                                <img src="<?=IMAGES_PATH?>/logo_black.png" class="d-none d-sm-block" alt="CMS">
+                                <img src="<?=IMAGES_PATH?>/logo-small.png" class="d-block d-sm-none" alt="CMS">
                             </div>
                         </div>
                         <div class="col col-sm-10 col-md-10 col-lg-10">
                             <div class="wrap-social-icons normal-top">
                                 <div class="social-icons">
-                                    <a class="phone black d-none d-sm-block" href="tel:+38 (050) 449-06-00">+38 (050) 449-06-00</a>
-                                    <a href="#" class="social facebook d-none d-sm-block"></a>
-                                    <a href="#" class="social insta d-none d-sm-block"></a>
-                                    <a href="#" class="social youtube d-none d-sm-block"></a>
+                                    <a class="phone black d-none d-sm-block" href="tel:<?=App::$config->telephone?>"><?=App::$config->telephone?></a>
+                                    <a href="<?=App::$config->facebook_link?>" class="social facebook"></a>
+                                    <a href="<?=App::$config->instagram_link?>" class="social insta"></a>
+                                    <a href="<?=App::$config->youtube_link?>" class="social youtube"></a>
                                     <div class="burger-menu">
                                         <div class="navigation after-head">
                                             <div class="burger after-head">
@@ -225,8 +224,8 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="wrap-logo">
-                            <img src="<?=SITE_TEMPLATE_PATH?>/images/logo.png" class="d-none d-sm-block" alt="CMS">
-                            <img src="<?=SITE_TEMPLATE_PATH?>/images/logo-small.png" class="d-block d-sm-none" alt="CMS">
+                            <img src="<?=IMAGES_PATH?>/logo.png" class="d-none d-sm-block" alt="CMS">
+                            <img src="<?=IMAGES_PATH?>/logo-small.png" class="d-block d-sm-none" alt="CMS">
                         </div>
                         <div class="burger-menu in-menu">
                             <div class="navigation">
@@ -289,10 +288,10 @@
                         <div class="wrap-social-icons">
                             <div class="col col-lg-6">
                                 <div class="social-icons">
-                                    <a class="phone" href="tel:+38 (050) 449-06-00">+38 (050) 449-06-00</a>
-                                    <a href="#" class="social facebook"></a>
-                                    <a href="#" class="social insta"></a>
-                                    <a href="#" class="social youtube"></a>
+                                    <a class="phone" href="tel:<?=App::$config->telephone?>"><?=App::$config->telephone?></a>
+                                    <a href="<?=App::$config->facebook_link?>" class="social facebook"></a>
+                                    <a href="<?=App::$config->instagram_link?>" class="social insta"></a>
+                                    <a href="<?=App::$config->youtube_link?>" class="social youtube"></a>
                                 </div>
                             </div>
                         </div>

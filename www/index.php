@@ -17,7 +17,7 @@ $APPLICATION->SetTitle("Кофемашины");
                     <div class="col-md-3 dont-padding">
                         <div class="m-card first">
                             <div class="wrap">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/images/icon-sale.png" alt="sale">
+                                <img src="<?=IMAGES_PATH?>/icon-sale.png" alt="sale">
                                 <div>
                                     <span>Продажа</span>
                                     <div class="meta">
@@ -41,7 +41,7 @@ $APPLICATION->SetTitle("Кофемашины");
                     <div class="col-md-3 dont-padding">
                         <div class="m-card second">
                             <div class="wrap">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/images/icon-lease.png" alt="lease">
+                                <img src="<?=IMAGES_PATH?>/icon-lease.png" alt="lease">
                                 <div>
                                     <span>Аренда</span>
                                     <div class="meta">
@@ -65,7 +65,7 @@ $APPLICATION->SetTitle("Кофемашины");
                     <div class="col-md-3 dont-padding">
                         <div class="m-card third">
                             <div class="wrap">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/images/icon-repairs.png" alt="repairs">
+                                <img src="<?=IMAGES_PATH?>/icon-repairs.png" alt="repairs">
                                 <div>
                                     <span>Ремонт</span>
                                     <div class="meta">
@@ -89,7 +89,7 @@ $APPLICATION->SetTitle("Кофемашины");
                     <div class="col-md-3 dont-padding">
                         <div class="m-card fourth">
                             <div class="wrap">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/images/icon-service.png" alt="service">
+                                <img src="<?=IMAGES_PATH?>/icon-service.png" alt="service">
                                 <div>
                                     <span>Сервис</span>
                                     <div class="meta">
@@ -136,7 +136,7 @@ $APPLICATION->SetTitle("Кофемашины");
                         </div>
                         <div class="content-wmf-cmf">
                             <div class="c-image">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/images/wmf-image.png" class="d-none d-lg-block" alt="WMF">
+                                <img src="<?=IMAGES_PATH?>/wmf-image.png" class="d-none d-lg-block" alt="WMF">
                             </div>
                             <div class="c-text">
                                 <ul>
@@ -162,7 +162,7 @@ $APPLICATION->SetTitle("Кофемашины");
                         </div>
                         <div class="content-wmf-cmf">
                             <div class="c-image">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/images/cms-image.png" class="d-none d-lg-block" alt="CMS">
+                                <img src="<?=IMAGES_PATH?>/cms-image.png" class="d-none d-lg-block" alt="CMS">
                             </div>
                             <div class="c-text">
                                 <ul>
@@ -195,25 +195,25 @@ $APPLICATION->SetTitle("Кофемашины");
             <div class="wrap-slider">
                 <div class="center">
                     <div class="slide">
-                        <img src="<?=SITE_TEMPLATE_PATH?>/images/client1.png" alt="">
+                        <img src="<?=IMAGES_PATH?>/client1.png" alt="">
                     </div>
                     <div class="slide">
-                        <img src="<?=SITE_TEMPLATE_PATH?>/images/client2.png" alt="">
+                        <img src="<?=IMAGES_PATH?>/client2.png" alt="">
                     </div>
                     <div class="slide">
-                        <img src="<?=SITE_TEMPLATE_PATH?>/images/client5.png" alt="">
+                        <img src="<?=IMAGES_PATH?>/client5.png" alt="">
                     </div>
                     <div class="slide">
-                        <img src="<?=SITE_TEMPLATE_PATH?>/images/client3.png" alt="">
+                        <img src="<?=IMAGES_PATH?>/client3.png" alt="">
                     </div>
                     <div class="slide">
-                        <img src="<?=SITE_TEMPLATE_PATH?>/images/client1.png" alt="">
+                        <img src="<?=IMAGES_PATH?>/client1.png" alt="">
                     </div>
                     <div class="slide">
-                        <img src="<?=SITE_TEMPLATE_PATH?>/images/client4.png" alt="">
+                        <img src="<?=IMAGES_PATH?>/client4.png" alt="">
                     </div>
                     <div class="slide">
-                        <img src="<?=SITE_TEMPLATE_PATH?>/images/client5.png" alt="">
+                        <img src="<?=IMAGES_PATH?>/client5.png" alt="">
                     </div>
                 </div>
             </div>

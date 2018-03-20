@@ -8,7 +8,11 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
  * @property string priceSaleCoffee;
  * @property string koeffForCostPriceCoffee;
  * @property string coffeeMachineIblockId;
- * @property string pricesHighBlockId;
+ * @property string telephone;
+ * @property string email;
+ * @property string facebook_link;
+ * @property string instagram_link;
+ * @property string youtube_link;
  */
 class Config
 {
@@ -20,6 +24,11 @@ class Config
         'priceCofeeKg' => 600, // цена за 1 кг. кофе
         'priceSaleCoffee' => 12, // цена реализации напитка
         'koeffForCostPriceCoffee' => 120, // коэффициент для расчета себестоимости одной чашки кофе
+        'telephone' => '+38 (050) 449-06-00',
+        'email' => 'cms@cms.com.ua',
+        'facebook_link' => '#',
+        'instagram_link' => '#',
+        'youtube_link' => '#'
 
     ];
 
