@@ -88,9 +88,9 @@
                     <div class="wrap-social-icons normal-top">
                         <div class="social-icons">
                             <a class="phone" href="tel:<?=App::$config->telephone?>"><?=App::$config->telephone?></a>
-                            <a href="<?=App::$config->facebook_link?>" class="social facebook"></a>
-                            <a href="<?=App::$config->instagram_link?>" class="social insta"></a>
-                            <a href="<?=App::$config->youtube_link?>" class="social youtube"></a>
+                            <a href="<?=App::$config->facebookLink?>" class="social facebook"></a>
+                            <a href="<?=App::$config->instagramLink?>" class="social insta"></a>
+                            <a href="<?=App::$config->youtubeLink?>" class="social youtube"></a>
                             <div class="burger-menu">
                                 <div class="navigation after-head">
                                     <div class="burger after-head">
@@ -175,9 +175,9 @@
                     <div class="col col-lg-6">
                         <div class="social-icons">
                             <a class="phone" href="tel:<?=App::$config->telephone?>"><?=App::$config->telephone?></a>
-                            <a href="<?=App::$config->facebook_link?>" class="social facebook"></a>
-                            <a href="<?=App::$config->instagram_link?>" class="social insta"></a>
-                            <a href="<?=App::$config->youtube_link?>" class="social youtube"></a>
+                            <a href="<?=App::$config->facebookLink?>" class="social facebook"></a>
+                            <a href="<?=App::$config->instagramLink?>" class="social insta"></a>
+                            <a href="<?=App::$config->youtubeLink?>" class="social youtube"></a>
                         </div>
                     </div>
                 </div>
@@ -202,9 +202,9 @@
                             <div class="wrap-social-icons normal-top">
                                 <div class="social-icons">
                                     <a class="phone black d-none d-sm-block" href="tel:<?=App::$config->telephone?>"><?=App::$config->telephone?></a>
-                                    <a href="<?=App::$config->facebook_link?>" class="social facebook"></a>
-                                    <a href="<?=App::$config->instagram_link?>" class="social insta"></a>
-                                    <a href="<?=App::$config->youtube_link?>" class="social youtube"></a>
+                                    <a href="<?=App::$config->facebookLink?>" class="social facebook"></a>
+                                    <a href="<?=App::$config->instagramLink?>" class="social insta"></a>
+                                    <a href="<?=App::$config->youtubeLink?>" class="social youtube"></a>
                                     <div class="burger-menu">
                                         <div class="navigation after-head">
                                             <div class="burger after-head">
@@ -289,9 +289,9 @@
                             <div class="col col-lg-6">
                                 <div class="social-icons">
                                     <a class="phone" href="tel:<?=App::$config->telephone?>"><?=App::$config->telephone?></a>
-                                    <a href="<?=App::$config->facebook_link?>" class="social facebook"></a>
-                                    <a href="<?=App::$config->instagram_link?>" class="social insta"></a>
-                                    <a href="<?=App::$config->youtube_link?>" class="social youtube"></a>
+                                    <a href="<?=App::$config->facebookLink?>" class="social facebook"></a>
+                                    <a href="<?=App::$config->instagramLink?>" class="social insta"></a>
+                                    <a href="<?=App::$config->youtubeLink?>" class="social youtube"></a>
                                 </div>
                             </div>
                         </div>
