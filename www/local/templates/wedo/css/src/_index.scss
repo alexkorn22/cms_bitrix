@@ -245,6 +245,9 @@
       position: relative;
       .burger {
         right: 30px;
+        @include media-breakpoint-up(md){
+          right: 15px;
+        }
       }
     }
   }
@@ -727,7 +730,7 @@
       background: #424242;
       background-position: center;
       background-repeat: no-repeat;
-      transition: 1s ease;
+      transition: 0.5s ease;
       //transition-delay: 0.2s;
       &:hover {
         //width: 200%;
