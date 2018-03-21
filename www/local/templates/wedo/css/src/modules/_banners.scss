@@ -5,9 +5,9 @@
   background-image: url(../../images/banners/bg-banner-catalog2.png);
   .wrap-banner-img {
     .banner-img {
-      top: -30%;
+      top: -25%;
       @include media-breakpoint-up(xl){
-        top: -50%;
+        top: -45%;
       }
     }
   }
@@ -54,6 +54,9 @@
         font-family: $Semibold;
       }
     }
+    @include media-breakpoint-down(md) {
+      width: 90%;
+     }
     @include media-breakpoint-down(sm){
       .title-banner {
         font-size: 30px;
@@ -79,7 +82,7 @@
     .banner-img {
       position: absolute;
       max-width: 100%;
-      top: -15%;
+      top: -10%;
       img {
         width: 100%;
       }

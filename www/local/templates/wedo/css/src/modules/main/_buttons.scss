@@ -52,7 +52,7 @@
   }
 
   &_small-mobile {
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(xs){
       padding: 10px 15px;
       font-size: 18px;
     }
