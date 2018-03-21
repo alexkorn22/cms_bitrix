@@ -1,0 +1,24 @@
+.modal {
+
+}
+#filter {
+  .modal-dialog {
+    .modal-content {
+      background-color: $red;
+      .modal-header {
+        border: none;
+        #title-filter {
+          color: $white;
+          font-size: 24px;
+          width: 100%;
+          text-align: center;
+        }
+        .close {
+          text-shadow: none;
+          font-size: 26px;
+        }
+      }
+    }
+  }
+
+}
