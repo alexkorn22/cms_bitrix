@@ -89,11 +89,26 @@
       }
       .characteristics {
         .list-group {
+          width: 100%;
+
           .item {
+            overflow: hidden;
+            margin: 0;
             font-size: 18px;
-            line-height: 26px;
-            display: flex;
-            width: 100%;
+            &:after {
+              content:'....................................................................................................................................................................................................................................................................................................................';
+              display: block;
+              white-space: nowrap;
+              overflow: hidden;
+            }
+            span:first-of-type {
+              float:left;
+              margin-right: 10px;
+            }
+            span:last-of-type {
+              float:right;
+              margin-left: 10px;
+            }
           }
         }
       }
@@ -104,8 +119,8 @@
         }
         .characteristics {
           .list-group .item{
-            font-size: 15px;
-            line-height: 20px;
+            font-size: 14px;
+            //line-height: 20px;
           }
         }
       }
