@@ -14,7 +14,7 @@
             <div class="col-12 col-lg-6">
                 <div class="right">
                     <div class="catalog-btn-filter">
-                        <button type="button" class="btn btn_red btn_big btn_small-mobile">Подобрать кофемашину</button>
+                        <button type="button" class="btn btn_red btn_big btn_small-mobile" data-toggle="modal" data-target="#filter">Подобрать кофемашину</button>
                     </div>
                 </div>
             </div>
@@ -87,5 +87,62 @@
     //= templates/catalog_product.html
 
 </div>
+
+
+
+<!--Modal Filter-->
+<div class="modal fade" id="filter" tabindex="-1" role="dialog" aria-labelledby="filter" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Сервис подбора кофемашины</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="select1">Я буду использовать кофемашину:</label>
+                    <select class="form-control custom-select" id="select1">
+                        <option>не указано</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="select2">Количество порций в день:</label>
+                    <select class="form-control custom-select" id="select2">
+                        <option>не указано</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="select3">Производительность в часы пик, порций/час:</label>
+                    <select class="form-control custom-select" id="select3">
+                        <option>не указано</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Хочу только новую кофемашину</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn_black btn_small-mobile btn_font-small">Подобрать</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 //= layouts/footer.html

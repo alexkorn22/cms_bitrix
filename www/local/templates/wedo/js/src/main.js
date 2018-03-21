@@ -70,12 +70,17 @@ $( document ).ready(function() {
         $('.block.cms').removeClass('big-section');
         $('.block.wmf').removeClass('small-section');
     });
+    /*END section wmf-cms*/
 
-    // $('.burger').on('click', function () {
-    //     $('#line-menu').toggleClass("none")
-    // })
+
+//open modal
+    $('#filter').on('shown.bs.modal', function () {
+
+    })
+//END open modal
+
 });
-/*END section wmf-cms*/
+
 
 // SCROLL NAVBAR
 window.onscroll = function() {stickyMenu()};
