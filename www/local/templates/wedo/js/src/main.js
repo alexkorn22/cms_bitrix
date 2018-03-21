@@ -1,5 +1,4 @@
 $( document ).ready(function() {
-
 /*burger menu*/
     $('.burger').on('click',function() {
         $('.top-fixed-line').toggleClass('open');
@@ -74,34 +73,35 @@ $( document ).ready(function() {
     // $('.burger').on('click', function () {
     //     $('#line-menu').toggleClass("none")
     // })
-});
-/*END section wmf-cms*/
+    /*END section wmf-cms*/
 
-// SCROLL NAVBAR
-window.onscroll = function() {stickyMenu()};
+    // SCROLL NAVBAR
+    window.onscroll = function() {stickyMenu()};
 
-var navbar = document.getElementById("line-menu");
-var sticky = navbar.offsetTop;
-var prevScrollpos = window.pageYOffset;
+    var navbar = document.getElementById("line-menu");
+    var sticky = navbar.offsetTop;
+    var prevScrollpos = window.pageYOffset;
 
-function stickyMenu() {
-    if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
-    } else {
-        navbar.classList.remove("sticky");
+    function stickyMenu() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            navbar.style.transition = "all 0.5s";
+            navbar.style.top = "0";
+        } else {
+            navbar.style.transition = "all 0.5s";
+            navbar.style.top = "-115px";
+        }
+        prevScrollpos = currentScrollPos;
     }
-
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-        navbar.style.transition = "all 0.5s";
-        navbar.style.top = "0";
-    } else {
-        navbar.style.transition = "all 0.5s";
-        navbar.style.top = "-115px";
-    }
-    prevScrollpos = currentScrollPos;
-}
 // END SCROLL
+});
+
 
 //  Responsice VIDEO background
 var video = document.querySelector('video');
