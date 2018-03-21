@@ -64,22 +64,16 @@ $( document ).ready(function() {
         $('.block.cms').removeClass('big-section');
         $('.block.wmf').removeClass('small-section');
     });
+/*END section wmf-cms*/
 
-    // $('.burger').on('click', function () {
-    //     $('#line-menu').toggleClass("none")
-    // })
-    /*END section wmf-cms*/
-
-
-    //  Responsice VIDEO background
-    window.onresize = setVideoDimensions;
-    setVideoDimensions();
-    //  END OF VIDEO background
+//  Responsice VIDEO background
+    $(window).resize(setVideoDimensions());
+//  END OF VIDEO background
 
 
 // SCROLL NAVBAR
     var navbarData = startNav();
-    window.onscroll = function() {stickyMenu(navbarData)};
+    $(window).scroll(function(){stickyMenu(navbarData);});
 // END SCROLL
 
 });
@@ -87,7 +81,7 @@ $( document ).ready(function() {
 function startNav(){
     var navbar  = $("#line-menu");
     var sticky = navbar.offset().top;
-    var prevScrollPos = window.pageYOffset;
+    var prevScrollPos = $(window).scrollTop();
     var navbarData = {
         'navObject':navbar,
         'sticky':sticky,
@@ -98,13 +92,14 @@ function startNav(){
 
 function stickyMenu(navbarData) {
      var navbar = navbarData['navObject'];
-    if (window.pageYOffset >= navbarData['sticky']) {
+     var pageYOffset = $(window).scrollTop();
+    if ( pageYOffset >= navbarData['sticky']) {
         navbar.addClass("sticky")
     } else {
         navbar.removeClass("sticky");
     }
 
-    var currentScrollPos = window.pageYOffset;
+    var currentScrollPos = pageYOffset;
     if (navbarData['prevScrollPos'] > currentScrollPos) {
         navbar.css({transition:"all 0.5s",top:'0'});
     } else {
@@ -121,15 +116,13 @@ function clickBurger(){
 }
 
 function setVideoDimensions () {
-    var video = document.querySelector('video');
+    var video = $('video');
     if (!video) {
         return;
     }
-    if (window.innerWidth / window.innerHeight > 16 / 9) {
-        video.style.width = '100vw';
-        video.style.height = 'calc(100vw * 9 / 16)';
+    if ($(window).innerWidth() / $(window).innerHeight() > 16 / 9) {
+        video.css({width: '100vw',height:"calc(100vw * 9 / 16)"});
     } else {
-        video.style.width = 'calc(100vh * 16 / 9)';
-        video.style.height = '100vh';
+        video.css({width: 'calc(100vh * 16 / 9)',height:'100vh'});
     }
 }
