@@ -42,9 +42,6 @@ if (isset($templateData['TEMPLATE_THEME']))
 
 </div>
 
-<div class="bx-filter <?=$templateData["TEMPLATE_CLASS"]?> <?if ($arParams["FILTER_VIEW_MODE"] == "HORIZONTAL") echo "bx-filter-horizontal"?>">
-	<div class="bx-filter-section container-fluid">
-		<div class="row">
             <!--  our modal goes herel -->
             <div class="modal fade" id="filter" tabindex="-1" role="dialog" aria-labelledby="filter" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
@@ -55,13 +52,12 @@ if (isset($templateData['TEMPLATE_THEME']))
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
+
                         <div class="modal-body">
                             <form name="<?echo $arResult["FILTER_NAME"]."_form"?>" action="<?echo $arResult["FORM_ACTION"]?>" method="get" class="smartfilter">
-
                                 <?foreach($arResult["HIDDEN"] as $arItem):?>
                                     <input type="hidden" name="<?echo $arItem["CONTROL_NAME"]?>" id="<?echo $arItem["CONTROL_ID"]?>" value="<?echo $arItem["HTML_VALUE"]?>" />
                                 <?endforeach;?>
-                                <div class="row">
                                     <?
                                     foreach($arResult["ITEMS"] as $key=>$arItem)
                                     {
@@ -79,16 +75,12 @@ if (isset($templateData['TEMPLATE_THEME']))
                                         )
                                             continue;
                                         ?>
-                                        <div class="<?if ($arParams["FILTER_VIEW_MODE"] == "HORIZONTAL"):?>col-sm-6 col-md-4<?else:?>col-lg-12 col-md-12 col-sm-12<?endif?> bx-filter-parameters-box <?if ($arItem["DISPLAY_EXPANDED"]== "Y"):?>bx-active<?endif?>">
-                                            <div class="bx-filter-block" data-role="bx_filter_block">
-                                                <div class="row">
                                                     <?
                                                     $arCur = current($arItem["VALUES"]);
                                                     switch ($arItem["DISPLAY_TYPE"])
                                                     {
                                                         case "B"://NUMBERS
                                                         ?>
-                                                            <div class="">
                                                                     <input
                                                                             class="min-price"
                                                                             type="hidden"
@@ -97,21 +89,17 @@ if (isset($templateData['TEMPLATE_THEME']))
                                                                             value="0"
                                                                             size="5"
                                                                     />
-                                                            </div>
-                                                            <div class="">
                                                                     <div class="form-group">
-                                                                        <label for="select3"><?=$arItem["NAME"]?></label>
+                                                                        <label for="select2"><?=$arItem["NAME"]?> : </label>
                                                                         <select class="form-control custom-select" name="<?echo $arItem["VALUES"]["MAX"]["CONTROL_NAME"]?>">
                                                                             <option value="5000">Не указано</option>
-                                                                            <option value="49">до 50</option>
-                                                                            <option value="99">до 100</option>
-                                                                            <option value="149" >до 150</option>
-                                                                            <option value="179">до 180</option>
-                                                                            <option value="199">до 200</option>
+                                                                            <option value="51">до 50</option>
+                                                                            <option value="101">до 100</option>
+                                                                            <option value="151" >до 150</option>
+                                                                            <option value="181">до 180</option>
+                                                                            <option value="201">до 200</option>
                                                                         </select>
                                                                     </div>
-
-                                                            </div>
                                                         <?
                                                         break;
                                                         case "P"://DROPDOWN
@@ -247,14 +235,10 @@ if (isset($templateData['TEMPLATE_THEME']))
                                                             <?
                                                     }
                                                     ?>
-                                                </div>
-                                                <div style="clear: both"></div>
-                                            </div>
-                                        </div>
                                         <?
                                     }
                                     ?>
-                                </div><!--//row-->
+
                                 <div class="modal-footer">
                                     <div class="row">
                                         <div class="col-xs-12 bx-filter-button-box">
@@ -287,10 +271,6 @@ if (isset($templateData['TEMPLATE_THEME']))
                 </div>
             </div>
             <!--  end of modal -->
-            <div class="<?if ($arParams["FILTER_VIEW_MODE"] == "HORIZONTAL"):?>col-sm-6 col-md-4<?else:?>col-lg-12<?endif?> bx-filter-title"></div></div>
-
-	</div>
-</div>
 
 <script type="text/javascript">
 	var smartFilter = new JCSmartFilter('<?echo CUtil::JSEscape($arResult["FORM_ACTION"])?>', '<?=CUtil::JSEscape($arParams["FILTER_VIEW_MODE"])?>', <?=CUtil::PhpToJSObject($arResult["JS_FILTER_PARAMS"])?>);
