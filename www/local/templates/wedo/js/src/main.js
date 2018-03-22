@@ -2,7 +2,7 @@ $( document ).ready(function() {
 
     $('.burger').on('click', clickBurger );
 
-    $('.center').slick({
+    $('.clients-slider').slick({
         centerMode: true,
         infinite: true,
         slidesToShow: 5,
