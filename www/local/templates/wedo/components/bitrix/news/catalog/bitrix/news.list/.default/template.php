@@ -17,47 +17,74 @@ $this->setFrameMode(true);
 <?if($arParams["DISPLAY_TOP_PAGER"]):?>
 	<?=$arResult["NAV_STRING"]?>
 <?endif;?>
+<? $countCMachines = 1 ; $countBanners   = 1 ; ?>
 
-    <? $countCMachines = 1 ;
-       $countBanners   = 1 ; ?>
-<?foreach($arResult["ITEMS"] as $arItem):?>
-    <div class="row">
-        <div class="container">
-	        <div class="col-md-4" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-                    <?if($arParams["DISPLAY_PICTURE"]!="N"):?>
-                        <?if (is_array($arItem["PREVIEW_PICTURE"])):?>
-                            <div>
-                                <img
-                                    src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>"
-                                    alt="<?=$arItem["PREVIEW_PICTURE"]["ALT"]?>"
-                                    title="<?=$arItem["PREVIEW_PICTURE"]["TITLE"]?>"
-                                    />
+<!-- first block -->
+    <div class="container-fluid catalog">
+        <!-- products section -->
+        <?foreach($arResult["ITEMS"] as $arItem):?>
+            <div class="wrap-product">
+                <div class="row">
+                    <div class="col-12 order-1 d-block d-lg-none">
+                        <div class="wrap-title-charact">
+                            <div class="title-product">
+                                <?=$arItem["NAME"]?>
                             </div>
-                        <?endif;?>
-                    <?endif;?>
-            </div>
-	        <div class="col-md-4">
-                    <div class="row">
-                        <div>
-                                <a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$arItem["NAME"]?></a>
-                            <div>
-                                Цена : <?=$arResult[$arItem['ID']]['PRICE']?> EUR
+                            <div class="sub-title-product">
+                                Сделайте первый шаг к профессиональному кофе
                             </div>
                         </div>
-                         <div class="col-xs-5">
-                              <div class="bx-newslist-more"><a class="btn btn-primary btn-lg" href="<?echo $arItem["DETAIL_PAGE_URL"]?>"><?echo GetMessage("CT_BNL_GOTO_DETAIL")?></a></div>
-                          </div>
                     </div>
+                    <div class="col-6 order-2 order-lg-1 col-md-6 col-lg-3">
+                        <div class="wrap-img">
+                            <div class="img-product">
+                                <img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 order-4 order-lg-2 col-md-12 col-lg-6">
+                        <div class="wrap-title-charact">
+                            <div class="title-product d-none d-lg-block">
+                                <?=$arItem["NAME"]?>
+                            </div>
+                            <div class="sub-title-product d-none d-lg-block">
+                                Сделайте первый шаг к профессиональному кофе
+                            </div>
+                            <div class="characteristics">
+                                <div class="list-group">
+                                    <?foreach($arResult[$arItem['ID']] as $prop):?>
+                                        <?if($prop['CODE'] == 'PRICE'){$price = $prop['VALUE'];}?>
+                                        <?if(!empty($prop['VALUE']) && $prop['SORT'] < 5000 ):?>
+                                            <p class="item"> <span><?=$prop['NAME']?> </span><span> <?=$prop['VALUE']?></span></p>
+                                        <?endif;?>
+                                    <?endforeach;?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 order-3 order-lg-3 col-md-6 col-lg-3">
+                        <div class="wrap-price">
+                            <div class="rpice">
+                                <p><?=$price?> грн.</p>
+                            </div>
+                            <div class="btn-more-info">
+                                <button type="button" class="btn btn_none-fill btn_small-mobile"><a href="<?=$arItem["DETAIL_PAGE_URL"]?>">Подробнее</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        <!-- Banners -->
+            <?if($countCMachines %2 == 0 ):?>
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <?  include ROOT.$this->GetFolder() .'/banners/'.($countBanners).'.php' ?>
+                    </div>
+                </div>
+                <? $countBanners++; ?>
+            <?endif;?>
+            <? $countCMachines++; ?>
+        <?endforeach;?>
+        <!-- -->
     </div>
-    <?if($countCMachines %2 == 0 ):?>
-        <div class="row text-center">
-            <div class="col-md-12">
-            <?  include ROOT.$this->GetFolder() .'/banners/'.($countBanners).'.php' ?>
-            </div>
-        </div>
-        <? $countBanners++; ?>
-    <?endif;?>
-    <? $countCMachines++; ?>
-<?endforeach;?>
+<!-- -->

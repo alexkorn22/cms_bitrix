@@ -12,7 +12,10 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<?$APPLICATION->IncludeComponent(
+
+<?
+//TODO : return the smart filter again
+$APPLICATION->IncludeComponent(
     "bitrix:catalog.smart.filter",
     "",
     Array(
@@ -39,6 +42,7 @@ $this->setFrameMode(true);
         "XML_EXPORT" => "N"
     )
 );?>
+
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"",

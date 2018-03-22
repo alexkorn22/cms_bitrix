@@ -18,18 +18,39 @@ if (isset($templateData['TEMPLATE_THEME']))
 	$this->addExternalCss($templateData['TEMPLATE_THEME']);
 }
 ?>
+<div class="container-fluid catalog">
+
+    <div class="wrap-filter">
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="left">
+                    <div class="catalog-text-head">
+                        <p>Какая кофемашина подойдет Вам?</p>
+                        <p>Не можете выбрать, какую профессиональную кофемашину купить для ваших задач? Воспользуйтесь сервисом подбора, который порекомендует вам нужную модель. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="right">
+                    <div class="catalog-btn-filter">
+                        <button type="button" class="btn btn_red btn_big btn_small-mobile" data-toggle="modal" data-target="#filter">Подобрать кофемашину</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
 <div class="bx-filter <?=$templateData["TEMPLATE_CLASS"]?> <?if ($arParams["FILTER_VIEW_MODE"] == "HORIZONTAL") echo "bx-filter-horizontal"?>">
 	<div class="bx-filter-section container-fluid">
 		<div class="row">
-            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#filterModal">
-                <?echo GetMessage("CT_BCSF_FILTER_TITLE")?>
-            </button>
             <!--  our modal goes herel -->
-            <div class="modal fade" id="filterModal" tabindex="-1" role="dialog" aria-hidden="true">
-                <div class="modal-dialog" role="document">
+            <div class="modal fade" id="filter" tabindex="-1" role="dialog" aria-labelledby="filter" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h2 class="modal-title" id="exampleModalLabel">Сервис подбора кофемашины</h2>
+                            <h5 class="modal-title" id="title-filter">Сервис подбора кофемашины</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -537,18 +558,11 @@ if (isset($templateData['TEMPLATE_THEME']))
                                             <div class="bx-filter-block">
                                                 <div class="bx-filter-parameters-box-container">
                                                     <input
-                                                            class="btn btn-primary"
+                                                            class="btn btn_black btn_small-mobile btn_font-small"
                                                             type="submit"
                                                             id="set_filter"
                                                             name="set_filter"
-                                                            value="<?=GetMessage("CT_BCSF_SET_FILTER")?>"
-                                                    />
-                                                    <input
-                                                            class="btn btn-link"
-                                                            type="submit"
-                                                            id="del_filter"
-                                                            name="del_filter"
-                                                            value="<?=GetMessage("CT_BCSF_DEL_FILTER")?>"
+                                                            value="Подобрать"
                                                     />
                                                     <div class="bx-filter-popup-result <?if ($arParams["FILTER_VIEW_MODE"] == "VERTICAL") echo $arParams["POPUP_POSITION"]?>" id="modef" <?if(!isset($arResult["ELEMENT_COUNT"])) echo 'style="display:none"';?> style="display: inline-block;">
                                                         <?echo GetMessage("CT_BCSF_FILTER_COUNT", array("#ELEMENT_COUNT#" => '<span id="modef_num">'.intval($arResult["ELEMENT_COUNT"]).'</span>'));?>
