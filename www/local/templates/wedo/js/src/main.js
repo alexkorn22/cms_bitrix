@@ -108,7 +108,9 @@ $( document ).ready(function() {
         dots: false,
         nav: false,
         vertical: true,
-        arrows:false,
+        arrows: false,
+        centerMode: false,
+        verticalSwiping: true,
         focusOnSelect: true
     });
 //Конец слайдер в карточке товара

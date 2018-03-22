@@ -66,8 +66,8 @@
           align-items: center;
           justify-content: center;
           img {
-            width: 80%;
-            height: auto;
+            width: auto;
+            height: 600px;
           }
         }
       }
@@ -81,7 +81,9 @@
           margin: 20px 0;
           width: 100%;
           img {
-            width: 100%;
+            //width: 100%;
+            height: 104px;
+            width: auto;
             //height: auto;
           }
         }
@@ -170,4 +172,21 @@
     }
   }
 
+}
+
+
+.wrapp-table {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  .col-table {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    width: 15%;
+    align-items: center;
+    height: 200px;
+    justify-content: center;
+  }
 }
