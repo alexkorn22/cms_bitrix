@@ -23,11 +23,8 @@
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH .'/js/libs/slick.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH .'/js/dist/main.js');
 
-
      ?>
-	<title><?$APPLICATION->ShowTitle()?></title>
-    
-    
+	<title><?$APPLICATION->ShowTitle()?></title
 </head>
 <body>
 <?$APPLICATION->ShowPanel();?>
@@ -301,5 +298,4 @@
         </div>
     </header>
 <? endif;?>
-
 <div id="wrap">
