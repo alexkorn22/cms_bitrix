@@ -24,7 +24,7 @@ $APPLICATION->IncludeComponent(
         "CACHE_TYPE" => "A",
         "DISPLAY_ELEMENT_COUNT" => "N",
         "FILTER_NAME" => "arrFilter",
-        "FILTER_VIEW_MODE" => "horizontal",
+        "FILTER_VIEW_MODE" => "vertical",
         "IBLOCK_ID" => "12",
         "IBLOCK_TYPE" => "catalogs",
         "PAGER_PARAMS_NAME" => "arrPager",
