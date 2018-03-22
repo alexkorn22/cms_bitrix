@@ -17,18 +17,43 @@
     }
   }
 
-  .tabs {
+  .tabs-kartochka {
     ul {
       display: flex;
       align-items: center;
       justify-content: space-between;
       li {
+        text-align: center;
         a {
           text-decoration: none;
           color: $black;
+          font-size: 20px;
+          line-height: 22px;
+          cursor: pointer;
+          display: inline-block;
+          position: relative;
+          margin-bottom: 0.5em;
+          &:after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 3px;
+            background: $red;
+            margin: auto;
+            transition: all .5s ease;
+            margin-top: 5px;
+          }
+          &:hover::after,
+          &:focus::after{
+            width: 100%;
+          }
         }
       }
     }
+  }
+
+  #osnovnoe {
+    margin: 50px 0;
   }
 
 }

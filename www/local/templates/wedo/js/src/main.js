@@ -79,6 +79,37 @@ $( document ).ready(function() {
     })
 //END open modal
 
+//плавный скролл к якорю
+    $(".tabs-kartochka").on("click","a", function (event) {
+        event.preventDefault();
+        //забираем идентификатор бока с атрибута href
+        var id  = $(this).attr('href'),
+        //узнаем высоту от начала страницы до блока на который ссылается якорь
+        top = $(id).offset().top;
+        //анимируем переход на расстояние - top за 1500 мс
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
+//конец плавный скролл к якорю
+
+
+//слайдер в карточке товара
+    $('.product-img-main').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.product-img-preview'
+    });
+    $('.product-img-preview').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.product-img-main',
+        dots: false,
+        centerMode: true,
+        focusOnSelect: true
+    });
+//Конец слайдер в карточке товара
+
 });
 
 
