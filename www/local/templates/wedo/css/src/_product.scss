@@ -142,10 +142,32 @@
         display: block;
         margin: 10px 0 20px 0;
         color: $red;
+        font-family: $Semibold;
         text-decoration: underline;
       }
     }
 
+  }
+
+  #raschet-okup {
+    .calculate-raschet {
+      .wrap-inpit {
+        text-align: center;
+        label {
+          font-size: 22px;
+        }
+        .custom-input {
+          width: 90px;
+          font-size: 18px;
+          border: 1px solid $red;
+          margin: 0 auto;
+          text-align: center;
+          &:focus {
+            box-shadow: none;
+          }
+        }
+      }
+    }
   }
 
 }
