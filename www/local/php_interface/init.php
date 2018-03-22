@@ -23,6 +23,7 @@ require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/epilog_afte
  */
 
 define('ROOT', $_SERVER['DOCUMENT_ROOT']);
+define('IMAGES_PATH','/local/templates/wedo/images');
 
 //***** AUTOLOAD CLASSES *****
 $pathArtorgClasses = '/local/classes/';
@@ -59,6 +60,4 @@ function getArClasses($path,$arResult = array()){
 App::Init();
 include_once $_SERVER['DOCUMENT_ROOT'] . '/local/files/events.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/local/files/functions.php';
-
-
 ?>
