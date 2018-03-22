@@ -87,41 +87,11 @@
         padding-bottom: 15px;
         line-height: 30px;
       }
-      .characteristics {
-        .list-group {
-          width: 100%;
 
-          .item {
-            overflow: hidden;
-            margin: 0;
-            font-size: 18px;
-            &:after {
-              content:'....................................................................................................................................................................................................................................................................................................................';
-              display: block;
-              white-space: nowrap;
-              overflow: hidden;
-            }
-            span:first-of-type {
-              float:left;
-              margin-right: 10px;
-            }
-            span:last-of-type {
-              float:right;
-              margin-left: 10px;
-            }
-          }
-        }
-      }
       @include media-breakpoint-down(sm){
         .sub-title-product {
           font-size: 20px;
           line-height: 22px;
-        }
-        .characteristics {
-          .list-group .item{
-            font-size: 14px;
-            //line-height: 20px;
-          }
         }
       }
     }
@@ -165,6 +135,38 @@
       &:hover {
         box-shadow: none;
       }
+    }
+  }
+}
+
+.characteristics {
+  .list-group {
+    width: 100%;
+
+    .item {
+      overflow: hidden;
+      margin: 0;
+      font-size: 18px;
+      &:after {
+        content:'....................................................................................................................................................................................................................................................................................................................';
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      span:first-of-type {
+        float:left;
+        margin-right: 10px;
+      }
+      span:last-of-type {
+        float:right;
+        margin-left: 10px;
+      }
+    }
+  }
+  @include media-breakpoint-down(sm){
+    .list-group .item{
+      font-size: 14px;
+      //line-height: 20px;
     }
   }
 }

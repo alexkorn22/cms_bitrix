@@ -18,6 +18,7 @@
   }
 
   .tabs-kartochka {
+    padding-right: 15px;
     ul {
       display: flex;
       align-items: center;
@@ -54,6 +55,97 @@
 
   #osnovnoe {
     margin: 50px 0;
+
+    .image-product {
+      .product-img-main {
+        width: 100%;
+        .img-main {
+          width: 100%;
+          outline: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            width: 80%;
+            height: auto;
+          }
+        }
+      }
+      .product-img-preview {
+        width: 80%;
+        margin: 0 auto;
+        //height: 100%;
+        .preview {
+          outline: none;
+          //height: auto;
+          margin: 20px 0;
+          width: 100%;
+          img {
+            width: 100%;
+            //height: auto;
+          }
+        }
+      }
+    }
+    .text-product {
+      .product-charact {
+        padding-right: 15px;
+        .title-charact {
+          font-size: 30px;
+          font-family: $Bold;
+        }
+      }
+      .product-price {
+        margin: 25px 0;
+        p {
+          font-size: 34px;
+          margin: 0;
+        }
+        span {
+          color: $red;
+        }
+      }
+      .product-button {
+
+      }
+      .price-comment {
+        margin: 25px 0;
+        p {
+          margin: 0;
+          font-size: 15px;
+          span {
+            color: $red;
+          }
+        }
+      }
+    }
+    .product-description {
+      margin: 60px 0;
+      .title {
+        font-size: 30px;
+        font-family: $Bold;
+      }
+      .text {
+        padding-right: 25px;
+      }
+
+      .toggle-text {
+        width: 100%;
+        margin: 50px auto;
+      }
+      .toggle-text-content  {
+        span {
+          display: none;
+        }
+      }
+      .toggle-text-link {
+        display: block;
+        margin: 10px 0 20px 0;
+        color: $red;
+        text-decoration: underline;
+      }
+    }
+
   }
 
 }
