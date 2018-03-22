@@ -60,7 +60,14 @@ $( document ).ready(function() {
         $('.block.cms').removeClass('big-section');
         $('.block.wmf').removeClass('small-section');
     });
+    /*END section wmf-cms*/
 
+
+//open modal
+    $('#filter').on('shown.bs.modal', function () {
+
+    })
+//END open modal
 
     $(window).resize(setVideoDimensions);
     setVideoDimensions();
