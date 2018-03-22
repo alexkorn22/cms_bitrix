@@ -193,7 +193,7 @@ $APPLICATION->SetTitle("Кофемашины");
                 </div>
             </div>
             <div class="wrap-slider">
-                <div class="center">
+                <div class="clients-slider">
                     <div class="slide">
                         <img src="<?=IMAGES_PATH?>/client1.png" alt="">
                     </div>
