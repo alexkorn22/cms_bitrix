@@ -1,9 +1,7 @@
 $( document ).ready(function() {
-/*burger menu*/
-    $('.burger').on('click', clickBurger );
-/*END burger menu*/
 
-/*slider clients*/
+    $('.burger').on('click', clickBurger );
+
     $('.center').slick({
         centerMode: true,
         infinite: true,
@@ -46,9 +44,7 @@ $( document ).ready(function() {
             // instead of a settings object
         ]
 });
-/*END slider clients*/
 
-/*section wmf-cms*/
     $( ".block.wmf" ).hover(function() {
         $('.block.wmf').addClass('big-section');
         $('.block.cms').addClass('small-section');
@@ -64,17 +60,13 @@ $( document ).ready(function() {
         $('.block.cms').removeClass('big-section');
         $('.block.wmf').removeClass('small-section');
     });
-/*END section wmf-cms*/
-
-//  Responsice VIDEO background
-    $(window).resize(setVideoDimensions());
-//  END OF VIDEO background
 
 
-// SCROLL NAVBAR
+    $(window).resize(setVideoDimensions);
+    setVideoDimensions();
+
     var navbarData = startNav();
     $(window).scroll(function(){stickyMenu(navbarData);});
-// END SCROLL
 
 });
 
@@ -91,21 +83,21 @@ function startNav(){
 }
 
 function stickyMenu(navbarData) {
-     var navbar = navbarData['navObject'];
+     var navbar = navbarData.navObject;
      var pageYOffset = $(window).scrollTop();
-    if ( pageYOffset >= navbarData['sticky']) {
+    if ( pageYOffset >= navbarData.sticky) {
         navbar.addClass("sticky")
     } else {
         navbar.removeClass("sticky");
     }
 
     var currentScrollPos = pageYOffset;
-    if (navbarData['prevScrollPos'] > currentScrollPos) {
+    if (navbarData.prevScrollPos > currentScrollPos) {
         navbar.css({transition:"all 0.5s",top:'0'});
     } else {
         navbar.css({transition:"all 0.5s",top:'-115px'});
     }
-    navbarData['prevScrollPos'] = currentScrollPos;
+    navbarData.prevScrollPos = currentScrollPos;
 }
 
 function clickBurger(){
