@@ -288,6 +288,44 @@
 
   #documents {
     padding-top: 100px;
+
+    .schedule, .instructions {
+      margin: 35px 0 80px 0;
+      .item {
+        margin-bottom: 30px;
+      }
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: auto;
+          height: 80px;
+        }
+      }
+      .name {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
+        p {
+          font-size: 28px;
+          line-height: 35px;
+          margin:0;
+        }
+      }
+      .open {
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        height: 100%;
+        a {
+          color: $red;
+          font-size: 22px;
+          font-family: $Light;
+        }
+      }
+    }
   }
 
 }
