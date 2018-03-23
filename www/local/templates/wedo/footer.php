@@ -2,6 +2,7 @@
 </div>
 
 <footer>
+    <div id="upbutton"></div>
     <div class="container-fluid">
         <div class="row wrap-content-footer">
             <div class="col-sm-12 order-1 order-md-1 col-md-3">

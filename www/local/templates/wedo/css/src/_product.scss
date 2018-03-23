@@ -135,7 +135,6 @@
 
       .toggle-text {
         width: 100%;
-        margin: 50px auto;
       }
       .toggle-text-content  {
         span {
@@ -153,6 +152,10 @@
   }
 
   #raschet-okup {
+    padding-top: 80px;
+    .section-description {
+      padding-bottom: 50px;
+    }
     .calculate-raschet {
       .wrap-inpit {
         text-align: center;
