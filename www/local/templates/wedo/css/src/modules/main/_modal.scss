@@ -4,7 +4,12 @@
 
 .custom-modal-dialog {
   .custom-modal-content {
-    background-color: #d32d1f;
+    &_bg-red {
+      background-color: #d32d1f;
+    }
+    &_bg-black {
+      background-color: $light-black;
+    }
     .custom-modal-header {
       padding-top: 25px;
       border: none;
