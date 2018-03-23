@@ -434,20 +434,31 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
+            <form class="consultation" novalidate>
             <div class="modal-body custom-modal-body">
                 <div class="form-group">
-                    <input type="text" class="form-control custom-input" id="name" placeholder="Имя">
+                    <input type="text" class="form-control custom-input" id="name" placeholder="Имя" required>
+                    <div class="invalid-feedback">
+                        Вы не указали имя!
+                    </div>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control custom-input" id="phone" placeholder="Телефон">
+                    <input type="text" class="form-control custom-input" id="phone" placeholder="Телефон" required>
+                    <div class="invalid-feedback">
+                        Вы не указали телефон!
+                    </div>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control custom-input" id="city" placeholder="Город">
+                    <input type="text" class="form-control custom-input" id="city" placeholder="Город" required>
+                    <div class="invalid-feedback">
+                       Вы не указали город!
+                    </div>
                 </div>
             </div>
             <div class="modal-footer custom-modal-footer">
-                <button type="button" class="btn btn_black btn_small-mobile btn_font-small">Заказать консультацию</button>
+                <button type="submit" class="btn btn_black btn_small-mobile btn_font-small">Заказать консультацию</button>
             </div>
+            </form>
         </div>
     </div>
 </div>
