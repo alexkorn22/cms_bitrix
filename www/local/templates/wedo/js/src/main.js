@@ -74,9 +74,7 @@ $( document ).ready(function() {
 
 
 //open modal
-    $('#filter').on('shown.bs.modal', function () {
-
-    })
+    $('#filter').on('shown.bs.modal');
 //END open modal
 
 //плавный скролл к якорю
