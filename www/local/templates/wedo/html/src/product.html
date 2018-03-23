@@ -87,7 +87,7 @@
                             <p>123 137 грн. <span>*</span></p>
                         </div>
                         <div class="product-button">
-                            <button type="button" class="btn btn_red">Заказать консультацию</button>
+                            <button type="button" class="btn btn_red" data-toggle="modal" data-target="#order-consultation">Заказать консультацию</button>
                         </div>
                         <div class="price-comment">
                             <p><span>*</span> Цена за базовую модель 1</p>
@@ -272,7 +272,7 @@
         <div class="row">
             <div class="col">
                 <div class="order-consultation">
-                    <button type="button" class="btn btn_red">Заказать консультацию</button>
+                    <button type="button" class="btn btn_red" data-toggle="modal" data-target="#order-consultation">Заказать консультацию</button>
                 </div>
             </div>
         </div>
@@ -396,7 +396,7 @@
             <div class="row">
                 <div class="col">
                     <div class="order-consultation">
-                        <button type="button" class="btn btn_black">Заказать консультацию</button>
+                        <button type="button" class="btn btn_black" data-toggle="modal" data-target="#order-consultation">Заказать консультацию</button>
                     </div>
                 </div>
             </div>
@@ -418,6 +418,35 @@
                         <button type="button" class="btn btn_red btn_font-small">Подробнее об условиях аренды</button>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Modal order-consultation-->
+<div class="modal fade" id="order-consultation" tabindex="-1" role="dialog" aria-labelledby="order-consultation" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom-modal-dialog" role="document">
+        <div class="modal-content custom-modal-content">
+            <div class="modal-header custom-modal-header">
+                <h5 class="modal-title custom-modal-title">Заявка на консультацию</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body custom-modal-body">
+                <div class="form-group">
+                    <input type="text" class="form-control custom-input" id="name" placeholder="Имя">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control custom-input" id="phone" placeholder="Телефон">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control custom-input" id="city" placeholder="Город">
+                </div>
+            </div>
+            <div class="modal-footer custom-modal-footer">
+                <button type="button" class="btn btn_black btn_small-mobile btn_font-small">Заказать консультацию</button>
             </div>
         </div>
     </div>

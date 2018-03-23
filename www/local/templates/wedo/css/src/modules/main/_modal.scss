@@ -1,77 +1,80 @@
 .modal {
 
 }
-#filter {
-  .modal-dialog {
-    .modal-content {
-      background-color: #d32d1f;
-      .modal-header {
-        padding-top: 25px;
-        border: none;
-        #title-filter {
-          color: $white;
-          font-size: 24px;
-          width: 100%;
-          text-align: center;
-        }
-        .close {
-          text-shadow: none;
-          font-size: 26px;
-          &:focus {
-            outline: none;
-          }
+
+.custom-modal-dialog {
+  .custom-modal-content {
+    background-color: #d32d1f;
+    .custom-modal-header {
+      padding-top: 25px;
+      border: none;
+      .custom-modal-title {
+        color: $white;
+        font-size: 24px;
+        width: 100%;
+        text-align: center;
+      }
+      .close {
+        text-shadow: none;
+        font-size: 26px;
+        &:focus {
+          outline: none;
         }
       }
-      .modal-body {
-        padding: 15px 50px;
-        .form-group {
-          label {
-            color: $black;
-            font-size: 16px;
+    }
+    .custom-modal-body {
+      padding: 15px 50px;
+      .form-group {
+        label {
+          color: $black;
+          font-size: 16px;
 
+        }
+        .custom-select, .custom-input {
+          background-color: transparent;
+          color: $white;
+          border: 2px solid $white;
+          font-size: 16px;
+          &:focus {
+            box-shadow: none;
           }
-          .custom-select {
-            background-color: transparent;
+          &::placeholder {
+            color: rgba($white, 0.7);
+          }
+          option {
+            background-color: $red;
             color: $white;
-            border: 2px solid $white;
-            &:focus {
-              box-shadow: none;
-            }
-            option {
-              background-color: $red;
-              color: $white;
-              span {
-                &:hover {
-                  background-color: #fff;
-                }
+            span {
+              &:hover {
+                background-color: #fff;
               }
             }
           }
         }
-        .custom-checkbox {
-          label {
-            color:$light-black;
-            font-size: 16px;
-          }
-          .custom-control-label {
-            &:before {
-              background-color: transparent;
-              border: 1px solid $white;
-            }
-          }
-        }
       }
-      .modal-footer {
-        padding-bottom: 30px;
-        border: 0;
-        justify-content: center;
-        .btn.btn_black{
-          &:hover {
-            background-color: $black;
+      .custom-checkbox {
+        label {
+          color:$light-black;
+          font-size: 16px;
+        }
+        .custom-control-label {
+          &:before {
+            background-color: transparent;
+            border: 1px solid $white;
           }
         }
       }
     }
+    .custom-modal-footer {
+      padding-bottom: 30px;
+      border: 0;
+      justify-content: center;
+      .btn.btn_black{
+        &:hover {
+          background-color: $black;
+        }
+      }
+    }
   }
-
 }
+
