@@ -53,9 +53,11 @@
     }
   }
 
-  #osnovnoe {
+  #osnovnoe, #raschet-okup, #pohozchie-tovari, #service-maintenance, #documents {
     margin: 50px 0;
+  }
 
+  #osnovnoe {
     .image-product {
       .product-img-main {
         width: 100%;
@@ -122,7 +124,7 @@
       }
     }
     .product-description {
-      margin: 60px 0;
+      margin-top: 60px;
       .title {
         font-size: 30px;
         font-family: $Bold;
@@ -148,7 +150,6 @@
         text-decoration: underline;
       }
     }
-
   }
 
   #raschet-okup {
@@ -174,7 +175,7 @@
       display: flex;
       align-items: center;
       justify-content: space-around;
-      margin: 40px 15px 40px 0;
+      margin: 30px 15px 30px 0;
 
       .col-table {
         display: flex;
@@ -206,6 +207,87 @@
         }
       }
     }
+    .comment-table {
+      width:100%;
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  #pohozchie-tovari {
+    padding-top: 100px;
+    .similar-product {
+      display: flex;
+      align-items:center;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 20px;
+      img {
+        width: auto;
+        height: 350px;
+      }
+      p {
+        font-size: 30px;
+        width: 100%;
+        text-align: center;
+        margin:0;
+        margin-top: 7px;
+      }
+    }
+  }
+
+  #service-maintenance {
+    padding-top: 100px;
+    .section-title .title {
+      padding-bottom: 5px;
+    }
+  }
+  .service-advantages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    img {
+      width: auto;
+      height: 75px;
+    }
+    p {
+      text-align: center;
+      padding: 0 35px;
+      margin: 0;
+      margin-top: 10px;
+    }
+    span {
+      color: $red;
+    }
+  }
+  .range-of-services {
+    margin: 70px 0;
+    p {
+      font-size: 26px;
+      line-height: 35px;
+    }
+    ul {
+      margin-left: 40px;
+      li {
+        list-style-type: disc;
+        font-size: 22px;
+        line-height: 32px;
+        font-family: $Light;
+      }
+    }
+  }
+  .order-consultation {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+
+  #documents {
+    padding-top: 100px;
   }
 
 }
