@@ -76,11 +76,7 @@ $this->setFrameMode(true);
             </div>
         <!-- Banners -->
             <?if($countCMachines %2 == 0 ):?>
-                <div class="row text-center">
-                    <div class="col-md-12">
                         <?  include ROOT.$this->GetFolder() .'/banners/'.($countBanners).'.php' ?>
-                    </div>
-                </div>
                 <? $countBanners++; ?>
             <?endif;?>
             <? $countCMachines++; ?>

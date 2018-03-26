@@ -2,7 +2,7 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Кофемашины");
 ?>
-
+<div id="wrap">
     <section id="cards-section">
         <div class="container-fluid">
             <div class="row justify-content-center">
@@ -151,7 +151,7 @@ $APPLICATION->SetTitle("Кофемашины");
                                         <div class="scroll-arrow"></div>
                                         <div class="scroll-arrow"></div>
                                     </div>
-                                    <a href="#" class="more-info">Каталог кофемашин</a>
+                                    <a href="/catalog/" class="more-info">Каталог кофемашин</a>
                                 </div>
                             </div>
                         </div>
@@ -219,6 +219,6 @@ $APPLICATION->SetTitle("Кофемашины");
             </div>
         </div>
     </section>
-
+</div>
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

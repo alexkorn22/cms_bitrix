@@ -13,10 +13,6 @@
 $this->setFrameMode(true);
 
 
-if (isset($templateData['TEMPLATE_THEME']))
-{
-	$this->addExternalCss($templateData['TEMPLATE_THEME']);
-}
 ?>
 <div class="container-fluid catalog">
 
@@ -54,7 +50,7 @@ if (isset($templateData['TEMPLATE_THEME']))
                         </div>
 
                         <div class="modal-body">
-                            <form name="<?echo $arResult["FILTER_NAME"]."_form"?>" action="<?echo $arResult["FORM_ACTION"]?>" method="get" class="smartfilter">
+                            <form name="<?echo $arResult["FILTER_NAME"]."_form"?>" action="<?echo $arResult["FORM_ACTION"]?>" method="get">
                                 <?foreach($arResult["HIDDEN"] as $arItem):?>
                                     <input type="hidden" name="<?echo $arItem["CONTROL_NAME"]?>" id="<?echo $arItem["CONTROL_ID"]?>" value="<?echo $arItem["HTML_VALUE"]?>" />
                                 <?endforeach;?>
@@ -91,7 +87,7 @@ if (isset($templateData['TEMPLATE_THEME']))
                                                                     />
                                                                     <div class="form-group">
                                                                         <label for="select2"><?=$arItem["NAME"]?> : </label>
-                                                                        <select class="form-control custom-select" name="<?echo $arItem["VALUES"]["MAX"]["CONTROL_NAME"]?>">
+                                                                        <select class="form-control custom-select" name="<?echo $arItem["VALUES"]["MAX"]["CONTROL_NAME"]?>" id="select2">
                                                                             <option value="5000">Не указано</option>
                                                                             <option value="51">до 50</option>
                                                                             <option value="101">до 100</option>
@@ -210,34 +206,23 @@ if (isset($templateData['TEMPLATE_THEME']))
                                                         break;
                                                         default://CHECKBOXES
                                                         ?>
-                                                            <div class="col-xs-12">
                                                                 <?foreach($arItem["VALUES"] as $val => $ar):?>
-                                                                    <div class="checkbox">
-                                                                        <label data-role="label_<?=$ar["CONTROL_ID"]?>" class="bx-filter-param-label <? echo $ar["DISABLED"] ? 'disabled': '' ?>" for="<? echo $ar["CONTROL_ID"] ?>">
-                                                        <span class="bx-filter-input-checkbox">
-                                                            <input
-                                                                    type="checkbox"
-                                                                    value="<? echo $ar["HTML_VALUE"] ?>"
-                                                                    name="<? echo $ar["CONTROL_NAME"] ?>"
-                                                                    id="<? echo $ar["CONTROL_ID"] ?>"
-                                                                <? echo $ar["CHECKED"]? 'checked="checked"': '' ?>
-                                                                    onclick="smartFilter.click(this)"
-                                                            />
-                                                            <span class="bx-filter-param-text" title="<?=$ar["VALUE"];?>"><?=$ar["VALUE"];?><?
-                                                                if ($arParams["DISPLAY_ELEMENT_COUNT"] !== "N" && isset($ar["ELEMENT_COUNT"])):
-                                                                    ?>&nbsp;(<span data-role="count_<?=$ar["CONTROL_ID"]?>"><? echo $ar["ELEMENT_COUNT"]; ?></span>)<?
-                                                                endif;?></span>
-                                                        </span>
-                                                                        </label>
-                                                                    </div>
+                                                                    <? if($ar['VALUE'] == 'Да'):?>
+                                                                        <div class="custom-control custom-checkbox">
+                                                                            <input
+                                                                                    type="checkbox"
+                                                                                    class="custom-control-input"
+                                                                                    value="<? echo $ar["HTML_VALUE"] ?>"
+                                                                                    name="<? echo $ar["CONTROL_NAME"] ?>"
+                                                                                    id="<? echo $ar["CONTROL_ID"] ?>"
+                                                                                    <? echo $ar["CHECKED"]? 'checked="checked"': '' ?>
+                                                                            >
+                                                                            <label  class="custom-control-label" for="<? echo $ar["CONTROL_ID"] ?>">Хочу только новую кофемашину</label>
+                                                                        </div>
+                                                                    <?endif;?>
                                                                 <?endforeach;?>
-                                                            </div>
-                                                            <?
-                                                    }
-                                                    ?>
-                                        <?
-                                    }
-                                    ?>
+                                                        <? } ?>
+                                    <? } ?>
 
                                 <div class="modal-footer">
                                     <div class="row">
@@ -271,7 +256,3 @@ if (isset($templateData['TEMPLATE_THEME']))
                 </div>
             </div>
             <!--  end of modal -->
-
-<script type="text/javascript">
-	var smartFilter = new JCSmartFilter('<?echo CUtil::JSEscape($arResult["FORM_ACTION"])?>', '<?=CUtil::JSEscape($arParams["FILTER_VIEW_MODE"])?>', <?=CUtil::PhpToJSObject($arResult["JS_FILTER_PARAMS"])?>);
-</script>
