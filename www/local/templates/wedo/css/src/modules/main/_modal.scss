@@ -28,6 +28,7 @@
           label {
             color: $black;
             font-size: 16px;
+
           }
           .custom-select {
             background-color: transparent;
@@ -46,33 +47,16 @@
               }
             }
           }
-          select.form-control:not([size]):not([multiple]) {
-            height: calc(3.25rem + 2px);
-          }
-          .form-control{
-            font-size: 1.5rem;
-          }
         }
         .custom-checkbox {
           label {
             color:$light-black;
             font-size: 16px;
-            margin-left: 6px;
           }
           .custom-control-label {
             &:before {
               background-color: transparent;
               border: 1px solid $white;
-              height: 1.5rem;
-              width: 1.5rem;
-            }
-          }
-          .custom-control-label {
-            &:after {
-              width: 2.3rem;
-              height: 2.3rem;
-              top: -0.2rem;
-              left: -.39rem;
             }
           }
         }
