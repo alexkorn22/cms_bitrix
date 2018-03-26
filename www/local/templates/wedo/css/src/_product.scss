@@ -199,9 +199,6 @@
         }
       }
     }
-    .custom-card {
-      border: 0;
-    }
     .wrapp-table {
       display: flex;
       align-items: center;
@@ -247,6 +244,10 @@
     }
   }
 
+  .custom-card {
+    border: 0;
+  }
+
   #pohozchie-tovari {
     padding-top: 100px;
     .slider-similar-products {
@@ -288,6 +289,7 @@
     }
   }
   .service-advantages {
+    margin-top: 40px;
     display: flex;
     align-items: center;
     justify-content: center;

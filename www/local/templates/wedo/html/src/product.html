@@ -14,7 +14,7 @@
                </div>
             </div>
         </div>
-        <div class="tabs-kartochka">
+        <div class="tabs-kartochka d-none d-md-block">
             <div class="row">
                 <div class="col">
                     <ul>
@@ -106,339 +106,391 @@
             </div>
 
         </div>
-        <div id="raschet-okup">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="section-title">
-                        <h2 class="title">Расчёт окупаемости</h2>
-                    </div>
-                    <div class="section-description">
-                        <p class="descr">Воспользуйтесь калькулятором, чтобы спрогнозировать срок окупеаемости кофемашины </p>
-                    </div>
-                </div>
-            </div>
-            <div class="calculate-raschet">
-            <div class="row justify-content-center">
-                <div class="col-lg-3">
-                    <div class="wrap-input">
-                        <div class="form-group">
-                            <label for="fild-coffee">Цена 1 кг. кофе (грн) *</label>
-                            <input type="text" class="form-control custom-input" id="fild-coffee" value="600">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="wrap-input">
-                        <div class="form-group">
-                            <label for="fild-realizaciy">Цена реализации (грн) *</label>
-                            <input type="text" class="form-control custom-input" id="fild-realizaciy" value="12">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="wrap-input">
-                        <div class="form-group">
-                            <label for="fild-porcii">Количество порций в день *</label>
-                            <input type="text" class="form-control custom-input" id="fild-porcii" value="100">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="wrap-input srok-okupaemosti">
-                        <div class="form-group">
-                            <label for="fild-srok-okupaemosti">Срок окупаемости (месяцев)</label>
-                            <input type="text" class="form-control custom-input" id="fild-srok-okupaemosti" value="4">
-                        </div>
-                        <p>
-                            <a class="" data-toggle="collapse" href="#open-table-calculate" role="button" aria-expanded="false" aria-controls="open-table-calculate">
-                                Подробнее
-                            </a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            </div>
-            <div class="collapse" id="open-table-calculate">
-                <div class="card card-body custom-card">
-                    <div class="wrapp-table">
-                        <div class="col-table"><p>Цена кофемашины  (грн)</p> <div>300 000</div></div>
-                        <div class="col-table"><p>Себестоимость напитка (грн)</p> <div>5</div></div>
-                        <div class="col-table"><p>Цена реализации напитка (грн)</p> <div>12</div></div>
-                        <div class="col-table"><p>Количество порций в день</p> <div>100</div></div>
-                        <div class="col-table"><p>Сервисное обслуживание в месяц (грн)</p> <div>0</div></div>
-                        <div class="col-table"><p class="bold-col-table">Маржинальный доход в месяц (грн)</p> <div class="bold-col-table">2600</div></div>
-                        <div class="col-table"><p>Срок окупаемости (месяцев)</p> <div>0</div></div>
-                    </div>
-                </div>
-            </div>
-            <div class="comment-table">
-                <p>* Рекомендованные значения для данной модели кофемашины</p>
-            </div>
-        </div>
-        <div id="pohozchie-tovari">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="section-title">
-                        <h2 class="title">Похожие товары</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="slider-similar-products">
-                        <div class="similar-product">
-                            <a href="#">
-                                <img src="../../images/product/cm4.png" alt="">
-                                <p>WMF 5000 S</p>
-                            </a>
-                        </div>
-                        <div class="similar-product">
-                            <a href="#">
-                                <img src="../../images/product/cm5.png" alt="">
-                                <p>WMF 9000 S+</p>
-                            </a>
-                        </div>
-                        <div class="similar-product">
-                            <a href="#">
-                                <img src="../../images/product/cm4.png" alt="">
-                                <p>WMF 5000 S</p>
-                            </a>
-                        </div>
-                        <div class="similar-product">
-                            <a href="#">
-                                <img src="../../images/product/cm5.png" alt="">
-                                <p>WMF 9000 S+</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="service-maintenance">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="section-title">
-                        <h2 class="title">Сервисное обслуживание</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="wrap-banner third">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-5 d-none d-lg-block">
-                    <div class="wrap-banner-img">
-                        <div class="banner-img">
-                            <img src="../../images/banners/banner-img3.png" alt="">
+        <div id="accordion-on-mobile">
+            <div class="card custom-card">
+                <div class="card-header d-block d-md-none" id="heading-raschet-okup">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#raschet-okup" aria-expanded="true" aria-controls="raschet-okup">
+                            Расчёт окупаемости
+                        </button>
+                    </h5>
+                </div>
+                    <div id="raschet-okup" class="collapse custom-collapse" aria-labelledby="heading-raschet-okup" data-parent="#accordion-on-mobile">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-10">
+                                    <div class="section-title">
+                                        <h2 class="title">Расчёт окупаемости</h2>
+                                    </div>
+                                    <div class="section-description">
+                                        <p class="descr">Воспользуйтесь калькулятором, чтобы спрогнозировать срок окупеаемости кофемашины </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calculate-raschet">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-3">
+                                        <div class="wrap-input">
+                                            <div class="form-group">
+                                                <label for="fild-coffee">Цена 1 кг. кофе (грн) *</label>
+                                                <input type="text" class="form-control custom-input" id="fild-coffee" value="600">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="wrap-input">
+                                            <div class="form-group">
+                                                <label for="fild-realizaciy">Цена реализации (грн) *</label>
+                                                <input type="text" class="form-control custom-input" id="fild-realizaciy" value="12">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="wrap-input">
+                                            <div class="form-group">
+                                                <label for="fild-porcii">Количество порций в день *</label>
+                                                <input type="text" class="form-control custom-input" id="fild-porcii" value="100">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="wrap-input srok-okupaemosti">
+                                            <div class="form-group">
+                                                <label for="fild-srok-okupaemosti">Срок окупаемости (месяцев)</label>
+                                                <input type="text" class="form-control custom-input" id="fild-srok-okupaemosti" value="4">
+                                            </div>
+                                            <p>
+                                                <a class="" data-toggle="collapse" href="#open-table-calculate" role="button" aria-expanded="false" aria-controls="open-table-calculate">
+                                                    Подробнее
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collapse" id="open-table-calculate">
+                                <div class="card card-body custom-card">
+                                    <div class="wrapp-table">
+                                        <div class="col-table"><p>Цена кофемашины  (грн)</p> <div>300 000</div></div>
+                                        <div class="col-table"><p>Себестоимость напитка (грн)</p> <div>5</div></div>
+                                        <div class="col-table"><p>Цена реализации напитка (грн)</p> <div>12</div></div>
+                                        <div class="col-table"><p>Количество порций в день</p> <div>100</div></div>
+                                        <div class="col-table"><p>Сервисное обслуживание в месяц (грн)</p> <div>0</div></div>
+                                        <div class="col-table"><p class="bold-col-table">Маржинальный доход в месяц (грн)</p> <div class="bold-col-table">2600</div></div>
+                                        <div class="col-table"><p>Срок окупаемости (месяцев)</p> <div>0</div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment-table">
+                                <p>* Рекомендованные значения для данной модели кофемашины</p>
+                            </div>
+                        </div>
+            </div>
+            <div class="card custom-card">
+                <div class="card-header d-block d-md-none" id="heading-pohozchie-tovari">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#pohozchie-tovari" aria-expanded="false" aria-controls="pohozchie-tovari">
+                            Похожие товары
+                        </button>
+                    </h5>
+                </div>
+                    <div id="pohozchie-tovari" class="collapse custom-collapse" aria-labelledby="heading-pohozchie-tovari" data-parent="#accordion-on-mobile">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-10">
+                                    <div class="section-title">
+                                        <h2 class="title">Похожие товары</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="slider-similar-products">
+                                        <div class="similar-product">
+                                            <a href="#">
+                                                <img src="../../images/product/cm4.png" alt="">
+                                                <p>WMF 5000 S</p>
+                                            </a>
+                                        </div>
+                                        <div class="similar-product">
+                                            <a href="#">
+                                                <img src="../../images/product/cm5.png" alt="">
+                                                <p>WMF 9000 S+</p>
+                                            </a>
+                                        </div>
+                                        <div class="similar-product">
+                                            <a href="#">
+                                                <img src="../../images/product/cm4.png" alt="">
+                                                <p>WMF 5000 S</p>
+                                            </a>
+                                        </div>
+                                        <div class="similar-product">
+                                            <a href="#">
+                                                <img src="../../images/product/cm5.png" alt="">
+                                                <p>WMF 9000 S+</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+            <div class="card custom-card">
+                <div class="card-header d-block d-md-none" id="heading-service-maintenance">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#service-maintenance" aria-expanded="false" aria-controls="service-maintenance">
+                            Сервисное обслуживание
+                        </button>
+                    </h5>
+                </div>
+                <div id="service-maintenance" class="collapse custom-collapse" aria-labelledby="heading-service-maintenance" data-parent="#accordion-on-mobile">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="section-title">
+                                <h2 class="title">Сервисное обслуживание</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrap-banner third">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-5 d-none d-lg-block">
+                                    <div class="wrap-banner-img">
+                                        <div class="banner-img">
+                                            <img src="../../images/banners/banner-img3.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 offset-md-1">
+                                    <div class="banner-text">
+                                        <p class="descr-banner">Бесплатное сервисное обслуживаниепри покупке кофемашины!</p>
+                                        <button type="button" class="btn btn_red btn_font-small btn_small-mobile"><a href="#">Подробнее</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-11">
+                            <div class="section-title">
+                                <h2 class="title">Сервисное обслуживание кофемашины WMF 1100 S позволяет</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="service-advantages">
+                                <img src="../../images/icons/icon-squares.png" alt="advantages">
+                                <p><span>Предупреждать поломки</span>, поддерживать работоспособность суперавтомата</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="service-advantages">
+                                <img src="../../images/icons/icon-squares.png" alt="advantages">
+                                <p><span>Обеспечивать правильную технологию</span> приготовления напитков</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="service-advantages">
+                                <img src="../../images/icons/icon-squares.png" alt="advantages">
+                                <p><span>Контролировать и нормировать расход</span> кофе, молока, воды</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-11">
+                            <div class="range-of-services">
+                                <p>Сервисное обслуживание кофемашины WMF 1100 S в Coffee Machine Service предполагает комплекс услуг: </p>
+                                <ul>
+                                    <li>визит техника 1-2 раза в месяц</li>
+                                    <li>проверка технических и технологических параметров</li>
+                                    <li>проверка и настройка датчиков</li>
+                                    <li>проверка и настройка калькуляций</li>
+                                    <li>замена кит-наборов и деталей согласно рекомендаций производителя для сохранения гарантии</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="order-consultation">
+                                <button type="button" class="btn btn_red" data-toggle="modal" data-target="#order-consultation">Заказать консультацию</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-6 offset-md-1">
-                    <div class="banner-text">
-                        <p class="descr-banner">Бесплатное сервисное обслуживаниепри покупке кофемашины!</p>
-                        <button type="button" class="btn btn_red btn_font-small btn_small-mobile"><a href="#">Подробнее</a></button>
+            </div>
+            <div class="card custom-card">
+                <div class="card-header d-block d-md-none" id="heading-documents">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#documents" aria-expanded="false" aria-controls="documents">
+                            График замены запчастей кофемашины модели WMF 1100 S
+                        </button>
+                    </h5>
+                </div>
+                <div id="documents" class="collapse custom-collapse" aria-labelledby="heading-documents" data-parent="#accordion-on-mobile">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-11">
+                            <div class="section-title">
+                                <h2 class="title">График замены запчастей кофемашины модели WMF 1100 S</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="schedule">
+                        <div class="row">
+                            <div class="col-lg-2">
+                                <div class="icon">
+                                    <img src="../../images/file_types/icon-pdf.png" alt="PDF">
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="name">
+                                    <p>Надо заголовок документы, наверное</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="open">
+                                    <a href="#" target="_blank">Открыть</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-11">
+                            <div class="section-title">
+                                <h2 class="title">Инструкции по эксплуатации WMF 1100 S </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="instructions">
+                        <div class="row item">
+                            <div class="col-lg-2">
+                                <div class="icon">
+                                    <img src="../../images/file_types/icon-pdf.png" alt="PDF">
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="name">
+                                    <p>Правильная чистка чего то там</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="open">
+                                    <a href="#" target="_blank">Открыть</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row item">
+                            <div class="col-lg-2">
+                                <div class="icon">
+                                    <img src="../../images/file_types/icon-pdf.png" alt="PDF">
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="name">
+                                    <p>Название инструкции.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="open">
+                                    <a href="#" target="_blank">Открыть</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row item">
+                            <div class="col-lg-2">
+                                <div class="icon">
+                                    <img src="../../images/file_types/icon-pdf.png" alt="PDF">
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="name">
+                                    <p>Название инструкции номер 3</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="open">
+                                    <a href="#" target="_blank">Открыть</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card custom-card">
+                <div class="card-header d-block d-md-none" id="heading-video-product">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#video-product" aria-expanded="false" aria-controls="video-product">
+                            Видео о WMF 1100 S
+                        </button>
+                    </h5>
+                </div>
+                <div id="video-product" class="collapse custom-collapse" aria-labelledby="heading-video-product" data-parent="#accordion-on-mobile">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-11">
+                            <div class="section-title">
+                                <h2 class="title">Видео о WMF 1100 S</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrap-videos">
+                        <div class="row">
+                            <div class="col">
+                                <div class="video">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/crLlrQ1bLbw?rel=0&amp;showinfo=0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                                </div>
+                                <div class="description-video">
+                                    <p>Возможна подпись видео, но и не обязательно</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="video">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/fcq_8NR8VFw?rel=0&amp;showinfo=0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                                </div>
+                                <div class="description-video">
+                                    <p>Название видеоролика</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="order-consultation">
+                                <button type="button" class="btn btn_black" data-toggle="modal" data-target="#order-consultation">Заказать консультацию</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card custom-card">
+                <div class="card-header d-block d-md-none" id="heading-lease-product">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#lease-product" aria-expanded="false" aria-controls="lease-product">
+                            Аренда WMF 1100 S
+                        </button>
+                    </h5>
+                </div>
+                <div id="lease-product" class="collapse custom-collapse" aria-labelledby="heading-lease-product" data-parent="#accordion-on-mobile">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="section-title">
+                                <h2 class="title">Аренда WMF 1100 S</h2>
+                            </div>
+                            <div class="section-description">
+                                <p class="descr">Вы можете взять кофемашину WMF 1100 S в аренду на выгодных условиях.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="order-consultation">
+                                <button type="button" class="btn btn_red btn_font-small">Подробнее об условиях аренды</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="container-fluid product">
-
-        <div class="row justify-content-center">
-            <div class="col-lg-11">
-                <div class="section-title">
-                    <h2 class="title">Сервисное обслуживание кофемашины WMF 1100 S позволяет</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="service-advantages">
-                    <img src="../../images/icons/icon-squares.png" alt="advantages">
-                    <p><span>Предупреждать поломки</span>, поддерживать работоспособность суперавтомата</p>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="service-advantages">
-                    <img src="../../images/icons/icon-squares.png" alt="advantages">
-                    <p><span>Обеспечивать правильную технологию</span> приготовления напитков</p>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="service-advantages">
-                    <img src="../../images/icons/icon-squares.png" alt="advantages">
-                    <p><span>Контролировать и нормировать расход</span> кофе, молока, воды</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-11">
-                <div class="range-of-services">
-                    <p>Сервисное обслуживание кофемашины WMF 1100 S в Coffee Machine Service предполагает комплекс услуг: </p>
-                    <ul>
-                        <li>визит техника 1-2 раза в месяц</li>
-                        <li>проверка технических и технологических параметров</li>
-                        <li>проверка и настройка датчиков</li>
-                        <li>проверка и настройка калькуляций</li>
-                        <li>замена кит-наборов и деталей согласно рекомендаций производителя для сохранения гарантии</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="order-consultation">
-                    <button type="button" class="btn btn_red" data-toggle="modal" data-target="#order-consultation">Заказать консультацию</button>
-                </div>
-            </div>
-        </div>
-
-        <div id="documents">
-            <div class="row justify-content-center">
-                <div class="col-lg-11">
-                    <div class="section-title">
-                        <h2 class="title">График замены запчастей кофемашины модели WMF 1100 S</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="schedule">
-                <div class="row">
-                    <div class="col-lg-2">
-                        <div class="icon">
-                            <img src="../../images/file_types/icon-pdf.png" alt="PDF">
-                        </div>
-                    </div>
-                    <div class="col-lg-8">
-                        <div class="name">
-                            <p>Надо заголовок документы, наверное</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-2">
-                        <div class="open">
-                            <a href="#" target="_blank">Открыть</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-11">
-                    <div class="section-title">
-                        <h2 class="title">Инструкции по эксплуатации WMF 1100 S </h2>
-                    </div>
-                </div>
-            </div>
-            <div class="instructions">
-                <div class="row item">
-                    <div class="col-lg-2">
-                        <div class="icon">
-                            <img src="../../images/file_types/icon-pdf.png" alt="PDF">
-                        </div>
-                    </div>
-                    <div class="col-lg-8">
-                        <div class="name">
-                            <p>Правильная чистка чего то там</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-2">
-                        <div class="open">
-                            <a href="#" target="_blank">Открыть</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row item">
-                    <div class="col-lg-2">
-                        <div class="icon">
-                            <img src="../../images/file_types/icon-pdf.png" alt="PDF">
-                        </div>
-                    </div>
-                    <div class="col-lg-8">
-                        <div class="name">
-                            <p>Название инструкции.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-2">
-                        <div class="open">
-                            <a href="#" target="_blank">Открыть</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row item">
-                    <div class="col-lg-2">
-                        <div class="icon">
-                            <img src="../../images/file_types/icon-pdf.png" alt="PDF">
-                        </div>
-                    </div>
-                    <div class="col-lg-8">
-                        <div class="name">
-                            <p>Название инструкции номер 3</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-2">
-                        <div class="open">
-                            <a href="#" target="_blank">Открыть</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="video-product">
-            <div class="row justify-content-center">
-                <div class="col-lg-11">
-                    <div class="section-title">
-                        <h2 class="title">Видео о WMF 1100 S</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="wrap-videos">
-                <div class="row">
-                    <div class="col">
-                        <div class="video">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/crLlrQ1bLbw?rel=0&amp;showinfo=0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
-                        </div>
-                        <div class="description-video">
-                            <p>Возможна подпись видео, но и не обязательно</p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="video">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/fcq_8NR8VFw?rel=0&amp;showinfo=0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
-                        </div>
-                        <div class="description-video">
-                            <p>Название видеоролика</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="order-consultation">
-                        <button type="button" class="btn btn_black" data-toggle="modal" data-target="#order-consultation">Заказать консультацию</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="lease-product">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="section-title">
-                        <h2 class="title">Аренда WMF 1100 S</h2>
-                    </div>
-                    <div class="section-description">
-                        <p class="descr">Вы можете взять кофемашину WMF 1100 S в аренду на выгодных условиях.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="order-consultation">
-                        <button type="button" class="btn btn_red btn_font-small">Подробнее об условиях аренды</button>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 

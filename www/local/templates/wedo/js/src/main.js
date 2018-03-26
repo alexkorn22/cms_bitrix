@@ -1,3 +1,5 @@
+var  breakpointMD=768;
+
 $( document ).ready(function() {
 
 /*burger menu*/
@@ -233,10 +235,29 @@ $( document ).ready(function() {
             // instead of a settings object
         ]
     });
-
 //Конец слайдер похожих товаров
 
+
+//ресайз табов
+    $(window).resize(function(){
+        togglePanel();
+    });
+
+    togglePanel();
+//конец ресайз табов
+
 });
+
+//табы на мобильном
+function togglePanel (){
+    var w = $(window).width();
+    if (w <= breakpointMD) {
+        $('.custom-collapse').removeClass('show');
+    } else {
+        $('.custom-collapse').addClass('show');
+    }
+}
+//конец табы на мобильном
 
 
 // SCROLL NAVBAR
