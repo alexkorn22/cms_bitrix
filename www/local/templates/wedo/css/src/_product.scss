@@ -157,10 +157,12 @@
       padding-bottom: 50px;
     }
     .calculate-raschet {
-      .wrap-inpit {
+      .wrap-input {
         text-align: center;
         label {
-          font-size: 22px;
+          font-size: 20px;
+          margin-bottom: 25px;
+          padding: 0 55px;
         }
         .custom-input {
           width: 90px;
@@ -172,7 +174,33 @@
             box-shadow: none;
           }
         }
+        &.srok-okupaemosti {
+          .form-group, p{
+            margin: 0;
+          }
+          p a {
+            color: $red;
+          }
+          label {
+            font-family: $Bold;
+            margin-bottom: 8px;
+          }
+          .custom-input {
+            font-family: $Bold;
+            font-size: 28px;
+            border: none;
+            margin: 0 auto;
+            text-align: center;
+            color: $black;
+            &:focus {
+              box-shadow: none;
+            }
+          }
+        }
       }
+    }
+    .custom-card {
+      border: 0;
     }
     .wrapp-table {
       display: flex;
@@ -214,6 +242,7 @@
       width:100%;
       p {
         margin: 0;
+        font-size: 14px;
       }
     }
   }
