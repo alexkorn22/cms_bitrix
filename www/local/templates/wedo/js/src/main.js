@@ -111,7 +111,17 @@ $( document ).ready(function() {
         arrows: false,
         centerMode: false,
         verticalSwiping: true,
-        focusOnSelect: true
+        focusOnSelect: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    vertical: false,
+                    swipeToSlide: true,
+                    verticalSwiping: false
+                }
+            }
+        ]
     });
 //Конец слайдер в карточке товара
 

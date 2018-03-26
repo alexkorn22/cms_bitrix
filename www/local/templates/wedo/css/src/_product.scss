@@ -15,6 +15,15 @@
         font-family: $Semibold;
       }
     }
+    @include media-breakpoint-down(sm){
+      margin: 20px 0 10px 0;
+      .sub-title {
+        p {
+          font-size: 20px;
+          line-height: 24px;
+        }
+      }
+    }
   }
 
   .tabs-kartochka {
@@ -55,6 +64,9 @@
 
   #osnovnoe, #raschet-okup, #pohozchie-tovari, #service-maintenance, #documents, #video-product, #lease-product {
     margin: 50px 0;
+    @include media-breakpoint-down(sm){
+      margin: 0px 0;
+    }
   }
 
   #osnovnoe {
@@ -88,6 +100,19 @@
             width: auto;
             //height: auto;
           }
+        }
+      }
+      @include media-breakpoint-down(sm){
+        .product-img-main {
+          .img-main {
+            img {
+              width: auto;
+              height: 400px;
+            }
+          }
+        }
+        .product-img-preview {
+          width: 100%;
         }
       }
     }
@@ -242,6 +267,27 @@
         font-size: 14px;
       }
     }
+    @include media-breakpoint-down(sm){
+      padding: 35px 0;
+      .wrapp-table {
+        flex-direction: column;
+        .col-table {
+          flex-direction: row;
+          width: 100%;
+          border-left: none;
+          height: 100%;
+          &:last-child {
+            p,div {
+              border-bottom: none;
+            }
+          }
+          div {
+            border-bottom: 1px dashed #dd2a1b;
+            border-left: 1px dashed #dd2a1b;
+          }
+        }
+      }
+    }
   }
 
   .custom-card {
@@ -280,12 +326,18 @@
         }
       }
     }
+    @include media-breakpoint-down(sm){
+      padding: 35px 0;
+    }
   }
 
   #service-maintenance {
     padding-top: 100px;
     .section-title .title {
       padding-bottom: 5px;
+    }
+    @include media-breakpoint-down(sm){
+      padding-top: 10px;
     }
   }
   .service-advantages {
@@ -321,6 +373,19 @@
         font-size: 22px;
         line-height: 32px;
         font-family: $Light;
+      }
+    }
+    @include media-breakpoint-down(sm){
+      p {
+        font-size: 20px;
+        line-height: 26px;
+      }
+      ul {
+        margin-left: 22px;
+        li {
+          font-size: 18px;
+          line-height: 26px;
+        }
       }
     }
   }
@@ -372,6 +437,31 @@
         }
       }
     }
+    @include media-breakpoint-down(sm){
+      padding: 35px 0;
+      .schedule, .instructions {
+        .icon {
+          img {
+            width: auto;
+            height: 30px;
+          }
+        }
+        .name {
+          padding: 5px 0;
+          p {
+            font-size: 18px;
+            line-height: 22px;
+            text-align: center;
+            width: 100%;
+          }
+        }
+        .open {
+          a {
+            font-size: 18px;
+          }
+        }
+      }
+    }
   }
 
   #video-product {
@@ -395,6 +485,18 @@
         }
       }
     }
+    @include media-breakpoint-down(sm){
+      padding: 35px 0;
+      .wrap-videos {
+        .description-video {
+          p {
+            font-size: 18px;
+            line-height: 24px;
+            padding-bottom: 20px;
+          }
+        }
+      }
+    }
   }
 
   #lease-product {
@@ -402,6 +504,33 @@
 
     .section-description {
       padding-bottom: 30px;
+    }
+    @include media-breakpoint-down(sm){
+      padding: 35px 0;
+    }
+  }
+
+  #accordion-on-mobile {
+    margin: 30px 0;
+    .custom-card {
+      .custom-card-header {
+        padding: 10px 0;
+        border-bottom: 1px solid $red;
+
+        .title-item {
+          color: $black;
+          text-decoration: none;
+          font-family: $Regular;
+        }
+      }
+      &:last-child {
+        .custom-card-header {
+          border-bottom: none;
+        }
+
+      }
+
+
     }
   }
 
