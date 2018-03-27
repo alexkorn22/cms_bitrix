@@ -2,7 +2,6 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Кофемашины");
 ?>
-<div id="wrap">
     <section id="cards-section">
 
         <div class="container-fluid">
@@ -174,6 +173,5 @@ $APPLICATION->SetTitle("Кофемашины");
             </div>
         </div>
     </section>
-</div>
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
