@@ -1,18 +1,8 @@
-var  breakpointMD=767;
-
 $( document ).ready(function() {
 
-/*burger menu*/
-    $('.burger').on('click',function() {
-        $('.top-fixed-line').toggleClass('open');
-        $('.container-line-menu').toggleClass('open');
-        $('.burger').toggleClass('open');
-        $('.overlay').toggleClass('open');
-    });
-/*END burger menu*/
+    $('.burger').on('click', clickBurger );
 
-/*slider clients*/
-    $('.center').slick({
+    $('.clients-slider').slick({
         centerMode: true,
         infinite: true,
         slidesToShow: 5,
@@ -54,9 +44,7 @@ $( document ).ready(function() {
             // instead of a settings object
         ]
 });
-/*END slider clients*/
 
-/*section wmf-cms*/
     $( ".block.wmf" ).hover(function() {
         $('.block.wmf').addClass('big-section');
         $('.block.cms').addClass('small-section');
@@ -76,53 +64,64 @@ $( document ).ready(function() {
 
 
 //open modal
-    $('#filter, #order-consultation').on('shown.bs.modal');
+    $('#filter').on('shown.bs.modal', function () {
+
+    })
 //END open modal
+
+    $(window).resize(setVideoDimensions);
+    setVideoDimensions();
+
+    var navbarData = startNav();
+    $(window).scroll(function(){stickyMenu(navbarData);});
 
 });
 
-
-// SCROLL NAVBAR
-window.onscroll = function() {stickyMenu()};
-
-var navbar = document.getElementById("line-menu");
-var sticky = navbar.offsetTop;
-var prevScrollpos = window.pageYOffset;
-
-function stickyMenu() {
-    if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
-    } else {
-        navbar.classList.remove("sticky");
-    }
-
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-        navbar.style.transition = "all 0.5s";
-        navbar.style.top = "0";
-    } else {
-        navbar.style.transition = "all 0.5s";
-        navbar.style.top = "-115px";
-    }
-    prevScrollpos = currentScrollPos;
+function startNav(){
+    var navbar  = $("#line-menu");
+    var sticky = navbar.offset().top;
+    var prevScrollPos = $(window).scrollTop();
+    var navbarData = {
+        'navObject':navbar,
+        'sticky':sticky,
+        'prevScrollPos':prevScrollPos
+    };
+    return navbarData;
 }
-// END SCROLL
 
-//  Responsice VIDEO background
-var video = document.querySelector('video');
+function stickyMenu(navbarData) {
+     var navbar = navbarData.navObject;
+     var pageYOffset = $(window).scrollTop();
+    if ( pageYOffset >= (navbarData.sticky + 1)) {
+        navbar.addClass("sticky")
+    } else {
+        navbar.removeClass("sticky");
+    }
+
+    var currentScrollPos = pageYOffset;
+    if (navbarData.prevScrollPos > currentScrollPos) {
+        navbar.css({transition:"all 0.5s",top:'0'});
+    } else {
+        navbar.css({transition:"all 0.5s",top:'-125px'});
+    }
+    navbarData.prevScrollPos = currentScrollPos;
+}
+
+function clickBurger(){
+        $('.top-fixed-line').toggleClass('open');
+        $('.container-line-menu').toggleClass('open');
+        $('.burger').toggleClass('open');
+        $('.overlay').toggleClass('open');
+}
+
 function setVideoDimensions () {
+    var video = $('video');
     if (!video) {
         return;
     }
-    if (window.innerWidth / window.innerHeight > 16 / 9) {
-        video.style.width = '100vw';
-        video.style.height = 'calc(100vw * 9 / 16)';
+    if ($(window).innerWidth() / $(window).innerHeight() > 16 / 9) {
+        video.css({width: '100vw',height:"calc(100vw * 9 / 16)"});
     } else {
-        video.style.width = 'calc(100vh * 16 / 9)';
-        video.style.height = '100vh';
+        video.css({width: 'calc(100vh * 16 / 9)',height:'100vh'});
     }
 }
-
-window.onresize = setVideoDimensions;
-setVideoDimensions();
-//  END OF VIDEO background
