@@ -1023,6 +1023,14 @@
   .none {
     display: none !important;
   }
+
+  @include media-breakpoint-down(md){
+    .sticky {
+      .container-fluid {
+        padding-right: 15px;
+      }
+    }
+  }
 }
 
 
