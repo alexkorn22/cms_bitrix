@@ -622,36 +622,65 @@
         }
       }
 
-      .slick-prev:before {
-        content: '\2039';
-      }
-      .slick-next:before {
-        content: '\203A';
-      }
-      .slick-prev,
-      .slick-next {
-        width: 70px;
-        background-color: $white;
-        height: 100%;
-        z-index: 1;
-        @include media-breakpoint-down(sm){
-          background-color: transparent;
-        }
-      }
-      .slick-prev{
-        left: -10px;
-      }
-      .slick-next {
-        right: -10px;
-      }
-      .slick-prev:before, .slick-next:before {
-        font-size: 40px;
-        color: $black;
-      }
+      //.slick-prev:before {
+      //  content: '\2039';
+      //}
+      //.slick-next:before {
+      //  content: '\203A';
+      //}
+      //.slick-prev,
+      //.slick-next {
+      //  width: 70px;
+      //  background-color: $white;
+      //  height: 100%;
+      //  z-index: 1;
+      //  @include media-breakpoint-down(sm){
+      //    background-color: transparent;
+      //  }
+      //}
+      //.slick-prev{
+      //  left: -10px;
+      //}
+      //.slick-next {
+      //  right: -10px;
+      //}
+      //.slick-prev:before, .slick-next:before {
+      //  font-size: 40px;
+      //  color: $black;
+      //}
     }
   }
 }
 //END section clients
+
+//стрелочки на слайдере
+.slick-prev:before {
+  content: '\2039';
+}
+.slick-next:before {
+  content: '\203A';
+}
+.slick-prev,
+.slick-next {
+  width: 70px;
+  background-color: $white;
+  height: 100%;
+  z-index: 1;
+  @include media-breakpoint-down(sm){
+    background-color: transparent;
+  }
+}
+.slick-prev{
+  left: -10px;
+}
+.slick-next {
+  right: -10px;
+}
+.slick-prev:before, .slick-next:before {
+  font-size: 40px;
+  color: $black;
+}
+//конец стрелочки на слайдере
 
 // MENU SCROLL
 .container-line-menu {
