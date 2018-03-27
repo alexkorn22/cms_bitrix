@@ -92,7 +92,7 @@ function startNav(){
 function stickyMenu(navbarData) {
      var navbar = navbarData.navObject;
      var pageYOffset = $(window).scrollTop();
-    if ( pageYOffset >= navbarData.sticky) {
+    if ( pageYOffset >= (navbarData.sticky + 1)) {
         navbar.addClass("sticky")
     } else {
         navbar.removeClass("sticky");
@@ -102,7 +102,7 @@ function stickyMenu(navbarData) {
     if (navbarData.prevScrollPos > currentScrollPos) {
         navbar.css({transition:"all 0.5s",top:'0'});
     } else {
-        navbar.css({transition:"all 0.5s",top:'-115px'});
+        navbar.css({transition:"all 0.5s",top:'-125px'});
     }
     navbarData.prevScrollPos = currentScrollPos;
 }
