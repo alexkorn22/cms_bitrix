@@ -3,7 +3,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Кофемашины");
 ?>
 
-    <section id="cards-section">
+<section id="cards-section">
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
@@ -15,100 +15,52 @@ $APPLICATION->SetTitle("Кофемашины");
             <div class="menu-cards">
                 <div class="row justify-content-center">
                     <div class="col-md-3 dont-padding">
-                        <div class="m-card first">
-                            <div class="wrap">
-                                <img src="<?=IMAGES_PATH?>/icon-sale.png" alt="sale">
-                                <div>
-                                    <span>Продажа</span>
-                                    <div class="meta">
-                                        <ul>
-                                            <li>для офисов компаний, предприятий</li>
-                                            <li>гостиниц и отелей со шведскими линиями</li>
-                                            <li>фастфудов</li>
-                                            <li>АЗС</li>
-                                        </ul>
-                                        <a href="#" class="more-info">Подробнее</a>
-                                        <div class="wrap-arrow d-none d-md-flex">
-                                            <div class="scroll-arrow"></div>
-                                            <div class="scroll-arrow"></div>
-                                            <div class="scroll-arrow"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <?$APPLICATION->IncludeComponent(
+                        "bitrix:main.include",
+                        "",
+                        Array(
+                            "AREA_FILE_SHOW" => "file",
+                            "AREA_FILE_SUFFIX" => "inc",
+                            "EDIT_TEMPLATE" => "standard.php",
+                            "PATH" => "/local/files/includes/cards/sells.php"
+                        )
+                    );?>
                     </div>
                     <div class="col-md-3 dont-padding">
-                        <div class="m-card second">
-                            <div class="wrap">
-                                <img src="<?=IMAGES_PATH?>/icon-lease.png" alt="lease">
-                                <div>
-                                    <span>Аренда</span>
-                                    <div class="meta">
-                                        <ul>
-                                            <li>без стартового взноса</li>
-                                            <li>без ежемесячных затрат</li>
-                                            <li>без процента от продаж</li>
-                                            <li>без залоговой суммы</li>
-                                        </ul>
-                                        <a href="#" class="more-info">Подробнее</a>
-                                        <div class="wrap-arrow d-none d-md-flex">
-                                            <div class="scroll-arrow"></div>
-                                            <div class="scroll-arrow"></div>
-                                            <div class="scroll-arrow"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <?$APPLICATION->IncludeComponent(
+                            "bitrix:main.include",
+                            "",
+                            Array(
+                                "AREA_FILE_SHOW" => "file",
+                                "AREA_FILE_SUFFIX" => "inc",
+                                "EDIT_TEMPLATE" => "standard.php",
+                                "PATH" => "/local/files/includes/cards/arenda.php"
+                            )
+                        );?>
                     </div>
                     <div class="col-md-3 dont-padding">
-                        <div class="m-card third">
-                            <div class="wrap">
-                                <img src="<?=IMAGES_PATH?>/icon-repairs.png" alt="repairs">
-                                <div>
-                                    <span>Ремонт</span>
-                                    <div class="meta">
-                                        <ul>
-                                            <li>выезд техника на место</li>
-                                            <li>диагностика неисправности</li>
-                                            <li>подбор и замена деталей и узлов</li>
-                                            <li>капитальный ремонт по истечении гарантии</li>
-                                        </ul>
-                                        <a href="#" class="more-info">Подробнее</a>
-                                        <div class="wrap-arrow d-none d-md-flex">
-                                            <div class="scroll-arrow"></div>
-                                            <div class="scroll-arrow"></div>
-                                            <div class="scroll-arrow"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <?$APPLICATION->IncludeComponent(
+                            "bitrix:main.include",
+                            "",
+                            Array(
+                                "AREA_FILE_SHOW" => "file",
+                                "AREA_FILE_SUFFIX" => "inc",
+                                "EDIT_TEMPLATE" => "standard.php",
+                                "PATH" => "/local/files/includes/cards/remont.php"
+                            )
+                        );?>
                     </div>
                     <div class="col-md-3 dont-padding">
-                        <div class="m-card fourth">
-                            <div class="wrap">
-                                <img src="<?=IMAGES_PATH?>/icon-service.png" alt="service">
-                                <div>
-                                    <span>Сервис</span>
-                                    <div class="meta">
-                                        <ul>
-                                            <li>ежемесячный визит техника</li>
-                                            <li>проверка технических параметров</li>
-                                            <li>настройка датчиков</li>
-                                            <li>текущий ремонт</li>
-                                        </ul>
-                                        <a href="#" class="more-info">Подробнее</a>
-                                        <div class="wrap-arrow d-none d-md-flex">
-                                            <div class="scroll-arrow"></div>
-                                            <div class="scroll-arrow"></div>
-                                            <div class="scroll-arrow"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <?$APPLICATION->IncludeComponent(
+                            "bitrix:main.include",
+                            "",
+                            Array(
+                                "AREA_FILE_SHOW" => "file",
+                                "AREA_FILE_SUFFIX" => "inc",
+                                "EDIT_TEMPLATE" => "standard.php",
+                                "PATH" => "/local/files/includes/cards/service.php"
+                            )
+                        );?>
                     </div>
                 </div>
             </div>
@@ -128,6 +80,7 @@ $APPLICATION->SetTitle("Кофемашины");
                     </div>
                 </div>
             </div>
+
             <div class="row">
                 <div class="wrap-wmf-cms">
                     <div class="block wmf">
@@ -176,6 +129,7 @@ $APPLICATION->SetTitle("Кофемашины");
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
     <section id="clients">
