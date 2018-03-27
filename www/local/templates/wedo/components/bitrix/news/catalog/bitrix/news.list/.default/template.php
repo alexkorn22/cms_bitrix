@@ -17,7 +17,7 @@ $this->setFrameMode(true);
 <?if($arParams["DISPLAY_TOP_PAGER"]):?>
 	<?=$arResult["NAV_STRING"]?>
 <?endif;?>
-<? $countCMachines = 1 ; $countBanners   = 1 ; ?>
+<? $countCMachines = 1 ; $countBanners   = 1 ; $price=0; ?>
 
 <!-- first block -->
     <div class="container-fluid catalog">
@@ -52,7 +52,7 @@ $this->setFrameMode(true);
                             </div>
                             <div class="characteristics">
                                 <div class="list-group">
-                                    <?foreach($arResult[$arItem['ID']] as $prop):?>
+                                    <?foreach($arItem['PROPERTIES'] as $prop):?>
                                         <?if($prop['CODE'] == 'PRICE'){$price = $prop['VALUE'];}?>
                                         <?if(!empty($prop['VALUE']) && $prop['SORT'] < 5000 ):?>
                                             <p class="item"> <span><?=$prop['NAME']?> </span><span> <?=$prop['VALUE']?></span></p>
