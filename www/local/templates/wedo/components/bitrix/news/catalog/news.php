@@ -12,7 +12,10 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<?$APPLICATION->IncludeComponent(
+
+<?
+//TODO : return the smart filter again
+$APPLICATION->IncludeComponent(
     "bitrix:catalog.smart.filter",
     "",
     Array(
@@ -21,7 +24,7 @@ $this->setFrameMode(true);
         "CACHE_TYPE" => "A",
         "DISPLAY_ELEMENT_COUNT" => "N",
         "FILTER_NAME" => "arrFilter",
-        "FILTER_VIEW_MODE" => "horizontal",
+        "FILTER_VIEW_MODE" => "vertical",
         "IBLOCK_ID" => "12",
         "IBLOCK_TYPE" => "catalogs",
         "PAGER_PARAMS_NAME" => "arrPager",
@@ -39,6 +42,7 @@ $this->setFrameMode(true);
         "XML_EXPORT" => "N"
     )
 );?>
+
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"",

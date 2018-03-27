@@ -2,10 +2,16 @@
 <!doctype html>
 <html>
 <head>
-	<?
+
+    <?
     $APPLICATION->ShowHead();
     use Bitrix\Main\Page\Asset;
     Asset::getInstance()->addString('<link rel="shortcut icon" href="' . SITE_TEMPLATE_PATH .'/images/favicon.png" type="image/x-icon">');
+    Asset::getInstance()->addString('<meta charset="UTF-8">');
+    Asset::getInstance()->addString('<meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">');
+    Asset::getInstance()->addString('<meta http-equiv="X-UA-Compatible" content="ie=edge">');
+
     // CSS
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/libs/bootstrap/bootstrap.min.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/libs/jqueryui/jquery-ui.min.css');
@@ -23,13 +29,11 @@
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH .'/js/libs/slick.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH .'/js/dist/main.js');
 
-
      ?>
-	<title><?$APPLICATION->ShowTitle()?></title>
-    
-    
+	<title><?$APPLICATION->ShowTitle()?></title
 </head>
 <body>
+<div id="main">
 <?$APPLICATION->ShowPanel();?>
 <? if($APPLICATION->GetCurPage() == '/'):?>
     <section id="header-main">
@@ -88,9 +92,9 @@
                     <div class="wrap-social-icons normal-top">
                         <div class="social-icons">
                             <a class="phone" href="tel:<?=App::$config->telephone?>"><?=App::$config->telephone?></a>
-                            <a href="<?=App::$config->facebookLink?>" class="social facebook"></a>
-                            <a href="<?=App::$config->instagramLink?>" class="social insta"></a>
-                            <a href="<?=App::$config->youtubeLink?>" class="social youtube"></a>
+                            <a href="<?=App::$config->facebookLink?>" class="social facebook  d-none d-sm-block"></a>
+                            <a href="<?=App::$config->instagramLink?>" class="social insta  d-none d-sm-block"></a>
+                            <a href="<?=App::$config->youtubeLink?>" class="social youtube  d-none d-sm-block"></a>
                             <div class="burger-menu">
                                 <div class="navigation after-head">
                                     <div class="burger after-head">
@@ -202,9 +206,9 @@
                             <div class="wrap-social-icons normal-top">
                                 <div class="social-icons">
                                     <a class="phone black d-none d-sm-block" href="tel:<?=App::$config->telephone?>"><?=App::$config->telephone?></a>
-                                    <a href="<?=App::$config->facebookLink?>" class="social facebook"></a>
-                                    <a href="<?=App::$config->instagramLink?>" class="social insta"></a>
-                                    <a href="<?=App::$config->youtubeLink?>" class="social youtube"></a>
+                                    <a href="<?=App::$config->facebookLink?>" class="social facebook  d-none d-sm-block"></a>
+                                    <a href="<?=App::$config->instagramLink?>" class="social insta  d-none d-sm-block"></a>
+                                    <a href="<?=App::$config->youtubeLink?>" class="social youtube d-none d-sm-block"></a>
                                     <div class="burger-menu">
                                         <div class="navigation after-head">
                                             <div class="burger after-head">
@@ -302,4 +306,3 @@
     </header>
 <? endif;?>
 
-<div id="wrap">
