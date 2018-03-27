@@ -15,8 +15,11 @@
         font-family: $Semibold;
       }
     }
+    @include media-breakpoint-down(md){
+      margin: 25px 0 20px 0;
+    }
     @include media-breakpoint-down(sm){
-      margin: 20px 0 10px 0;
+      margin: 20px 0 20px 0;
       .sub-title {
         p {
           font-size: 20px;
@@ -34,6 +37,7 @@
       justify-content: space-between;
       li {
         text-align: center;
+        padding: 0 10px;
         a {
           text-decoration: none;
           color: $black;
@@ -171,6 +175,29 @@
         text-decoration: underline;
       }
     }
+
+    @include media-breakpoint-down(md){
+      .text-product {
+        .product-charact {
+          padding-right: 0;
+          padding-top: 35px;
+        }
+      }
+      .product-description {
+        margin-top: 25px;
+      }
+    }
+    @include media-breakpoint-down(sm){
+      .text-product {
+        .product-charact {
+          padding-right: 0;
+          padding-top: 15px;
+        }
+      }
+      .product-description {
+        margin-top: 30px;
+      }
+    }
   }
 
   #raschet-okup {
@@ -264,8 +291,59 @@
         font-size: 14px;
       }
     }
+    @include media-breakpoint-down(md){
+      padding: 35px 0;
+      .calculate-raschet {
+        .wrap-input {
+          padding-bottom: 15px;
+          label {
+            margin-bottom: 10px;
+          }
+          &.srok-okupaemosti {
+            label {
+              margin-bottom: 2px;
+            }
+          }
+        }
+      }
+      .wrapp-table {
+        flex-direction: column;
+        .col-table {
+          flex-direction: row;
+          width: 100%;
+          border-left: none;
+          height: 100%;
+          &:last-child {
+            p,div {
+              border-bottom: none;
+            }
+          }
+          div {
+            border-bottom: 1px dashed #dd2a1b;
+            border-left: 1px dashed #dd2a1b;
+          }
+        }
+      }
+    }
     @include media-breakpoint-down(sm){
       padding: 35px 0;
+      .calculate-raschet {
+        .wrap-input {
+          padding-bottom: 15px;
+          label {
+            font-size: 18px;
+            margin-bottom: 10px;
+          }
+          .custom-input {
+
+          }
+          &.srok-okupaemosti {
+            label {
+              margin-bottom: 2px;
+            }
+          }
+        }
+      }
       .wrapp-table {
         flex-direction: column;
         .col-table {
@@ -434,6 +512,22 @@
         }
       }
     }
+    @include media-breakpoint-down(md){
+      padding: 35px 0;
+      .schedule, .instructions {
+        .icon img{
+          width: auto;
+          height: 45px;
+        }
+        .name {
+          padding: 5px 0;
+          p {
+            text-align: center;
+            width: 100%;
+          }
+        }
+      }
+    }
     @include media-breakpoint-down(sm){
       padding: 35px 0;
       .schedule, .instructions {
@@ -483,6 +577,16 @@
           line-height: 30px;
           text-align: center;
           padding: 15px 30px 0 30px;
+        }
+      }
+    }
+    @include media-breakpoint-down(md){
+      padding: 35px 0;
+      .wrap-videos {
+        .description-video {
+          p {
+            padding-bottom: 20px;
+          }
         }
       }
     }

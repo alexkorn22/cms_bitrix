@@ -1,4 +1,4 @@
-var  breakpointMD=768;
+var  breakpointMD=767;
 
 $( document ).ready(function() {
 
