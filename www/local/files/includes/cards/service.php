@@ -10,12 +10,13 @@
                     <li>настройка датчиков</li>
                     <li>текущий ремонт</li>
                 </ul>
-                <a href="#" class="more-info">Подробнее</a>
-                <div class="wrap-arrow d-none d-md-flex">
-                    <div class="scroll-arrow"></div>
-                    <div class="scroll-arrow"></div>
-                    <div class="scroll-arrow"></div>
-                </div>
+                <a href="/news/" class="more-info">Подробнее
+                    <div class="wrap-arrow d-none d-md-flex">
+                        <div class="scroll-arrow"></div>
+                        <div class="scroll-arrow"></div>
+                        <div class="scroll-arrow"></div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>

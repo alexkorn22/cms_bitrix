@@ -46,7 +46,9 @@
             <div class="row top-line">
                 <div class="col">
                     <div class="wrap-logo">
-                        <img src="<?=IMAGES_PATH?>/logo.png" alt="CMS">
+                        <a href="/">
+                            <img src="<?=IMAGES_PATH?>/logo.png" alt="CMS">
+                        </a>
                     </div>
                 </div>
                 <div class="col">
@@ -84,8 +86,10 @@
             <div class="row">
                 <div class="col col-sm-2 col-md-2 col-lg-2">
                     <div class="wrap-logo">
-                        <img src="<?=IMAGES_PATH?>/logo_black.png" class="d-none d-sm-block" alt="CMS">
-                        <img src="<?=IMAGES_PATH?>/logo-small.png" class="d-block d-sm-none" alt="CMS">
+                        <a href="/">
+                            <img src="<?=IMAGES_PATH?>/logo_black.png" class="d-none d-sm-block" alt="CMS">
+                            <img src="<?=IMAGES_PATH?>/logo-small.png" class="d-block d-sm-none" alt="CMS">
+                        </a>
                     </div>
                 </div>
                 <div class="col col-sm-10 col-md-10 col-lg-10">
@@ -114,8 +118,10 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="wrap-logo">
-                    <img src="<?=IMAGES_PATH?>/logo.png" class="d-none d-sm-block" alt="CMS">
-                    <img src="<?=IMAGES_PATH?>/logo-small.png" class="d-block d-sm-none" alt="CMS">
+                    <a href="/">
+                        <img src="<?=IMAGES_PATH?>/logo.png" class="d-none d-sm-block" alt="CMS">
+                        <img src="<?=IMAGES_PATH?>/logo-small.png" class="d-block d-sm-none" alt="CMS">
+                    </a>
                 </div>
                 <div class="burger-menu in-menu">
                     <div class="navigation">
@@ -198,8 +204,10 @@
                     <div class="row">
                         <div class="col col-sm-2 col-md-2 col-lg-2">
                             <div class="wrap-logo">
-                                <img src="<?=IMAGES_PATH?>/logo_black.png" class="d-none d-sm-block" alt="CMS">
-                                <img src="<?=IMAGES_PATH?>/logo-small.png" class="d-block d-sm-none" alt="CMS">
+                                <a href="/">
+                                    <img src="<?=IMAGES_PATH?>/logo_black.png" class="d-none d-sm-block" alt="CMS">
+                                    <img src="<?=IMAGES_PATH?>/logo-small.png" class="d-block d-sm-none" alt="CMS">
+                                </a>
                             </div>
                         </div>
                         <div class="col col-sm-10 col-md-10 col-lg-10">
@@ -228,8 +236,10 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="wrap-logo">
-                            <img src="<?=IMAGES_PATH?>/logo.png" class="d-none d-sm-block" alt="CMS">
-                            <img src="<?=IMAGES_PATH?>/logo-small.png" class="d-block d-sm-none" alt="CMS">
+                            <a href="/">
+                                <img src="<?=IMAGES_PATH?>/logo.png" class="d-none d-sm-block" alt="CMS">
+                                <img src="<?=IMAGES_PATH?>/logo-small.png" class="d-block d-sm-none" alt="CMS">
+                            </a>
                         </div>
                         <div class="burger-menu in-menu">
                             <div class="navigation">
