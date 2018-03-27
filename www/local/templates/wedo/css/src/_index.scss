@@ -838,11 +838,13 @@
               font-size: 18px;
               font-family: $Bold;
               padding-left: 15px;
+              display: flex;
             }
             .wrap-arrow {
               display: flex;
               align-items: center;
               justify-content: flex-start;
+              padding-right: 10px;
               .scroll-arrow {
                 width: 10px;
                 height: 10px;
