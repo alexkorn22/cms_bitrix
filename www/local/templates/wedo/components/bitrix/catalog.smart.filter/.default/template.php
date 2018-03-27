@@ -40,16 +40,15 @@ $this->setFrameMode(true);
 
             <!--  our modal goes herel -->
             <div class="modal fade" id="filter" tabindex="-1" role="dialog" aria-labelledby="filter" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="title-filter">Сервис подбора кофемашины</h5>
+                <div class="modal-dialog modal-dialog-centered custom-modal-dialog" role="document">
+                    <div class="modal-content custom-modal-content custom-modal-content_bg-red">
+                        <div class="modal-header custom-modal-header">
+                            <h5 class="modal-title custom-modal-title">Сервис подбора кофемашины</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-
-                        <div class="modal-body">
+                        <div class="modal-body custom-modal-body">
                             <form name="<?echo $arResult["FILTER_NAME"]."_form"?>" action="<?echo $arResult["FORM_ACTION"]?>" method="get">
                                 <?foreach($arResult["HIDDEN"] as $arItem):?>
                                     <input type="hidden" name="<?echo $arItem["CONTROL_NAME"]?>" id="<?echo $arItem["CONTROL_ID"]?>" value="<?echo $arItem["HTML_VALUE"]?>" />
@@ -224,7 +223,7 @@ $this->setFrameMode(true);
                                                         <? } ?>
                                     <? } ?>
 
-                                <div class="modal-footer">
+                                <div class="modal-footer custom-modal-footer">
                                     <div class="row">
                                         <div class="col-xs-12 bx-filter-button-box">
                                             <div class="bx-filter-block">
