@@ -680,6 +680,9 @@
   font-size: 40px;
   color: $black;
 }
+.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+  background: $white;
+}
 //конец стрелочки на слайдере
 
 // MENU SCROLL
