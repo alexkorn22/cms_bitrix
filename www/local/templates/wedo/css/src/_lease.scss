@@ -86,6 +86,22 @@
     .form-footer {
       text-align: center;
     }
+    &_horizontal {
+      width: 820px;
+      background-image: url(../../images/banners/bg-form-lease.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      .form-content {
+        .custom-form-group {
+          display: flex;
+          justify-content: center;
+        }
+        input, textarea {
+          width: 300px;
+        }
+      }
+    }
   }
 }
 
@@ -141,6 +157,11 @@
         }
       }
     }
+
+    .slick-next, .slick-prev {
+      background-color: transparent;
+
+    }
   }
   .descr-model-for-rent {
     padding-top: 25px;
@@ -194,6 +215,12 @@
         .custom-input {
           font-size: 24px;
         }
+      }
+    }
+    .wrap-select {
+      .form-group {
+        display: flex;
+        flex-direction: column;
       }
     }
   }
