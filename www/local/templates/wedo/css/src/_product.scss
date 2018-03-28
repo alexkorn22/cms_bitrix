@@ -632,6 +632,15 @@
           color: $black;
           text-decoration: none;
           font-family: $Regular;
+          display: flex;
+          justify-content: space-between;
+          .arrow-down{
+            text-align:  end;
+            img {
+              width: 12px;
+              height: auto;
+            }
+          }
         }
       }
       &:last-child {
