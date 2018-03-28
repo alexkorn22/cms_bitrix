@@ -1,7 +1,65 @@
 //= layouts/header.html
 
 <div id="wrap">
-ss
+    <div class="head-banner head-banner_repair">
+        <div class="container-fluid">
+            <div class="tabs-lease-repair d-none d-lg-block">
+                <div class="row">
+                    <div class="col">
+                        <ul>
+                            <li><a href="#">Преимущества</a></li>
+                            <li><a href="#">Схема работы</a></li>
+                            <li><a href="#">Стоимость</a></li>
+                            <li><a href="#">Гарантии</a></li>
+                            <li><a href="#">Сервисные центры</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="title-repair">
+                        <p>Ремонт кофемашин <span class="wmf wmf_red">WMF</span> в Украине с гарантией</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-repair">
+                        <form class="repair repair_bg-red" novalidate>
+                            <div class="form-titile">
+                                <p>Заявка на аренду</p>
+                            </div>
+                            <div class="form-content">
+                                <div class="form-group custom-form-group">
+                                    <input type="text" class="form-control custom-input" id="name" placeholder="Имя" required>
+                                    <div class="invalid-feedback">
+                                        Вы не указали имя!
+                                    </div>
+                                </div>
+                                <div class="form-group custom-form-group">
+                                    <input type="text" class="form-control custom-input" id="phone" placeholder="Телефон" required>
+                                    <div class="invalid-feedback">
+                                        Вы не указали телефон!
+                                    </div>
+                                </div>
+                                <div class="form-group custom-form-group">
+                                    <input type="text" class="form-control custom-input" id="city" placeholder="Город" required>
+                                    <div class="invalid-feedback">
+                                        Вы не указали город!
+                                    </div>
+                                </div>
+                                <div class="form-group custom-form-group">
+                                    <textarea class="form-control custom-textarea" id="comment" rows="3" placeholder="Комментарий"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-footer">
+                                <button type="submit" class="btn btn_black btn_small-mobile btn_font-small">Заказать диагностику</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 //= layouts/footer.html
