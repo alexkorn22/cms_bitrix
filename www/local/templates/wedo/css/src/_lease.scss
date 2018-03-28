@@ -74,6 +74,7 @@
     background-color: $bgHead;
     padding: 30px 40px;
     border-radius: 4px;
+    box-shadow: 2px 5px 7px 0 rgba($black, 0.3);
     .form-titile {
       text-align: center;
       font-size: 24px;
@@ -88,7 +89,7 @@
   }
 }
 
-#advantages-lease, #models-for-rent, #rent-terms {
+#advantages-lease, #models-for-rent, #rent-terms, #payback-calculator {
   padding-top: 150px;
 }
 
@@ -171,6 +172,27 @@
           padding: 0 35px;
           font-size: 18px;
           line-height: 27px;
+        }
+      }
+    }
+  }
+}
+
+#payback-calculator {
+  .calculate-raschet {
+    .wrap-input, .wrap-select {
+      label {
+        font-size: 18px;
+        margin-bottom: 0;
+        padding: 0 10px;
+        min-height: 65px;
+      }
+      &.srok-okupaemosti {
+        label {
+          margin-bottom: 0;
+        }
+        .custom-input {
+          font-size: 24px;
         }
       }
     }
