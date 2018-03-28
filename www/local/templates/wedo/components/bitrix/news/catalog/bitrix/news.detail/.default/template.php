@@ -109,7 +109,10 @@ CUtil::InitJSCore(array('fx'));
         <div id="accordion-on-mobile">
             <div class="card custom-card">
                 <div class="custom-card-header d-block d-md-none">
-                    <a href="#raschet-okup" class="title-item" data-toggle="collapse" aria-expanded="false" aria-controls="raschet-okup">Расчёт окупаемости</a>
+                    <a href="#raschet-okup" class="title-item" data-toggle="collapse" aria-expanded="false" aria-controls="raschet-okup">
+                        <div>Расчёт окупаемости</div>
+                        <div class="arrow-down"><img src="<?=IMAGES_PATH?>/icons/btn-arrow-down.png" alt="down"></div>
+                    </a>
                 </div>
                 <div id="raschet-okup" class="collapse custom-collapse" data-parent="#accordion-on-mobile">
                     <div class="row justify-content-center">
@@ -184,9 +187,13 @@ CUtil::InitJSCore(array('fx'));
             <!-- похожие товары -->
             <? if($arResult['PROPERTIES']['SIMILAR_PRODUCTS']['VALUE'] != FALSE):?>
                 <div class="card custom-card">
-                <div class="custom-card-header d-block d-md-none">
-                    <a href="#pohozchie-tovari" class="title-item" data-toggle="collapse" aria-expanded="false" aria-controls="pohozchie-tovari">Похожие товары</a>
-                </div>
+                    <div class="custom-card-header d-block d-md-none">
+                        <a href="#pohozchie-tovari" class="title-item" data-toggle="collapse" aria-expanded="false"
+                           aria-controls="pohozchie-tovari">
+                            <div>Похожие товары</div>
+                            <div class="arrow-down"><img src="<?=IMAGES_PATH?>/icons/btn-arrow-down.png" alt="down"></div>
+                        </a>
+                    </div>
                 <div id="pohozchie-tovari" class="collapse custom-collapse" data-parent="#accordion-on-mobile">
                     <div class="row justify-content-center">
                         <div class="col-lg-10">
@@ -216,7 +223,11 @@ CUtil::InitJSCore(array('fx'));
             <? endif; ?>
             <div class="card custom-card">
                 <div class="custom-card-header d-block d-md-none">
-                    <a href="#service-maintenance" class="title-item" data-toggle="collapse" aria-expanded="false" aria-controls="service-maintenance">Сервисное обслуживание</a>
+                    <a href="#service-maintenance" class="title-item" data-toggle="collapse" aria-expanded="false"
+                       aria-controls="service-maintenance">
+                        <div>Сервисное обслуживание</div>
+                        <div class="arrow-down"><img src="<?=IMAGES_PATH?>/icons/btn-arrow-down.png" alt="down"></div>
+                    </a>
                 </div>
                 <div id="service-maintenance" class="collapse custom-collapse" data-parent="#accordion-on-mobile">
                     <div class="row justify-content-center">
@@ -293,21 +304,15 @@ CUtil::InitJSCore(array('fx'));
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="card custom-card">
-                <div class="custom-card-header d-block d-md-none">
-                    <a href="#documents" class="title-item" data-toggle="collapse" aria-expanded="false" aria-controls="documents">График замены запчастей кофемашины модели <?=$arResult["NAME"]?></a>
-                </div>
-                <div id="documents" class="collapse custom-collapse" data-parent="#accordion-on-mobile">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-11">
-                            <div class="section-title">
-                                <h2 class="title d-none d-md-block">График замены запчастей кофемашины модели <?=$arResult["NAME"]?></h2>
+                    <?if (!empty($arResult['PROPERTIES']['SCHEDULE']['VALUE'])):?>
+                        <div class="row justify-content-center">
+                            <div class="col-lg-11">
+                                <div class="section-title">
+                                    <h2 class="title d-md-block">График замены запчастей кофемашины модели <?=$arResult["NAME"]?></h2>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <?if (!empty($arResult['PROPERTIES']['SCHEDULE']['VALUE'])):?>
+
                         <div class="schedule">
                             <? foreach($arResult['PROPERTIES']['SCHEDULE']['VALUE'] as $id):?>
                                 <? $file = CFile::GetFileArray($id); ?>
@@ -324,14 +329,24 @@ CUtil::InitJSCore(array('fx'));
                                     </div>
                                     <div class="col-lg-2">
                                         <div class="open">
-                                                <a href="<?=$file['SRC']?>" target="_blank">Открыть</a>
+                                            <a href="<?=$file['SRC']?>" target="_blank">Открыть</a>
                                         </div>
                                     </div>
                                 </div>
                             <?endforeach; ?>
                         </div>
                     <? endif;?>
-
+                </div>
+            </div>
+            <?if(!empty($arResult['PROPERTIES']['DOCUMENTS']['VALUE'])):?>
+                 <div class="card custom-card">
+                <div class="custom-card-header d-block d-md-none">
+                    <a href="#documents" class="title-item" data-toggle="collapse" aria-expanded="false" aria-controls="documents">
+                        <div>Инструкции по эксплуатации <?=$arResult['NAME']?></div>
+                        <div class="arrow-down"><img src="<?=IMAGES_PATH?>/icons/btn-arrow-down.png" alt="down"></div>
+                    </a>
+                </div>
+                <div id="documents" class="collapse custom-collapse" data-parent="#accordion-on-mobile">
                     <div class="row justify-content-center">
                         <div class="col-lg-11">
                             <div class="section-title">
@@ -339,7 +354,6 @@ CUtil::InitJSCore(array('fx'));
                             </div>
                         </div>
                     </div>
-                    <?if(!empty($arResult['PROPERTIES']['DOCUMENTS']['VALUE'])):?>
                         <div class="instructions">
                             <?foreach($arResult['PROPERTIES']['DOCUMENTS']['VALUE'] as $IdDoc):?>
                                 <? $file = CFile::GetFileArray($IdDoc); ?>
@@ -362,15 +376,19 @@ CUtil::InitJSCore(array('fx'));
                             </div>
                             <?endforeach;?>
                         </div>
-                    <? endif; ?>
+
                 </div>
             </div>
+            <? endif; ?>
             <!-- Videos -->
             <?if(!empty($arResult['PROPERTIES']['VIDEO']['VALUE'][0])):?>
                 <div class="card custom-card">
-                <div class="custom-card-header d-block d-md-none">
-                    <a href="#video-product" class="title-item" data-toggle="collapse" aria-expanded="false" aria-controls="video-product">Видео о <?=$arResult["NAME"]?></a>
-                </div>
+                    <div class="custom-card-header d-block d-md-none">
+                        <a href="#video-product" class="title-item" data-toggle="collapse" aria-expanded="false" aria-controls="video-product">
+                            <div>Видео о <?=$arResult['NAME']?></div>
+                            <div class="arrow-down"><img src="<?=IMAGES_PATH?>/icons/btn-arrow-down.png" alt="down"></div>
+                        </a>
+                    </div>
                 <div id="video-product" class="collapse custom-collapse" data-parent="#accordion-on-mobile">
                     <div class="row justify-content-center">
                         <div class="col-lg-11">
@@ -399,9 +417,9 @@ CUtil::InitJSCore(array('fx'));
                                  <?else: ?> <!-- Video from site -->
                                     <div class="col-md-6">
                                         <div class="video">
-                                            <div class="video">
-                                                <iframe src="<?=$video['path']?>" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
-                                            </div>
+                                            <video controls>
+                                                <source src="<?=$video['path']?>">
+                                            </video>
                                         </div>
                                         <div class="description-video">
                                             <p><?=$video['desc']?></p>
@@ -425,9 +443,12 @@ CUtil::InitJSCore(array('fx'));
             <? endif; ?>
             <?if($arResult['PROPERTIES']['RENT']['VALUE'] == 'Да'):?>
                 <div class="card custom-card">
-                <div class="custom-card-header d-block d-md-none">
-                    <a href="#lease-product" class="title-item" data-toggle="collapse"  aria-expanded="false" aria-controls="lease-product">Аренда <?=$arResult["NAME"]?></a>
-                </div>
+                    <div class="custom-card-header d-block d-md-none">
+                        <a href="#lease-product" class="title-item" data-toggle="collapse"  aria-expanded="false" aria-controls="lease-product">
+                            <div>Аренда <?=$arResult['NAME']?></div>
+                            <div class="arrow-down"><img src="<?=IMAGES_PATH?>/icons/btn-arrow-down.png" alt="down"></div>
+                        </a>
+                    </div>
                 <div id="lease-product" class="collapse custom-collapse" data-parent="#accordion-on-mobile">
                     <div class="row justify-content-center">
                         <div class="col-lg-10">
