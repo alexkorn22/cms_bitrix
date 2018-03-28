@@ -80,27 +80,6 @@ function loadSimilarProductsSlider (){
     });
 }
 function loadProductSlider(){
-
-    $( ".block.cms" ).hover(function() {
-        $('.block.cms').addClass('big-section');
-        $('.block.wmf').addClass('small-section');
-    },  function(){
-        $('.block.cms').removeClass('big-section');
-        $('.block.wmf').removeClass('small-section');
-    });
-
-
-//open modal
-    $('#filter, #order-consultation').on('shown.bs.modal');
-
-    $(window).resize(setVideoDimensions);
-    setVideoDimensions();
-
-    var navbarData = startNav();
-    $(window).scroll(function(){stickyMenu(navbarData);});
-
-
-//слайдер в карточке товара
     $('.product-img-main').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
