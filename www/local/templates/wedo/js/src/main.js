@@ -5,7 +5,6 @@ var moretext     = "Подробнее";
 var lesstext     = "Скрыть";
 
 $( document ).ready(function() {
-
     setVideoDimensions();
     loadClientsSlider();
     loadProductSlider();
@@ -13,37 +12,35 @@ $( document ).ready(function() {
     loadModal();
     togglePanel();
     validateForm();
-
-    $('.burger').on('click', clickBurger );
-
-    $( ".block.wmf" ).hover(blockWMFHoverIn,blockWMFHoverOut);
-
-    $( ".block.cms" ).hover(blockCMSHoverIn,blockCMSHoverOut);
-
-    $(window).on('resize',function(){
-        togglePanel();
-        setVideoDimensions();
-    });
-
-    var navbarData = startNav();
-    $(window).scroll(function(){stickyMenu(navbarData);});
-
-    $(".tabs-kartochka").on("click","a",clickOnTap);
-
-    //Cut content based on showChar length
-    if($(".toggle-text").length){
-        $(".toggle-text").each(textToggle);
-    }
-
-    //Toggle content when click on read more link
-    $(".toggle-text-link").on('click',linkToggle);
-
-    //кнопка на верх
-    $(window).on('scroll',showUpButton);
-    $('#upbutton').on('click',goUp);
-
-
 });
+
+$('.burger').on('click', clickBurger );
+
+$( ".block.wmf" ).hover(blockWMFHoverIn,blockWMFHoverOut);
+
+$( ".block.cms" ).hover(blockCMSHoverIn,blockCMSHoverOut);
+
+$(window).on('resize',function(){
+    togglePanel();
+    setVideoDimensions();
+});
+
+var navbarData = startNav();
+$(window).scroll(function(){stickyMenu(navbarData);});
+
+$(".tabs-kartochka").on("click","a",clickOnTap);
+
+//Cut content based on showChar length
+$(".toggle-text").each(textToggle);
+
+//Toggle content when click on read more link
+$(".toggle-text-link").on('click',linkToggle);
+
+//кнопка на верх
+$(window).on('scroll',showUpButton);
+$('#upbutton').on('click',goUp);
+
+
 
 function loadSimilarProductsSlider (){
     $('.slider-similar-products').slick({
@@ -297,7 +294,6 @@ function goUp(){
 }
 
 function validateForm(){
-    'use strict';
     window.addEventListener('load', function() {
         // Fetch all the forms we want to apply custom Bootstrap validation styles to
         var forms = document.getElementsByClassName('consultation');
@@ -313,3 +309,5 @@ function validateForm(){
         });
     }, false);
 }
+
+
