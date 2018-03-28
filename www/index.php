@@ -99,12 +99,14 @@ $APPLICATION->SetTitle("Кофемашины");
                                     <li>сервисное обслуживание и ремонт в Украине</li>
                                 </ul>
                                 <div class="wrap-link">
-                                    <div class="wrap-arrow">
-                                        <div class="scroll-arrow"></div>
-                                        <div class="scroll-arrow"></div>
-                                        <div class="scroll-arrow"></div>
-                                    </div>
-                                    <a href="/catalog/" class="more-info">Каталог кофемашин</a>
+                                    <a href="/catalog/" class="more-info">
+                                        <div class="wrap-arrow">
+                                            <div class="scroll-arrow"></div>
+                                            <div class="scroll-arrow"></div>
+                                            <div class="scroll-arrow"></div>
+                                        </div>
+                                        Каталог кофемашин
+                                    </a>
                                 </div>
                             </div>
                         </div>

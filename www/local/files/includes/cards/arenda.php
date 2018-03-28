@@ -10,12 +10,13 @@
                     <li>без процента от продаж</li>
                     <li>без залоговой суммы</li>
                 </ul>
-                <a href="#" class="more-info">Подробнее</a>
-                <div class="wrap-arrow d-none d-md-flex">
-                    <div class="scroll-arrow"></div>
-                    <div class="scroll-arrow"></div>
-                    <div class="scroll-arrow"></div>
-                </div>
+                <a href="/lease/index.php" class="more-info">Подробнее
+                    <div class="wrap-arrow d-none d-md-flex">
+                        <div class="scroll-arrow"></div>
+                        <div class="scroll-arrow"></div>
+                        <div class="scroll-arrow"></div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>

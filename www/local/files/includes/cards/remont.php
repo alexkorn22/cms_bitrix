@@ -10,12 +10,13 @@
                     <li>подбор и замена деталей и узлов</li>
                     <li>капитальный ремонт по истечении гарантии</li>
                 </ul>
-                <a href="#" class="more-info">Подробнее</a>
-                <div class="wrap-arrow d-none d-md-flex">
-                    <div class="scroll-arrow"></div>
-                    <div class="scroll-arrow"></div>
-                    <div class="scroll-arrow"></div>
-                </div>
+                <a href="/repair/" class="more-info">Подробнее
+                    <div class="wrap-arrow d-none d-md-flex">
+                        <div class="scroll-arrow"></div>
+                        <div class="scroll-arrow"></div>
+                        <div class="scroll-arrow"></div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>

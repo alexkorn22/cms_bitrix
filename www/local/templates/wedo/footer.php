@@ -6,7 +6,9 @@
         <div class="row wrap-content-footer">
             <div class="col-sm-12 order-1 order-md-1 col-md-3">
                 <div class="f-logo">
-                    <img src="<?=SITE_TEMPLATE_PATH?>/images/logo.png" alt="CMS">
+                    <a href="/">
+                        <img src="<?=SITE_TEMPLATE_PATH?>/images/logo.png" alt="CMS">
+                    </a>
                 </div>
             </div>
             <div class="col-sm-12 order-3 order-md-2 col-md-3">
