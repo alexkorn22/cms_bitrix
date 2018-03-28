@@ -13,7 +13,6 @@
 $this->setFrameMode(true);
 CUtil::InitJSCore(array('fx'));
 ?>
-<div id="wrap">
     <div class="container-fluid product">
         <div class="row">
             <div class="col">
@@ -474,7 +473,7 @@ CUtil::InitJSCore(array('fx'));
         </div>
 
     </div>
-</div>
+
 
 
 <!--Modal order-consultation-->
