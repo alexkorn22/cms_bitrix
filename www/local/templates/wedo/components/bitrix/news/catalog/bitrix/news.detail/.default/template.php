@@ -21,7 +21,7 @@ CUtil::InitJSCore(array('fx'));
                         <p><?=$arResult["NAME"]?></p>
                     </div>
                     <div class="sub-title">
-                        <p><?=$arResult['PROPERTIES']['TAG']['VALUE']?></p>
+                        <p><?=$arResult['PROPERTIES']['SLOGAN']['VALUE']?></p>
                     </div>
                 </div>
             </div>
@@ -64,7 +64,7 @@ CUtil::InitJSCore(array('fx'));
                 <?  include ROOT.$this->GetFolder() .'/sections/videos.php' ?>
             <? endif; ?>
 
-            <?if($arResult['PROPERTIES']['RENT']['VALUE'] == 'Да'):?>
+            <?if($arResult['PROPERTIES']['RENT']['VALUE_XML_ID'] == 'RENT_TRUE'):?>
                 <!-- Аренда -->
                 <?  include ROOT.$this->GetFolder() .'/sections/arenda.php' ?>
             <?endif;?>
