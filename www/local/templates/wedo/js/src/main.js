@@ -14,31 +14,27 @@ $( document ).ready(function() {
     validateForm();
     var navbarData = startNav();
     $(window).scroll(function(){stickyMenu(navbarData);});
-});
+    $('.burger').on('click', clickBurger );
+    $( ".block.wmf" ).hover(blockWMFHoverIn,blockWMFHoverOut);
+    $( ".block.cms" ).hover(blockCMSHoverIn,blockCMSHoverOut);
+    $(window).on('resize',function(){
+        togglePanel();
+        setVideoDimensions();
+    });
 
-$('.burger').on('click', clickBurger );
-
-$( ".block.wmf" ).hover(blockWMFHoverIn,blockWMFHoverOut);
-
-$( ".block.cms" ).hover(blockCMSHoverIn,blockCMSHoverOut);
-
-$(window).on('resize',function(){
-    togglePanel();
-    setVideoDimensions();
-});
-
-$(".tabs-kartochka").on("click","a",clickOnTap);
+    $(".tabs-kartochka").on("click","a",clickOnTap);
 
 //Cut content based on showChar length
-$(".toggle-text").each(textToggle);
+    $(".toggle-text").each(textToggle);
 
 //Toggle content when click on read more link
-$(".toggle-text-link").on('click',linkToggle);
+    $(".toggle-text-link").on('click',linkToggle);
 
 //кнопка на верх
-$(window).on('scroll',showUpButton);
-$('#upbutton').on('click',goUp);
+    $(window).on('scroll',showUpButton);
+    $('#upbutton').on('click',goUp);
 
+});
 
 
 function loadSimilarProductsSlider (){
@@ -214,6 +210,7 @@ function stickyMenu(navbarData) {
 }
 
 function clickBurger(){
+        console.log('test');
         $('.top-fixed-line').toggleClass('open');
         $('.container-line-menu').toggleClass('open');
         $('.burger').toggleClass('open');
