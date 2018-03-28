@@ -87,3 +87,28 @@
     }
   }
 }
+
+#advantages-lease {
+  padding-top: 100px;
+}
+
+.item-advantages {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  img {
+    width: auto;
+    height: 75px;
+  }
+  p {
+    text-align: center;
+    padding: 0 55px;
+    margin: 0;
+    margin-top: 10px;
+  }
+  span {
+    color: $red;
+  }
+}
