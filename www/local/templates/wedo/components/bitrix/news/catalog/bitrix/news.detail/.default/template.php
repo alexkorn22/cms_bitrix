@@ -13,142 +13,16 @@
 $this->setFrameMode(true);
 CUtil::InitJSCore(array('fx'));
 ?>
-<div class="container">
-	<div  id="<?echo $this->GetEditAreaId($arResult['ID'])?>">
-        <div class="row text-center">
-            <div><?=$arResult["NAME"]?></div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <?if($arParams["DISPLAY_PICTURE"]!="N"):?>
-                    <?if(is_array($arResult["DETAIL_PICTURE"])):?>
-                        <div class="bx-newsdetail-img">
-                            <img
-                                    src="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>"
-                                    width="<?=$arResult["DETAIL_PICTURE"]["WIDTH"]?>"
-                                    height="<?=$arResult["DETAIL_PICTURE"]["HEIGHT"]?>"
-                                    alt="<?=$arResult["DETAIL_PICTURE"]["ALT"]?>"
-                                    title="<?=$arResult["DETAIL_PICTURE"]["TITLE"]?>"
-                            />
-                        </div>
-                    <?endif;?>
-                <?endif;?>
-            </div>
-            <div class="col-md-offset-1 col-md-4">
-                <div><b>Характеристики:</b></div>
-                <?foreach($arResult['PROPERTIES'] as $prop):?>
-                    <?if(!empty($prop['VALUE']) && $prop['SORT'] < 5000 ):?>
-                       <div> <?=$prop['NAME']?> : <?=$prop['VALUE']?></div>
-                    <?endif;?>
-                <?endforeach;?>
-            </div>
-            <div class="col-md-3">
-                <div>  Цена : <?=$arResult['PROPERTIES']['PRICE']['VALUE']?> EUR</div>
-                <div>
-                    <button class="btn btn-primary btn-lg">
-                        Заказать консультацию
-                    </button>
-                </div>
-            </div>
-        </div><hr/>
-        <div class="row">
-            <div class="col-md-6">
-                <div>Описание </div>
-                <div><?=$arResult['PROPERTIES']['DESCRIPTION']['VALUE']?></div>
-            </div>
-        </div>
-        <hr/>
-        <?if($arResult['PROPERTIES']['RENT']['VALUE'] == 'Да'):?>
-        <div class="row">
-            <div class="col-md-6">
-                <div>Аренда </div>
-                <div>Возможность арендовать  : <?=$arResult['PROPERTIES']['RENT']['VALUE']?></div>
-            </div>
-        </div>
-        <hr/>
-        <?endif;?>
-        <?if(!empty($arResult['PROPERTIES']['DOCUMENTS']['VALUE'])):?>
-            <div class="row">
-                <div class="col-md-12">
-                    <div>Документы</div>
-                    <?foreach($arResult['PROPERTIES']['DOCUMENTS']['VALUE'] as $IdDoc):?>
-                        <? $file = CFile::GetFileArray($IdDoc); ?>
-                        <div>
-                            <div class="col-md-6"> <div> Название : <?=$file['FILE_NAME']?> </div></div>
-                            <div class="col-md-4"> <div><a target="_blank" href="<?=$file['SRC']?>">Открыть</a></div></div>
-                        </div>
-                    <?endforeach;?>
-                </div>
-            </div>
-            <hr/>
-        <?endif;?>
-        <?if(!empty($arResult['PROPERTIES']['VIDEO']['VALUE'][0])):?>
-            <div>Видео</div>
-            <div class="row">
-                <?foreach ($arResult['PROPERTIES']['VIDEO']['VALUE'] as $video):?>
-                <div class="col-md-6">
-                    <div>Title  :<?=$video['title']?></div>
-                    <? if(strpos($video['path'], 'youtube') !== false): ?> <!-- youtube video -->
-                        <?php
-                            $src         = $video['path'];
-                            $youtubeSrc  =  'https://www.youtube.com/embed/';
-                            $youtubeSrc .= substr($src, strpos($src, "=") + 1);
-                        ?>
-                        <iframe width="320" height="240"
-                                src="<?=$youtubeSrc?>">
-                        </iframe>
-                    <?else: ?> <!-- Video from site -->
-                        <iframe width="320" height="240"
-<!--                                src=""> --><?//=$video['path']?>
-                        </iframe>
-                    <?endif;?>
-                    <div>Description  : <?=$video['desc']?></div>
-                </div>
-                <?endforeach;?>
-            </div>
-            <hr/>
-        <?endif;?>
-        <?if (!empty($arResult['PROPERTIES']['SCHEDULE']['VALUE'])):?>
-            <div class="row">
-                <div class="col-md-6">
-                    <div>График замены запчастей кофемашины</div>
-                    <? foreach($arResult['PROPERTIES']['SCHEDULE']['VALUE'] as $id):?>
-                        <img src="<?=CFile::GetPath($id);?>" height="500" width="500">
-                    <?endforeach;?>
-                </div>
-            </div>
-            <hr/>
-        <?endif;?>
-	</div>
-
-    <? if($arResult['PROPERTIES']['SIMILAR_PRODUCTS']['VALUE'] != FALSE):?>
-    <!-- Similar products component -->
-    <?$APPLICATION->IncludeComponent(
-        "wedo:similar_products",
-        "",
-        array(
-            "IBLOCK_TYPE" => "catalogs",
-            "IBLOCK_ID" => App::$config->coffeeMachineIblockId,
-            "PRODUCT_ID" => $arResult['ID']
-        ),
-        false
-    );?>
-    <!-- -->
-    <hr/>
-    <? endif;?>
-</div>
-
-
 <div id="wrap">
     <div class="container-fluid product">
         <div class="row">
             <div class="col">
                 <div class="title-product">
                     <div class="title">
-                        <p>WMF 1100 S</p>
+                        <p><?=$arResult["NAME"]?></p>
                     </div>
                     <div class="sub-title">
-                        <p>Сделайте первый шаг к профессиональному кофе</p>
+                        <p><?=$arResult['PROPERTIES']['TAG']['VALUE']?></p>
                     </div>
                 </div>
             </div>
@@ -175,34 +49,20 @@ CUtil::InitJSCore(array('fx'));
                         <div class="row">
                             <div class="col-md-9 col-lg-9">
                                 <div class="product-img-main">
-                                    <div class="img-main">
-                                        <img src="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="img-main">
-                                        <img src="<?=IMAGES_PATH?>/product/cm2.png" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="img-main">
-                                        <img src="<?=IMAGES_PATH?>/product/cm3.png" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="img-main">
-                                        <img src="<?=IMAGES_PATH?>/product/img_1100s.png" class="img-fluid" alt="">
-                                    </div>
+                                    <? foreach($arResult['PROPERTIES']['IMAGES']['VALUE'] as $id):?>
+                                        <div class="img-main">
+                                            <img src="<?=CFile::GetPath($id);?>" class="img-fluid" alt="">
+                                        </div>
+                                    <? endforeach;?>
                                 </div>
                             </div>
                             <div class="col-md-3 col-lg-2">
                                 <div class="product-img-preview">
-                                    <div class="preview">
-                                        <img src="<?=IMAGES_PATH?>/product/cm1.png" alt="">
-                                    </div>
-                                    <div class="preview">
-                                        <img src="<?=IMAGES_PATH?>/product/cm2.png" alt="">
-                                    </div>
-                                    <div class="preview">
-                                        <img src="<?=IMAGES_PATH?>/product/cm3.png" alt="">
-                                    </div>
-                                    <div class="preview">
-                                        <img src="<?=IMAGES_PATH?>/product/img_1100s.png" alt="">
-                                    </div>
+                                    <? foreach($arResult['PROPERTIES']['IMAGES']['VALUE'] as $id):?>
+                                        <div class="preview">
+                                            <img src="<?=CFile::GetPath($id);?>" class="img-fluid" alt="">
+                                        </div>
+                                    <? endforeach;?>
                                 </div>
                             </div>
                         </div>
@@ -388,7 +248,7 @@ CUtil::InitJSCore(array('fx'));
                     <div class="row justify-content-center">
                         <div class="col-lg-11">
                             <div class="section-title">
-                                <h2 class="title">Сервисное обслуживание кофемашины WMF 1100 S позволяет</h2>
+                                <h2 class="title">Сервисное обслуживание кофемашины <?=$arResult["NAME"]?> позволяет</h2>
                             </div>
                         </div>
                     </div>
@@ -415,7 +275,7 @@ CUtil::InitJSCore(array('fx'));
                     <div class="row">
                         <div class="col-lg-11">
                             <div class="range-of-services">
-                                <p>Сервисное обслуживание кофемашины WMF 1100 S в Coffee Machine Service предполагает комплекс услуг: </p>
+                                <p>Сервисное обслуживание кофемашины <?=$arResult["NAME"]?> в Coffee Machine Service предполагает комплекс услуг: </p>
                                 <ul>
                                     <li>визит техника 1-2 раза в месяц</li>
                                     <li>проверка технических и технологических параметров</li>
@@ -437,39 +297,45 @@ CUtil::InitJSCore(array('fx'));
             </div>
             <div class="card custom-card">
                 <div class="custom-card-header d-block d-md-none">
-                    <a href="#documents" class="title-item" data-toggle="collapse" aria-expanded="false" aria-controls="documents">График замены запчастей кофемашины модели WMF 1100 S</a>
+                    <a href="#documents" class="title-item" data-toggle="collapse" aria-expanded="false" aria-controls="documents">График замены запчастей кофемашины модели <?=$arResult["NAME"]?></a>
                 </div>
                 <div id="documents" class="collapse custom-collapse" data-parent="#accordion-on-mobile">
                     <div class="row justify-content-center">
                         <div class="col-lg-11">
                             <div class="section-title">
-                                <h2 class="title d-none d-md-block">График замены запчастей кофемашины модели WMF 1100 S</h2>
+                                <h2 class="title d-none d-md-block">График замены запчастей кофемашины модели <?=$arResult["NAME"]?></h2>
                             </div>
                         </div>
                     </div>
-                    <div class="schedule">
-                        <div class="row">
-                            <div class="col-lg-2">
-                                <div class="icon">
-                                    <img src="<?=IMAGES_PATH?>/file_types/icon-pdf.png" alt="PDF">
+                    <?if (!empty($arResult['PROPERTIES']['SCHEDULE']['VALUE'])):?>
+                        <div class="schedule">
+                            <? foreach($arResult['PROPERTIES']['SCHEDULE']['VALUE'] as $id):?>
+                                <? $file = CFile::GetFileArray($id); ?>
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <div class="icon">
+                                            <img src="<?=IMAGES_PATH?>/file_types/icon-pdf.png" alt="PDF">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <div class="name">
+                                            <p><?=$file['FILE_NAME']?></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="open">
+                                                <a href="<?=$file['SRC']?>" target="_blank">Открыть</a>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="name">
-                                    <p>Надо заголовок документы, наверное</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-2">
-                                <div class="open">
-                                    <a href="#" target="_blank">Открыть</a>
-                                </div>
-                            </div>
+                            <?endforeach; ?>
                         </div>
-                    </div>
+                    <? endif;?>
+
                     <div class="row justify-content-center">
                         <div class="col-lg-11">
                             <div class="section-title">
-                                <h2 class="title">Инструкции по эксплуатации WMF 1100 S </h2>
+                                <h2 class="title">Инструкции по эксплуатации <?=$arResult["NAME"]?> </h2>
                             </div>
                         </div>
                     </div>
@@ -503,13 +369,13 @@ CUtil::InitJSCore(array('fx'));
             <?if(!empty($arResult['PROPERTIES']['VIDEO']['VALUE'][0])):?>
                 <div class="card custom-card">
                 <div class="custom-card-header d-block d-md-none">
-                    <a href="#video-product" class="title-item" data-toggle="collapse" aria-expanded="false" aria-controls="video-product">Видео о WMF 1100 S</a>
+                    <a href="#video-product" class="title-item" data-toggle="collapse" aria-expanded="false" aria-controls="video-product">Видео о <?=$arResult["NAME"]?></a>
                 </div>
                 <div id="video-product" class="collapse custom-collapse" data-parent="#accordion-on-mobile">
                     <div class="row justify-content-center">
                         <div class="col-lg-11">
                             <div class="section-title">
-                                <h2 class="title d-none d-md-block">Видео о WMF 1100 S</h2>
+                                <h2 class="title d-none d-md-block">Видео о <?=$arResult["NAME"]?></h2>
                             </div>
                         </div>
                     </div>
@@ -560,16 +426,16 @@ CUtil::InitJSCore(array('fx'));
             <?if($arResult['PROPERTIES']['RENT']['VALUE'] == 'Да'):?>
                 <div class="card custom-card">
                 <div class="custom-card-header d-block d-md-none">
-                    <a href="#lease-product" class="title-item" data-toggle="collapse"  aria-expanded="false" aria-controls="lease-product">Аренда WMF 1100 S</a>
+                    <a href="#lease-product" class="title-item" data-toggle="collapse"  aria-expanded="false" aria-controls="lease-product">Аренда <?=$arResult["NAME"]?></a>
                 </div>
                 <div id="lease-product" class="collapse custom-collapse" data-parent="#accordion-on-mobile">
                     <div class="row justify-content-center">
                         <div class="col-lg-10">
                             <div class="section-title">
-                                <h2 class="title d-none d-md-block">Аренда WMF 1100 S</h2>
+                                <h2 class="title d-none d-md-block">Аренда <?=$arResult["NAME"]?></h2>
                             </div>
                             <div class="section-description">
-                                <p class="descr">Вы можете взять кофемашину WMF 1100 S в аренду на выгодных условиях.</p>
+                                <p class="descr">Вы можете взять кофемашину <?=$arResult["NAME"]?> в аренду на выгодных условиях.</p>
                             </div>
                         </div>
                     </div>
