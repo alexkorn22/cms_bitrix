@@ -598,60 +598,34 @@
 
 
 //section clients
-#clients {
-  .wrap-slider {
-    width: 100%;
-    height: auto;
-    .clients-slider {
-      .slide {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 155px;
-        outline: none;
-        img {
-          filter: grayscale(1);
-          @include media-breakpoint-down(sm){
-            filter: none;
-          }
-        }
-      }
-      & .slick-center {
-        img {
-          filter: grayscale(0);
-        }
-      }
+#clients {}
+//END section clients
 
-      //.slick-prev:before {
-      //  content: '\2039';
-      //}
-      //.slick-next:before {
-      //  content: '\203A';
-      //}
-      //.slick-prev,
-      //.slick-next {
-      //  width: 70px;
-      //  background-color: $white;
-      //  height: 100%;
-      //  z-index: 1;
-      //  @include media-breakpoint-down(sm){
-      //    background-color: transparent;
-      //  }
-      //}
-      //.slick-prev{
-      //  left: -10px;
-      //}
-      //.slick-next {
-      //  right: -10px;
-      //}
-      //.slick-prev:before, .slick-next:before {
-      //  font-size: 40px;
-      //  color: $black;
-      //}
+//clients-slider
+.wrap-slider {
+  width: 100%;
+  height: auto;
+  .clients-slider {
+    .slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 155px;
+      outline: none;
+      img {
+        filter: grayscale(1);
+        @include media-breakpoint-down(sm){
+          filter: none;
+        }
+      }
+    }
+    & .slick-center {
+      img {
+        filter: grayscale(0);
+      }
     }
   }
 }
-//END section clients
 
 //стрелочки на слайдере
 .slick-prev:before {
@@ -684,6 +658,7 @@
   background: $white;
 }
 //конец стрелочки на слайдере
+//END clients-slider
 
 // MENU SCROLL
 .container-line-menu {
