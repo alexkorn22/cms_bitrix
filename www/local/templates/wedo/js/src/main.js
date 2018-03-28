@@ -9,6 +9,7 @@ $( document ).ready(function() {
     loadClientsSlider();
     loadProductSlider();
     loadSimilarProductsSlider();
+    loadModelForRentSlider ();
     loadModal();
     togglePanel();
     validateForm();
@@ -324,6 +325,45 @@ function validateForm(){
             }, false);
         });
     }, false);
+}
+
+function loadModelForRentSlider (){
+    $('.slider-models-for-rent').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: false,
+        nav: true,
+        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
 }
 
 
