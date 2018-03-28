@@ -210,7 +210,6 @@ function stickyMenu(navbarData) {
 }
 
 function clickBurger(){
-        console.log('test');
         $('.top-fixed-line').toggleClass('open');
         $('.container-line-menu').toggleClass('open');
         $('.burger').toggleClass('open');
