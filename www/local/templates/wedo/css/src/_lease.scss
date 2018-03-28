@@ -88,8 +88,8 @@
   }
 }
 
-#advantages-lease, #models-for-rent {
-  padding-top: 100px;
+#advantages-lease, #models-for-rent, #rent-terms {
+  padding-top: 150px;
 }
 
 .item-advantages {
@@ -115,6 +115,7 @@
 
 #models-for-rent {
   .slider-models-for-rent {
+    margin-top: 40px;
     .models {
      &:focus {
        outline: 0;
@@ -145,5 +146,33 @@
     font-size: 26px;
     line-height: 36px;
     font-family: $Light;
+  }
+}
+
+#rent-terms {
+  .wrap-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    .circle {
+      border: 2px solid $red;
+      height: 250px;
+      width: 250px;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 6px 0 $bgHead;
+      .text {
+        p {
+          margin: 0;
+          text-align: center;
+          padding: 0 35px;
+          font-size: 18px;
+          line-height: 27px;
+        }
+      }
+    }
   }
 }
