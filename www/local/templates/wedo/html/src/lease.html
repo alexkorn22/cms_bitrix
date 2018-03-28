@@ -1,7 +1,99 @@
 //= layouts/header.html
 
 <div id="wrap">
-    sss
+    <div class="head-banner">
+        <div class="container-fluid">
+            <div class="tabs-lease-repair d-none d-lg-block">
+                <div class="row">
+                    <div class="col">
+                        <ul>
+                            <li><a href="#advantages-lease">Преимущества</a></li>
+                            <li><a href="#">Модели для аренды</a></li>
+                            <li><a href="#">Условия аренды</a></li>
+                            <li><a href="#">Калькулятор окупаемости</a></li>
+                            <li><a href="#">Наши клиенты</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="title-lease">
+                        <p>Аренда кофемашин <span>WMF</span> в Украине</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-lease">
+                        <form class="lease" novalidate>
+                            <div class="form-titile">
+                                <p>Заявка на аренду</p>
+                            </div>
+                            <div class="form-content">
+                                <div class="form-group custom-form-group">
+                                    <input type="text" class="form-control custom-input" id="name" placeholder="Имя" required>
+                                    <div class="invalid-feedback">
+                                        Вы не указали имя!
+                                    </div>
+                                </div>
+                                <div class="form-group custom-form-group">
+                                    <input type="text" class="form-control custom-input" id="phone" placeholder="Телефон" required>
+                                    <div class="invalid-feedback">
+                                        Вы не указали телефон!
+                                    </div>
+                                </div>
+                                <div class="form-group custom-form-group">
+                                    <input type="text" class="form-control custom-input" id="city" placeholder="Город" required>
+                                    <div class="invalid-feedback">
+                                        Вы не указали город!
+                                    </div>
+                                </div>
+                                <div class="form-group custom-form-group">
+                                    <textarea class="form-control custom-textarea" id="comment" rows="3" placeholder="Комментарий"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-footer">
+                                <button type="submit" class="btn btn_red btn_small-mobile btn_font-small">Отправить</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div id="advantages-lease">
+            <div class="row justify-content-center">
+                <div class="col-lg-11">
+                    <div class="section-title">
+                        <h2 class="title">Сервисное обслуживание кофемашины WMF 1100 S позволяет</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="service-advantages">
+                        <img src="../../images/icons/icon-squares.png" alt="advantages">
+                        <p><span>Предупреждать поломки</span>, поддерживать работоспособность суперавтомата</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="service-advantages">
+                        <img src="../../images/icons/icon-squares.png" alt="advantages">
+                        <p><span>Обеспечивать правильную технологию</span> приготовления напитков</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="service-advantages">
+                        <img src="../../images/icons/icon-squares.png" alt="advantages">
+                        <p><span>Контролировать и нормировать расход</span> кофе, молока, воды</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
 </div>
 
 //= layouts/footer.html

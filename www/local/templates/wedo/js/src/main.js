@@ -78,7 +78,7 @@ $( document ).ready(function() {
     $(window).scroll(function(){stickyMenu(navbarData);});
 
 //плавный скролл к якорю
-    $(".tabs-kartochka").on("click","a",clickOnTap);
+    $(".tabs-kartochka, .tabs-lease-repair").on("click","a",clickOnTap);
 
 //слайдер в карточке товара
     $('.product-img-main').slick({

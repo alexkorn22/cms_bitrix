@@ -1,0 +1,89 @@
+.head-banner {
+  min-height: 85vh;
+  background-image: url(../../images/banners/bg-banner-lease.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.tabs-lease-repair {
+  padding-right: 15px;
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0;
+    li {
+      text-align: center;
+      padding: 0 10px;
+      a {
+        text-decoration: none;
+        color: $white;
+        font-size: 18px;
+        line-height: 20px;
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        margin-bottom: 0.5em;
+        text-transform: uppercase;
+        &:after {
+          content: '';
+          display: block;
+          width: 0;
+          height: 2px;
+          background: $white;
+          margin: auto;
+          transition: all .5s ease;
+          margin-top: 5px;
+        }
+        &:hover::after,
+        &:focus::after{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.title-lease, .form-lease {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10%;
+}
+
+.title-lease {
+  p {
+    font-size: 54px;
+    font-family: $Bold;
+    color: $white;
+    line-height: 64px;
+    span {
+      color: $black;
+      font-size: 58px;
+      font-family: $Black;
+      font-style: italic;
+    }
+  }
+}
+
+.form-lease {
+  form.lease {
+    width: 430px;
+    background-color: $bgHead;
+    padding: 30px 40px;
+    border-radius: 4px;
+    .form-titile {
+      text-align: center;
+      font-size: 24px;
+      color: $white;
+    }
+    .form-content {
+
+    }
+    .form-footer {
+      text-align: center;
+    }
+  }
+}
