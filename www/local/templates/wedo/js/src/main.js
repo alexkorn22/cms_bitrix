@@ -12,6 +12,8 @@ $( document ).ready(function() {
     loadModal();
     togglePanel();
     validateForm();
+    var navbarData = startNav();
+    $(window).scroll(function(){stickyMenu(navbarData);});
 });
 
 $('.burger').on('click', clickBurger );
@@ -24,9 +26,6 @@ $(window).on('resize',function(){
     togglePanel();
     setVideoDimensions();
 });
-
-var navbarData = startNav();
-$(window).scroll(function(){stickyMenu(navbarData);});
 
 $(".tabs-kartochka").on("click","a",clickOnTap);
 
