@@ -6,8 +6,124 @@ var lesstext     = "Скрыть";
 
 $( document ).ready(function() {
 
+    setVideoDimensions();
+    loadClientsSlider();
+    loadProductSlider();
+    loadSimilarProductsSlider();
+    loadModal();
+    togglePanel();
+    validateForm();
+
     $('.burger').on('click', clickBurger );
 
+    $( ".block.wmf" ).hover(blockWMFHoverIn,blockWMFHoverOut);
+
+    $( ".block.cms" ).hover(blockCMSHoverIn,blockCMSHoverOut);
+
+    $(window).on('resize',function(){
+        togglePanel();
+        setVideoDimensions();
+    });
+
+    var navbarData = startNav();
+    $(window).scroll(function(){stickyMenu(navbarData);});
+
+    $(".tabs-kartochka").on("click","a",clickOnTap);
+
+    //Cut content based on showChar length
+    if($(".toggle-text").length){
+        $(".toggle-text").each(textToggle);
+    }
+
+    //Toggle content when click on read more link
+    $(".toggle-text-link").on('click',linkToggle);
+
+    //кнопка на верх
+    $(window).on('scroll',showUpButton);
+    $('#upbutton').on('click',goUp);
+
+
+});
+
+function loadSimilarProductsSlider (){
+    $('.slider-similar-products').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        dots: false,
+        nav: true,
+        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    });
+}
+function loadProductSlider(){
+    $('.product-img-main').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        adaptiveHeight: true,
+        asNavFor: '.product-img-preview'
+    });
+    $('.product-img-preview').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.product-img-main',
+        dots: false,
+        nav: false,
+        vertical: true,
+        arrows: false,
+        centerMode: false,
+        verticalSwiping: true,
+        focusOnSelect: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    vertical: false,
+                    swipeToSlide: true,
+                    verticalSwiping: false
+                }
+            }
+        ]
+    });
+
+}
+
+function loadModal(){
+    $('#filter, #order-consultation').on('shown.bs.modal');
+}
+function loadClientsSlider(){
     $('.clients-slider').slick({
         centerMode: true,
         infinite: true,
@@ -49,131 +165,27 @@ $( document ).ready(function() {
             // settings: "unslick"
             // instead of a settings object
         ]
-});
-
-    $( ".block.wmf" ).hover(function() {
-        $('.block.wmf').addClass('big-section');
-        $('.block.cms').addClass('small-section');
-     }, function(){
-        $('.block.wmf').removeClass('big-section');
-        $('.block.cms').removeClass('small-section');
     });
+}
 
-    $( ".block.cms" ).hover(function() {
-        $('.block.cms').addClass('big-section');
-        $('.block.wmf').addClass('small-section');
-    },  function(){
-        $('.block.cms').removeClass('big-section');
-        $('.block.wmf').removeClass('small-section');
-    });
+function blockWMFHoverIn(){
+    $('.block.wmf').addClass('big-section');
+    $('.block.cms').addClass('small-section');
+}
+function blockWMFHoverOut(){
+    $('.block.wmf').removeClass('big-section');
+    $('.block.cms').removeClass('small-section');
+}
 
+function blockCMSHoverIn(){
+    $('.block.cms').addClass('big-section');
+    $('.block.wmf').addClass('small-section');
+}
 
-//open modal
-    $('#filter, #order-consultation').on('shown.bs.modal');
-
-    $(window).resize(setVideoDimensions);
-    setVideoDimensions();
-
-    var navbarData = startNav();
-    $(window).scroll(function(){stickyMenu(navbarData);});
-
-//плавный скролл к якорю
-    $(".tabs-kartochka").on("click","a",clickOnTap);
-
-//слайдер в карточке товара
-    $('.product-img-main').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        adaptiveHeight: true,
-        asNavFor: '.product-img-preview'
-    });
-    $('.product-img-preview').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        asNavFor: '.product-img-main',
-        dots: false,
-        nav: false,
-        vertical: true,
-        arrows: false,
-        centerMode: false,
-        verticalSwiping: true,
-        focusOnSelect: true,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    vertical: false,
-                    swipeToSlide: true,
-                    verticalSwiping: false
-                }
-            }
-        ]
-    });
-
-//Cut content based on showChar length
-    if($(".toggle-text").length){
-        $(".toggle-text").each(textToggle);
-    }
-
-//Toggle content when click on read more link
-    $(".toggle-text-link").on('click',linkToggle);
-
-//кнопка на верх
-    $(window).on('scroll',showUpButton);
-    $('#upbutton').on('click',goUp);
-
-//валидация форм
-    validateForm();
-
-//слайдер похожих товаров
-    $('.slider-similar-products').slick({
-        infinite: true,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        dots: false,
-        nav: true,
-        arrows: true,
-        autoplay: true,
-        autoplaySpeed: 4000,
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 2
-                }
-            },
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 2
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1
-                }
-            },
-            {
-                breakpoint: 576,
-                settings: {
-                    slidesToShow: 1
-                }
-            }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
-        ]
-    });
-
-    $(window).resize(function(){
-        togglePanel();
-    });
-    togglePanel();
-
-});
+function blockCMSHoverOut(){
+    $('.block.cms').removeClass('big-section');
+    $('.block.wmf').removeClass('small-section');
+}
 
 function startNav(){
     var navbar  = $("#line-menu");
@@ -224,7 +236,7 @@ function setVideoDimensions () {
     }
 }
 
-// product detail js :
+// product detail page js :
 
 function togglePanel (){
     var w = $(window).width();
@@ -252,7 +264,7 @@ function textToggle(){
 
         var contentExcert = content.substr(0, showChar);
         var contentRest = content.substr(showChar, content.length - showChar);
-        var html = contentExcert + '<span class="toggle-text-ellipses">' + ellipsestext + ' </span> <span class="toggle-text-content"><span>' + contentRest + '</span><a href="javascript:;" class="toggle-text-link">' + moretext + '</a></span>';
+        var html = contentExcert + '<span class="toggle-text-ellipses">' + ellipsestext + ' </span> <span class="toggle-text-content"><span class="contentRest">' + contentRest + '</span><a href="javascript:;" class="toggle-text-link">' + moretext + '</a></span>';
 
         $(this).html(html);
     }
@@ -266,8 +278,9 @@ function linkToggle(){
         $(this).addClass("less");
         $(this).html(lesstext);
     }
-    $(this).parent().prev().toggle();
-    $(this).prev().toggle();
+
+    $('.toggle-text-ellipses').toggle();
+    $('.contentRest').toggle();
     return false;
 }
 
