@@ -5,59 +5,80 @@ var moretext     = "Подробнее";
 var lesstext     = "Скрыть";
 
 $( document ).ready(function() {
-
+    setVideoDimensions();
+    loadClientsSlider();
+    loadProductSlider();
+    loadSimilarProductsSlider();
+    loadModal();
+    togglePanel();
+    validateForm();
+    var navbarData = startNav();
+    $(window).scroll(function(){stickyMenu(navbarData);});
     $('.burger').on('click', clickBurger );
+    $( ".block.wmf" ).hover(blockWMFHoverIn,blockWMFHoverOut);
+    $( ".block.cms" ).hover(blockCMSHoverIn,blockCMSHoverOut);
+    $(window).on('resize',function(){
+        togglePanel();
+        setVideoDimensions();
+    });
 
-    $('.clients-slider').slick({
-        centerMode: true,
+    $(".tabs-kartochka").on("click","a",clickOnTap);
+
+//Cut content based on showChar length
+    $(".toggle-text").each(textToggle);
+
+//Toggle content when click on read more link
+    $(".toggle-text-link").on('click',linkToggle);
+
+//кнопка на верх
+    $(window).on('scroll',showUpButton);
+    $('#upbutton').on('click',goUp);
+
+});
+
+
+function loadSimilarProductsSlider (){
+    $('.slider-similar-products').slick({
         infinite: true,
-        slidesToShow: 5,
-        focusOnSelect: true,
-        centerPadding: '60px',
-        speed: 500,
-        autoplay: true,
-        autoplaySpeed: 2000,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        dots: false,
+        nav: true,
         arrows: true,
-        pauseOnFocus: false,
+        autoplay: true,
+        autoplaySpeed: 4000,
         responsive: [
             {
                 breakpoint: 1200,
-                settings: {
-                    slidesToShow: 3
-                }
-            },
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 3
-                }
-            },
-            {
-                breakpoint: 768,
                 settings: {
                     slidesToShow: 2
                 }
             },
             {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            },
+            {
                 breakpoint: 576,
                 settings: {
-                    slidesToShow: 1,
-                    centerMode: false
+                    slidesToShow: 1
                 }
             }
             // You can unslick at a given breakpoint now by adding:
             // settings: "unslick"
             // instead of a settings object
         ]
-});
-
-    $( ".block.wmf" ).hover(function() {
-        $('.block.wmf').addClass('big-section');
-        $('.block.cms').addClass('small-section');
-     }, function(){
-        $('.block.wmf').removeClass('big-section');
-        $('.block.cms').removeClass('small-section');
     });
+}
+function loadProductSlider(){
 
     $( ".block.cms" ).hover(function() {
         $('.block.cms').addClass('big-section');
@@ -112,54 +133,47 @@ $( document ).ready(function() {
         ]
     });
 
-//Cut content based on showChar length
-    if($(".toggle-text").length){
-        $(".toggle-text").each(textToggle);
-    }
+}
 
-//Toggle content when click on read more link
-    $(".toggle-text-link").on('click',linkToggle);
-
-//кнопка на верх
-    $(window).on('scroll',showUpButton);
-    $('#upbutton').on('click',goUp);
-
-//валидация форм
-    validateForm();
-
-//слайдер похожих товаров
-    $('.slider-similar-products').slick({
+function loadModal(){
+    $('#filter, #order-consultation').on('shown.bs.modal');
+}
+function loadClientsSlider(){
+    $('.clients-slider').slick({
+        centerMode: true,
         infinite: true,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        dots: false,
-        nav: true,
-        arrows: true,
+        slidesToShow: 5,
+        focusOnSelect: true,
+        centerPadding: '60px',
+        speed: 500,
         autoplay: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 2000,
+        arrows: true,
+        pauseOnFocus: false,
         responsive: [
             {
                 breakpoint: 1200,
                 settings: {
-                    slidesToShow: 2
+                    slidesToShow: 3
                 }
             },
             {
                 breakpoint: 992,
                 settings: {
-                    slidesToShow: 2
+                    slidesToShow: 3
                 }
             },
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 1
+                    slidesToShow: 2
                 }
             },
             {
                 breakpoint: 576,
                 settings: {
-                    slidesToShow: 1
+                    slidesToShow: 1,
+                    centerMode: false
                 }
             }
             // You can unslick at a given breakpoint now by adding:
@@ -167,13 +181,26 @@ $( document ).ready(function() {
             // instead of a settings object
         ]
     });
+}
 
-    $(window).resize(function(){
-        togglePanel();
-    });
-    togglePanel();
+function blockWMFHoverIn(){
+    $('.block.wmf').addClass('big-section');
+    $('.block.cms').addClass('small-section');
+}
+function blockWMFHoverOut(){
+    $('.block.wmf').removeClass('big-section');
+    $('.block.cms').removeClass('small-section');
+}
 
-});
+function blockCMSHoverIn(){
+    $('.block.cms').addClass('big-section');
+    $('.block.wmf').addClass('small-section');
+}
+
+function blockCMSHoverOut(){
+    $('.block.cms').removeClass('big-section');
+    $('.block.wmf').removeClass('small-section');
+}
 
 function startNav(){
     var navbar  = $("#line-menu");
@@ -224,7 +251,7 @@ function setVideoDimensions () {
     }
 }
 
-// product detail js :
+// product detail page js :
 
 function togglePanel (){
     var w = $(window).width();
@@ -252,7 +279,7 @@ function textToggle(){
 
         var contentExcert = content.substr(0, showChar);
         var contentRest = content.substr(showChar, content.length - showChar);
-        var html = contentExcert + '<span class="toggle-text-ellipses">' + ellipsestext + ' </span> <span class="toggle-text-content"><span>' + contentRest + '</span><a href="javascript:;" class="toggle-text-link">' + moretext + '</a></span>';
+        var html = contentExcert + '<span class="toggle-text-ellipses">' + ellipsestext + ' </span> <span class="toggle-text-content"><span class="contentRest">' + contentRest + '</span><a href="javascript:;" class="toggle-text-link">' + moretext + '</a></span>';
 
         $(this).html(html);
     }
@@ -266,8 +293,9 @@ function linkToggle(){
         $(this).addClass("less");
         $(this).html(lesstext);
     }
-    $(this).parent().prev().toggle();
-    $(this).prev().toggle();
+
+    $('.toggle-text-ellipses').toggle();
+    $('.contentRest').toggle();
     return false;
 }
 
@@ -284,7 +312,6 @@ function goUp(){
 }
 
 function validateForm(){
-    'use strict';
     window.addEventListener('load', function() {
         // Fetch all the forms we want to apply custom Bootstrap validation styles to
         var forms = document.getElementsByClassName('consultation');
@@ -300,3 +327,5 @@ function validateForm(){
         });
     }, false);
 }
+
+
