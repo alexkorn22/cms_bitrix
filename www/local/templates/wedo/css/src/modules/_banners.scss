@@ -21,6 +21,14 @@
   background-image: url(../../images/banners/bg-banner-repair2.png);
   margin-top: 100px;
 
+  .wrap-banner-img {
+    .banner-img {
+      //top: -25%;
+      @include media-breakpoint-up(xl){
+        top: -35%;
+      }
+    }
+  }
   .banner-text {
     .title-banner {
       font-size: 30px;
