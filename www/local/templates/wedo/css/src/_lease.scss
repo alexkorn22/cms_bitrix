@@ -1,0 +1,231 @@
+.head-banner {
+  min-height: 85vh;
+  background-image: url(../../images/banners/bg-banner-lease.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.tabs-lease-repair {
+  padding-right: 15px;
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0;
+    li {
+      text-align: center;
+      padding: 0 10px;
+      a {
+        text-decoration: none;
+        color: $white;
+        font-size: 18px;
+        line-height: 20px;
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        margin-bottom: 0.5em;
+        text-transform: uppercase;
+        &:after {
+          content: '';
+          display: block;
+          width: 0;
+          height: 2px;
+          background: $white;
+          margin: auto;
+          transition: all .5s ease;
+          margin-top: 5px;
+        }
+        &:hover::after,
+        &:focus::after{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.title-lease, .form-lease {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10%;
+}
+
+.title-lease {
+  p {
+    font-size: 54px;
+    font-family: $Bold;
+    color: $white;
+    line-height: 64px;
+    span {
+      color: $black;
+      font-size: 58px;
+      font-family: $Black;
+      font-style: italic;
+    }
+  }
+}
+
+.form-lease {
+  form.lease {
+    width: 430px;
+    background-color: $bgHead;
+    padding: 30px 40px;
+    border-radius: 4px;
+    box-shadow: 2px 5px 7px 0 rgba($black, 0.3);
+    .form-titile {
+      text-align: center;
+      font-size: 24px;
+      color: $white;
+    }
+    .form-content {
+
+    }
+    .form-footer {
+      text-align: center;
+    }
+    &_horizontal {
+      width: 820px;
+      background-image: url(../../images/banners/bg-form-lease.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      .form-content {
+        .custom-form-group {
+          display: flex;
+          justify-content: center;
+        }
+        input, textarea {
+          width: 300px;
+        }
+      }
+    }
+  }
+}
+
+#advantages-lease, #models-for-rent, #rent-terms, #payback-calculator, #clients-in-lease {
+  padding-top: 150px;
+}
+
+.item-advantages {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  img {
+    width: auto;
+    height: 75px;
+  }
+  p {
+    text-align: center;
+    padding: 0 55px;
+    margin: 0;
+    margin-top: 10px;
+  }
+  span {
+    color: $red;
+  }
+}
+
+#models-for-rent {
+  .slider-models-for-rent {
+    margin-top: 40px;
+    .models {
+     &:focus {
+       outline: 0;
+     }
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: inherit;
+        &:focus {
+          outline: 0;
+        }
+        img {
+          width: auto;
+          height: 350px;
+        }
+        p {
+          font-size: 26px;
+          font-family: $Light;
+        }
+      }
+    }
+
+    .slick-next, .slick-prev {
+      background-color: transparent;
+
+    }
+  }
+  .descr-model-for-rent {
+    padding-top: 25px;
+    font-size: 26px;
+    line-height: 36px;
+    font-family: $Light;
+  }
+}
+
+#rent-terms {
+  .wrap-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    .circle {
+      border: 2px solid $red;
+      height: 250px;
+      width: 250px;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 6px 0 $bgHead;
+      .text {
+        p {
+          margin: 0;
+          text-align: center;
+          padding: 0 35px;
+          font-size: 18px;
+          line-height: 27px;
+        }
+      }
+    }
+  }
+}
+
+#payback-calculator {
+  .calculate-raschet {
+    .wrap-input, .wrap-select {
+      label {
+        font-size: 18px;
+        margin-bottom: 0;
+        padding: 0 10px;
+        min-height: 65px;
+      }
+      &.srok-okupaemosti {
+        label {
+          margin-bottom: 0;
+        }
+        .custom-input {
+          font-size: 24px;
+        }
+      }
+    }
+    .wrap-select {
+      .form-group {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+#clients-in-lease {
+  padding-bottom: 100px;
+}
