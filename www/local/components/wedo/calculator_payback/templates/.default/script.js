@@ -3,6 +3,15 @@ CalculatorPayback = function (urlAjax, productId) {
     this.priceCofee = $('#priceCofee');
     this.priceSale = $('#priceSale');
     this.productId = $('#productId');
+
+    var srok      = $('#fild-srok-okupaemosti');
+    var srokTable = $('#srok_months');
+
+    srokTable.html(srok.val());
+    srok.on('change',function () {
+        srokTable.html(srok.val());
+    });
+
     this.urlAjax = urlAjax;
     var self = this;
 
@@ -30,7 +39,7 @@ CalculatorPayback = function (urlAjax, productId) {
                 productId : self.productId.val()
             },
             success : function (html) {
-                $("#result").html(html)
+                $("#result").html(html);
             }
         });
     };
