@@ -1,11 +1,8 @@
 CalculatorPayback = function (urlAjax, productId) {
-    this.cmServings    = $('#cmServings');
-    this.priceCofee    = $('#priceCofee');
-    this.priceSale     = $('#priceSale');
-    this.productId     = $('#productId');
-
-
-
+    this.cmServings = $('#cmServings');
+    this.priceCofee = $('#priceCofee');
+    this.priceSale = $('#priceSale');
+    this.productId = $('#productId');
     this.urlAjax = urlAjax;
     var self = this;
 
