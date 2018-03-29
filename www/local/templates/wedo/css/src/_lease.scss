@@ -81,7 +81,9 @@
       color: $white;
     }
     .form-content {
-
+      .invalid-feedback {
+        color: $white;
+      }
     }
     .form-footer {
       text-align: center;
@@ -96,6 +98,12 @@
         .custom-form-group {
           display: flex;
           justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          .invalid-feedback {
+            color: $white;
+            width: 300px;
+          }
         }
         input, textarea {
           width: 300px;
