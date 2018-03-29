@@ -1,12 +1,11 @@
 <div class="card custom-card">
     <div class="custom-card-header d-block d-md-none">
-        <a href="#pohozchie-tovari" class="title-item" data-toggle="collapse" aria-expanded="false"
-           aria-controls="pohozchie-tovari">
+        <a href="#pohozchie-tovari" class="title-item" data-toggle="collapse" data-parent="#accordion-on-mobile">
             <div>Похожие товары</div>
             <div class="arrow-down"><img src="<?=IMAGES_PATH?>/icons/btn-arrow-down.png" alt="down"></div>
         </a>
     </div>
-    <div id="pohozchie-tovari" class="collapse custom-collapse" data-parent="#accordion-on-mobile">
+    <div id="pohozchie-tovari" class="collapse custom-collapse">
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <div class="section-title">

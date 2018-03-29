@@ -1,12 +1,11 @@
 <div class="card custom-card">
     <div class="custom-card-header d-block d-md-none">
-        <a href="#service-maintenance" class="title-item" data-toggle="collapse" aria-expanded="false"
-           aria-controls="service-maintenance">
+        <a href="#service-maintenance" class="title-item" data-toggle="collapse" data-parent="#accordion-on-mobile">
             <div>Сервисное обслуживание</div>
             <div class="arrow-down"><img src="<?=IMAGES_PATH?>/icons/btn-arrow-down.png" alt="down"></div>
         </a>
     </div>
-    <div id="service-maintenance" class="collapse custom-collapse" data-parent="#accordion-on-mobile">
+    <div id="service-maintenance" class="collapse custom-collapse">
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <div class="section-title">
@@ -74,21 +73,8 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <div class="order-consultation">
-                    <button type="button" class="btn btn_red btn_small-mobile" data-toggle="modal" data-target="#order-consultation">Заказать консультацию</button>
-                </div>
-            </div>
-        </div>
+
         <?if (!empty($arResult['PROPERTIES']['SCHEDULE']['VALUE'])):?>
-            <div class="row justify-content-center">
-                <div class="col-lg-11">
-                    <div class="section-title">
-                        <h2 class="title d-md-block">График замены запчастей кофемашины модели <?=$arResult["NAME"]?></h2>
-                    </div>
-                </div>
-            </div>
 
             <div class="schedule">
                 <? foreach($arResult['SCHEDULE_FILES'] as $file):?>
@@ -112,5 +98,12 @@
                 <?endforeach; ?>
             </div>
         <? endif;?>
+        <div class="row">
+            <div class="col">
+                <div class="order-consultation">
+                    <button type="button" class="btn btn_red btn_small-mobile" data-toggle="modal" data-target="#order-consultation">Заказать консультацию</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

@@ -1,11 +1,11 @@
 <div class="card custom-card">
     <div class="custom-card-header d-block d-md-none">
-        <a href="#documents" class="title-item" data-toggle="collapse" aria-expanded="false" aria-controls="documents">
+        <a href="#documents" class="title-item" data-toggle="collapse" data-parent="#accordion-on-mobile">
             <div>Инструкции по эксплуатации <?=$arResult['NAME']?></div>
             <div class="arrow-down"><img src="<?=IMAGES_PATH?>/icons/btn-arrow-down.png" alt="down"></div>
         </a>
     </div>
-    <div id="documents" class="collapse custom-collapse" data-parent="#accordion-on-mobile">
+    <div id="documents" class="collapse custom-collapse">
         <div class="row justify-content-center">
             <div class="col-lg-11">
                 <div class="section-title">

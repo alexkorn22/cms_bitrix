@@ -1,11 +1,11 @@
 <div class="card custom-card">
     <div class="custom-card-header d-block d-md-none">
-        <a href="#raschet-okup" class="title-item" data-toggle="collapse" aria-expanded="false" aria-controls="raschet-okup">
+        <a href="#raschet-okup" class="title-item" data-toggle="collapse" data-parent="#accordion-on-mobile">
             <div>Расчёт окупаемости</div>
             <div class="arrow-down"><img src="<?=IMAGES_PATH?>/icons/btn-arrow-down.png" alt="down"></div>
         </a>
     </div>
-    <div id="raschet-okup" class="collapse custom-collapse" data-parent="#accordion-on-mobile">
+    <div id="raschet-okup" class="collapse custom-collapse">
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <div class="section-title">
