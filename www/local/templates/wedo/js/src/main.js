@@ -13,6 +13,7 @@ $( document ).ready(function() {
     loadModal();
     togglePanel();
     validateForm();
+    CustomSlideCircle();
     var navbarData = startNav();
     $(window).scroll(function(){stickyMenu(navbarData);});
     $('.burger').on('click', clickBurger );
@@ -345,4 +346,40 @@ function loadModelForRentSlider (){
     });
 }
 
+function CustomSlideCircle() {
+    $('.circle').each(function (i, elem) {
+        var thisCircle = $(this);
+        var circle =  $('.circle');
+        var arrowRight = thisCircle.find('.right-arrow-circle');
+        var arrowLeft = thisCircle.find('.left-arrow-circle');
+        var elemNextStyle =  circle.get( i+1 );
+        var elemPrevStyle =  circle.get( i-1 );
 
+        arrowRight.on('click', function () {
+            thisCircle.toggleClass('circle_active');
+            $(elemNextStyle).toggleClass('circle_active');
+            var index = $(elemNextStyle).index();
+            if(index == 2) {
+                var one =  circle.get(0);
+                var two =  circle.get(1);
+                $(one).css('z-index', '3');
+                $(two).css('z-index', '4');
+            }
+
+            if(index == 3) {
+                var three =  circle.get(2);
+                $(three).css('z-index', '5');
+            }
+        });
+
+        arrowLeft.on('click', function () {
+            thisCircle.toggleClass('circle_active');
+            $(elemPrevStyle).toggleClass('circle_active');
+            var index = $(elemNextStyle).index();
+            if(index == 3) {
+                var three =  circle.get(2);
+                $(three).css('z-index', '2');
+            }
+        });
+    })
+}
