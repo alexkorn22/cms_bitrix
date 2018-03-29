@@ -315,7 +315,7 @@
   }
 
   .schedule, .instructions {
-    margin: 35px 0 80px 0;
+    margin: 5px 0 50px 0;
     .item {
       margin-bottom: 30px;
     }
@@ -412,6 +412,11 @@
         iframe {
           width: 560px;
           height: 315px;
+        }
+        video{
+          width: 100% !important;
+          height:100% !important;
+          padding: 10px;
         }
 
       }

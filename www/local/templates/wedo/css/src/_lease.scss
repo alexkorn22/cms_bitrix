@@ -99,7 +99,9 @@
       color: $white;
     }
     .form-content {
-
+      .invalid-feedback {
+        color: $white;
+      }
     }
     .form-footer {
       text-align: center;
@@ -114,6 +116,12 @@
         .custom-form-group {
           display: flex;
           justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          .invalid-feedback {
+            color: $white;
+            width: 300px;
+          }
         }
         input, textarea {
           width: 300px;
@@ -195,6 +203,14 @@
     align-items: center;
     justify-content: center;
     margin-top: 40px;
+    &:after {
+      content: '';
+      border-bottom: 1px dashed $red;
+      z-index: 0;
+      width: 100%;
+      position: absolute;
+      right: -50%;
+    }
     .circle {
       border: 2px solid $red;
       height: 250px;
@@ -204,6 +220,8 @@
       align-items: center;
       justify-content: center;
       box-shadow: 0 0 6px 0 $bgHead;
+      background-color: $white;
+      z-index: 1;
       .text {
         p {
           margin: 0;
@@ -211,6 +229,15 @@
           padding: 0 35px;
           font-size: 18px;
           line-height: 27px;
+        }
+      }
+    }
+  }
+  .not-dotted {
+    &:last-of-type {
+      .wrap-circle {
+        &:after {
+          border: 0;
         }
       }
     }

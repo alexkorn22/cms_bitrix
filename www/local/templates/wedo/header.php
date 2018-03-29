@@ -315,4 +315,4 @@
         </div>
     </header>
 <? endif;?>
-
+<div id="wrap">
