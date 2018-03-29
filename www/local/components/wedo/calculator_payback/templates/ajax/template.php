@@ -12,7 +12,3 @@ $help = '
                 ';
 require ROOT . $this->getComponent()->getPath(). '/views/result.php';
 ?>
-
-<script>
-    new CalculatorPayback("<?=$this->getComponent()->getPath() . "/ajax.php"?>");
-</script>

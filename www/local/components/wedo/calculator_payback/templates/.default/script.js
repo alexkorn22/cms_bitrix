@@ -4,9 +4,7 @@ CalculatorPayback = function (urlAjax, productId) {
     this.priceSale     = $('#priceSale');
     this.productId     = $('#productId');
 
-    var paybackPeriod  = $('#paybackPeriod');
-    var srok           = $('#fild-srok-okupaemosti');
-    srok.val(paybackPeriod.html());
+
 
     this.urlAjax = urlAjax;
     var self = this;
@@ -36,6 +34,7 @@ CalculatorPayback = function (urlAjax, productId) {
             },
             success : function (html) {
                 $("#result").html(html);
+                $('#fild-srok-okupaemosti').val($('#paybackPeriod').html());
             }
         });
     };
