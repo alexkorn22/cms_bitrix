@@ -13,127 +13,100 @@
 $this->setFrameMode(true);
 CUtil::InitJSCore(array('fx'));
 ?>
-<div class="container">
-	<div  id="<?echo $this->GetEditAreaId($arResult['ID'])?>">
-        <div class="row text-center">
-            <div><?=$arResult["NAME"]?></div>
-        </div>
+    <div class="container-fluid product">
         <div class="row">
-            <div class="col-md-4">
-                <?if($arParams["DISPLAY_PICTURE"]!="N"):?>
-                    <?if(is_array($arResult["DETAIL_PICTURE"])):?>
-                        <div class="bx-newsdetail-img">
-                            <img
-                                    src="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>"
-                                    width="<?=$arResult["DETAIL_PICTURE"]["WIDTH"]?>"
-                                    height="<?=$arResult["DETAIL_PICTURE"]["HEIGHT"]?>"
-                                    alt="<?=$arResult["DETAIL_PICTURE"]["ALT"]?>"
-                                    title="<?=$arResult["DETAIL_PICTURE"]["TITLE"]?>"
-                            />
-                        </div>
-                    <?endif;?>
-                <?endif;?>
-            </div>
-            <div class="col-md-offset-1 col-md-4">
-                <div><b>Характеристики:</b></div>
-                <?foreach($arResult['PROPERTIES'] as $prop):?>
-                    <?if(!empty($prop['VALUE']) && $prop['SORT'] < 5000 ):?>
-                       <div> <?=$prop['NAME']?> : <?=$prop['VALUE']?></div>
-                    <?endif;?>
-                <?endforeach;?>
-            </div>
-            <div class="col-md-3">
-                <div>  Цена : <?=$arResult['PROPERTIES']['PRICE']['VALUE']?> EUR</div>
-                <div>
-                    <button class="btn btn-primary btn-lg">
-                        Заказать консультацию
-                    </button>
+            <div class="col">
+                <div class="title-product">
+                    <div class="title">
+                        <p><?=$arResult["NAME"]?></p>
+                    </div>
+                    <div class="sub-title">
+                        <p><?=$arResult['PROPERTIES']['SLOGAN']['VALUE']?></p>
+                    </div>
                 </div>
-            </div>
-        </div><hr/>
-        <div class="row">
-            <div class="col-md-6">
-                <div>Описание </div>
-                <div><?=$arResult['PROPERTIES']['DESCRIPTION']['VALUE']?></div>
             </div>
         </div>
-        <hr/>
-        <?if($arResult['PROPERTIES']['RENT']['VALUE'] == 'Да'):?>
-        <div class="row">
-            <div class="col-md-6">
-                <div>Аренда </div>
-                <div>Возможность арендовать  : <?=$arResult['PROPERTIES']['RENT']['VALUE']?></div>
+        <div class="tabs-kartochka d-none d-lg-block">
+            <div class="row">
+                <div class="col">
+                    <ul>
+                        <li><a href="#osnovnoe">Основное</a></li>
+                        <li><a href="#raschet-okup">Расчёт окупаемости</a></li>
+                        <li><a href="#pohozchie-tovari">Похожие товары</a></li>
+                        <li><a href="#service-maintenance">Сервисное обслуживание</a></li>
+                        <li><a href="#documents">Документы</a></li>
+                        <li><a href="#video-product">Видео</a></li>
+                        <li><a href="#lease-product">Аренда</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <hr/>
-        <?endif;?>
-        <?if(!empty($arResult['PROPERTIES']['DOCUMENTS']['VALUE'])):?>
-            <div class="row">
-                <div class="col-md-12">
-                    <div>Документы</div>
-                    <?foreach($arResult['PROPERTIES']['DOCUMENTS']['VALUE'] as $IdDoc):?>
-                        <? $file = CFile::GetFileArray($IdDoc); ?>
-                        <div>
-                            <div class="col-md-6"> <div> Название : <?=$file['FILE_NAME']?> </div></div>
-                            <div class="col-md-4"> <div><a target="_blank" href="<?=$file['SRC']?>">Открыть</a></div></div>
-                        </div>
-                    <?endforeach;?>
-                </div>
-            </div>
-            <hr/>
-        <?endif;?>
-        <?if(!empty($arResult['PROPERTIES']['VIDEO']['VALUE'][0])):?>
-            <div>Видео</div>
-            <div class="row">
-                <?foreach ($arResult['PROPERTIES']['VIDEO']['VALUE'] as $video):?>
-                <div class="col-md-6">
-                    <div>Title  :<?=$video['title']?></div>
-                    <? if(strpos($video['path'], 'youtube') !== false): ?> <!-- youtube video -->
-                        <?php
-                            $src         = $video['path'];
-                            $youtubeSrc  =  'https://www.youtube.com/embed/';
-                            $youtubeSrc .= substr($src, strpos($src, "=") + 1);
-                        ?>
-                        <iframe width="320" height="240"
-                                src="<?=$youtubeSrc?>">
-                        </iframe>
-                    <?else: ?> <!-- Video from site -->
-                        <video width="320" height="240" controls>
-                            <source src="<?=$video['path']?>" type="video/mp4">
-                        </video>
-                    <?endif;?>
-                    <div>Description  : <?=$video['desc']?></div>
-                </div>
-                <?endforeach;?>
-            </div>
-            <hr/>
-        <?endif;?>
-        <?if (!empty($arResult['PROPERTIES']['SCHEDULE']['VALUE'])):?>
-            <div class="row">
-                <div class="col-md-6">
-                    <div>График замены запчастей кофемашины</div>
-                    <? foreach($arResult['PROPERTIES']['SCHEDULE']['VALUE'] as $id):?>
-                        <img src="<?=CFile::GetPath($id);?>" height="500" width="500">
-                    <?endforeach;?>
-                </div>
-            </div>
-            <hr/>
-        <?endif;?>
-	</div>
+        <!-- require main oprions -->
+        <?  require ROOT.$this->GetFolder() .'/views/main_options.php' ?>
 
-    <? if($arResult['PROPERTIES']['SIMILAR_PRODUCTS']['VALUE'] != FALSE):?>
-    <!-- Similar products component -->
-    <?$APPLICATION->IncludeComponent(
-        "wedo:similar_products",
-        "",
-        array(
-            "IBLOCK_TYPE" => "catalogs",
-            "IBLOCK_ID" => App::$config->coffeeMachineIblockId,
-            "PRODUCT_ID" => $arResult['ID']
-        ),
-        false
-    );?>
-    <!-- -->
-    <hr/>
-    <? endif;?>
+        <div id="accordion-on-mobile">
+            <!-- Расчёт окупаемости -->
+            <?  require ROOT.$this->GetFolder() .'/views/calculations.php' ?>
+
+            <? if($arResult['PROPERTIES']['SIMILAR_PRODUCTS']['VALUE'] != FALSE):?>
+            <!-- похожие товары -->
+                <?  require ROOT.$this->GetFolder() .'/views/similar_products.php' ?>
+            <? endif; ?>
+            <!-- Сервисное обслуживание -->
+            <?  require ROOT.$this->GetFolder() .'/views/services.php' ?>
+            <?if(!empty($arResult['PROPERTIES']['DOCUMENTS']['VALUE'])):?>
+            <!-- Дукоменты -->
+                <?  require ROOT.$this->GetFolder() .'/views/documents.php' ?>
+            <? endif; ?>
+
+            <?if(!empty($arResult['PROPERTIES']['VIDEO']['VALUE'][0])):?>
+                <!-- Videos -->
+                <?  require ROOT.$this->GetFolder() .'/views/videos.php' ?>
+            <? endif; ?>
+
+            <?if($arResult['PROPERTIES']['RENT']['VALUE_XML_ID'] == 'RENT_TRUE'):?>
+                <!-- Аренда -->
+                <?  require ROOT.$this->GetFolder() .'/views/arenda.php' ?>
+            <?endif;?>
+        </div>
+
+    </div>
+
+<!--Modal order-consultation-->
+<div class="modal fade" id="order-consultation" tabindex="-1" role="dialog" aria-labelledby="order-consultation" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom-modal-dialog" role="document">
+        <div class="modal-content custom-modal-content custom-modal-content_bg-red">
+            <div class="modal-header custom-modal-header">
+                <h5 class="modal-title custom-modal-title">Заявка на консультацию</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form class="consultation" novalidate>
+                <div class="modal-body custom-modal-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control custom-input" id="name" placeholder="Имя" required>
+                        <div class="invalid-feedback">
+                            Вы не указали имя!
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control custom-input" id="phone" placeholder="Телефон" required>
+                        <div class="invalid-feedback">
+                            Вы не указали телефон!
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control custom-input" id="city" placeholder="Город" required>
+                        <div class="invalid-feedback">
+                            Вы не указали город!
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer custom-modal-footer">
+                    <button type="submit" class="btn btn_black btn_small-mobile btn_font-small">Заказать консультацию</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>

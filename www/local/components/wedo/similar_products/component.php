@@ -19,7 +19,7 @@ $arFilter = array(
     'IBLOCK_ID ' =>$arParams['IBLOCK_ID'],
     'ID' => $similarProductsID
 );
-$arSelect = array('ID','IBLOCK_ID','NAME','PREVIEW_PICTURE',"PROPERTY_*");
+$arSelect = array('ID','IBLOCK_ID','NAME','PREVIEW_PICTURE','DETAIL_PAGE_URL',"PROPERTY_*");
 $similarProductsRes = CIBlockElement::GetList(
     array(),
     $arFilter,
