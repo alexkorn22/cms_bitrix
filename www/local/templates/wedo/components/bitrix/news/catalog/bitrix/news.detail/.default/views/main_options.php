@@ -5,18 +5,18 @@
                 <div class="row">
                     <div class="col-md-9 col-lg-9">
                         <div class="product-img-main">
-                            <? foreach($arResult['PROPERTIES']['IMAGES']['VALUE'] as $id):?>
+                            <? foreach($arResult['MAIN_IMAGES'] as $img):?>
                                 <div class="img-main">
-                                    <img src="<?=CFile::GetPath($id);?>" class="img-fluid" alt="">
+                                    <img src="<?=$img['SRC']?>" class="img-fluid" alt="<?=$arResult['NAME']?>">
                                 </div>
                             <? endforeach;?>
                         </div>
                     </div>
                     <div class="col-md-3 col-lg-2">
                         <div class="product-img-preview">
-                            <? foreach($arResult['PROPERTIES']['IMAGES']['VALUE'] as $id):?>
+                            <? foreach($arResult['MAIN_IMAGES'] as $img):?>
                                 <div class="preview">
-                                    <img src="<?=CFile::GetPath($id);?>" class="img-fluid" alt="">
+                                    <img src="<?=$img['SRC']?>" class="img-fluid" alt="<?=$arResult['NAME']?>">
                                 </div>
                             <? endforeach;?>
                         </div>
