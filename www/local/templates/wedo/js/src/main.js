@@ -292,7 +292,7 @@ function goUp(){
 function validateForm(){
     window.addEventListener('load', function() {
         // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.getElementsByClassName('consultation');
+        var forms = document.getElementsByClassName('check-valid');
         // Loop over them and prevent submission
         var validation = Array.prototype.filter.call(forms, function(form) {
             form.addEventListener('submit', function(event) {
