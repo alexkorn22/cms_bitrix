@@ -32,23 +32,23 @@ extract($arResult);
             <div class="col-md-12">
                 <div class="calculate-raschet">
                     <div class="row justify-content-center">
-                        <div class="form-group">
-                            <? if (isset($arResult['products'])): ?>
-                                <select class="custom-select" id="productId">
-                                    <? foreach ($arResult['products'] as $item): ?>
-                                        <option
-                                                value="<?= $item['ID'] ?>"
-                                            <? if ($item['ID'] == $product['ID']): ?>
-                                                selected
-                                            <? endif; ?>
-                                                data-servings="<?= $item['servings'] ?>"
-                                        >
-                                            <?= $item['NAME'] ?>
-                                        </option>
-                                    <? endforeach; ?>
-                                </select>
-                            <? endif; ?>
-                        </div>
+                        <? if (isset($arResult['products'])): ?>
+                            <div class="form-group">
+                                    <select class="custom-select" id="productId">
+                                        <? foreach ($arResult['products'] as $item): ?>
+                                            <option
+                                                    value="<?= $item['ID'] ?>"
+                                                <? if ($item['ID'] == $product['ID']): ?>
+                                                    selected
+                                                <? endif; ?>
+                                                    data-servings="<?= $item['servings'] ?>"
+                                            >
+                                                <?= $item['NAME'] ?>
+                                            </option>
+                                        <? endforeach; ?>
+                                    </select>
+                            </div>
+                        <? endif; ?>
                             <div class="col-lg-3">
                                 <div class="wrap-input">
                                     <div class="form-group">
