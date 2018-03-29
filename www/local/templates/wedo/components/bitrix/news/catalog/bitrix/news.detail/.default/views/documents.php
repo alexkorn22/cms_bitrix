@@ -14,8 +14,7 @@
             </div>
         </div>
         <div class="instructions">
-            <?foreach($arResult['PROPERTIES']['DOCUMENTS']['VALUE'] as $IdDoc):?>
-                <? $file = CFile::GetFileArray($IdDoc); ?>
+            <?foreach( $arResult['INSTRUCTIONS_FILES'] as $file):?>
                 <div class="row item">
                     <div class="col-lg-2">
                         <div class="icon">

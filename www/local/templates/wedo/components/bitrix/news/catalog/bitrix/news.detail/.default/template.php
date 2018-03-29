@@ -41,32 +41,32 @@ CUtil::InitJSCore(array('fx'));
                 </div>
             </div>
         </div>
-        <!-- include main oprions -->
-        <?  include ROOT.$this->GetFolder() .'/sections/main_options.php' ?>
+        <!-- require main oprions -->
+        <?  require ROOT.$this->GetFolder() .'/views/main_options.php' ?>
 
         <div id="accordion-on-mobile">
             <!-- Расчёт окупаемости -->
-            <?  include ROOT.$this->GetFolder() .'/sections/calculations.php' ?>
+            <?  require ROOT.$this->GetFolder() .'/views/calculations.php' ?>
 
             <? if($arResult['PROPERTIES']['SIMILAR_PRODUCTS']['VALUE'] != FALSE):?>
             <!-- похожие товары -->
-                <?  include ROOT.$this->GetFolder() .'/sections/similar_products.php' ?>
+                <?  require ROOT.$this->GetFolder() .'/views/similar_products.php' ?>
             <? endif; ?>
             <!-- Сервисное обслуживание -->
-            <?  include ROOT.$this->GetFolder() .'/sections/services.php' ?>
+            <?  require ROOT.$this->GetFolder() .'/views/services.php' ?>
             <?if(!empty($arResult['PROPERTIES']['DOCUMENTS']['VALUE'])):?>
             <!-- Дукоменты -->
-                <?  include ROOT.$this->GetFolder() .'/sections/documents.php' ?>
+                <?  require ROOT.$this->GetFolder() .'/views/documents.php' ?>
             <? endif; ?>
 
             <?if(!empty($arResult['PROPERTIES']['VIDEO']['VALUE'][0])):?>
                 <!-- Videos -->
-                <?  include ROOT.$this->GetFolder() .'/sections/videos.php' ?>
+                <?  require ROOT.$this->GetFolder() .'/views/videos.php' ?>
             <? endif; ?>
 
             <?if($arResult['PROPERTIES']['RENT']['VALUE_XML_ID'] == 'RENT_TRUE'):?>
                 <!-- Аренда -->
-                <?  include ROOT.$this->GetFolder() .'/sections/arenda.php' ?>
+                <?  require ROOT.$this->GetFolder() .'/views/arenda.php' ?>
             <?endif;?>
         </div>
 

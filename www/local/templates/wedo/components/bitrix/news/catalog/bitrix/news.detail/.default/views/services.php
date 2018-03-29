@@ -91,8 +91,7 @@
             </div>
 
             <div class="schedule">
-                <? foreach($arResult['PROPERTIES']['SCHEDULE']['VALUE'] as $id):?>
-                    <? $file = CFile::GetFileArray($id); ?>
+                <? foreach($arResult['SCHEDULE_FILES'] as $file):?>
                     <div class="row">
                         <div class="col-lg-2">
                             <div class="icon">
