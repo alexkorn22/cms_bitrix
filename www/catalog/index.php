@@ -37,7 +37,7 @@ $APPLICATION->SetTitle("");
 		"FILTER_NAME" => "arrFilter",
 		"FILTER_PROPERTY_CODE" => array("",""),
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "12",
+		"IBLOCK_ID" => App::$config->coffeeMachineIblockId,
 		"IBLOCK_TYPE" => "catalogs",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
