@@ -1,5 +1,5 @@
 
-#advantege-repair, .we-are-trusted, .slider-clients-repair, #scheme-of-work, #cost-repair {
+#advantege-repair, .we-are-trusted, .slider-clients-repair, #scheme-of-work, #cost-repair, #garantee-repair, #service-centers-repair {
   padding-top: 150px;
 }
 
@@ -208,6 +208,18 @@
     }
     .no-garantee {
 
+    }
+  }
+}
+
+#service-centers-repair {
+  padding-bottom: 80px;
+  .map-service-center {
+    height: 650px;
+    width: 100%;
+    img {
+      width: 100%;
+      height: auto;
     }
   }
 }
