@@ -1,16 +1,12 @@
 CalculatorPayback = function (urlAjax, productId) {
-    this.cmServings = $('#cmServings');
-    this.priceCofee = $('#priceCofee');
-    this.priceSale = $('#priceSale');
-    this.productId = $('#productId');
+    this.cmServings    = $('#cmServings');
+    this.priceCofee    = $('#priceCofee');
+    this.priceSale     = $('#priceSale');
+    this.productId     = $('#productId');
 
-    var srok      = $('#fild-srok-okupaemosti');
-    var srokTable = $('#srok_months');
-
-    srokTable.html(srok.val());
-    srok.on('change',function () {
-        srokTable.html(srok.val());
-    });
+    var paybackPeriod  = $('#paybackPeriod');
+    var srok           = $('#fild-srok-okupaemosti');
+    srok.val(paybackPeriod.html());
 
     this.urlAjax = urlAjax;
     var self = this;
