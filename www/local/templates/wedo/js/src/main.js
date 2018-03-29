@@ -350,33 +350,34 @@ function CustomSlideCircle() {
     $('.circle').each(function (i, elem) {
         var thisCircle = $(this);
         var circle =  $('.circle');
+        var prev = i-1;
+        var next = i+1;
+
         var arrowRight = thisCircle.find('.right-arrow-circle');
         var arrowLeft = thisCircle.find('.left-arrow-circle');
-        var elemNextStyle =  circle.get( i+1 );
-        var elemPrevStyle =  circle.get( i-1 );
+        var elemNextStyle =  circle.get(next);
+        var elemPrevStyle =  circle.get(prev);
+
+        var one =  circle.get(0);
+        var two =  circle.get(1);
+        var three =  circle.get(2);
 
         arrowRight.on('click', function () {
             thisCircle.toggleClass('circle_active');
             $(elemNextStyle).toggleClass('circle_active');
-            var index = $(elemNextStyle).index();
-            if(index == 2) {
-                var one =  circle.get(0);
-                var two =  circle.get(1);
+            if(next == 2) {
                 $(one).css('z-index', '3');
                 $(two).css('z-index', '4');
             }
-
-            if(index == 3) {
-                var three =  circle.get(2);
-                $(three).css('z-index', '5');
+            if(next == 3) {
+               $(three).css('z-index', '5');
             }
         });
 
         arrowLeft.on('click', function () {
             thisCircle.toggleClass('circle_active');
             $(elemPrevStyle).toggleClass('circle_active');
-            var index = $(elemNextStyle).index();
-            if(index == 3) {
+            if(prev == 2) {
                 var three =  circle.get(2);
                 $(three).css('z-index', '2');
             }
