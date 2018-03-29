@@ -1,5 +1,5 @@
 
-#advantege-repair, .we-are-trusted, .slider-clients-repair, #scheme-of-work {
+#advantege-repair, .we-are-trusted, .slider-clients-repair, #scheme-of-work, #cost-repair {
   padding-top: 150px;
 }
 
@@ -171,5 +171,43 @@
       }
     }
 
+  }
+}
+
+#cost-repair {
+  .text {
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .on-garantee, .no-garantee {
+      padding: 20px 0;
+      .title {
+        font-size: 22px;
+        font-family: $Bold;
+        line-height: 30px;
+      }
+      .descr {
+        font-size: 22px;
+        font-family: $Regular;
+        line-height: 30px;
+        margin: 0;
+        span {
+          color: $red;
+        }
+      }
+      .footnote {
+        font-size: 16px;
+        font-family: $Light;
+        line-height: 22px;
+        span {
+          color: $red;
+        }
+      }
+    }
+    .no-garantee {
+
+    }
   }
 }
