@@ -77,7 +77,7 @@ $APPLICATION->SetTitle("");
 	<div class="row">
 		<div class="col-md-8 col-sm-12 col-xs-12">
 			<div class="row">
-				<div class="col-md-6 offices-data">
+				<div class="col-md-5 offices-data">
 					<div class="office-city">
 						 г. Львов
 					</div>
@@ -86,7 +86,7 @@ $APPLICATION->SetTitle("");
 						 т. 0965248764
 					</p>
 				</div>
-				<div class="col-md-6 offices-data">
+				<div class="col-md-5 offices-data">
 					<div class="office-city">
 						 г. Киев
 					</div>
@@ -97,7 +97,7 @@ $APPLICATION->SetTitle("");
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-6 offices-data">
+				<div class="col-md-5 offices-data">
 					<div class="office-city">
 						 г. Запорожье
 					</div>
@@ -106,7 +106,7 @@ $APPLICATION->SetTitle("");
 						 т. 0507894521
 					</p>
 				</div>
-				<div class="col-md-6 offices-data">
+				<div class="col-md-5 offices-data">
 					<div class="office-city">
 						 г. Одесса
 					</div>
@@ -117,7 +117,7 @@ $APPLICATION->SetTitle("");
 				</div>
 			</div>
 			<div class="row ">
-				<div class="col-md-6 offices-data">
+				<div class="col-md-5 offices-data">
 					<div class="office-city">
 						 г. Харьков
 					</div>
