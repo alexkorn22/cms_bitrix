@@ -17,6 +17,49 @@
   background-image: url(../../images/banners/bg-banner-product6.png);
 }
 
+.wrap-banner.repair {
+  background-image: url(../../images/banners/bg-banner-repair2.png);
+  margin-top: 100px;
+
+  .wrap-banner-img {
+    .banner-img {
+      //top: -25%;
+      @include media-breakpoint-up(xl){
+        top: -35%;
+      }
+    }
+  }
+  .banner-text {
+    .title-banner {
+      font-size: 30px;
+      line-height: 30px;
+    }
+    ul li{
+      font-size: 20px;
+      line-height: 24px;
+    }
+    .descr-banner {
+      font-size: 26px;
+      line-height: 30px;
+    }
+
+    @include media-breakpoint-down(sm){
+      .title-banner {
+        font-size: 20px;
+        line-height: 20px;
+      }
+      ul li{
+        font-size: 16px;
+        line-height: 20px;
+      }
+      .descr-banner {
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+  }
+}
+
 .wrap-banner {
   height: 320px;
   margin: 60px 0;

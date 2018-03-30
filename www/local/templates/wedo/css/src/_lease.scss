@@ -1,9 +1,14 @@
 .head-banner {
   min-height: 85vh;
-  background-image: url(../../images/banners/bg-banner-lease.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  &_lease {
+    background-image: url(../../images/banners/bg-banner-lease.jpg);
+  }
+  &_repair {
+    background-image: url(../../images/banners/bg-banner-repair.jpg);
+  }
 }
 
 .tabs-lease-repair {
@@ -45,7 +50,7 @@
   }
 }
 
-.title-lease, .form-lease {
+.title-lease, .form-lease, .title-repair, .form-repair {
   height: 100%;
   display: flex;
   align-items: center;
@@ -53,28 +58,41 @@
   padding-top: 10%;
 }
 
-.title-lease {
+.title-lease, .title-repair {
   p {
     font-size: 54px;
     font-family: $Bold;
     color: $white;
     line-height: 64px;
-    span {
-      color: $black;
+    .wmf {
       font-size: 58px;
       font-family: $Black;
       font-style: italic;
+      &_red {
+        color: $red;
+      }
+      &_black {
+        color: $black;
+      }
     }
   }
 }
 
-.form-lease {
-  form.lease {
+.form-lease, .form-repair {
+  form.lease, form.repair {
     width: 430px;
-    background-color: $bgHead;
     padding: 30px 40px;
     border-radius: 4px;
     box-shadow: 2px 5px 7px 0 rgba($black, 0.3);
+    &_bg-black {
+      background-color: $bgHead;
+    }
+    &_bg-red {
+      background-color: rgba($red, 0.7);
+    }
+    &_bg-red-opacity1 {
+      background-color: rgba($red, 0.9);
+    }
     .form-titile {
       text-align: center;
       font-size: 24px;
