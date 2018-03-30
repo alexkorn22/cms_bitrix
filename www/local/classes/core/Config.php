@@ -13,6 +13,10 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
  * @property string facebookLink;
  * @property string instagramLink;
  * @property string youtubeLink;
+ * @property string apiKeyMainOfficeMap;
+ * @property string apiKeyOtherOfficesMap;
+ * @property array officesList;
+ * @property array mainOffice;
  */
 class Config
 {
@@ -28,8 +32,11 @@ class Config
         'email' => 'cms@cms.com.ua',
         'facebookLink' => '#',
         'instagramLink' => '#',
-        'youtubeLink' => '#'
-
+        'youtubeLink' => '#',
+        'apiKeyMainOfficeMap'=>'AIzaSyDZWJcFQabrMDUPmXaiU7wlZ74dzm_virI',
+        'apiKeyOtherOfficesMap'=>'AIzaSyAz1W2wSLUwOGipJpjwRI0HeZm69dSLeBE',
+        'officesList'=>[],
+        'mainOffice'=>[]
     ];
 
     public function __construct(){
@@ -38,12 +45,13 @@ class Config
         if ($debug == 'Y') {
             $this->debug = true;
         }
+        $this->readFileConfig();
     }
 
     protected function readFileConfig(){
-        if (!$this->debug) {
-            return;
-        }
+//        if (!$this->debug) {
+//            return;
+//        }
         $config = include_once $_SERVER['DOCUMENT_ROOT'] . '/bitrix/config.php';
         if (!empty($config)) {
             foreach ($config as $key => $item) {
