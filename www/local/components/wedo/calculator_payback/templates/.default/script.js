@@ -30,7 +30,8 @@ CalculatorPayback = function (urlAjax, productId) {
                 productId : self.productId.val()
             },
             success : function (html) {
-                $("#result").html(html)
+                $("#result").html(html);
+                $('#fild-srok-okupaemosti').val($('#paybackPeriod').html());
             }
         });
     };
