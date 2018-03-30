@@ -7,11 +7,10 @@
 /** @var CBitrixComponentTemplate $this */
 
 // получить свойства элемента :
-$i = 0;
-foreach ($arResult['ITEMS'] as $item){
+foreach ($arResult['ITEMS'] as &$item){
     $props = CIBlockElement::GetByID($item['ID'])->GetNextElement()->GetProperties();
+    $item['PROPERTIES'] = [];
     foreach ($props as $prop){
-        $arResult['ITEMS'][$i]['PROPERTIES'][]= $prop ;
+        $item['PROPERTIES'][] = $prop;
     }
-    $i++;
 }

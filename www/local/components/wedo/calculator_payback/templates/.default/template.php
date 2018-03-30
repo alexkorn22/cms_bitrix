@@ -30,48 +30,71 @@ extract($arResult);
 
         <div class="row">
             <div class="col-md-12">
-                <div class="row justify-content-center">
-                    <div class="col-6">
-                        <form>
-                            <br>
+                <div class="calculate-raschet">
+                    <div class="row justify-content-center">
+                        <? if (isset($arResult['products'])): ?>
                             <div class="form-group">
-                                <? if (isset($arResult['products'])):?>
                                     <select class="custom-select" id="productId">
-                                        <? foreach($arResult['products'] as $item):?>
+                                        <? foreach ($arResult['products'] as $item): ?>
                                             <option
-                                                    value="<?=$item['ID']?>"
-                                                <? if ($item['ID'] == $product['ID']):?>
+                                                    value="<?= $item['ID'] ?>"
+                                                <? if ($item['ID'] == $product['ID']): ?>
                                                     selected
-                                                <? endif;?>
-                                                    data-servings="<?=$item['servings']?>"
+                                                <? endif; ?>
+                                                    data-servings="<?= $item['servings'] ?>"
                                             >
-                                                <?=$item['NAME']?>
+                                                <?= $item['NAME'] ?>
                                             </option>
-                                        <? endforeach;?>
-
+                                        <? endforeach; ?>
                                     </select>
-                                <? endif;?>
-
                             </div>
-                            <div class="form-group">
-                                <label for="priceCofee">Цена за 1 кг. кофе</label>
-                                <input type="text" class="form-control" id="priceCofee" value="<?=$priceCofee?>">
+                        <? endif; ?>
+                            <div class="col-lg-3">
+                                <div class="wrap-input">
+                                    <div class="form-group">
+                                        <label for="fild-coffee">Цена 1 кг. кофе (грн) *</label>
+                                        <input type="text" class="form-control custom-input" id="priceCofee" value="<?=$priceCofee?>">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="priceSale">Цена реализации напитка</label>
-                                <input type="text" class="form-control" id="priceSale" value="<?=$priceSale?>">
+                            <div class="col-lg-3">
+                                <div class="wrap-input">
+                                    <div class="form-group">
+                                        <label for="fild-realizaciy">Цена реализации (грн) *</label>
+                                        <input type="text" class="form-control custom-input" id="priceSale" value="<?=$priceSale?>">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="cmServings">Количество порций в день</label>
-                                <input type="text" class="form-control" id="cmServings" value="<?=$cmServings?>">
+                            <div class="col-lg-3">
+                                <div class="wrap-input">
+                                    <div class="form-group">
+                                        <label for="fild-porcii">Количество порций в день *</label>
+                                        <input type="text" class="form-control custom-input" id="cmServings" value="<?=$cmServings?>">
+                                    </div>
+                                </div>
                             </div>
-                        </form>
+                            <div class="col-lg-3">
+                                <div class="wrap-input srok-okupaemosti">
+                                    <div class="form-group">
+                                        <label for="fild-srok-okupaemosti">Срок окупаемости (месяцев)</label>
+                                        <input type="text" class="form-control custom-input" id="fild-srok-okupaemosti" value="<?=$paybackPeriod?>">
+                                    </div>
+                                    <p>
+                                        <a class="" data-toggle="collapse" href="#open-table-calculate" role="button" aria-expanded="false" aria-controls="open-table-calculate">
+                                            Подробнее
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
                     </div>
                 </div>
+
                 <div id="result">
-                    <?
-                    require ROOT . $this->getComponent()->getPath(). '/views/result.php';
-                    ?>
+                    <div class="collapse" id="open-table-calculate">
+                        <?
+                            require ROOT . $this->getComponent()->getPath(). '/views/result.php';
+                        ?>
+                    </div>
                 </div>
 
 
