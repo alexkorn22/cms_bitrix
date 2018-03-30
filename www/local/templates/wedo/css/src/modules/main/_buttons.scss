@@ -84,7 +84,7 @@
   cursor: pointer;
   display: none;
   position: fixed;
-  z-index: 999;
+  z-index: 14;
   transition: 0.5s;
   &:hover {
     box-shadow: 0 2px 15px 0px $gray;

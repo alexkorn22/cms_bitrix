@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="form-repair">
+                    <div class="form-repair d-none d-lg-block">
                         <form class="repair repair_bg-red check-valid" novalidate>
                             <div class="form-titile">
                                 <p>Заявка на диагностику</p>
@@ -56,7 +56,10 @@
                             </div>
                         </form>
                     </div>
-                </div>
+                    <div class="btn-order d-block d-lg-none">
+                        <button type="button" class="btn btn_red btn_small-mobile" data-toggle="modal" data-target="#order-diagnostics">Заказать диагностику</button>
+                    </div>
+                 </div>
             </div>
         </div>
     </div>
@@ -171,7 +174,7 @@
                     </div>
                 </div>
             </div>
-            <div class="wrap-scheme">
+            <div class="wrap-scheme d-none d-lg-block">
                 <div class="row">
                     <div class="col">
                         <div class="wrap-circles">
@@ -184,7 +187,7 @@
                                     <p>Заполните заявку, и мы свяжемся с Вами для решения проблемы.</p>
                                 </div>
                                 <div class="footer">
-                                    <a href="#">Заказать диагностику</a>
+                                    <a href="#order-diagnostics" data-toggle="modal" data-target="#order-diagnostics" role="button">Заказать диагностику</a>
                                 </div>
                                 <a class="right-arrow-circle">
                                     <img src="../../images/icons/btn-arrow-right.png" alt="Right">
@@ -235,7 +238,7 @@
                                     <p>Мы обеспечим ежемесячную поддержку и контроль работы кофеавтомата у вас на месте после проведенного ремонта. Сервис включает в себя визит техников 1-2 раза в месяц, проверку и настройку технических/технологических параметров и датчиков, текущий ремонт кофемашины согласно рекомендаций производителя.</p>
                                 </div>
                                 <div class="footer">
-                                    <a href="#">Заказать диагностику</a>
+                                    <a href="#order-diagnostics" data-toggle="modal" data-target="#order-diagnostics" role="button">Заказать диагностику</a>
                                 </div>
                                 <a class="left-arrow-circle">
                                     <img src="../../images/icons/btn-arrow-left.png" alt="Left">
@@ -244,6 +247,42 @@
                         </div>
 
                     </div>
+                </div>
+            </div>
+            <div class="wrap-tabs-mobile d-block d-lg-none">
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item tab-circle">
+                        <a class="nav-link active" id="pills-1-tab" data-toggle="pill" href="#pills-1" role="tab" aria-controls="pills-home" aria-selected="true">1</a>
+                    </li>
+                    <li class="nav-item tab-circle">
+                        <a class="nav-link" id="pills-2-tab" data-toggle="pill" href="#pills-2" role="tab" aria-controls="pills-profile" aria-selected="false">2</a>
+                    </li>
+                    <li class="nav-item tab-circle">
+                        <a class="nav-link" id="pills-3-tab" data-toggle="pill" href="#pills-3" role="tab" aria-controls="pills-contact" aria-selected="false">3</a>
+                    </li>
+                    <li class="nav-item tab-circle">
+                        <a class="nav-link" id="pills-4-tab" data-toggle="pill" href="#pills-4" role="tab" aria-controls="pills-contact" aria-selected="false">4</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content d-block d-lg-none" id="pills-tabContent">
+                <div class="tab-pane content-tabs-mobile fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <p class="title">Заявка на диагностику</p>
+                    <p class="descr">Заполните заявку, и мы свяжемся с Вами для решения проблемы.</p>
+                    <a href="#order-diagnostics" data-toggle="modal" data-target="#order-diagnostics" role="button">Заказать диагностику</a>
+                </div>
+                <div class="tab-pane content-tabs-mobile fade" id="pills-2" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <p class="title">Диагностика</p>
+                    <p class="descr">Квалифицированный техник выедет на место, где установлен кофеавтомат, для диагностики и составления сметы. После согласования стоимости он выполнит ремонт кофемашины на месте. Если поломка требует капитального ремонта, может потребоваться отправка в один из наших сервисных центров по ремонту кофемашин в Украине.</p>
+                </div>
+                <div class="tab-pane content-tabs-mobile fade" id="pills-3" role="tabpanel" aria-labelledby="pills-contact-tab">
+                    <p class="title">Ремонт кофемашин</p>
+                    <p class="descr">Мы осуществим замену необходимых оригинальных деталей и узлов согласно составленной нашим специалистом и согласованной с вами смете, «под ключ», без дополнительных скрытых затрат.</p>
+                </div>
+                <div class="tab-pane content-tabs-mobile fade" id="pills-4" role="tabpanel" aria-labelledby="pills-contact-tab">
+                    <p class="title">Сервисное обслуживание</p>
+                    <p class="descr">Мы обеспечим ежемесячную поддержку и контроль работы кофеавтомата у вас на месте после проведенного ремонта. Сервис включает в себя визит техников 1-2 раза в месяц, проверку и настройку технических/технологических параметров и датчиков, текущий ремонт кофемашины согласно рекомендаций производителя.</p>
+                    <a href="#order-diagnostics" data-toggle="modal" data-target="#order-diagnostics" role="button">Заказать диагностику</a>
                 </div>
             </div>
         </div>
@@ -365,6 +404,48 @@
         </div>
         <div class="map-service-center">
             <img src="../../images/map-img.png" alt="map">
+        </div>
+    </div>
+</div>
+
+<!--Modal order-consultation-->
+<div class="modal fade" id="order-diagnostics" tabindex="-1" role="dialog" aria-labelledby="order-diagnostics" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom-modal-dialog" role="document">
+        <div class="modal-content custom-modal-content custom-modal-content_bg-red">
+            <div class="modal-header custom-modal-header">
+                <h5 class="modal-title custom-modal-title">Заявка на диагностику</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form class="repair check-valid" novalidate>
+                <div class="modal-body custom-modal-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control custom-input" id="name3" placeholder="Имя" required>
+                        <div class="invalid-feedback">
+                            Вы не указали имя!
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control custom-input" id="phone3" placeholder="Телефон" required>
+                        <div class="invalid-feedback">
+                            Вы не указали телефон!
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control custom-input" id="city3" placeholder="Город" required>
+                        <div class="invalid-feedback">
+                            Вы не указали город!
+                        </div>
+                    </div>
+                    <div class="form-group custom-form-group">
+                        <textarea class="form-control custom-textarea" id="comment3" rows="3" placeholder="Комментарий"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer custom-modal-footer">
+                    <button type="submit" class="btn btn_black btn_small-mobile ">Заказать диагностику</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
