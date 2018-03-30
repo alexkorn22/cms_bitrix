@@ -59,6 +59,18 @@
 }
 
 .title-lease, .title-repair {
+  @include media-breakpoint-down(md){
+    padding-top: 25%;
+  }
+}
+
+.form-lease, .form-repair {
+  @include media-breakpoint-down(md){
+    padding-top: 10%;
+  }
+}
+
+.title-lease, .title-repair {
   p {
     font-size: 54px;
     font-family: $Bold;
@@ -73,6 +85,15 @@
       }
       &_black {
         color: $black;
+      }
+    }
+  }
+  @include media-breakpoint-down(sm){
+    p {
+      font-size: 40px;
+      line-height: 44px;
+      .wmf {
+        font-size: 44px;
       }
     }
   }
@@ -129,6 +150,11 @@
       }
     }
   }
+}
+
+
+.btn-order {
+  padding-top: 20px;
 }
 
 #advantages-lease, #models-for-rent, #rent-terms, #payback-calculator, #clients-in-lease {

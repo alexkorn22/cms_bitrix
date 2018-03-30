@@ -690,5 +690,8 @@
       }
     }
   }
+  @include media-breakpoint-down(sm){
+    height: 80px;
+  }
 }
 

@@ -43,6 +43,21 @@
       line-height: 30px;
     }
 
+    @include media-breakpoint-between(lg, xl){
+      .title-banner {
+        font-size: 24px;
+        line-height: 22px;
+      }
+      ul li{
+        font-size: 18px;
+        line-height: 22px;
+      }
+      .descr-banner {
+        font-size: 22px;
+        line-height: 22px;
+      }
+    }
+
     @include media-breakpoint-down(sm){
       .title-banner {
         font-size: 20px;
