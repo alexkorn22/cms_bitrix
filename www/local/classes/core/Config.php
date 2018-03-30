@@ -34,34 +34,6 @@ class Config
         'youtubeLink' => '#',
         'apiKeyMainOfficeMap'=>'AIzaSyDZWJcFQabrMDUPmXaiU7wlZ74dzm_virI',
         'apiKeyOtherOfficesMap'=>'AIzaSyAz1W2wSLUwOGipJpjwRI0HeZm69dSLeBE',
-        'officesList'=>[
-            '0'=>[
-                'city'=>'г. Львов',
-                'address'=>'ул. Центральная 29',
-                'phone' => 'т.0965248764'
-            ],
-            '1'=>[
-                'city'=>' г. Киев',
-                'address'=>'  ул. Восточная 152 ',
-                'phone'=>'т. 0675236654'
-            ],
-            '2'=>[
-                'city'=>' г. Запорожье',
-                'address'=>' ул. Панфиловцев 2 ',
-                'phone'=>' т. 0507894521'
-            ],
-            '3'=>[
-                'city'=>'  г. Одесса',
-                'address'=>'ул. Дерибасовская 45 ',
-                'phone'=>'т. 0504567899'
-            ],
-            '4'=>[
-                'city'=>'  
-                г. Харьков',
-                'address'=>'  ул. Производственная 1 ',
-                'phone'=>'т. 096456785'
-            ]
-        ]
     ];
 
     public function __construct(){
@@ -70,12 +42,13 @@ class Config
         if ($debug == 'Y') {
             $this->debug = true;
         }
+        $this->readFileConfig();
     }
 
     protected function readFileConfig(){
-        if (!$this->debug) {
-            return;
-        }
+//        if (!$this->debug) {
+//            return;
+//        }
         $config = include_once $_SERVER['DOCUMENT_ROOT'] . '/bitrix/config.php';
         if (!empty($config)) {
             foreach ($config as $key => $item) {
