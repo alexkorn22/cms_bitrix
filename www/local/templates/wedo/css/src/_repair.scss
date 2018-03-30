@@ -251,6 +251,9 @@
   .wrap-tabs-mobile {
     ul {
       flex-wrap: nowrap;
+      width: 100%;
+      max-width: 87vw;
+      margin: auto;
     }
     .tab-circle a {
       width: 25vw;
