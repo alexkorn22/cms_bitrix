@@ -102,7 +102,7 @@
   width: 100vw;
   top: 0;
   left: 100vw;
-  z-index: 2;
+  z-index: 15;
   color: $white;
   background-image: url("../../images/bg-burger.png");
   background-position: bottom left;
@@ -112,7 +112,7 @@
   &.open {
     width: 100vw;
     position: fixed;
-    z-index: 4;
+    z-index: 16;
     left: 0;
     .container-fluid {
       width: 100%;
