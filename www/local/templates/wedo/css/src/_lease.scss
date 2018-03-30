@@ -76,6 +76,7 @@
     font-family: $Bold;
     color: $white;
     line-height: 64px;
+    padding: 0 30px;
     .wmf {
       font-size: 58px;
       font-family: $Black;
@@ -92,6 +93,7 @@
     p {
       font-size: 40px;
       line-height: 44px;
+      padding: 0;
       .wmf {
         font-size: 44px;
       }

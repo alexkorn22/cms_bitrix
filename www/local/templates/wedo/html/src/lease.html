@@ -17,13 +17,13 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-xl-7">
                     <div class="title-lease">
                         <p>Аренда кофемашин <span class="wmf wmf_black">WMF</span> в Украине</p>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="form-lease">
+                <div class="col-lg-6 col-xl-5">
+                    <div class="form-lease d-none d-lg-block">
                         <form class="lease lease_bg-black check-valid" novalidate>
                             <div class="form-titile">
                                 <p>Заявка на аренду</p>
@@ -55,6 +55,9 @@
                                 <button type="submit" class="btn btn_red btn_small-mobile btn_font-small">Отправить</button>
                             </div>
                         </form>
+                    </div>
+                    <div class="btn-order d-block d-lg-none">
+                        <button type="button" class="btn btn_black btn_small-mobile" data-toggle="modal" data-target="#order-lease">Заказать аренду</button>
                     </div>
                 </div>
             </div>
@@ -286,7 +289,7 @@
                                 </div>
                                 <div class="form-content">
                                     <div class="row">
-                                        <div class="col-lg-6">
+                                        <div class="col-xl-6">
                                             <div class="form-group custom-form-group">
                                                 <input type="text" class="form-control custom-input" id="name2" placeholder="Имя" required>
                                                 <div class="invalid-feedback">
@@ -306,7 +309,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6">
+                                        <div class="col-xl-6">
                                             <div class="form-group custom-form-group">
                                                 <textarea class="form-control custom-textarea" id="comment2" rows="3" placeholder="Комментарий"></textarea>
                                             </div>
@@ -364,8 +367,48 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
-
+<!--Modal order-consultation-->
+<div class="modal fade" id="order-lease" tabindex="-1" role="dialog" aria-labelledby="order-lease" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom-modal-dialog" role="document">
+        <div class="modal-content custom-modal-content custom-modal-content_bg-red">
+            <div class="modal-header custom-modal-header">
+                <h5 class="modal-title custom-modal-title">Заявка на аренду</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form class="repair check-valid" novalidate>
+                <div class="modal-body custom-modal-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control custom-input" id="name3" placeholder="Имя" required>
+                        <div class="invalid-feedback">
+                            Вы не указали имя!
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control custom-input" id="phone3" placeholder="Телефон" required>
+                        <div class="invalid-feedback">
+                            Вы не указали телефон!
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control custom-input" id="city3" placeholder="Город" required>
+                        <div class="invalid-feedback">
+                            Вы не указали город!
+                        </div>
+                    </div>
+                    <div class="form-group custom-form-group">
+                        <textarea class="form-control custom-textarea" id="comment3" rows="3" placeholder="Комментарий"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer custom-modal-footer">
+                    <button type="submit" class="btn btn_black btn_small-mobile ">Отправить</button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
