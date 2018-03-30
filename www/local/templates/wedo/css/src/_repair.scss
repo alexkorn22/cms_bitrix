@@ -107,6 +107,9 @@
             text-decoration: none;
             color: $red;
             font-size: 20px;
+            &:focus {
+              outline: none;
+            }
           }
         }
         .right-arrow-circle, .left-arrow-circle {
