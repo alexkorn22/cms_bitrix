@@ -6,18 +6,27 @@
   padding-top: 50px;
   .main-office-text{
     display: inline;
-    font-size: x-large;
+    font-size: 38px;
     font-family: $Bold;
     padding-left: 25px;
+    @include media-breakpoint-down(sm){
+      font-size: 23px;
+    }
   }
 }
 
 .other-contacts{
   padding-top: 20px;
   .other-contacts-text{
+    font-size: 20px;
     display: inline-block;
+    text-decoration: none;
+    color: $black;
     padding-left: 25px;
     padding-top: 10px;
+    @include media-breakpoint-down(sm){
+      font-size: 16px;
+    }
   }
 }
 
@@ -31,10 +40,11 @@
 }
 
 .red-star{
-  color: red;
+  color: $red;
 }
 .note{
   padding-top: 20px;
+  font-size: 13px;
 }
 
 .map-main-office{
@@ -43,17 +53,20 @@
 
 .googleMap{
   .map-heading{
-    font-size: x-large;
+    font-size: 34px;
     font-family: $Bold;
     text-align: center;
     padding-top: 50px;
     padding-bottom: 50px;
+    @include media-breakpoint-down(sm){
+      font-size: 28px;
+    }
   }
 }
 
 .office-city{
   font-family: $Bold;
-  font-size: larger;
+  font-size: 21px;
 }
 
 .offices-data{
