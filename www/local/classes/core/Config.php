@@ -35,6 +35,8 @@ class Config
         'youtubeLink' => '#',
         'apiKeyMainOfficeMap'=>'AIzaSyDZWJcFQabrMDUPmXaiU7wlZ74dzm_virI',
         'apiKeyOtherOfficesMap'=>'AIzaSyAz1W2wSLUwOGipJpjwRI0HeZm69dSLeBE',
+        'officesList'=>[],
+        'mainOffice'=>[]
     ];
 
     public function __construct(){
