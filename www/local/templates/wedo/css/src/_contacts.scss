@@ -72,6 +72,10 @@
 .offices-data{
   padding-left: 50px;
   padding-top: 30px;
+  .phone>a{
+    text-decoration: none;
+    color: $black;
+  }
 }
 
 .contact-us{

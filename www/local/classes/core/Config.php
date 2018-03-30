@@ -16,6 +16,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
  * @property string apiKeyMainOfficeMap;
  * @property string apiKeyOtherOfficesMap;
  * @property array officesList;
+ * @property array mainOffice;
  */
 class Config
 {

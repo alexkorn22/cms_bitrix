@@ -12,10 +12,7 @@ $APPLICATION->SetTitle("");
 				</div>
 				<div class="other-contacts">
  <img src="<?= IMAGES_PATH ?>/contacts_icons/maps-icon.png" class="contacts-icons" alt="">
-					<p class="other-contacts-text">
-						 Украина г. Запорожье<br>
-						 простект Соборный 156
-					</p>
+						<div class="other-contacts-text"><?=App::$config->mainOffice['city']?><br/><?=App::$config->mainOffice['address']?></div>
 				</div>
 				<div class="other-contacts">
  <img src="<?= IMAGES_PATH ?>/contacts_icons/phone-icon.png" class="contacts-icons" alt=""> <a href="tel: <?=App::$config->telephone?>" class="other-contacts-text"> <?=App::$config->telephone?> </a>
@@ -80,8 +77,8 @@ $APPLICATION->SetTitle("");
                         <div>
                             <?=$office['address']?>
                         </div>
-                        <div>
-                            <?=$office['phone']?>
+                        <div class="phone">
+                            <a href="tel:<?=$office['phone']?>">т. <?=$office['phone']?></a>
                         </div>
                     </div>
                 <?endforeach;?>
