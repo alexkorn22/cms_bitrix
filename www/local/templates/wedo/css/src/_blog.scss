@@ -1,0 +1,66 @@
+.tag-line {
+  padding: 10px 0;
+
+  nav.priority-nav {
+    position: relative;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    color: $black;
+
+    .more-tags {
+      align-self: stretch;
+      transition: all .4s ease-out;
+      outline: 0;
+      border: 0;
+      font-size: 18px;
+      color: $black;
+      background-color: transparent;
+      cursor: pointer;
+      &.hidden {
+        transition: none;
+        width: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+    }
+  }
+
+  ul.tags-blog {
+    display: flex;
+    justify-content: flex-start;
+    flex: 1;
+    overflow: hidden;
+    list-style: none;
+
+    li {
+      flex: none;
+      padding: 1rem;
+
+      a {
+        color: $black;
+        font-size: 18px;
+        text-decoration: none;
+      }
+    }
+  }
+
+  ul.hidden-tags-blog {
+    position: absolute;
+    background: $red;
+    right: 0;
+    top: 100%;
+
+    li {
+      padding: 1rem;
+      a {
+        color: $white;
+        padding-right: 1rem;
+      }
+    }
+
+    &.hidden {
+      display: none;
+    }
+  }
+}
