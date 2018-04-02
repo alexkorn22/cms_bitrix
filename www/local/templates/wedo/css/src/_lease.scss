@@ -76,6 +76,7 @@
     font-family: $Bold;
     color: $white;
     line-height: 64px;
+    padding: 0 30px;
     .wmf {
       font-size: 58px;
       font-family: $Black;
@@ -92,6 +93,7 @@
     p {
       font-size: 40px;
       line-height: 44px;
+      padding: 0;
       .wmf {
         font-size: 44px;
       }
@@ -159,6 +161,9 @@
 
 #advantages-lease, #models-for-rent, #rent-terms, #payback-calculator, #clients-in-lease {
   padding-top: 150px;
+  @include media-breakpoint-down(sm){
+    padding-top: 100px;
+  }
 }
 
 .item-advantages {
@@ -220,6 +225,10 @@
     font-size: 26px;
     line-height: 36px;
     font-family: $Light;
+    @include media-breakpoint-down(sm){
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
 }
 
@@ -236,6 +245,15 @@
       width: 100%;
       position: absolute;
       right: -50%;
+    }
+    @include media-breakpoint-down(md){
+      &:after {
+        height: 100%;
+        border-left: 1px dashed #dd2a1b;
+        border-bottom: 0;
+        top: 50%;
+      }
+
     }
     .circle {
       border: 2px solid $red;
@@ -292,6 +310,25 @@
       .form-group {
         display: flex;
         flex-direction: column;
+      }
+    }
+    @include media-breakpoint-down(md){
+      .wrap-input, .wrap-select {
+        text-align: left;
+        label {
+          height: 100%;
+        }
+        input, select {
+          height: 40px;
+          margin: 0;
+        }
+      }
+      .wrap-select, .wrap-input {
+        .form-group {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
       }
     }
   }
