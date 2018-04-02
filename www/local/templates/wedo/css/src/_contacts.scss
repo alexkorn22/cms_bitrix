@@ -1,0 +1,92 @@
+.main-contacts{
+  padding: 15px;
+}
+
+.main-office{
+  padding-top: 50px;
+  .main-office-text{
+    display: inline;
+    font-size: 38px;
+    font-family: $Bold;
+    padding-left: 25px;
+    @include media-breakpoint-down(sm){
+      font-size: 23px;
+    }
+  }
+}
+
+.other-contacts{
+  padding-top: 20px;
+  .other-contacts-text{
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    color: $black;
+    padding-left: 25px;
+    padding-top: 10px;
+    @include media-breakpoint-down(sm){
+      font-size: 16px;
+    }
+  }
+}
+
+.contacts-icons{
+  width: 50px;
+  height: 50px;
+}
+.contacts-icons-message{
+  width: 50px;
+  height: 40px;
+}
+
+.red-star{
+  color: $red;
+}
+.note{
+  padding-top: 20px;
+  font-size: 13px;
+}
+
+.map-main-office{
+  padding-top: 30px;
+}
+
+.googleMap{
+  .map-heading{
+    font-size: 34px;
+    font-family: $Bold;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    @include media-breakpoint-down(sm){
+      font-size: 28px;
+    }
+  }
+}
+
+.office-city{
+  font-family: $Bold;
+  font-size: 21px;
+}
+
+.offices-data{
+  padding-left: 50px;
+  padding-top: 30px;
+  .phone>a{
+    text-decoration: none;
+    color: $black;
+  }
+}
+
+.contact-us{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: right;
+  padding-right: 50px;
+  @include media-breakpoint-down(sm){
+    display: block;
+  }@include media-breakpoint-down(xs){
+    padding-right:15px;
+  }
+}
+
