@@ -8,12 +8,6 @@ $arComponentParameters = array(
 		
 	),
 	"PARAMETERS" => array(
-		"IBLOCK_ID"  =>  Array(
-			"PARENT" => "DATA_SOURCE",
-			"NAME" => GetMessage("WEDO_CLIENTS_PARAM_IBLOCK_ID_NAME"),
-			"TYPE" => "STRING",
-		),
-		
 	),
 );
 ?>
