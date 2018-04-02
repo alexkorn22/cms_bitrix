@@ -1,7 +1,7 @@
 <?
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
-class CTestComponent extends CBitrixComponent{
+class ClientsComponent extends CBitrixComponent{
 	
 	public function generateArOrder(){
 		$this->arParams["AR_ORDER"] = Array();
