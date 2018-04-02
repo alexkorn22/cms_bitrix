@@ -75,6 +75,36 @@
   }
 }
 
+
+.wrap-banner.blog {
+  background-image: url(../../images/banners/bg-banner-blog.png);
+
+  .wrap-banner-img {
+    .banner-img {
+      top: -5%;
+      img {
+        width: auto;
+        height: 430px;
+      }
+      @include media-breakpoint-up(xl){
+        top: -10%;
+      }
+    }
+  }
+
+  .banner-text {
+    .title-banner {
+      font-size: 30px;
+      line-height: 34px;
+      font-family: $Light;
+    }
+    .descr-banner {
+      font-family: $Bold;
+    }
+  }
+}
+
+
 .wrap-banner {
   height: 320px;
   margin: 60px 0;
