@@ -35,6 +35,7 @@ class CTestComponent extends CBitrixComponent{
 			$arFields["PROPS"] = $ob->GetProperties();
 
 			$this->arResult["ITEMS"][] = $arFields;
+//			App::$debug->dDie($this->arResult["ITEMS"]);
 		}
 	}
 
