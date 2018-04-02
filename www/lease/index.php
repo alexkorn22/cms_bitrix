@@ -105,36 +105,19 @@ $APPLICATION->SetTitle("Аренда");
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col">
-					<div class="slider-models-for-rent">
-						<div class="models">
-							<a href="#">
-								<img src="<?=IMAGES_PATH?>/product/cm4.png" alt="">
-								<p>WMF 5000 S</p>
-							</a>
-						</div>
-						<div class="models">
-							<a href="#">
-								<img src="<?=IMAGES_PATH?>/product/cm5.png" alt="">
-								<p>WMF 9000 S+</p>
-							</a>
-						</div>
-						<div class="models">
-							<a href="#">
-								<img src="<?=IMAGES_PATH?>/product/cm4.png" alt="">
-								<p>WMF 5000 S</p>
-							</a>
-						</div>
-						<div class="models">
-							<a href="#">
-								<img src="<?=IMAGES_PATH?>/product/cm5.png" alt="">
-								<p>WMF 9000 S+</p>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
+
+            <!-- popular cms -->
+
+            <?$APPLICATION->IncludeComponent(
+                "wedo:popular_cm",
+                ".default",
+                array(
+                    "COMPONENT_TEMPLATE" => ".default",
+                    "IBLOCK_ID" => App::$config->coffeeMachineIblockId,
+                ),
+                false
+            );?>
+            
 			<div class="row">
 				<div class="col">
 					<div class="descr-model-for-rent">
