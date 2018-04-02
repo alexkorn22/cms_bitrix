@@ -1,0 +1,3 @@
+<?
+$MESS["WEDO_CLIENTS_PARAM_IBLOCK_ID_NAME"] = "Инфоблок";
+?>
