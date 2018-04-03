@@ -14,14 +14,10 @@ class PopularCM extends BaseInfoBlockComponent{
     public function setFilterValue (){
         if(CModule::IncludeModule("iblock"))
         {
-            $property_enums = CIBlockPropertyEnum::GetList(Array(), Array("IBLOCK_ID"=>App::$config->coffeeMachineIblockId, "CODE"=>"POPULAR_CM"));
+            $property_enums = CIBlockPropertyEnum::GetList(Array(), Array("IBLOCK_ID"=>App::$config->coffeeMachineIblockId, "XML_ID"=>"POPULAR_TRUE"));
             while($enum_fields = $property_enums->GetNext())
             {
-                $this->filterValue = '';
-                if($enum_fields['XML_ID'] == 'POPULAR_TRUE'){
-                    $this->filterValue = $enum_fields['VALUE'];
-                }
-
+                $this->filterValue = $enum_fields['VALUE'];
             }
         }
 
