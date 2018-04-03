@@ -14,6 +14,7 @@ $( document ).ready(function() {
     togglePanel();
     validateForm();
     CustomSlideCircle();
+    TagsBlog();
     var navbarData = startNav();
     $(window).scroll(function(){stickyMenu(navbarData);});
     $('.burger').on('click', clickBurger );
@@ -383,4 +384,58 @@ function CustomSlideCircle() {
             }
         });
     })
+}
+
+function TagsBlog() {
+    var $nav = $('nav');
+    var $btn = $('nav .more-tags');
+    var $vlinks = $('nav .tags-blog');
+    var $hlinks = $('nav .hidden-tags-blog');
+
+    var numOfItems = 0;
+    var totalSpace = 0;
+    var breakWidths = [];
+
+    // Get initial state
+    $vlinks.children().outerWidth(function(i, w) {
+        totalSpace += w;
+        numOfItems += 1;
+        breakWidths.push(totalSpace);
+    });
+
+    var availableSpace, numOfVisibleItems, requiredSpace;
+
+    function check() {
+
+        // Get instant state
+        availableSpace = $vlinks.width() - 10;
+        numOfVisibleItems = $vlinks.children().length;
+        requiredSpace = breakWidths[numOfVisibleItems - 1];
+
+        // Not enough space
+        if (requiredSpace > availableSpace) {
+            $vlinks.children().last().prependTo($hlinks);
+
+            check();
+            // More than enough space
+        } else if (availableSpace > breakWidths[numOfVisibleItems]) {
+            $hlinks.children().first().appendTo($vlinks);
+
+        }
+        // Update the button
+        if (numOfVisibleItems === numOfItems) {
+            $btn.addClass('hidden');
+        } else $btn.removeClass('hidden');
+    }
+
+    // Window listeners
+    $(window).resize(function() {
+        check();
+    });
+
+    $btn.on('click', function() {
+        $hlinks.toggleClass('hidden');
+    });
+
+    check();
 }
