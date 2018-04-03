@@ -235,13 +235,13 @@ $APPLICATION->SetTitle("Ремонт");
             <div class="wrap-tabs-mobile d-block d-lg-none">
                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                     <li class="nav-item tab-circle">
-                        <a class="nav-link active" id="pills-1-tab" data-toggle="pill" href="#pills-1" role="tab" aria-controls="pills-home" aria-selected="true">1</a>
+                        <a class="nav-link active" id="pills-1-tab" data-toggle="pill" href="#pills-1" role="tab" aria-controls="pills-home" aria-selected="true">1<img src="<?=IMAGES_PATH?>/icons/icons8-long-arrow-right-w.png"></a>
                     </li>
                     <li class="nav-item tab-circle">
-                        <a class="nav-link" id="pills-2-tab" data-toggle="pill" href="#pills-2" role="tab" aria-controls="pills-profile" aria-selected="false">2</a>
+                        <a class="nav-link" id="pills-2-tab" data-toggle="pill" href="#pills-2" role="tab" aria-controls="pills-profile" aria-selected="false">2<img src="<?=IMAGES_PATH?>/icons/icons8-long-arrow-right-w.png"></a>
                     </li>
                     <li class="nav-item tab-circle">
-                        <a class="nav-link" id="pills-3-tab" data-toggle="pill" href="#pills-3" role="tab" aria-controls="pills-contact" aria-selected="false">3</a>
+                        <a class="nav-link" id="pills-3-tab" data-toggle="pill" href="#pills-3" role="tab" aria-controls="pills-contact" aria-selected="false">3<img src="<?=IMAGES_PATH?>/icons/icons8-long-arrow-right-w.png"></a>
                     </li>
                     <li class="nav-item tab-circle">
                         <a class="nav-link" id="pills-4-tab" data-toggle="pill" href="#pills-4" role="tab" aria-controls="pills-contact" aria-selected="false">4</a>
