@@ -3,10 +3,10 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Новости");
 ?><?$APPLICATION->IncludeComponent(
 	"bitrix:news", 
-	"flat", 
+	"newsCM",
 	array(
 		"IBLOCK_TYPE" => "info",
-		"IBLOCK_ID" => "13",
+		"IBLOCK_ID" => App::$config->newsIblockId,
 		"NEWS_COUNT" => "10",
 		"USE_SEARCH" => "N",
 		"USE_RSS" => "N",
