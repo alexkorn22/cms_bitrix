@@ -1,7 +1,7 @@
 <?
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
-class CTestComponent extends CBitrixComponent{
+class OrderConsultationComponent extends CBitrixComponent{
 	
 	public function generateArOrder(){
 		$this->arParams["AR_ORDER"] = Array();
@@ -33,9 +33,7 @@ class CTestComponent extends CBitrixComponent{
 		while ($ob = $rs->GetNextElement()){
 			$arFields = $ob->GetFields();
 			$arFields["PROPS"] = $ob->GetProperties();
-
 			$this->arResult["ITEMS"][] = $arFields;
-//			App::$debug->dDie($this->arResult["ITEMS"]);
 		}
 	}
 
