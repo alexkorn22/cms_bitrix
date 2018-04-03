@@ -15,6 +15,7 @@ $( document ).ready(function() {
     validateForm();
     CustomSlideCircle();
     TagsBlog();
+    Preloader();
     var navbarData = startNav();
     $(window).scroll(function(){stickyMenu(navbarData);});
     $('.burger').on('click', clickBurger );
@@ -439,3 +440,11 @@ function TagsBlog() {
 
     check();
 }
+
+function Preloader() {
+    $(window).on('load', function () {
+        var $preloader = $('.preloader');
+        $preloader.delay(400).fadeOut('slow');
+    });
+}
+
