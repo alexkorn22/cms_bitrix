@@ -1,8 +1,8 @@
 <?
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
-CBitrixComponent::includeComponentClass("wedo:order_consultation");
+CBitrixComponent::includeComponentClass("wedo:base_infoblock_component");
 
-class PopularCM extends OrderConsultationComponent{
+class PopularCM extends BaseInfoBlockComponent{
     private $filterValue;
     public function generateArFilter(){
         $this->setFilterValue();
