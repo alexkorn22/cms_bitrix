@@ -269,10 +269,21 @@
       color: $black;
       font-size: 40px;
       font-family: $Black;
+      img {
+        display: none;
+        position: absolute;
+        bottom: 10px;
+        width: 26px;
+        height: auto;
+      }
       
       &.active {
         background-color: $red;
         color: $white;
+        img {
+          display: block;
+        }
+
       }
     }
     .tab-circle {
