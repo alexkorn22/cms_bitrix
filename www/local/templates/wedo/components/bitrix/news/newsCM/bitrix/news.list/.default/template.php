@@ -12,9 +12,9 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 
-$k = 3 ; // elements/row
+$columns = 3 ; // elements/row
 $i = 1; //  elements
-$r = 1; // rows
+$rows = 1; // rows
 $banner = true;
 
 ?>
@@ -41,7 +41,8 @@ $banner = true;
     <div class="news-line">
             <div class="row">
                 <? foreach ($arResult['ITEMS'] as $item):?>
-                    <?if($r%2 != 0 && $i==1 || $r%2 == 0 && $i == $k):?> <!-- if $r is odd and $i==1 -->
+                    <? $oddRows = $rows%2 != 0 ; ?>
+                    <?if($oddRows && $i==1 || !$oddRows && $i == $columns):?> <!-- if $rows is odd and $i==1 -->
                     <!-- Начало первой новости -->
                         <?  include ROOT.$this->GetFolder() .'/views/main_news.php' ?>
                     <!-- Конец первой новости -->
@@ -49,8 +50,8 @@ $banner = true;
                         <?  include ROOT.$this->GetFolder() .'/views/news.php' ?>
                     <? endif;?>
                     <?
-                        if($i==$k){
-                            $r++;
+                        if($i==$columns){
+                            $rows++;
                             if($banner){
                                 include ROOT.$this->GetFolder() .'/views/banner.php';
                                 $banner = false;

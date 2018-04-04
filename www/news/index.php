@@ -51,7 +51,7 @@ $APPLICATION->SetTitle("Новости");
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
-		"NEWS_COUNT" => "1",
+		"NEWS_COUNT" => "10",
 		"NUM_DAYS" => "360",
 		"NUM_NEWS" => "20",
 		"PAGER_BASE_LINK_ENABLE" => "N",
