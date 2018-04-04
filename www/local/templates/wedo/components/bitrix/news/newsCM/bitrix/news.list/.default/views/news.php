@@ -1,7 +1,7 @@
 <div class="col-lg-3 col-xl">
     <div class="wrap-news">
-    <a href="#">
-        <div class="news" style="background-image: url('<?=$item['imageSrc']?>')">
+    <a href="<?=$item['DETAIL_PAGE_URL']?>">
+        <div class="news" style="background-image: url('<?=$item['PREVIEW_PICTURE']['SRC']?>')">
             <div class="date-news date-news_small">
                 <p><?=$item['time']['day']?>:</p>
                 <p><?=$item['time']['month']?></p>
@@ -14,7 +14,7 @@
         </div>
         <div class="descr-news">
             <p>
-                <?=$item['PROPERTIES']['DESCRIPTION']?>
+                <?=$item['PREVIEW_TEXT']?>
             </p>
         </div>
     </a>

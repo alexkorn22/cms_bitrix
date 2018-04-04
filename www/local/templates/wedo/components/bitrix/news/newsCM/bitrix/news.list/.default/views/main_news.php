@@ -1,6 +1,6 @@
 <div class="col-lg-6 col-xl d-none d-lg-block">
-    <a href="#" class="wrap-link-main-news">
-        <div class="main-news" style="background-image: url('<?=$item['imageSrc']?>')">
+    <a href="<?=$item['DETAIL_PAGE_URL']?>" class="wrap-link-main-news">
+        <div class="main-news" style="background-image: url('<?=$item['PREVIEW_PICTURE']['SRC']?>')">
             <div class="date-news">
                 <p><?=$item['time']['day']?>:</p>
                 <p><?=$item['time']['month']?></p>
@@ -14,8 +14,8 @@
 </div>
 <div class="col-lg-3 d-block d-lg-none">
     <div class="wrap-news">
-        <a href="#">
-            <div class="news" style="background-image:  url('<?=$item['imageSrc']?>')">
+        <a href="<?=$item['DETAIL_PAGE_URL']?>">
+            <div class="news" style="background-image:  url('<?=$item['PREVIEW_PICTURE']['SRC']?>')">
                 <div class="date-news date-news_small">
                     <p><?=$item['time']['day']?>:</p>
                     <p><?=$item['time']['month']?></p>
@@ -28,7 +28,7 @@
             </div>
             <div class="descr-news">
                 <p>
-                    <?=$item['PROPERTIES']['DESCRIPTION']?>
+                    <?=$item['PREVIEW_TEXT']?>
                 </p>
             </div>
         </a>
