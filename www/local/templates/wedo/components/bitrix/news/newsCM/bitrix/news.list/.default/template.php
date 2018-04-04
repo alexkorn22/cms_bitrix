@@ -65,11 +65,5 @@ $banner = true;
 </div>
 
 <div class="container-fluid">
-    <div class="pagination">
-        <!--<a href="#" class="pagination__prev"></a>-->
-        <span class="pagination__prev pagination__prev-no-active"></span>
-        <a href="#" class="pagination__page pagination__page-active">1</a>
-        <a href="#" class="pagination__page">2</a>
-        <a href="#" class="pagination__next"></a>
-    </div>
+   <?=$arResult['NAV_STRING']?>
 </div>
