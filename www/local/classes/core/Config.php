@@ -8,6 +8,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
  * @property string priceSaleCoffee;
  * @property string koeffForCostPriceCoffee;
  * @property string coffeeMachineIblockId;
+ * @property string newsIblockId;
  * @property string telephone;
  * @property string email;
  * @property string facebookLink;
@@ -24,6 +25,7 @@ class Config
     public $debug = false;
     protected $default = [
         'coffeeMachineIblockId' => 12,
+        'newsIblockId' => 13,
         'pricesHighBlockId' => 1,
         'priceCofeeKg' => 600, // цена за 1 кг. кофе
         'priceSaleCoffee' => 12, // цена реализации напитка

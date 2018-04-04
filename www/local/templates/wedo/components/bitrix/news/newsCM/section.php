@@ -13,36 +13,6 @@
 $this->setFrameMode(true);
 ?>
 
-<?
-
-$APPLICATION->IncludeComponent(
-    "bitrix:catalog.smart.filter",
-    "",
-    Array(
-        "CACHE_GROUPS" => "Y",
-        "CACHE_TIME" => "36000000",
-        "CACHE_TYPE" => "A",
-        "DISPLAY_ELEMENT_COUNT" => "N",
-        "FILTER_NAME" => "arrFilter",
-        "FILTER_VIEW_MODE" => "vertical",
-        "IBLOCK_ID" => "12",
-        "IBLOCK_TYPE" => "catalogs",
-        "PAGER_PARAMS_NAME" => "arrPager",
-        "POPUP_POSITION" => "left",
-        "SAVE_IN_SESSION" => "N",
-        "SECTION_CODE" => "",
-        "SECTION_CODE_PATH" => "",
-        "SECTION_DESCRIPTION" => "-",
-        "SECTION_ID" => $_REQUEST["SECTION_ID"],
-        "SECTION_TITLE" => "-",
-        "SEF_MODE" => "N",
-        "SEF_RULE" => "",
-        "SMART_FILTER_PATH" => "",
-        "TEMPLATE_THEME" => "blue",
-        "XML_EXPORT" => "N"
-    )
-);?>
-
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"",
@@ -60,6 +30,7 @@ $APPLICATION->IncludeComponent(
 		"FIELD_CODE" => $arParams["LIST_FIELD_CODE"],
 		"PROPERTY_CODE" => $arParams["LIST_PROPERTY_CODE"],
 		"CHECK_DATES" => $arParams["CHECK_DATES"],
+		"STRICT_SECTION_CHECK" => $arParams["STRICT_SECTION_CHECK"],
 		"IBLOCK_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["news"],
 		"SECTION_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["section"],
 		"DETAIL_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["detail"],
@@ -82,11 +53,11 @@ $APPLICATION->IncludeComponent(
 		"FILE_404" => $arParams["FILE_404"],
 		"SET_LAST_MODIFIED" => $arParams["SET_LAST_MODIFIED"],
 		"INCLUDE_IBLOCK_INTO_CHAIN" => $arParams["INCLUDE_IBLOCK_INTO_CHAIN"],
-		"ADD_SECTIONS_CHAIN" => "N",
+		"ADD_SECTIONS_CHAIN" => $arParams["ADD_SECTIONS_CHAIN"],
 		"HIDE_LINK_WHEN_NO_DETAIL" => $arParams["HIDE_LINK_WHEN_NO_DETAIL"],
 
-		"PARENT_SECTION" => "",
-		"PARENT_SECTION_CODE" => "",
+		"PARENT_SECTION" => $arResult["VARIABLES"]["SECTION_ID"],
+		"PARENT_SECTION_CODE" => $arResult["VARIABLES"]["SECTION_CODE"],
 		"INCLUDE_SUBSECTIONS" => "Y",
 
 		"DISPLAY_DATE" => $arParams["DISPLAY_DATE"],
