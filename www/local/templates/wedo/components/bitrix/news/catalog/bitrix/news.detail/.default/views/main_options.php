@@ -39,7 +39,7 @@
                     </div>
                 </div>
                 <div class="product-price">
-                    <p><?=$arResult['PROPERTIES']['PRICE']['VALUE']?> грн. <span>*</span></p>
+                    <p><?=$arResult['PRICE_UAH']?> грн. <span>*</span></p>
                 </div>
                 <div class="product-button">
                     <button type="button" class="btn btn_red btn_small-mobile" data-toggle="modal" data-target="#order-consultation">Заказать консультацию</button>

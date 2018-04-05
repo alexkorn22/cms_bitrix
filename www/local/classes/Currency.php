@@ -42,7 +42,7 @@ class Currency
         $strEntityDataClass = $obEntity->getDataClass();
         $rsData             = $strEntityDataClass::getList();
         while ($arItem = $rsData->Fetch()) {
-            if($arItem['UF_CODE'] == $this->code){
+            if($arItem['UF_CURR'] == $this->code){
                 $this->rate         = $arItem['UF_RATE'];
                 $this->id           = $arItem['ID'];
                 $this->multiplicity = $arItem['UF_MULTIPLICITY'];
