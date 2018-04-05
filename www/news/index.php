@@ -4,7 +4,9 @@ $APPLICATION->SetTitle("Новости");
 ?>
 <?
 // Фильтер по тегом :
-$tag = $request->get("tag");
+use Bitrix\Main\Application;
+$req = Application::getInstance()->getContext()->getRequest();
+$tag = $req->getQuery("tag");
 if(!empty($tag)){
     $arrTags["PROPERTY_TAGS_VALUE"] = htmlspecialchars($tag);
 }
