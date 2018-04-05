@@ -12,6 +12,9 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 CUtil::InitJSCore(array('fx'));
+$documentsExist = !empty($arResult['PROPERTIES']['DOCUMENTS']['VALUE']);
+$videosExist    = !empty($arResult['PROPERTIES']['VIDEO']['VALUE'][0]);
+$isRent         = $arResult['PROPERTIES']['RENT']['VALUE_XML_ID'] == 'RENT_TRUE';
 ?>
     <div class="container-fluid product">
         <div class="row">
@@ -34,9 +37,15 @@ CUtil::InitJSCore(array('fx'));
                         <li><a href="#raschet-okup">Расчёт окупаемости</a></li>
                         <li><a href="#pohozchie-tovari">Похожие товары</a></li>
                         <li><a href="#service-maintenance">Сервисное обслуживание</a></li>
-                        <li><a href="#documents">Документы</a></li>
-                        <li><a href="#video-product">Видео</a></li>
-                        <li><a href="#lease-product">Аренда</a></li>
+                        <?if($documentsExist):?>
+                            <li><a href="#documents">Документы</a></li>
+                        <? endif; ?>
+                        <?if($videosExist):?>
+                            <li><a href="#video-product">Видео</a></li>
+                        <? endif; ?>
+                        <?if($isRent):?>
+                            <li><a href="#lease-product">Аренда</a></li>
+                        <? endif; ?>
                     </ul>
                 </div>
             </div>
@@ -54,18 +63,19 @@ CUtil::InitJSCore(array('fx'));
             <? endif; ?>
             <!-- Сервисное обслуживание -->
             <?  require ROOT.$this->GetFolder() .'/views/services.php' ?>
-            <?if(!empty($arResult['PROPERTIES']['DOCUMENTS']['VALUE'])):?>
+
             <!-- Дукоменты -->
+            <?if($documentsExist):?>
                 <?  require ROOT.$this->GetFolder() .'/views/documents.php' ?>
             <? endif; ?>
 
-            <?if(!empty($arResult['PROPERTIES']['VIDEO']['VALUE'][0])):?>
-                <!-- Videos -->
+            <!-- Videos -->
+            <?if($videosExist):?>
                 <?  require ROOT.$this->GetFolder() .'/views/videos.php' ?>
             <? endif; ?>
 
-            <?if($arResult['PROPERTIES']['RENT']['VALUE_XML_ID'] == 'RENT_TRUE'):?>
-                <!-- Аренда -->
+            <!-- Аренда -->
+            <?if($isRent):?>
                 <?  require ROOT.$this->GetFolder() .'/views/arenda.php' ?>
             <?endif;?>
         </div>
