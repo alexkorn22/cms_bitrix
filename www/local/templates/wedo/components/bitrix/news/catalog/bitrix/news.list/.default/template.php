@@ -31,7 +31,7 @@ $this->setFrameMode(true);
                                 <?=$arItem["NAME"]?>
                             </div>
                             <div class="sub-title-product">
-                                Сделайте первый шаг к профессиональному кофе
+                                <?=$arItem["SLOGAN"]?>
                             </div>
                         </div>
                     </div>
@@ -48,7 +48,7 @@ $this->setFrameMode(true);
                                 <?=$arItem["NAME"]?>
                             </div>
                             <div class="sub-title-product d-none d-lg-block">
-                                Сделайте первый шаг к профессиональному кофе
+                                <?=$arItem["SLOGAN"]?>
                             </div>
                             <div class="characteristics">
                                 <div class="list-group">

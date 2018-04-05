@@ -55,7 +55,7 @@
         <div class="row">
             <div class="col">
                 <p class="title">Описание</p>
-                <p class="text toggle-text"><?=$arResult['PROPERTIES']['DESCRIPTION']['VALUE']?></p>
+                <p class="text toggle-text"><?=$arResult['PREVIEW_TEXT']?></p>
             </div>
         </div>
     </div>
