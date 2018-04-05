@@ -25,8 +25,8 @@ $banner = true;
             <div class="col">
                 <nav class="priority-nav">
                     <ul class='tags-blog'>
-                        <? foreach ($arResult['TAGS'] as $tag):?>
-                        <li><a href='/news/?TAG=<?=$tag?>'> <?=$tag?> </a></li>
+                        <? foreach ($arResult['TAGS'] as $name => $link):?>
+                            <li><a href='<?=$link?>'> <?=$name?> </a></li>
                         <? endforeach;?>
                     </ul>
                     <button class="more-tags">... Ещё</button>

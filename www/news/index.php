@@ -1,10 +1,12 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Новости");
-?><?
+?>
+<?
 // Фильтер по тегом :
-if(!empty($_GET['TAG'])){
-    $arrTags["PROPERTY_TAGS_VALUE"] =$_GET['TAG'];
+$tag = $request->get("tag");
+if(!empty($tag)){
+    $arrTags["PROPERTY_TAGS_VALUE"] = htmlspecialchars($tag);
 }
 ?>
 <?$APPLICATION->IncludeComponent(
