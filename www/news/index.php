@@ -1,12 +1,12 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Новости");
-?>
-<?
+?><?
 // Фильтер по тегом :
-
+if(!empty($_GET['TAG'])){
+    $arrTags["PROPERTY_TAGS_VALUE"] =$_GET['TAG'];
+}
 ?>
-
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news",
 	"newsCM",
@@ -46,6 +46,7 @@ $APPLICATION->SetTitle("Новости");
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
+		"FILTER_NAME" => "arrTags",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => App::$config->newsIblockId,
 		"IBLOCK_TYPE" => "info",
@@ -83,7 +84,7 @@ $APPLICATION->SetTitle("Новости");
 		"STRICT_SECTION_CHECK" => "N",
 		"TEMPLATE_THEME" => "blue",
 		"USE_CATEGORIES" => "Y",
-		"USE_FILTER" => "N",
+		"USE_FILTER" => "Y",
 		"USE_PERMISSIONS" => "N",
 		"USE_RATING" => "N",
 		"USE_REVIEW" => "N",
