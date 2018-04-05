@@ -1,11 +1,19 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("");
-?><?$APPLICATION->IncludeComponent(
+?>
+<div class="container-fluid">
+    <?$APPLICATION->IncludeComponent(
+        "bitrix:breadcrumb",
+        "",
+        Array()
+    );?>
+</div>
+<?$APPLICATION->IncludeComponent(
 	"bitrix:news",
 	"catalog",
 	Array(
-		"ADD_ELEMENT_CHAIN" => "N",
+		"ADD_ELEMENT_CHAIN" => "Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
