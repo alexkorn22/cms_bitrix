@@ -12,5 +12,8 @@ foreach ($arResult['ITEMS'] as &$item){
     $item['PROPERTIES'] = [];
     foreach ($props as $prop){
         $item['PROPERTIES'][] = $prop;
+        if ($prop['CODE'] == 'SLOGAN'){
+            $item['SLOGAN'] = $prop['VALUE'];
+        }
     }
 }
