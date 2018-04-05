@@ -1,7 +1,13 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Новости");
-?><?$APPLICATION->IncludeComponent(
+?>
+<?
+// Фильтер по тегом :
+
+?>
+
+<?$APPLICATION->IncludeComponent(
 	"bitrix:news",
 	"newsCM",
 	Array(

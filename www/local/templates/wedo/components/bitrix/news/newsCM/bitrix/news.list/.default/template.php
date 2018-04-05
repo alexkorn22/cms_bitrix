@@ -25,11 +25,9 @@ $banner = true;
             <div class="col">
                 <nav class="priority-nav">
                     <ul class='tags-blog'>
-                        <li><a href='#'>Обзоры</a></li>
-                        <li><a href='#'>Рекомендации по эксплуатации</a></li>
-                        <li><a href='#'>Сравнения</a></li>
-                        <li><a href='#'>Инструкции по применению</a></li>
-                        <li><a href='#'>Обслуживание и ремонт</a></li>
+                        <? foreach ($arResult['TAGS'] as $tag):?>
+                        <li><a href='/news/?TAG=<?=$tag?>'> <?=$tag?> </a></li>
+                        <? endforeach;?>
                     </ul>
                     <button class="more-tags">... Ещё</button>
                     <ul class='hidden-tags-blog hidden'></ul>

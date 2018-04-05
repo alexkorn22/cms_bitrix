@@ -8,3 +8,13 @@ foreach ($arResult['ITEMS'] as &$item){
         'day'   => date('d', strtotime($item['TIMESTAMP_X']))
     ];
 }
+
+// Получить список доступные тегы :
+$property_enums = CIBlockPropertyEnum::GetList(Array("DEF"=>"DESC", "SORT"=>"ASC"), Array("IBLOCK_ID"=>App::$config->newsIblockId, "CODE"=>"TAGS"));
+while($enum_fields = $property_enums->GetNext())
+{
+   $arResult['TAGS'][]=$enum_fields['VALUE'];
+}
+?>
+
+
