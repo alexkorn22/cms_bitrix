@@ -2,13 +2,6 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("");
 ?>
-<div class="container-fluid">
-    <?$APPLICATION->IncludeComponent(
-        "bitrix:breadcrumb",
-        "",
-        Array()
-    );?>
-</div>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news",
 	"catalog",

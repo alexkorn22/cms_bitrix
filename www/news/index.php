@@ -1,15 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Новости");
-?><?$APPLICATION->IncludeComponent(
-	"bitrix:breadcrumb",
-	"",
-	Array(
-		"PATH" => "",
-		"SITE_ID" => "s1",
-		"START_FROM" => "0"
-	)
-);?><?
+?><?
 // Фильтер по тегом :
 use Bitrix\Main\Application;
 $req = Application::getInstance()->getContext()->getRequest();
