@@ -20,4 +20,10 @@ foreach ($arResult['ITEMS'] as &$item){
               $item['PRICE_UAH'] = $EUR->convertTo($prop['VALUE'],Currency::UAH);
         }
     }
+
+    $item['IMG']=[
+        'SRC'=>$item["PREVIEW_PICTURE"]["SRC"],
+        'ALT'=>$item['IPROPERTY_VALUES']['ELEMENT_PREVIEW_PICTURE_FILE_ALT'],
+        'TITLE'=>$item['IPROPERTY_VALUES']['ELEMENT_PREVIEW_PICTURE_FILE_TITLE']
+    ];
 }

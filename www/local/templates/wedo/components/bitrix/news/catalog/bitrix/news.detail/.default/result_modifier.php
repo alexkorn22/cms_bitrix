@@ -6,7 +6,9 @@ foreach ($arResult['PROPERTIES']['IMAGES']['VALUE'] as $id){
     $arResult['MAIN_IMAGES'][] = [
         'SRC'       => $img['SRC'],
         'ID'        => $img['ID'],
-        'FILE_NAME' => $img['FILE_NAME']
+        'FILE_NAME' => $img['FILE_NAME'],
+        'ALT'       => $arResult['IPROPERTY_VALUES']['ELEMENT_DETAIL_PICTURE_FILE_ALT'],
+        'TITLE'     => $arResult['IPROPERTY_VALUES']['ELEMENT_DETAIL_PICTURE_FILE_TITLE']
     ];
 }
 
@@ -23,4 +25,10 @@ foreach($arResult['PROPERTIES']['SCHEDULE']['VALUE'] as $id){
 // instruction files :
 foreach($arResult['PROPERTIES']['DOCUMENTS']['VALUE'] as $id){
     $arResult['INSTRUCTIONS_FILES'][] = CFile::GetFileArray($id);
+}
+
+// title h1
+$arResult['TITLE_H1'] = $arResult['NAME'];
+if(!empty($arResult['IPROPERTY_VALUES']['ELEMENT_PAGE_TITLE'])){
+    $arResult['TITLE_H1'] = $arResult['IPROPERTY_VALUES']['ELEMENT_PAGE_TITLE'];
 }

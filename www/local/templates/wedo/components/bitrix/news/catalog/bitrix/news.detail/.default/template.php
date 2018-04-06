@@ -21,7 +21,7 @@ $isRent         = $arResult['PROPERTIES']['RENT']['VALUE_XML_ID'] == 'RENT_TRUE'
             <div class="col">
                 <div class="title-product">
                     <div class="title">
-                        <p><?=$arResult["NAME"]?></p>
+                        <h1><?=$arResult['TITLE_H1']?></h1>
                     </div>
                     <div class="sub-title">
                         <p><?=$arResult['PROPERTIES']['SLOGAN']['VALUE']?></p>

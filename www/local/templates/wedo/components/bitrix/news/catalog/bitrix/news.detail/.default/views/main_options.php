@@ -7,7 +7,7 @@
                         <div class="product-img-main">
                             <? foreach($arResult['MAIN_IMAGES'] as $img):?>
                                 <div class="img-main">
-                                    <img src="<?=$img['SRC']?>" class="img-fluid" alt="<?=$arResult['NAME']?>">
+                                    <img src="<?=$img['SRC']?>" class="img-fluid" alt="<?=$img['ALT']?>" title="<?=$img['TITLE']?>">
                                 </div>
                             <? endforeach;?>
                         </div>
@@ -16,7 +16,7 @@
                         <div class="product-img-preview">
                             <? foreach($arResult['MAIN_IMAGES'] as $img):?>
                                 <div class="preview">
-                                    <img src="<?=$img['SRC']?>" class="img-fluid" alt="<?=$arResult['NAME']?>">
+                                    <img src="<?=$img['SRC']?>" class="img-fluid" alt="<?=$img['ALT']?>" title="<?=$img['TITLE']?>">
                                 </div>
                             <? endforeach;?>
                         </div>
