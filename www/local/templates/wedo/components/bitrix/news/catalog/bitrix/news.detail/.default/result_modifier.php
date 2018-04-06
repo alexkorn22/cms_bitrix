@@ -12,8 +12,7 @@ foreach ($arResult['PROPERTIES']['IMAGES']['VALUE'] as $id){
 
 // convert price :
 $EUR = new Currency(Currency::EUR);
-$UAH = new Currency(Currency::UAH);
-$arResult['PRICE_UAH'] = Currency::convert($arResult['PROPERTIES']['PRICE']['VALUE'],$EUR,$UAH);
+$arResult['PRICE_UAH'] = $EUR->convertTo($arResult['PROPERTIES']['PRICE']['VALUE'],Currency::UAH);
 
 // Дукоменты, График замены запчастей
 foreach($arResult['PROPERTIES']['SCHEDULE']['VALUE'] as $id){
