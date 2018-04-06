@@ -1,5 +1,8 @@
 .content-news {
   margin: 90px 0 90px 0;
+  @include media-breakpoint-down(sm){
+    margin: 50px 0 50px 0;
+  }
 
   .main-news-img {
     width: 500px;
@@ -10,6 +13,10 @@
     position: relative;
     float: left;
     margin: 0 40px 30px 0;
+    @include media-breakpoint-down(xs){
+      width: 320px;
+      height: 320px;
+    }
   }
 
   .title-in-news {
@@ -33,7 +40,18 @@
       img {
         height: 350px;
         width: auto;
-        margin: 0 20px;
+        margin: 10px 20px;
+      }
+    }
+
+    @include media-breakpoint-down(sm){
+      p {
+        font-size: 20px;
+        line-height:26px;
+      }
+      .img-in-text img{
+        height: 200px;
+        width: auto;
       }
     }
   }
