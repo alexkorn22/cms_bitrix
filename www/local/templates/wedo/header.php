@@ -33,6 +33,7 @@
 	<title><?$APPLICATION->ShowTitle()?></title
 </head>
 <body>
+<div class="preloader"></div>
 <div id="main">
 <?$APPLICATION->ShowPanel();?>
 <? if($APPLICATION->GetCurPage() == '/'):?>
