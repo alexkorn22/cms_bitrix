@@ -9,7 +9,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Сервисные центры", 
-		"/about/contacts/", 
+		"/about/contacts/#service-centers",
 		Array(), 
 		Array(), 
 		"" 
