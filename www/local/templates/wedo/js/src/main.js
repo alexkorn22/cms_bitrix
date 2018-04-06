@@ -1,5 +1,5 @@
 var breakpointMD =767;
-var showChar     = 500;   // How many characters are shown by default
+var showChar     = 300;   // How many characters are shown by default
 var ellipsestext = "...";
 var moretext     = "Подробнее";
 var lesstext     = "Скрыть";
