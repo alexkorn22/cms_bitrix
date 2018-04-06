@@ -16,9 +16,8 @@ foreach ($arResult['ITEMS'] as &$item){
             $item['SLOGAN'] = $prop['VALUE'];
         }
         if($prop['CODE'] == 'PRICE'){
-            $EUR = new Currency(Currency::EUR);
-            $UAH = new Currency(Currency::UAH);
-            $item['PRICE_UAH'] = Currency::convert($prop['VALUE'],$EUR,$UAH);
+              $EUR = new Currency(Currency::EUR);
+              $item['PRICE_UAH'] = $EUR->convertTo($prop['VALUE'],Currency::UAH);
         }
     }
 }
