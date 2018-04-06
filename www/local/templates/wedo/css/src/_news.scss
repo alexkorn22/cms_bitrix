@@ -39,6 +39,16 @@
   }
 }
 
+.news-bottom-tag {
+  margin-bottom: 55px;
+  .back-to-news-list {
+    display: flex;
+    align-items:center;
+    justify-content: center;;
+  }
+}
+
+
 b {
   font-family: $Bold;
 }
