@@ -47,7 +47,7 @@ $APPLICATION->SetTitle("");
 	</div>
 </div>
 <div class="googleMap">
-	<div class="map-heading">
+	<div class="map-heading" id="service-centers">
 		 Сервисные центры по ремонту кофемашин WMF в Украине
 	</div>
 	 <?$APPLICATION->IncludeComponent(
