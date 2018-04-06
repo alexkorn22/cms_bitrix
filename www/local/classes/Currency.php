@@ -30,9 +30,14 @@ class Currency
     }
 
 
-    public static function convert($amount= 1,$from,$to){
+    public static function convert($amount= 0,$from,$to){
        $convertedPrice = $amount * ( ($from->rate/$from->multiplicity) / ($to->rate/$to->multiplicity) );
        return $convertedPrice;
+    }
+
+    public function convertTo($amount,$currency){
+        $currencyObj = new Currency($currency);
+        return Currency::convert($amount,$this,$currencyObj);
     }
 
     public function setCurrencyData(){

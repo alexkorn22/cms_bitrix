@@ -8,6 +8,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
  * @property string priceSaleCoffee;
  * @property string koeffForCostPriceCoffee;
  * @property string coffeeMachineIblockId;
+ * @property string pricesHighBlockId;
  * @property string newsIblockId;
  * @property string telephone;
  * @property string email;

@@ -17,7 +17,7 @@ $this->setFrameMode(true);
 <?if($arParams["DISPLAY_TOP_PAGER"]):?>
 	<?=$arResult["NAV_STRING"]?>
 <?endif;?>
-<? $countCMachines = 1 ; $countBanners   = 1 ; $price=0; ?>
+<? $countCMachines = 1 ; $countBanners   = 1 ; ?>
 
 <!-- first block -->
     <div class="container-fluid catalog">
@@ -53,7 +53,6 @@ $this->setFrameMode(true);
                             <div class="characteristics">
                                 <div class="list-group">
                                     <?foreach($arItem['PROPERTIES'] as $prop):?>
-                                        <?if($prop['CODE'] == 'PRICE'){$price = $prop['VALUE'];}?>
                                         <?if(!empty($prop['VALUE']) && $prop['SORT'] < 5000 ):?>
                                             <p class="item"> <span><?=$prop['NAME']?> </span><span> <?=$prop['VALUE']?></span></p>
                                         <?endif;?>
@@ -65,7 +64,7 @@ $this->setFrameMode(true);
                     <div class="col-6 order-3 order-lg-3 col-md-6 col-lg-3">
                         <div class="wrap-price">
                             <div class="rpice">
-                                <p><?=$price?> грн.</p>
+                                <p><?= $arItem['PRICE_UAH']?> грн.</p>
                             </div>
                             <div class="btn-more-info">
                                 <button type="button" class="btn btn_none-fill btn_small-mobile"><a href="<?=$arItem["DETAIL_PAGE_URL"]?>">Подробнее</a></button>
