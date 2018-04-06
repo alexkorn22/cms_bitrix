@@ -1,5 +1,4 @@
 var breakpointMD =767;
-var showChar     = 500;   // How many characters are shown by default
 var ellipsestext = "...";
 var moretext     = "Подробнее";
 var lesstext     = "Скрыть";
@@ -257,7 +256,7 @@ function clickOnTap (event) {
 
 function textToggle(){
     var content = $(this).html();
-
+    var showChar     = 300;   // How many characters are shown by default
     if(content.length > showChar) {
 
         var contentExcert = content.substr(0, showChar);

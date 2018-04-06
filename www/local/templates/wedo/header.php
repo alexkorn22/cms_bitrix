@@ -316,4 +316,11 @@
         </div>
     </header>
 <? endif;?>
+<div class="container-fluid">
+    <?$APPLICATION->IncludeComponent(
+        "bitrix:breadcrumb",
+        "",
+        Array()
+    );?>
+</div>
 <div id="wrap">

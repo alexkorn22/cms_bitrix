@@ -1,8 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Новости");
-?>
-<?
+?><?
 // Фильтер по тегом :
 use Bitrix\Main\Application;
 $req = Application::getInstance()->getContext()->getRequest();
@@ -15,7 +14,7 @@ if(!empty($tag)){
 	"bitrix:news",
 	"newsCM",
 	Array(
-		"ADD_ELEMENT_CHAIN" => "N",
+		"ADD_ELEMENT_CHAIN" => "Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
@@ -50,11 +49,13 @@ if(!empty($tag)){
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
+		"FILTER_FIELD_CODE" => array("",""),
 		"FILTER_NAME" => "arrTags",
+		"FILTER_PROPERTY_CODE" => array("",""),
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => App::$config->newsIblockId,
 		"IBLOCK_TYPE" => "info",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"LIST_FIELD_CODE" => array("",""),
 		"LIST_PROPERTY_CODE" => array("",""),
@@ -75,7 +76,7 @@ if(!empty($tag)){
 		"PREVIEW_TRUNCATE_LEN" => "0",
 		"SEF_FOLDER" => "/news/",
 		"SEF_MODE" => "Y",
-		"SEF_URL_TEMPLATES" => Array("detail"=>"#ELEMENT_ID#/","news"=>"/news/","section"=>"/#SECTION_ID#/"),
+		"SEF_URL_TEMPLATES" => Array("detail"=>"#ELEMENT_ID#/","news"=>"","section"=>""),
 		"SET_LAST_MODIFIED" => "N",
 		"SET_STATUS_404" => "Y",
 		"SET_TITLE" => "Y",
