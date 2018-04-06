@@ -17,7 +17,7 @@ foreach ($arResult['ITEMS'] as &$item){
         }
         if($prop['CODE'] == 'PRICE'){
               $EUR = new Currency(Currency::EUR);
-              $item['PRICE_UAH'] = $EUR->convertTo($prop['VALUE'],Currency::UAH);
+              $item['PRICE_UAH'] = round($EUR->convertTo($prop['VALUE'],Currency::UAH));
         }
     }
 
