@@ -122,7 +122,7 @@
         .slick-next, .slick-prev {
           width: 100%;
           background-color: transparent;
-          position: sticky;
+          position: initial;
           &:before {
             background-size: 50%;
             background-repeat: no-repeat;
