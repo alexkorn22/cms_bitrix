@@ -102,6 +102,38 @@
             width: auto;
           }
         }
+
+        .slick-next{
+          top: 100%;
+          &:before {
+            background-image: url('../../images/icons/btn-arrow-down.png');
+            //right: 50%;
+          }
+        }
+
+        .slick-prev {
+          top: 0;
+          &:before {
+            background-image: url('../../images/icons/btn-arrow-up-red.png');
+            top: 40px;
+            //left: 50%;
+          }
+        }
+        .slick-next, .slick-prev {
+          width: 100%;
+          background-color: transparent;
+          position: sticky;
+          &:before {
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            content:"";
+            position: relative;
+          }
+        }
       }
       @include media-breakpoint-down(sm){
         .product-img-main {

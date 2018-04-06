@@ -96,9 +96,9 @@ function loadProductSlider(){
         slidesToScroll: 1,
         asNavFor: '.product-img-main',
         dots: false,
-        nav: false,
+        nav: true,
+        arrows: true,
         vertical: true,
-        arrows: false,
         centerMode: false,
         verticalSwiping: true,
         focusOnSelect: true,
@@ -108,7 +108,9 @@ function loadProductSlider(){
                 settings: {
                     vertical: false,
                     swipeToSlide: true,
-                    verticalSwiping: false
+                    verticalSwiping: false,
+                    nav: false,
+                    arrows: false
                 }
             }
         ]
