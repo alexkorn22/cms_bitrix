@@ -1,0 +1,44 @@
+.content-news {
+  margin: 90px 0 90px 0;
+
+  .main-news-img {
+    width: 500px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    float: left;
+    margin: 0 40px 30px 0;
+  }
+
+  .title-in-news {
+    p {
+      font-size:30px;
+      line-height: 28px;
+      font-family: $Bold;
+      margin-bottom: 30px;
+    }
+  }
+
+  .text-news {
+    p {
+      font-size: 22px;
+      line-height:28px;
+      margin: 0;
+    }
+    .img-in-text {
+      text-align: center;
+      margin: 20px 0;
+      img {
+        height: 350px;
+        width: auto;
+        margin: 0 20px;
+      }
+    }
+  }
+}
+
+b {
+  font-family: $Bold;
+}
