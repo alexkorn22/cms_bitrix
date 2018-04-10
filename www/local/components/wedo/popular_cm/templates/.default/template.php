@@ -3,7 +3,7 @@
         <div class="slider-models-for-rent">
             <? foreach ($arResult['PRODUCTS'] as $item):?>
                 <div class="models">
-                    <a href="<?=$item['DETAIL_PAGE_URL']?>/">
+                    <a href="<?=$item['DETAIL_PAGE_URL']?>">
                         <img src="<?=$item['IMAGE_SRC']?>" alt="">
                         <p><?=$item['NAME']?></p>
                     </a>
