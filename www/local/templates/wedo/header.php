@@ -197,7 +197,6 @@
     </div>
 </div>
 <?else:?>
-    <div id="main">
     <header>
         <div class="container-line-menu">
             <div id="line-menu">
