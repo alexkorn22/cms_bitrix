@@ -13,6 +13,13 @@
 $this->setFrameMode(true);
 ?>
 
+<div class="row">
+	<div class="col">
+		<div class="section-title">
+			<h1 class="title">Каталог кофемашин </h1>
+		</div>
+	</div>
+</div>
 <?
 
 $APPLICATION->IncludeComponent(
