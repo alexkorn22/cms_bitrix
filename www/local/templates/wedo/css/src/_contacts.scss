@@ -2,8 +2,18 @@
   padding: 15px;
 }
 
+.section-title.contact{
+  .title{
+    padding-bottom: 0;
+    text-align: left;
+  }
+
+}
+
 .main-office{
   padding-top: 50px;
+  display: flex;
+  align-items: center;
   .main-office-text{
     display: inline;
     font-size: 38px;
@@ -17,6 +27,8 @@
 
 .other-contacts{
   padding-top: 20px;
+  display: flex;
+  align-items: center;
   .other-contacts-text{
     font-size: 20px;
     display: inline-block;
@@ -53,13 +65,17 @@
 
 .googleMap{
   .map-heading{
-    font-size: 34px;
-    font-family: $Bold;
+    h2 {
+      font-size: 34px;
+      font-family: $Bold;
+    }
     text-align: center;
     padding-top: 50px;
     padding-bottom: 50px;
     @include media-breakpoint-down(sm){
-      font-size: 28px;
+      h2 {
+        font-size: 28px;
+      }
     }
   }
 }

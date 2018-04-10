@@ -2,14 +2,21 @@
 $APPLICATION->SetTitle("");
 $APPLICATION->AddChainItem("Контакты", "/about/contacts");
 ?><div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div class="section-title contact">
+                <h1 class="title">Контакты</h1>
+            </div>
+        </div>
+    </div>
 	<div class="row">
 		<div class="col-md-7">
 			<div class="main-contacts container">
 				<div class="main-office">
  <img src="<?= IMAGES_PATH ?>/contacts_icons/home-icon.png" class="contacts-icons" alt="">
-					<p class="main-office-text">
+					<h2 class="main-office-text">
 						 Главный офис<span class="red-star"> *</span>
-					</p>
+					</h2>
 				</div>
 				<div class="other-contacts">
  <img src="<?= IMAGES_PATH ?>/contacts_icons/maps-icon.png" class="contacts-icons" alt="">
@@ -49,7 +56,7 @@ $APPLICATION->AddChainItem("Контакты", "/about/contacts");
 </div>
 <div class="googleMap">
 	<div class="map-heading" id="service-centers">
-		 Сервисные центры по ремонту кофемашин WMF в Украине
+		 <h2>Сервисные центры по ремонту кофемашин WMF в Украине</h2>
 	</div>
 	 <?$APPLICATION->IncludeComponent(
 	"bitrix:map.google.view",
