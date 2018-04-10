@@ -1,4 +1,4 @@
-<div class="col-lg-6 col-xl d-none d-lg-block">
+<div class="col-lg-6 col-xl d-none d-lg-block main-news-block">
     <a href="<?=$item['DETAIL_PAGE_URL']?>" class="wrap-link-main-news">
         <div class="main-news" style="background-image: url('<?=$item['PREVIEW_PICTURE']['SRC']?>')">
             <div class="date-news">
@@ -12,7 +12,7 @@
         </div>
     </a>
 </div>
-<div class="col-lg-3 d-block d-lg-none">
+<div class="col-lg-3 d-block d-lg-none main-news-block">
     <div class="wrap-news">
         <a href="<?=$item['DETAIL_PAGE_URL']?>">
             <div class="news" style="background-image:  url('<?=$item['PREVIEW_PICTURE']['SRC']?>')">
