@@ -367,6 +367,7 @@
     justify-content: center;
     width: 100%;
     height: 580px;
+    position: relative;
     @include media-breakpoint-down(sm){
       flex-direction: column;
       height: 900px;
@@ -384,6 +385,7 @@
       background-repeat: no-repeat;
       transition: 0.5s ease;
       //transition-delay: 0.2s;
+      position: relative;
       &:hover {
         //width: 200%;
         .content-wmf-cmf {
@@ -397,6 +399,13 @@
           width: 80%;
           .block-title {
             opacity: 1;
+            transition: 0.5s;
+            transition-delay: 0.8s;
+            position: absolute;
+            top: 0;
+          }
+          .content-wmf-cmf {
+            top: 30%;
             transition: 0.5s;
             transition-delay: 0.8s;
           }
@@ -440,6 +449,8 @@
           }
         }
         @include media-breakpoint-down(sm) {
+          position: absolute;
+          top: 0;
           p {
             font-size: 24px;
             line-height: 30px;
@@ -448,6 +459,8 @@
           }
         }
         @include media-breakpoint-down(xs) {
+          position: absolute;
+          top: 0;
           p {
             font-size: 20px;
             line-height: 24px;
@@ -458,24 +471,30 @@
       }
 
       .content-wmf-cmf {
+        position: absolute;
         display: none;
+        transition: 0.5s;
+        width: 100%;
         .c-image {
           width: 40%;
           display: flex;
           align-items: end;
           justify-content: center;
+          left: 50px;
+          position: relative;
           img {
             max-width: 300px;
           }
         }
         .c-text {
-          width: 60%;
+          width: 59%;
           ul {
             li {
               font-size: 27px;
               line-height: 28px;
               color: $white;
               padding: 15px 0;
+              width:100%;
             }
           }
           .wrap-link {
@@ -526,6 +545,13 @@
           }
         }
       }
+      @include media-breakpoint-down(lg){
+        .content-wmf-cmf {
+          .c-image {
+            left: 0;
+          }
+        }
+      }
       @include media-breakpoint-down(md){
         width: 100%;
         &:hover {
@@ -534,6 +560,7 @@
         .content-wmf-cmf {
           padding: 0 10px;
           .c-image {
+            left: 0;
             width: 0;
           }
           .c-text {
@@ -561,6 +588,7 @@
           width: 100%;
         }
         .content-wmf-cmf {
+          top: 30%;
           display: flex;
           padding: 0 10px;
           .c-image {
