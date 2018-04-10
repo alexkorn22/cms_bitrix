@@ -25,6 +25,8 @@
     color: $white;
     &:hover {
       background-color: $light-black;
+      color: $white;
+      text-decoration: none;
     }
   }
   
