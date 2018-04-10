@@ -1,5 +1,6 @@
 <?php require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("");
+$APPLICATION->AddChainItem("Контакты", "/about/contacts");
 ?><div class="container-fluid">
 	<div class="row">
 		<div class="col-md-7">
