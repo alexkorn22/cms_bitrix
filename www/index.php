@@ -7,7 +7,7 @@ $APPLICATION->SetTitle("Кофемашины");
 	<div class="row justify-content-center">
 		<div class="col-lg-10">
 			<div class="section-title">
-				<h2 class="title">Профессиональные кофемашины WMF от официального дилера Coffee Machine Service</h2>
+				<h1 class="title">Профессиональные кофемашины WMF от официального дилера Coffee Machine Service</h1>
 			</div>
 		</div>
 	</div>
@@ -69,7 +69,7 @@ $APPLICATION->SetTitle("Кофемашины");
 	<div class="row justify-content-center">
 		<div class="col-lg-10">
 			<div class="section-title">
-				<h2 class="title">Профессиональные кофемашины для бизнеса, соответствующие любым требованиям</h2>
+				<p class="title">Профессиональные кофемашины для бизнеса, соответствующие любым требованиям</p>
 			</div>
 			<div class="section-description">
 				<p class="descr">
@@ -140,7 +140,7 @@ $APPLICATION->SetTitle("Кофемашины");
 	<div class="row justify-content-center">
 		<div class="col-lg-10">
 			<div class="section-title">
-				<h2 class="title">Наши клиенты</h2>
+				<p class="title">Наши клиенты</p>
 			</div>
 			<div class="section-description">
 				<p class="descr">

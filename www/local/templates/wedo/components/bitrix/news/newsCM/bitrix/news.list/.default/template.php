@@ -20,6 +20,13 @@ $banner = true;
 ?>
 
 <div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div class="section-title blog">
+                <h1 class="title">Блог</h1>
+            </div>
+        </div>
+    </div>
     <div class="tag-line">
         <div class="row">
             <div class="col">
