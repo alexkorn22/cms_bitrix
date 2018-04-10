@@ -130,7 +130,7 @@ class CCalculatorPaybackComponent extends CBitrixComponent{
 
     protected function getMargin() {
         $margin = 0;
-        $margin =  ($this->arResult['priceSale'] - $this->arResult['costPrice'])* $this->arResult['cmServings'] - $this->arResult['cmPriceService'];
+        $margin =  ($this->arResult['priceSale'] - $this->arResult['costPrice'])* $this->arResult['cmServings'] * 30 - $this->arResult['cmPriceService'];
         return $margin;
     }
 
