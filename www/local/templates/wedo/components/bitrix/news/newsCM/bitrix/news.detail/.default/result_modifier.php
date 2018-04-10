@@ -4,3 +4,10 @@ $arResult['time']=[
     'month' => date('M', strtotime($arResult['TIMESTAMP_X'])),
     'day'   => date('d', strtotime($arResult['TIMESTAMP_X']))
 ];
+
+// Получить список доступные тегы :
+$property_enums = CIBlockPropertyEnum::GetList(Array("DEF"=>"DESC", "SORT"=>"ASC"), Array("IBLOCK_ID"=>App::$config->newsIblockId, "CODE"=>"TAGS"));
+while($enum_fields = $property_enums->GetNext())
+{
+    $arResult['TAGS'][$enum_fields['VALUE']]='/news/?tag='.$enum_fields['VALUE'];
+}
