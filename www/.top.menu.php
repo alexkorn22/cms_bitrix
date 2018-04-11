@@ -23,14 +23,14 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Сервис", 
-		"/news/servisnoe-obsluzhivanie-kofemashin-wmf/",
+		"/blog/servisnoe-obsluzhivanie-kofemashin-wmf/",
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Комплексные решения", 
-		"/news/kompleksnye-resheniya/",
+		"/blog/kompleksnye-resheniya/",
 		Array(), 
 		Array(), 
 		"" 
