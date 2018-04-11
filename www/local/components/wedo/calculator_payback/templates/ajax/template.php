@@ -1,4 +1,4 @@
-<?
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 extract($arResult);
 $help = '
                     $cmPriceService - сервисное обслуживание в месяц
@@ -10,5 +10,7 @@ $help = '
                     $marga - маржа в месяц
                     $paybackPeriod - срок окупаемости
                 ';
-require ROOT . $this->getComponent()->getPath(). '/views/result.php';
+
+require ROOT . $this->getComponent()->getPath(). '/views/'.$arParams['VIEW'].'.php';
+
 ?>

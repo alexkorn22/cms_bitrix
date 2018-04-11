@@ -11,7 +11,8 @@ if ($request->getPost('action') == 'recalculate') {
         Array(
             "IBLOCK_ID" => App::$config->coffeeMachineIblockId,
             "IBLOCK_TYPE" => "catalogs",
-            "PRODUCT_ID" => $request->getPost('productId')
+            "PRODUCT_ID" => $request->getPost('productId'),
+            "VIEW" => $request->getPost('view')
         )
     );
     die();

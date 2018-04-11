@@ -1,4 +1,4 @@
-<div class="col-lg-3 col-xl">
+<div class="col-lg-3 news-block">
     <div class="wrap-news">
     <a href="<?=$item['DETAIL_PAGE_URL']?>">
         <div class="news" style="background-image: url('<?=$item['PREVIEW_PICTURE']['SRC']?>')">

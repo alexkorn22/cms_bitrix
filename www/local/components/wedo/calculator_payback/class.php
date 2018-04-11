@@ -117,6 +117,8 @@ class CCalculatorPaybackComponent extends CBitrixComponent{
             $this->arResult['cmPriceService'] = $props['SERVICE_PRICE']['VALUE'];
         }
         $this->arResult['cmPrice'] = $price;
+        $EUR = new Currency(Currency::EUR);
+        $this->arResult['cmPriceUAH'] = round($EUR->convertTo($price,Currency::UAH));
         $this->arResult['cmServings'] = $servings;
 
     }
@@ -128,7 +130,7 @@ class CCalculatorPaybackComponent extends CBitrixComponent{
 
     protected function getMargin() {
         $margin = 0;
-        $margin =  ($this->arResult['priceSale'] - $this->arResult['costPrice'])* $this->arResult['cmServings'] - $this->arResult['cmPriceService'];
+        $margin =  ($this->arResult['priceSale'] - $this->arResult['costPrice'])* $this->arResult['cmServings'] * 30 - $this->arResult['cmPriceService'];
         return $margin;
     }
 

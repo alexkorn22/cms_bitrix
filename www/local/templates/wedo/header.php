@@ -96,7 +96,7 @@
                 <div class="col col-sm-10 col-md-10 col-lg-10">
                     <div class="wrap-social-icons normal-top">
                         <div class="social-icons">
-                            <a class="phone" href="tel:<?=App::$config->telephone?>"><?=App::$config->telephone?></a>
+                            <a class="phone black d-none d-sm-block" href="tel:<?=App::$config->telephone?>"><?=App::$config->telephone?></a>
                             <a href="<?=App::$config->facebookLink?>" class="social facebook  d-none d-sm-block"></a>
                             <a href="<?=App::$config->instagramLink?>" class="social insta  d-none d-sm-block"></a>
                             <a href="<?=App::$config->youtubeLink?>" class="social youtube  d-none d-sm-block"></a>
@@ -197,7 +197,6 @@
     </div>
 </div>
 <?else:?>
-    <div id="main">
     <header>
         <div class="container-line-menu">
             <div id="line-menu">

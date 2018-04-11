@@ -39,6 +39,46 @@ $( document ).ready(function() {
 
 });
 
+CalculatorPayback = function (urlAjax, productId,view) {
+    this.cmServings = $('#cmServings');
+    this.priceCofee = $('#priceCofee');
+    this.priceSale = $('#priceSale');
+    this.productId = $('#productId');
+    this.urlAjax = urlAjax;
+    var self = this;
+
+    this.constructor = function () {
+        self.priceSale.on('change',self.changeValue);
+        self.priceCofee.on('change',self.changeValue);
+        self.cmServings.on('change',self.changeValue);
+        self.productId.on('change', self.changeProduct);
+    };
+
+    this.changeProduct = function (e) {
+        self.cmServings.val( self.productId.find(':selected').data('servings'));
+        self.changeValue(e)
+    };
+
+    this.changeValue  = function (e) {
+        $.ajax({
+            url : self.urlAjax,
+            type: 'POST',
+            data: {
+                action : 'recalculate',
+                priceSale : self.priceSale.val(),
+                priceCofee : self.priceCofee.val(),
+                cmServings : self.cmServings.val(),
+                productId : self.productId.val(),
+                view      : view
+            },
+            success : function (html) {
+                $("#result").html(html);
+                $('#monthIncome').val( Math.round($('#monthIncomeTable').html()));
+            }
+        });
+    };
+    this.constructor();
+};
 
 function loadSimilarProductsSlider (){
     $('.slider-similar-products').slick({

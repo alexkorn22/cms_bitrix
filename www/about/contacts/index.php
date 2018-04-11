@@ -1,9 +1,10 @@
 <?php require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("");
+$APPLICATION->AddChainItem("Контакты", "/about/contacts");
 ?><div class="container-fluid">
     <div class="row">
         <div class="col">
-            <div class="section-title blog">
+            <div class="section-title contact">
                 <h1 class="title">Контакты</h1>
             </div>
         </div>

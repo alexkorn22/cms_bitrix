@@ -21,7 +21,7 @@ $APPLICATION->SetTitle("Аренда");
 			<div class="row">
 				<div class="col-lg-6 col-xl-7">
 					<div class="title-lease">
-						<p>Аренда кофемашин <span class="wmf wmf_black">WMF</span> в Украине</p>
+						<h1>Аренда кофемашин <span class="wmf wmf_black">WMF</span> в Украине</h1>
 					</div>
 				</div>
 				<div class="col-lg-6 col-xl-5">
@@ -131,7 +131,7 @@ $APPLICATION->SetTitle("Аренда");
 			<div class="row justify-content-center">
 				<div class="col-lg-10">
 					<div class="section-title">
-						<h2 class="title">Условия аренды профессиональных кофемашин WMF</h2>
+                        <p class="title">Кофемашина в аренду: как рассчитать прибыль?</p>
 					</div>
 				</div>
 			</div>
@@ -179,10 +179,11 @@ $APPLICATION->SetTitle("Аренда");
 		<!-- calculations -->
         <?$APPLICATION->IncludeComponent(
             "wedo:calculator_payback",
-            "repair_page",
+            "arenda_page",
             Array(
                 "IBLOCK_ID" => App::$config->coffeeMachineIblockId,
                 "IBLOCK_TYPE" => "catalogs",
+                "TEMPLATE"=>"arenda_page",
                 "PRODUCT_ID" => 0
             )
         );?>

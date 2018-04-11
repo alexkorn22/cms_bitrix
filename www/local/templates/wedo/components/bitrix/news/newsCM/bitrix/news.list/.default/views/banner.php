@@ -1,4 +1,3 @@
-
 <div class="wrap-banner blog col-md-12">
     <div class="container-fluid">
         <div class="row">
