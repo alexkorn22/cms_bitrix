@@ -37,7 +37,6 @@ extract($arResult);
             </div>
         </div>
     </div>
-    <div class="row justify-content-center">
         <div class="calculate-raschet">
             <div class="row justify-content-center">
 
@@ -110,7 +109,6 @@ extract($arResult);
                 </div>
             </div>
         </div>
-    </div>
 </div>
 
 <script>

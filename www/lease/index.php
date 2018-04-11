@@ -131,7 +131,7 @@ $APPLICATION->SetTitle("Аренда");
 			<div class="row justify-content-center">
 				<div class="col-lg-10">
 					<div class="section-title">
-                        <p class="title">Условия аренды профессиональных кофемашин WMF</p>
+                        <h2 class="title">Условия аренды профессиональных кофемашин WMF</h2>
 					</div>
 				</div>
 			</div>
