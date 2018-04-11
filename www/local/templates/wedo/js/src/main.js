@@ -434,8 +434,8 @@ function CustomSlideCircle() {
 function TagsBlog() {
     var $nav = $('nav');
     var $btn = $('nav .more-tags');
-    var $vlinks = $('nav .tags-news');
-    var $hlinks = $('nav .hidden-tags-news');
+    var $vlinks = $('nav .tags-blog');
+    var $hlinks = $('nav .hidden-tags-blog');
 
     var numOfItems = 0;
     var totalSpace = 0;
