@@ -16,7 +16,6 @@ $columns = 3 ; // elements/row
 $i = 1; //  elements
 $rows = 1; // rows
 $banner = true;
-
 ?>
 
 <div class="container-fluid">
@@ -69,6 +68,10 @@ $banner = true;
             </div>
     </div>
 </div>
+
+<? if(count($arResult['ITEMS']) < 3 ): ?>
+    <?  include ROOT.$this->GetFolder() .'/views/banner.php'; ?>
+<? endif;?>
 
 <div class="container-fluid">
    <?=$arResult['NAV_STRING']?>
