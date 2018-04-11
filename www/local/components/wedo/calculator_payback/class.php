@@ -152,7 +152,7 @@ class CCalculatorPaybackComponent extends CBitrixComponent{
         $this->arResult['priceSale'] = $this->getPriceSale();
         $this->arResult['costPrice'] = $this->arResult['priceCofee'] / $this->getKoeffForCostPrice();
         $this->arResult['marga'] = $this->getMargin();
-        $this->arResult['paybackPeriod'] = $this->arResult['cmPrice'] / $this->arResult['marga'];
+        $this->arResult['paybackPeriod'] = $this->arResult['cmPriceUAH'] / $this->arResult['marga'];
         // round
         $this->arResult['paybackPeriod'] = round($this->arResult['paybackPeriod']);
         $this->includeComponentTemplate();
