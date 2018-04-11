@@ -49,7 +49,7 @@ $arUrlRewrite = array(
 		"PATH" => "/catalog/index.php",
 	),
 	array(
-		"CONDITION" => "#^/news/#",
+		"CONDITION" => "#^/blog/#",
 		"RULE" => "",
 		"ID" => "bitrix:news",
 		"PATH" => "/news/index.php",

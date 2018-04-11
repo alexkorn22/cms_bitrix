@@ -74,7 +74,7 @@ if(!empty($tag)){
 		"PAGER_TEMPLATE" => "modern",
 		"PAGER_TITLE" => "Новости",
 		"PREVIEW_TRUNCATE_LEN" => "0",
-		"SEF_FOLDER" => "/news/",
+		"SEF_FOLDER" => "/blog/",
 		"SEF_MODE" => "Y",
 		"SEF_URL_TEMPLATES" => Array("detail"=>"#ELEMENT_CODE#/","news"=>"","section"=>""),
 		"SET_LAST_MODIFIED" => "N",

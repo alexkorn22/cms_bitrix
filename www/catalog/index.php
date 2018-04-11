@@ -24,7 +24,7 @@ $APPLICATION->SetTitle("");
 		"DETAIL_FIELD_CODE" => array("ID",""),
 		"DETAIL_PAGER_SHOW_ALL" => "Y",
 		"DETAIL_PAGER_TEMPLATE" => "",
-		"DETAIL_PAGER_TITLE" => "Страница",
+		"DETAIL_PAGER_TITLE" => "Каталог кофемашин",
 		"DETAIL_PROPERTY_CODE" => array("","DOCUMENTS",""),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
@@ -39,7 +39,7 @@ $APPLICATION->SetTitle("");
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => App::$config->coffeeMachineIblockId,
 		"IBLOCK_TYPE" => "catalogs",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"LIST_FIELD_CODE" => array("",""),
 		"LIST_PROPERTY_CODE" => array("",""),
@@ -78,4 +78,4 @@ $APPLICATION->SetTitle("");
 		"USE_SEARCH" => "N",
 		"USE_SHARE" => "N"
 	)
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?>цеп<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
