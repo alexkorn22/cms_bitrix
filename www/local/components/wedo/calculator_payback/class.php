@@ -118,7 +118,7 @@ class CCalculatorPaybackComponent extends CBitrixComponent{
         }
         $this->arResult['cmPrice'] = $price;
         $EUR = new Currency(Currency::EUR);
-        $this->arResult['cmPriceUAH'] = round($EUR->convertTo($price,Currency::UAH));
+        $this->arResult['cmPriceResult'] = round($EUR->convertTo($price,Currency::UAH));
         $this->arResult['cmServings'] = $servings;
 
     }
@@ -152,7 +152,7 @@ class CCalculatorPaybackComponent extends CBitrixComponent{
         $this->arResult['priceSale'] = $this->getPriceSale();
         $this->arResult['costPrice'] = $this->arResult['priceCofee'] / $this->getKoeffForCostPrice();
         $this->arResult['marga'] = $this->getMargin();
-        $this->arResult['paybackPeriod'] = $this->arResult['cmPriceUAH'] / $this->arResult['marga'];
+        $this->arResult['paybackPeriod'] = $this->arResult['cmPriceResult'] / $this->arResult['marga'];
         // round
         $this->arResult['paybackPeriod'] = round($this->arResult['paybackPeriod']);
         $this->includeComponentTemplate();
