@@ -16,8 +16,6 @@ $columns = 3 ; // elements/row
 $i = 1; //  elements
 $rows = 1; // rows
 $banner = true;
-$elementsCounter = 0;
-
 ?>
 
 <div class="container-fluid">
@@ -66,13 +64,12 @@ $elementsCounter = 0;
                         }
                         $i++;
                     ?>
-                    <? $elementsCounter++; ?>
                 <? endforeach;?>
             </div>
     </div>
 </div>
 
-<? if($elementsCounter < 3 ): ?>
+<? if(count($arResult['ITEMS']) < 3 ): ?>
     <?  include ROOT.$this->GetFolder() .'/views/banner.php'; ?>
 <? endif;?>
 

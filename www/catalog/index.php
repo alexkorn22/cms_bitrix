@@ -78,4 +78,4 @@ $APPLICATION->SetTitle("");
 		"USE_SEARCH" => "N",
 		"USE_SHARE" => "N"
 	)
-);?>цеп<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
