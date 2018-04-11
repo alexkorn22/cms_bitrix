@@ -117,6 +117,8 @@ class CCalculatorPaybackComponent extends CBitrixComponent{
             $this->arResult['cmPriceService'] = $props['SERVICE_PRICE']['VALUE'];
         }
         $this->arResult['cmPrice'] = $price;
+        $EUR = new Currency(Currency::EUR);
+        $this->arResult['cmPriceUAH'] = round($EUR->convertTo($price,Currency::UAH));
         $this->arResult['cmServings'] = $servings;
 
     }
