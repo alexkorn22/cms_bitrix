@@ -29,6 +29,14 @@
   }
 
   .text-news {
+    font-size: 22px;
+    line-height:28px;
+    ul {
+      list-style-type: unset;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      padding-left: 40px;
+    }
     p {
       font-size: 22px;
       line-height:28px;

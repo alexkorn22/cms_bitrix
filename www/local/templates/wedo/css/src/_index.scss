@@ -134,9 +134,12 @@
     }
   }
   @include media-breakpoint-down(xs) {
-    height: 80px;
-    .wrap-logo {
-      max-width: 50px;
+    .wrap-social-icons {
+      .social-icons {
+        .phone {
+          margin: 0;
+        }
+      }
     }
   }
 }
