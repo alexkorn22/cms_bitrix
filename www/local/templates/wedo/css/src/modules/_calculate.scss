@@ -45,6 +45,9 @@
         &:focus {
           box-shadow: none;
         }
+        @include media-breakpoint-down(sm){
+          text-align: right;
+        }
       }
     }
   }
