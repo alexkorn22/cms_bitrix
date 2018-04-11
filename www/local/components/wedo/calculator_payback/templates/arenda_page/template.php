@@ -28,6 +28,16 @@ extract($arResult);
 
 <div id="payback-calculator" >
     <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="section-title">
+                <h2 class="title">Кофемашина в аренду: как рассчитать прибыль?</h2>
+            </div>
+            <div class="section-description">
+                <p class="descr">Воспользуйтесь калькулятором, чтобы спрогнозировать ваш ежемесячный доход от продажи кофе</p>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
         <div class="calculate-raschet">
             <div class="row justify-content-center">
 
