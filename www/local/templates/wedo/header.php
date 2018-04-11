@@ -85,18 +85,17 @@
     <div id="line-menu">
         <div class="container-fluid">
             <div class="row">
-                <div class="col col-sm-2 col-md-2 col-lg-2">
+                <div class="col-4 col-sm-2 col-md-2 col-lg-2">
                     <div class="wrap-logo">
                         <a href="/">
-                            <img src="<?=IMAGES_PATH?>/logo_black.png" class="d-none d-sm-block" alt="CMS">
-                            <img src="<?=IMAGES_PATH?>/logo-small.png" class="d-block d-sm-none" alt="CMS">
+                            <img src="<?=IMAGES_PATH?>/logo_black.png" alt="CMS">
                         </a>
                     </div>
                 </div>
-                <div class="col col-sm-10 col-md-10 col-lg-10">
+                <div class="col-8 col-sm-10 col-md-10 col-lg-10">
                     <div class="wrap-social-icons normal-top">
                         <div class="social-icons">
-                            <a class="phone black d-none d-sm-block" href="tel:<?=App::$config->telephone?>"><?=App::$config->telephone?></a>
+                            <a class="phone black" href="tel:<?=App::$config->telephone?>"><?=App::$config->telephone?></a>
                             <a href="<?=App::$config->facebookLink?>" class="social facebook  d-none d-sm-block"></a>
                             <a href="<?=App::$config->instagramLink?>" class="social insta  d-none d-sm-block"></a>
                             <a href="<?=App::$config->youtubeLink?>" class="social youtube  d-none d-sm-block"></a>
@@ -120,8 +119,7 @@
             <div class="row">
                 <div class="wrap-logo">
                     <a href="/">
-                        <img src="<?=IMAGES_PATH?>/logo.png" class="d-none d-sm-block" alt="CMS">
-                        <img src="<?=IMAGES_PATH?>/logo-small.png" class="d-block d-sm-none" alt="CMS">
+                        <img src="<?=IMAGES_PATH?>/logo.png" alt="CMS">
                     </a>
                 </div>
                 <div class="burger-menu in-menu">
@@ -202,18 +200,17 @@
             <div id="line-menu">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col col-sm-2 col-md-2 col-lg-2">
+                        <div class="col-4 col-sm-2 col-md-2 col-lg-2">
                             <div class="wrap-logo">
                                 <a href="/">
                                     <img src="<?=IMAGES_PATH?>/logo_black.png" class="d-none d-sm-block" alt="CMS">
-                                    <img src="<?=IMAGES_PATH?>/logo-small.png" class="d-block d-sm-none" alt="CMS">
                                 </a>
                             </div>
                         </div>
                         <div class="col col-sm-10 col-md-10 col-lg-10">
                             <div class="wrap-social-icons normal-top">
                                 <div class="social-icons">
-                                    <a class="phone black d-none d-sm-block" href="tel:<?=App::$config->telephone?>"><?=App::$config->telephone?></a>
+                                    <a class="phone black" href="tel:<?=App::$config->telephone?>"><?=App::$config->telephone?></a>
                                     <a href="<?=App::$config->facebookLink?>" class="social facebook  d-none d-sm-block"></a>
                                     <a href="<?=App::$config->instagramLink?>" class="social insta  d-none d-sm-block"></a>
                                     <a href="<?=App::$config->youtubeLink?>" class="social youtube d-none d-sm-block"></a>
@@ -237,8 +234,7 @@
                     <div class="row">
                         <div class="wrap-logo">
                             <a href="/">
-                                <img src="<?=IMAGES_PATH?>/logo.png" class="d-none d-sm-block" alt="CMS">
-                                <img src="<?=IMAGES_PATH?>/logo-small.png" class="d-block d-sm-none" alt="CMS">
+                                <img src="<?=IMAGES_PATH?>/logo.png" alt="CMS">
                             </a>
                         </div>
                         <div class="burger-menu in-menu">
