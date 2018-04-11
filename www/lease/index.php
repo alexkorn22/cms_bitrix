@@ -179,7 +179,7 @@ $APPLICATION->SetTitle("Аренда");
 		<!-- calculations -->
         <?$APPLICATION->IncludeComponent(
             "wedo:calculator_payback",
-            "repair_page",
+            "arenda_page",
             Array(
                 "IBLOCK_ID" => App::$config->coffeeMachineIblockId,
                 "IBLOCK_TYPE" => "catalogs",

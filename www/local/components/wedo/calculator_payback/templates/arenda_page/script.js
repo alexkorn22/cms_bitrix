@@ -3,6 +3,8 @@ CalculatorPayback = function (urlAjax, productId) {
     this.priceCofee = $('#priceCofee');
     this.priceSale = $('#priceSale');
     this.productId = $('#productId');
+    $('#price').html(0);
+    $('#paybackPeriod').html(0);
     this.urlAjax = urlAjax;
     var self = this;
 
@@ -24,7 +26,7 @@ CalculatorPayback = function (urlAjax, productId) {
             type: 'POST',
             data: {
                 action : 'recalculate',
-                priceSale : self.priceSale.val(),
+                priceSale : 0,
                 priceCofee : self.priceCofee.val(),
                 cmServings : self.cmServings.val(),
                 productId : self.productId.val()
@@ -32,6 +34,8 @@ CalculatorPayback = function (urlAjax, productId) {
             success : function (html) {
                 $("#result").html(html);
                 $('#monthIncome').val( Math.round($('#monthIncomeTable').html()));
+                $('#price').html(0);
+                $('#paybackPeriod').html(0);
             }
         });
     };
