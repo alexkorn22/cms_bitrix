@@ -68,9 +68,9 @@
         <div class="row bottom-line">
             <div class="col-12 col-lg-11">
                 <div class="wrap-title">
-                    <h1 class="title-header">
+                    <p class="title-header">
                         Кофемашины <br><span>WMF</span> в Украине
-                    </h1>
+                    </p>
                 </div>
             </div>
             <div class="col-lg-1 d-none d-lg-block">
