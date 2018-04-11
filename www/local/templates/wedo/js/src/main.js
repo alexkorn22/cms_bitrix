@@ -74,7 +74,9 @@ CalculatorPayback = function (urlAjax, productId,view) {
             success : function (html) {
                 $("#result").html(html);
                 $('#monthIncome').val( Math.round($('#monthIncomeTable').html()));
-                $('#paybackPeriod').val( Math.round($('#paybackPeriodTable').html()));
+                if($('#paybackPeriodTable') !== null){
+                    $('#paybackPeriod').val( Math.round($('#paybackPeriodTable').html()));
+                }
             }
         });
     };
