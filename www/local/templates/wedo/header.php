@@ -203,7 +203,7 @@
                         <div class="col-4 col-sm-2 col-md-2 col-lg-2">
                             <div class="wrap-logo">
                                 <a href="/">
-                                    <img src="<?=IMAGES_PATH?>/logo_black.png" class="d-none d-sm-block" alt="CMS">
+                                    <img src="<?=IMAGES_PATH?>/logo_black.png" alt="CMS">
                                 </a>
                             </div>
                         </div>
