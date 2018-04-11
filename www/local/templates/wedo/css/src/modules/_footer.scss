@@ -11,6 +11,7 @@ footer {
   }
 
   .f-logo {
+    padding: 0 10px;
     img {
       max-width: 110px;
       width: 100%;
@@ -52,6 +53,10 @@ footer {
       justify-content: flex-start;
       padding-left: 10px;
     }
+  }
+
+  .f-contact {
+    padding: 0 15px;
   }
 
   .wrap-copyright {
