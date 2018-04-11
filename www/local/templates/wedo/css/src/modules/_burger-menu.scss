@@ -133,9 +133,7 @@
     @include media-breakpoint-down(sm){
       max-width: 70px;
     }
-    @include media-breakpoint-down(xs){
-      max-width: 50px;
-    }
+
 
   }
   .wrap-menu-item {
