@@ -92,7 +92,7 @@ extract($arResult);
                 <div id="result">
                     <div class="collapse" id="open-table-calculate">
                         <?
-                            require ROOT . $this->getComponent()->getPath(). '/views/result.php';
+                            require ROOT . $this->getComponent()->getPath(). '/views/product_table.php';
                         ?>
                     </div>
                 </div>
@@ -103,5 +103,5 @@ extract($arResult);
     </div>
 </div>
 <script>
-    new CalculatorPayback("<?=$this->getComponent()->getPath() . "/ajax.php"?>");
+    new CalculatorPayback("<?=$this->getComponent()->getPath() . "/ajax.php"?>",'','product_table');
 </script>

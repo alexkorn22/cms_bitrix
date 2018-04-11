@@ -183,6 +183,7 @@ $APPLICATION->SetTitle("Аренда");
             Array(
                 "IBLOCK_ID" => App::$config->coffeeMachineIblockId,
                 "IBLOCK_TYPE" => "catalogs",
+                "TEMPLATE"=>"arenda_page",
                 "PRODUCT_ID" => 0
             )
         );?>
