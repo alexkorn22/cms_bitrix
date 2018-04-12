@@ -72,7 +72,7 @@ if(!empty($tag)){
 		"PAGER_SHOW_ALL" => "N",
 		"PAGER_SHOW_ALWAYS" => "N",
 		"PAGER_TEMPLATE" => "modern",
-		"PAGER_TITLE" => "блог",
+		"PAGER_TITLE" => "Блог",
 		"PREVIEW_TRUNCATE_LEN" => "0",
 		"SEF_FOLDER" => "/blog/",
 		"SEF_MODE" => "Y",
