@@ -1,6 +1,5 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");
 $APPLICATION->SetTitle("Кофемашины");
 ?><section id="cards-section">
 <div class="container-fluid">
