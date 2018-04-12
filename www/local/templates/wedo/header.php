@@ -29,7 +29,18 @@
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH .'/js/libs/slick.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH .'/js/dist/main.js');
 
-     ?>
+    // Hide breadcrumb:
+    $pagesWithoutBCrumb = [
+            '/'
+    ];
+    $currPage           = $APPLICATION->GetCurPage();
+    $page_404           =  defined('ERROR_404') && ERROR_404=='Y' ;
+
+    if(in_array($currPage,$pagesWithoutBCrumb) || $page_404){
+        $APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");
+    }
+
+    ?>
 	<title><?$APPLICATION->ShowTitle()?></title
 </head>
 <body>
