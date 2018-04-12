@@ -1,6 +1,7 @@
 .calculate-raschet {
   .wrap-input, .wrap-select {
     text-align: center;
+
     label {
       font-size: 20px;
       margin-bottom: 25px;
@@ -47,6 +48,32 @@
         }
         @include media-breakpoint-down(sm){
           text-align: right;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(md){
+    .wrap-input, .wrap-select {
+      text-align: left;
+      .form-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      label {
+        height: 100%;
+        padding: 0;
+      }
+      .custom-input, .custom-select {
+        height: 40px;
+        margin: 0;
+      }
+      &.srok-okupaemosti {
+        .form-group{
+          .custom-input {
+            text-align: right;
+          }
         }
       }
     }
