@@ -13,10 +13,9 @@
 $this->setFrameMode(true);
 
 $columns = 3 ; // elements/row
-$i       = 1; //  elements
-$rows    = 1; // rows
-$banner  = true;
-$tag     = $_GET['tag'] ? $_GET['tag'] : '' ;
+$i = 1; //  elements
+$rows = 1; // rows
+$banner = true;
 ?>
 
 <div class="container-fluid">
@@ -33,7 +32,7 @@ $tag     = $_GET['tag'] ? $_GET['tag'] : '' ;
                 <nav class="priority-nav">
                     <ul class='tags-blog'>
                         <? foreach ($arResult['TAGS'] as $name => $link):?>
-                            <li><a class="<? if($tag == $name){echo 'active-tag';}?> " href='<?=$link?>'> <?=$name?> </a><a href="<?=$arParams['SECTION_URL']?>" class="<? if($tag == $name){echo'close-tag';}?>"></a></li>
+                            <li><a class="<? if($arResult['CURR_TAG'] == $name){echo 'active-tag';}?> " href='<?=$link?>'> <?=$name?> </a><a href="<?=$arParams['SECTION_URL']?>" class="<? if($arResult['CURR_TAG'] == $name){echo'close-tag';}?>"></a></li>
                         <? endforeach;?>
                     </ul>
                     <button class="more-tags">... Ещё</button>
