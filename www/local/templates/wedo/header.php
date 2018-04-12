@@ -322,7 +322,7 @@ $pagesWithoutBCrumb = [
 $currPage           = $APPLICATION->GetCurPage();
 $page_404           =  defined('ERROR_404') && ERROR_404=='Y' ;
 
-if(in_array($currPage,$pagesWithoutBCrumb) || $page_404): ?>
+if(!(in_array($currPage,$pagesWithoutBCrumb) || $page_404)): ?>
     <div class="container-fluid">
         <?$APPLICATION->IncludeComponent(
         "bitrix:breadcrumb",
