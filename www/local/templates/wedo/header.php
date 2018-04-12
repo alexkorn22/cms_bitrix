@@ -29,7 +29,7 @@
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH .'/js/libs/slick.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH .'/js/dist/main.js');
 
-     ?>
+    ?>
 	<title><?$APPLICATION->ShowTitle()?></title
 </head>
 <body>
@@ -311,11 +311,29 @@
         </div>
     </header>
 <? endif;?>
-<div class="container-fluid">
-    <?$APPLICATION->IncludeComponent(
+
+<?
+
+
+// breadcrumb:
+$pagesWithoutBCrumb = [
+    '/'
+];
+$currPage           = $APPLICATION->GetCurPage();
+$page_404           =  defined('ERROR_404') && ERROR_404=='Y' ;
+
+if(!(in_array($currPage,$pagesWithoutBCrumb) || $page_404)): ?>
+    <div class="container-fluid">
+        <?$APPLICATION->IncludeComponent(
         "bitrix:breadcrumb",
         "",
         Array()
     );?>
-</div>
+    </div>
+<?endif;?>
+
+
+
+
+
 <div id="wrap">
