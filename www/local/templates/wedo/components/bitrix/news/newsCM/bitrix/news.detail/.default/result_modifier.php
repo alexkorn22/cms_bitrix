@@ -4,9 +4,8 @@ $arResult['time']=[
     'month' => date('M', strtotime($arResult['TIMESTAMP_X'])),
     'day'   => date('d', strtotime($arResult['TIMESTAMP_X']))
 ];
-
 $res = CIBlockElement::GetProperty(App::$config->newsIblockId, $arResult['ID'], "sort", "asc", array("CODE" => "TAGS"));
 while ($ob = $res->GetNext())
 {
-    $arResult['TAGS'][$ob['VALUE_ENUM']]='/blog/?tag='.$ob['VALUE_ENUM'];
+    $arResult['TAGS'][$ob['VALUE_ENUM']]= $arParams['SECTION_URL'].'?tag='.$ob['VALUE_ENUM'];
 }
