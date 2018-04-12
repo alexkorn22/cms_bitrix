@@ -187,6 +187,9 @@ $APPLICATION->SetTitle("Аренда");
                 "PRODUCT_ID" => 0
             )
         );?>
+        <div class="comment-table">
+            <p>* Рекомендованные значения для данной модели кофемашины</p>
+        </div>
 
         <div class="row justify-content-center">
             <div class="col-lg-8">
