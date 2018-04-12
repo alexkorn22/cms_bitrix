@@ -15,14 +15,18 @@ $( document ).ready(function() {
     CustomSlideCircle();
     TagsBlog();
     Preloader();
+    var windowWidth = $(window).width();
     var navbarData = startNav();
     $(window).scroll(function(){stickyMenu(navbarData);});
     $('.burger').on('click', clickBurger );
     $( ".block.wmf" ).hover(blockWMFHoverIn,blockWMFHoverOut);
     $( ".block.cms" ).hover(blockCMSHoverIn,blockCMSHoverOut);
-    $(window).on('resize',function(){
-        togglePanel();
-        setVideoDimensions();
+    $(window).on('resize',function() {
+        if ($(window).width() != windowWidth) {
+            windowWidth = $(window).width();
+            togglePanel();
+            setVideoDimensions();
+        }
     });
 
     $(".tabs-kartochka, .tabs-lease-repair").on("click","a",clickOnTap);
