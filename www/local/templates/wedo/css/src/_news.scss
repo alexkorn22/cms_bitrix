@@ -42,15 +42,6 @@
       line-height:28px;
       margin: 0;
     }
-    .img-in-text {
-      text-align: center;
-      margin: 20px 0;
-      img {
-        height: 350px;
-        width: auto;
-        margin: 10px 20px;
-      }
-    }
 
     @include media-breakpoint-down(sm){
       p {
@@ -62,6 +53,16 @@
         width: auto;
       }
     }
+  }
+}
+
+.img-in-text {
+  text-align: center;
+  margin: 20px 0;
+  img {
+    height: 350px;
+    width: auto;
+    margin: 10px 0px;
   }
 }
 
