@@ -19,10 +19,7 @@ while($enum_fields = $property_enums->GetNext())
 
 // current page tag :
 $req = Application::getInstance()->getContext()->getRequest();
-$tag = $req->getQuery("tag");
-$arResult['CURR_TAG'] = $tag;
-
-
+$arResult['CURR_TAG'] = $req->getQuery("tag");
 ?>
 
 
