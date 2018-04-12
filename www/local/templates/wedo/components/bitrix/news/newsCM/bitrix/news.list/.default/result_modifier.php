@@ -1,4 +1,5 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+use Bitrix\Main\Application;
 
 foreach ($arResult['ITEMS'] as &$item){
     // time of the news
@@ -16,7 +17,9 @@ while($enum_fields = $property_enums->GetNext())
     $arResult['TAGS'][$enum_fields['VALUE']]=$arParams['SECTION_URL'].'?tag='.$enum_fields['VALUE'];
 }
 
-
+// current page tag :
+$req = Application::getInstance()->getContext()->getRequest();
+$arResult['CURR_TAG'] = $req->getQuery("tag");
 ?>
 
 
