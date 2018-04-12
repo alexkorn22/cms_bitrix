@@ -313,17 +313,7 @@
       }
     }
     @include media-breakpoint-down(md){
-      .wrap-input, .wrap-select {
-        text-align: left;
-        label {
-          height: 100%;
-          padding: 0;
-        }
-        input, select {
-          height: 40px;
-          margin: 0;
-        }
-      }
+
       .wrap-select, .wrap-input {
         .form-group {
           display: flex;
