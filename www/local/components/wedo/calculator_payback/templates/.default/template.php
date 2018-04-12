@@ -26,10 +26,6 @@ extract($arResult);
 
 ?>
 <div id="calculator-payback">
-    <div class="container-fluid">
-
-        <div class="row">
-            <div class="col-md-12">
                 <div class="calculate-raschet">
                     <div class="row justify-content-center">
                         <? if (isset($arResult['products'])): ?>
@@ -99,9 +95,6 @@ extract($arResult);
 
 
             </div>
-        </div>
-    </div>
-</div>
 <script>
     new CalculatorPayback("<?=$this->getComponent()->getPath() . "/ajax.php"?>",'','product_table');
 </script>
