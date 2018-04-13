@@ -5,7 +5,7 @@
                 <div class="banner-text">
                     <p class="title-banner">Комплексные решения для офисов и компаний</p>
                     <p class="descr-banner">Установка и сервис <span>"под ключ"</span></p>
-                    <button type="button" class="btn btn_black btn_small-mobile"><a href="#">Узнать подробности</a></button>
+                    <a href="/blog/kompleksnye-resheniya/" class="btn btn_black btn_small-mobile" >Узнать подробности</a>
                 </div>
             </div>
             <div class="col-lg-5 d-none d-lg-block">

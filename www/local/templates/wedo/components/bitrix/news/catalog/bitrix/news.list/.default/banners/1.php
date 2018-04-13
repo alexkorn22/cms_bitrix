@@ -9,7 +9,7 @@
                         <li>без ежемесячной платы</li>
                         <li>бесплатный сервис</li>
                     </ul>
-                    <button type="button" class="btn btn_red btn_small-mobile"><a href="#">Узнать подробности</a></button>
+                    <a class="btn btn_red btn_small-mobile" href="/lease/">Узнать подробности</a>
                 </div>
             </div>
             <div class="col-lg-5 d-none d-lg-block">
