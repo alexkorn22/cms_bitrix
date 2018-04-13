@@ -1,0 +1,5 @@
+<?
+$MESS ['WEDO_FORMS_COMPONENT_NAME'] = "Формы";
+$MESS ['WEDO_FORMS_COMPONENT_DESCRIPTION'] = "Компонент подключения формы";
+$MESS ['WEDO_FORMS_COMPONENTS_FOLDER_NAME'] = "main";
+?>
