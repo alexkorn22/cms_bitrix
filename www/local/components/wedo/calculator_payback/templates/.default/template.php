@@ -65,7 +65,7 @@ extract($arResult);
                                 <div class="wrap-input">
                                     <div class="form-group">
                                         <label for="fild-porcii">Количество порций в день *</label>
-                                        <input type="text" class="form-control custom-input" id="cmServings" value="<?=$cmServings?>">
+                                        <input type="text" class="form-control custom-input" id="cmServings" value="<?=$cmServings?>" disabled>
                                     </div>
                                 </div>
                             </div>
