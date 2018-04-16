@@ -73,7 +73,7 @@ $this->setFrameMode(true);
                                 <p><?= $arItem['PRICE_UAH']?> грн.</p>
                             </div>
                             <div class="btn-more-info">
-                                <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="btn btn_none-fill btn_small-mobile">Подробнее</a>
+                                <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" onclick="#" class="btn btn_none-fill btn_small-mobile">Подробнее</a>
                             </div>
                         </div>
                     </div>
