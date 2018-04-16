@@ -47,6 +47,7 @@ $( document ).ready(function() {
 // filter options :
     $(document).on('click','#modalWindowBtn',disableOptions);
     $(document).on('change','#cubsOnDay',disableOptions);
+
 });
 
 function filterHide() {
@@ -83,6 +84,8 @@ CalculatorPayback = function (urlAjax, productId,view) {
 
     this.changeProduct = function (e) {
         self.cmServings.val( self.productId.find(':selected').data('servings'));
+        // поменять Рекомендованное количество порций
+        $('#recommendedCubsDay').html(self.productId.find(':selected').data('servings'));
         self.changeValue(e)
     };
 
