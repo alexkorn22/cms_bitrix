@@ -25,8 +25,5 @@
                 "PRODUCT_ID" => $arResult['ID']
             )
         );?>
-        <div class="comment-table">
-            <p>* Рекомендованные значения для данной модели кофемашины</p>
-        </div>
     </div>
 </div>
