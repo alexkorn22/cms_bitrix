@@ -275,7 +275,7 @@ $APPLICATION->SetTitle("Ремонт");
                         </div>
                         <div class="no-garantee">
                             <p class="title">Кофеавтомат НЕ на гарантии или НЕ обслуживается в Coffee Machine Service?</p>
-                            <p class="descr">Выезд специалиста 450 грн+3 грн/км</p>
+                            <p class="descr">Выезд специалиста от 450 грн. + стоимость доезда</p>
                             <p class="descr">Стоимость ремонта и запчастей - по результатам диагностики</p>
                         </div>
                     </div>
