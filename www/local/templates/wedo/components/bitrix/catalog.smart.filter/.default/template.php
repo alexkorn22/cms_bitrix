@@ -11,11 +11,10 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-
-
+global $arrFilter;
 ?>
-<div class="container-fluid catalog">
-
+<? if(empty($arrFilter)):?>
+<div class="container-fluid catalog" id="filterBlock">
     <div class="wrap-filter">
         <div class="row">
             <div class="col-12 col-lg-6">
@@ -35,8 +34,16 @@ $this->setFrameMode(true);
             </div>
         </div>
     </div>
-
 </div>
+<?else:?>
+    <div class="col-12 col-lg-11 text-right">
+        <div class="right">
+            <div class="catalog-btn-filter">
+                <button type="button" class="btn btn_red btn-sm btn_small-mobile" data-toggle="modal" data-target="#filter">Фильтр</button>
+            </div>
+        </div>
+    </div>
+<?endif;?>
 
     <!--  our modal goes herel -->
     <div class="modal fade" id="filter" tabindex="-1" role="dialog" aria-labelledby="filter" aria-hidden="true">
@@ -234,6 +241,13 @@ $this->setFrameMode(true);
                                                     id="set_filter"
                                                     name="set_filter"
                                                     value="Подобрать"
+                                            />
+                                            <input
+                                                    class="btn btn_black btn_small-mobile btn_font-small"
+                                                    type="submit"
+                                                    id="del_filter"
+                                                    name="del_filter"
+                                                    value="<?=GetMessage("CT_BCSF_DEL_FILTER")?>"
                                             />
                                             <div class="bx-filter-popup-result <?if ($arParams["FILTER_VIEW_MODE"] == "VERTICAL") echo $arParams["POPUP_POSITION"]?>" id="modef" <?if(!isset($arResult["ELEMENT_COUNT"])) echo 'style="display:none"';?> style="display: inline-block;">
                                                 <?echo GetMessage("CT_BCSF_FILTER_COUNT", array("#ELEMENT_COUNT#" => '<span id="modef_num">'.intval($arResult["ELEMENT_COUNT"]).'</span>'));?>

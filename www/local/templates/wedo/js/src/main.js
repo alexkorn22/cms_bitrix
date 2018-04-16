@@ -42,11 +42,13 @@ $( document ).ready(function() {
     $('#upbutton').on('click',goUp);
 
 // hide filter form  :
-    $(document).on('submit','#filterForm',function (e) {
-         $('#hideModal').click();
-    });
+    $(document).on('submit','#filterForm',filterHide);
 
 });
+
+function filterHide() {
+    $('#hideModal').click();
+}
 
 CalculatorPayback = function (urlAjax, productId,view) {
     this.cmServings = $('#cmServings');
