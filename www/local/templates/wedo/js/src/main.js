@@ -539,10 +539,6 @@ function Preloader() {
             $('.preloader-wrap').fadeOut(300);
         }, time);
 
-
-
-        var $preloader = $('.preloader');
-        $preloader.delay(400).fadeOut('slow');
     });
 }
 
