@@ -134,21 +134,6 @@ $APPLICATION->SetTitle("Ремонт");
                 </div>
             </div>
         </div>
-        <div class="slider-clients-repair">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="section-title">
-                        <h2 class="title">Наши клиенты</h2>
-                    </div>
-                </div>
-            </div>
-           <!-- slider of clients -->
-            <?$APPLICATION->IncludeComponent(
-                "wedo:clients",
-                "",
-                Array()
-            );?>
-        </div>
         <div id="scheme-of-work">
             <div class="row justify-content-center">
                 <div class="col-lg-11">
@@ -408,6 +393,22 @@ $APPLICATION->SetTitle("Ремонт");
 	),
 	false
 );?>
+        </div>
+
+        <div class="slider-clients-repair">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="section-title">
+                        <h2 class="title">Наши клиенты</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- slider of clients -->
+            <?$APPLICATION->IncludeComponent(
+                "wedo:clients",
+                "",
+                Array()
+            );?>
         </div>
     </div>
 
