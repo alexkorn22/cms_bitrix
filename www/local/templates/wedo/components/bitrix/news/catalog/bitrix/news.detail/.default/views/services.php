@@ -26,7 +26,7 @@
                     <div class="col-12 col-lg-6 offset-md-1">
                         <div class="banner-text">
                             <p class="descr-banner">Бесплатное сервисное обслуживание при покупке кофемашины!</p>
-                            <button type="button" class="btn btn_red btn_font-small btn_small-mobile"><a href="#">Подробнее</a></button>
+                            <a href="/blog/servisnoe-obsluzhivanie-kofemashin-wmf/" class="btn btn_red btn_font-small btn_small-mobile">Подробнее</a>
                         </div>
                     </div>
                 </div>
