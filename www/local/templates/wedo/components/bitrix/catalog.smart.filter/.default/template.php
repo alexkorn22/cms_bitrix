@@ -100,11 +100,12 @@ global $arrFilter;
                                                         <label for="cubsOnDay"><?=$arItem["NAME"]?> : </label>
                                                         <select class="form-control custom-select" name="<?echo $arItem["VALUES"]["MAX"]["CONTROL_NAME"]?>" id="cubsOnDay">
                                                             <option value="5000">Не указано</option>
-                                                            <option value="51" <?if($cubsOnDay == 51):?>selected<?endif;?> >до 50</option>
-                                                            <option value="101" <?if($cubsOnDay == 101):?>selected<?endif;?> >до 100</option>
+                                                            <option value="81" <?if($cubsOnDay == 81):?>selected<?endif;?> >до 80</option>
                                                             <option value="151" <?if($cubsOnDay == 151):?>selected<?endif;?> >до 150</option>
                                                             <option value="181" <?if($cubsOnDay == 181):?>selected<?endif;?> >до 180</option>
-                                                            <option value="201" <?if($cubsOnDay == 201):?>selected<?endif;?> >до 200</option>
+                                                            <option value="251" <?if($cubsOnDay == 251):?>selected<?endif;?> >до 250</option>
+                                                            <option value="301" <?if($cubsOnDay == 301):?>selected<?endif;?> >до 300</option>
+                                                            <option value="351" <?if($cubsOnDay == 351):?>selected<?endif;?> >до 350</option>
                                                         </select>
                                                     </div>
                                                 <?elseif ($arItem["VALUES"]["MIN"]["CONTROL_NAME"] == 'arrFilter_77_MIN'):?>
@@ -120,11 +121,12 @@ global $arrFilter;
                                                         <label for="cubsOnHour"><?=$arItem["NAME"]?> : </label>
                                                         <select class="form-control custom-select" name="<?echo $arItem["VALUES"]["MAX"]["CONTROL_NAME"]?>" id="cubsOnHour">
                                                             <option value="5000">Не указано</option>
-                                                            <option value="51" <?if($cubsOnHour == 51):?>selected<?endif;?> >до 50</option>
-                                                            <option value="101" <?if($cubsOnHour == 101):?>selected<?endif;?>>до 100</option>
-                                                            <option value="151" <?if($cubsOnHour == 151):?>selected<?endif;?>>до 150</option>
-                                                            <option value="181" <?if($cubsOnHour == 181):?>selected<?endif;?>>до 180</option>
-                                                            <option value="201" <?if($cubsOnHour == 201):?>selected<?endif;?>>до 200</option>
+                                                            <option value="81" <?if($cubsOnHour == 81):?>selected<?endif;?> >до 80</option>
+                                                            <option value="151" <?if($cubsOnHour == 151):?>selected<?endif;?> >до 150</option>
+                                                            <option value="181" <?if($cubsOnHour == 181):?>selected<?endif;?> >до 180</option>
+                                                            <option value="251" <?if($cubsOnHour == 251):?>selected<?endif;?> >до 250</option>
+                                                            <option value="301" <?if($cubsOnHour == 301):?>selected<?endif;?> >до 300</option>
+                                                            <option value="351" <?if($cubsOnHour == 351):?>selected<?endif;?> >до 350</option>
                                                         </select>
                                                     </div>
                                                 <?endif;?>

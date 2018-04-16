@@ -57,7 +57,9 @@ function disableOptions(){
     var options = $('#cubsOnHour').find('option');
     options.each(function () {
         if(parseInt($(this).val()) > parseInt($('#cubsOnDay').val())){
-            $(this).prop("disabled", true);
+            if(parseInt($(this).val()) !== 5000){
+                $(this).prop("disabled", true);
+            }
         }else{
             $(this).prop("disabled", false);
         }
