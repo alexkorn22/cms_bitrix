@@ -66,7 +66,7 @@ extract($arResult);
                     <div class="wrap-input">
                         <div class="form-group">
                             <label for="fild-coffee">Цена 1 кг. кофе (грн)*</label>
-                            <input type="text" class="form-control custom-input" id="priceCofee" value="<?=$priceCofee?>">
+                            <input type="text" class="form-control custom-input" id="priceCofee" value="<?=$arResult['priceCofee']?>">
                         </div>
                     </div>
                 </div>
