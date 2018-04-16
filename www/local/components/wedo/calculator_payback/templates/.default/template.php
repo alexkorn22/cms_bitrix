@@ -65,7 +65,7 @@ extract($arResult);
                                 <div class="wrap-input">
                                     <div class="form-group">
                                         <label for="fild-porcii">Количество порций в день *</label>
-                                        <input type="text" class="form-control custom-input" id="cmServings" value="<?=$cmServings?>" disabled>
+                                        <input type="text" class="form-control custom-input" id="cmServings" value="<?=$cmServings?>">
                                     </div>
                                 </div>
                             </div>
@@ -95,6 +95,9 @@ extract($arResult);
 
 
             </div>
+<div class="comment-table">
+    <p>* Рекомендованное количество порций для данной кофемашины - <?=$cmServings?> порций в день</p>
+</div>
 <script>
     new CalculatorPayback("<?=$this->getComponent()->getPath() . "/ajax.php"?>",'','product_table');
 </script>

@@ -82,7 +82,7 @@ extract($arResult);
                     <div class="wrap-input">
                         <div class="form-group">
                             <label for="fild-porcii">Количество порций в день*</label>
-                            <input type="text" class="form-control custom-input" id="cmServings" value="<?=$cmServings?>" disabled>
+                            <input type="text" class="form-control custom-input" id="cmServings" value="<?=$cmServings?>">
                         </div>
                     </div>
                 </div>
@@ -109,6 +109,9 @@ extract($arResult);
                 </div>
             </div>
         </div>
+</div>
+<div class="comment-table">
+    <p>* Рекомендованное количество порций для данной кофемашины - <span><?=$cmServings?></span> порций в день</p>
 </div>
 
 <script>

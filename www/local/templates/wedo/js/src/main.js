@@ -2,7 +2,6 @@ var breakpointMD =767;
 var ellipsestext = "...";
 var moretext     = "Подробнее";
 var lesstext     = "Скрыть";
-
 $( document ).ready(function() {
     setVideoDimensions();
     loadClientsSlider();
@@ -14,7 +13,6 @@ $( document ).ready(function() {
     validateForm();
     CustomSlideCircle();
     TagsBlog();
-    Preloader();
     var windowWidth = $(window).width();
     var navbarData = startNav();
     $(window).scroll(function(){stickyMenu(navbarData);});
@@ -41,7 +39,33 @@ $( document ).ready(function() {
     $(window).on('scroll',showUpButton);
     $('#upbutton').on('click',goUp);
 
+// hide filter form  :
+    $(document).on('submit','#filterForm',filterHide);
+
+// filter options :
+    $(document).on('click','#modalWindowBtn',disableOptions);
+    $(document).on('change','#cubsOnDay',disableOptions);
+
 });
+
+Preloader();
+
+function filterHide() {
+    $('#hideModal').click();
+}
+
+function disableOptions(){
+    var options = $('#cubsOnHour').find('option');
+    options.each(function () {
+        if(parseInt($(this).val()) > parseInt($('#cubsOnDay').val())){
+            if(parseInt($(this).val()) !== 5000){
+                $(this).prop("disabled", true);
+            }
+        }else{
+            $(this).prop("disabled", false);
+        }
+    });
+}
 
 CalculatorPayback = function (urlAjax, productId,view) {
     this.cmServings = $('#cmServings');
@@ -60,6 +84,8 @@ CalculatorPayback = function (urlAjax, productId,view) {
 
     this.changeProduct = function (e) {
         self.cmServings.val( self.productId.find(':selected').data('servings'));
+        // поменять Рекомендованное количество порций
+        $('#recommendedCubsDay').html(self.productId.find(':selected').data('servings'));
         self.changeValue(e)
     };
 

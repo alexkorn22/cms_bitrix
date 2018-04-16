@@ -18,7 +18,13 @@ $this->setFrameMode(true);
 	<?=$arResult["NAV_STRING"]?>
 <?endif;?>
 <? $countCMachines = 1 ; $countBanners   = 1 ; ?>
-
+<?if(empty($arResult["ITEMS"])):?>
+    <div>
+        <p>
+            Кофе машина не найдена !
+        </p>
+    </div>
+<?endif;?>
 <!-- first block -->
     <div class="container-fluid catalog">
         <!-- products section -->
@@ -38,7 +44,9 @@ $this->setFrameMode(true);
                     <div class="col-6 order-2 order-lg-1 col-md-6 col-lg-3">
                         <div class="wrap-img">
                             <div class="img-product">
-                                <img src="<?=$arItem["IMG"]["SRC"]?>" alt="<?=$arItem["IMG"]["ALT"]?>" title="<?=$arItem["IMG"]["TITLE"]?>">
+                                <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" onclick="#">
+                                    <img src="<?=$arItem["IMG"]["SRC"]?>" alt="<?=$arItem["IMG"]["ALT"]?>" title="<?=$arItem["IMG"]["TITLE"]?>">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -67,7 +75,7 @@ $this->setFrameMode(true);
                                 <p><?= $arItem['PRICE_UAH']?> грн.</p>
                             </div>
                             <div class="btn-more-info">
-                                <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="btn btn_none-fill btn_small-mobile">Подробнее</a>
+                                <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" onclick="#" class="btn btn_none-fill btn_small-mobile">Подробнее</a>
                             </div>
                         </div>
                     </div>
