@@ -44,10 +44,23 @@ $( document ).ready(function() {
 // hide filter form  :
     $(document).on('submit','#filterForm',filterHide);
 
+// filter options :
+    $(document).on('change','#select1',disableOptions);
 });
 
 function filterHide() {
     $('#hideModal').click();
+}
+
+function disableOptions(){
+    var options = $('#select2').find('option');
+    options.each(function () {
+        if(parseInt($(this).val()) > parseInt($('#select1').val())){
+            $(this).prop("disabled", true);
+        }else{
+            $(this).prop("disabled", false);
+        }
+    });
 }
 
 CalculatorPayback = function (urlAjax, productId,view) {
