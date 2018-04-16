@@ -41,6 +41,11 @@ $( document ).ready(function() {
     $(window).on('scroll',showUpButton);
     $('#upbutton').on('click',goUp);
 
+// hide filter form  :
+    $(document).on('submit','#filterForm',function (e) {
+         $('#hideModal').click();
+    });
+
 });
 
 CalculatorPayback = function (urlAjax, productId,view) {
