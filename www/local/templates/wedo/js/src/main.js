@@ -41,7 +41,27 @@ $( document ).ready(function() {
     $(window).on('scroll',showUpButton);
     $('#upbutton').on('click',goUp);
 
+// hide filter form  :
+    $(document).on('submit','#filterForm',filterHide);
+
+// filter options :
+    $(document).on('change','#cubsOnDay',disableOptions);
 });
+
+function filterHide() {
+    $('#hideModal').click();
+}
+
+function disableOptions(){
+    var options = $('#cubsOnHour').find('option');
+    options.each(function () {
+        if(parseInt($(this).val()) > parseInt($('#cubsOnDay').val())){
+            $(this).prop("disabled", true);
+        }else{
+            $(this).prop("disabled", false);
+        }
+    });
+}
 
 CalculatorPayback = function (urlAjax, productId,view) {
     this.cmServings = $('#cmServings');

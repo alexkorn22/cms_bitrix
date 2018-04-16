@@ -18,7 +18,13 @@ $this->setFrameMode(true);
 	<?=$arResult["NAV_STRING"]?>
 <?endif;?>
 <? $countCMachines = 1 ; $countBanners   = 1 ; ?>
-
+<?if(empty($arResult["ITEMS"])):?>
+    <div>
+        <p>
+            Кофе машина не найдена !
+        </p>
+    </div>
+<?endif;?>
 <!-- first block -->
     <div class="container-fluid catalog">
         <!-- products section -->
