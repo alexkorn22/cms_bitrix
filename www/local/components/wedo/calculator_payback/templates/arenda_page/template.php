@@ -111,7 +111,7 @@ extract($arResult);
         </div>
 </div>
 <div class="comment-table">
-    <p>* Рекомендованное количество порций для данной кофемашины - <span id="recommendedCubsDay"><?=$cmServings?></span> порций в день</p>
+    <p>* Рекомендованное количество порций для данной кофемашины - <span><?=$cmServings?></span> порций в день</p>
 </div>
 
 <script>

@@ -44,7 +44,9 @@ $this->setFrameMode(true);
                     <div class="col-6 order-2 order-lg-1 col-md-6 col-lg-3">
                         <div class="wrap-img">
                             <div class="img-product">
-                                <img src="<?=$arItem["IMG"]["SRC"]?>" alt="<?=$arItem["IMG"]["ALT"]?>" title="<?=$arItem["IMG"]["TITLE"]?>">
+                                <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" onclick="#">
+                                    <img src="<?=$arItem["IMG"]["SRC"]?>" alt="<?=$arItem["IMG"]["ALT"]?>" title="<?=$arItem["IMG"]["TITLE"]?>">
+                                </a>
                             </div>
                         </div>
                     </div>
