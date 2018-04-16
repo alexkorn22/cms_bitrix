@@ -104,6 +104,11 @@
 
   .wrap-social-icons {
     .social-icons {
+      display: flex;
+      display: -webkit-flex;
+      -webkit-justify-content: flex-end;
+      align-items: center;
+      -webkit-align-items: center;
       justify-content: flex-end;
       .phone {
         margin: 0 30px;
@@ -129,7 +134,9 @@
         .social {
           margin: 0 15px;
         }
-
+        .burger-menu {
+          margin-left: 20px;
+        }
       }
     }
   }

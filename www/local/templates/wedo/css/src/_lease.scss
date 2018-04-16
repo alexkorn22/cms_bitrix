@@ -90,7 +90,7 @@
     }
   }
   @include media-breakpoint-down(sm){
-    p {
+    h1 {
       font-size: 40px;
       line-height: 44px;
       padding: 0;
@@ -147,7 +147,8 @@
           }
         }
         input, textarea {
-          width: 300px;
+          max-width: 300px;
+          width: 100%;
         }
       }
     }
