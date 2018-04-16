@@ -45,6 +45,7 @@ $( document ).ready(function() {
     $(document).on('submit','#filterForm',filterHide);
 
 // filter options :
+    $(document).on('click','#modalWindowBtn',disableOptions);
     $(document).on('change','#cubsOnDay',disableOptions);
 });
 

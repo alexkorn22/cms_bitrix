@@ -43,7 +43,7 @@ global $arrFilter;
     <div class="col-12 col-lg-11 text-right">
         <div class="right">
             <div class="catalog-btn-filter">
-                <button type="button" class="btn btn_red btn-sm btn_small-mobile" data-toggle="modal" data-target="#filter">Фильтр</button>
+                <button type="button" class="btn btn_red btn-sm btn_small-mobile" data-toggle="modal" data-target="#filter" id="modalWindowBtn">Фильтр</button>
             </div>
         </div>
     </div>
