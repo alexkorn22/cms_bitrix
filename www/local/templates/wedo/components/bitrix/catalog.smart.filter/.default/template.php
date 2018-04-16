@@ -97,8 +97,8 @@ global $arrFilter;
                                                             size="5"
                                                     />
                                                     <div class="form-group">
-                                                        <label for="select1"><?=$arItem["NAME"]?> : </label>
-                                                        <select class="form-control custom-select" name="<?echo $arItem["VALUES"]["MAX"]["CONTROL_NAME"]?>" id="select1">
+                                                        <label for="cubsOnDay"><?=$arItem["NAME"]?> : </label>
+                                                        <select class="form-control custom-select" name="<?echo $arItem["VALUES"]["MAX"]["CONTROL_NAME"]?>" id="cubsOnDay">
                                                             <option value="5000">Не указано</option>
                                                             <option value="51" <?if($cubsOnDay == 51):?>selected<?endif;?> >до 50</option>
                                                             <option value="101" <?if($cubsOnDay == 101):?>selected<?endif;?> >до 100</option>
@@ -117,8 +117,8 @@ global $arrFilter;
                                                             size="5"
                                                     />
                                                     <div class="form-group">
-                                                        <label for="select2"><?=$arItem["NAME"]?> : </label>
-                                                        <select class="form-control custom-select" name="<?echo $arItem["VALUES"]["MAX"]["CONTROL_NAME"]?>" id="select2">
+                                                        <label for="cubsOnHour"><?=$arItem["NAME"]?> : </label>
+                                                        <select class="form-control custom-select" name="<?echo $arItem["VALUES"]["MAX"]["CONTROL_NAME"]?>" id="cubsOnHour">
                                                             <option value="5000">Не указано</option>
                                                             <option value="51" <?if($cubsOnHour == 51):?>selected<?endif;?> >до 50</option>
                                                             <option value="101" <?if($cubsOnHour == 101):?>selected<?endif;?>>до 100</option>
