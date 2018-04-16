@@ -2,7 +2,6 @@ var breakpointMD =767;
 var ellipsestext = "...";
 var moretext     = "Подробнее";
 var lesstext     = "Скрыть";
-
 $( document ).ready(function() {
     setVideoDimensions();
     loadClientsSlider();
@@ -14,7 +13,6 @@ $( document ).ready(function() {
     validateForm();
     CustomSlideCircle();
     TagsBlog();
-    Preloader();
     var windowWidth = $(window).width();
     var navbarData = startNav();
     $(window).scroll(function(){stickyMenu(navbarData);});
@@ -49,6 +47,8 @@ $( document ).ready(function() {
     $(document).on('change','#cubsOnDay',disableOptions);
 
 });
+
+Preloader();
 
 function filterHide() {
     $('#hideModal').click();
