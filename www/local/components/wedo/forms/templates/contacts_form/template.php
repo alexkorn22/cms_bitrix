@@ -1,4 +1,4 @@
-<div class="form-repair d-none d-lg-block">
+<div class="form-repair">
     <form class="repair repair_bg-red-opacity1 check-valid" novalidate id="formContacts">
         <div class="form-titile">
             <p>Связаться с нами</p>
