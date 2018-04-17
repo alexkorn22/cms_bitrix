@@ -7,7 +7,9 @@
             <? foreach($arResult as $arItem):?>
                 <? if($curPage == $arItem["LINK"]) :?>
                     <li class="item"><a class="menuLink" href="#"><?=$arItem["TEXT"]?></a></li>
-                <? else:?>
+                <? elseif($arItem["LINK"]=='/about/contacts/#service-centers'):?>
+                    <li class="item"><a class="menuLinkService" href="/about/contacts/#service-centers"><?=$arItem["TEXT"]?></a></li>
+                <?else:?>
                     <li class="item"><a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a></li>
                 <?endif;?>
             <?endforeach?>
