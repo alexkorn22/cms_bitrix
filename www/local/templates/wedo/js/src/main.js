@@ -120,8 +120,8 @@ CalculatorPayback = function (urlAjax, productId,view) {
                 if($('#paybackPeriodTable') !== null){ // страница  КМ
 
                     animateValue = Math.round($('#paybackPeriodTable').html());
-                    animateNumbers(animateValue, $("#paybackPeriodTable"),1500);
-                    animateNumbers(animateValue, $('#paybackPeriod'),1500);
+                    animateNumbers(animateValue, $("#paybackPeriodTable"),1000);
+                    animateNumbers(animateValue, $('#paybackPeriod'),1000);
                 }
 
                 animateValue = Math.round($('#monthIncomeTable').html());
