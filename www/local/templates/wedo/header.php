@@ -33,7 +33,9 @@
 	<title><?$APPLICATION->ShowTitle()?></title
 </head>
 <body>
-<div class="preloader"></div>
+<div class="preloader-wrap">
+    <div class="percentage" id="precent"></div>
+</div>
 <div id="main">
 <?$APPLICATION->ShowPanel();?>
 <? if($APPLICATION->GetCurPage() == '/'):?>
