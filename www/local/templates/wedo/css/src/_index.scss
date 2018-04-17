@@ -104,6 +104,11 @@
 
   .wrap-social-icons {
     .social-icons {
+      display: flex;
+      display: -webkit-flex;
+      -webkit-justify-content: flex-end;
+      align-items: center;
+      -webkit-align-items: center;
       justify-content: flex-end;
       .phone {
         margin: 0 30px;
@@ -129,7 +134,9 @@
         .social {
           margin: 0 15px;
         }
-
+        .burger-menu {
+          margin-left: 20px;
+        }
       }
     }
   }
@@ -727,15 +734,83 @@
   }
 }
 
-.preloader {
-  position: fixed;
-  left: 0px;
-  top: 0px;
+.preloader-wrap {
   width: 100%;
   height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
   z-index: 999999;
   background: url(../../images/loader.gif) center no-repeat #fff;
-  background-size: 60px;
+  background-size: 80px;
   text-align: center;
 }
 
+.percentage {
+  z-index: 100;
+  text-align:center;
+  color: $black;
+  line-height: 30px;
+  font-size : 12px;
+}
+
+.loader,
+.percentage{
+  height: 2px;
+  max-width: 250px;
+  //background: rgba($gray, 0.3);
+  font-weight: 300;
+  position: absolute;
+  top: 20%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin : auto;
+}
+.loader:after,
+.percentage:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.trackbar {
+  width: 100%;
+  height: 100%;
+  color: $black;
+  text-align: center;
+  line-height: 10px;
+  overflow: hidden;
+  position: relative;
+  opacity: 0.99;
+}
+
+.loadbar {
+  width: 0%;
+  height: 100%;
+  background: $red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+@keyframes animation {
+  10% {
+    opacity: 0.9;
+  }
+  30% {
+    opacity: 0.86;
+  }
+  60% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.75;
+  }
+}
