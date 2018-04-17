@@ -692,6 +692,9 @@
   left: 0;
   right: 0;
   margin : auto;
+  @include media-breakpoint-down(sm){
+    top: 30%;
+  }
 }
 .loader:after,
 .percentage:after {
