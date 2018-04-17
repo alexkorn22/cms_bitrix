@@ -373,7 +373,7 @@
 //section wmf-cms
 #wmf-cms {
   padding-bottom: 90px;
-  @include media-breakpoint-down(sm){
+  @include media-breakpoint-down(md){
     padding-bottom: 50px;
   }
 
@@ -409,6 +409,11 @@
       max-height: 450px;
       margin: auto;
     }
+    @include media-breakpoint-down(md){
+      img {
+        max-height: 350px;
+      }
+    }
     @include media-breakpoint-down(sm){
       img {
         max-height: 350px;
@@ -443,6 +448,10 @@
     .firm {
       font-family: $Bold;
     }
+    @include media-breakpoint-down(md){
+      font-size: 30px;
+      line-height: 32px;
+    }
     @include media-breakpoint-down(sm){
       font-size: 26px;
       line-height: 28px;
@@ -460,6 +469,9 @@
     font-size: 20px;
     font-family: $Light;
 
+    @include media-breakpoint-down(md){
+      font-size: 18px;
+    }
     @include media-breakpoint-down(sm){
       text-align: center;
     }
