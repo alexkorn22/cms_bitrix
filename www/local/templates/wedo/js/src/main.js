@@ -47,7 +47,11 @@ $( document ).ready(function() {
     $(document).on('change','#cubsOnDay',disableOptions);
 
 // click on menu links at same page :
-    $('.menuLink').on('click',closeMenu);
+    $('.menuLink').on('click',function () {
+        closeMenu();
+        goUp();
+    });
+    $('.menuLinkService').on('click',closeMenu);
 
 });
 
@@ -58,7 +62,6 @@ function closeMenu(){
     $('.container-line-menu').removeClass('open');
     $('.burger').removeClass('open');
     $('.overlay').removeClass('open');
-    goUp();
 }
 
 function filterHide() {
