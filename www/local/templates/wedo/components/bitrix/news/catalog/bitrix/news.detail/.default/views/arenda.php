@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col">
                 <div class="order-consultation">
-                    <button type="button" class="btn btn_red btn_font-small btn_small-mobile">Подробнее об условиях аренды</button>
+                    <a class="btn btn_red btn_font-small btn_small-mobile" href="/lease">Подробнее об условиях аренды</a>
                 </div>
             </div>
         </div>

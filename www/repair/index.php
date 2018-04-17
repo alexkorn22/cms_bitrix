@@ -134,21 +134,6 @@ $APPLICATION->SetTitle("Ремонт");
                 </div>
             </div>
         </div>
-        <div class="slider-clients-repair">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="section-title">
-                        <h2 class="title">Наши клиенты</h2>
-                    </div>
-                </div>
-            </div>
-           <!-- slider of clients -->
-            <?$APPLICATION->IncludeComponent(
-                "wedo:clients",
-                "",
-                Array()
-            );?>
-        </div>
         <div id="scheme-of-work">
             <div class="row justify-content-center">
                 <div class="col-lg-11">
@@ -290,7 +275,7 @@ $APPLICATION->SetTitle("Ремонт");
                         </div>
                         <div class="no-garantee">
                             <p class="title">Кофеавтомат НЕ на гарантии или НЕ обслуживается в Coffee Machine Service?</p>
-                            <p class="descr">Выезд специалиста 450 грн+3 грн/км</p>
+                            <p class="descr">Выезд специалиста от 450 грн. + стоимость доезда</p>
                             <p class="descr">Стоимость ремонта и запчастей - по результатам диагностики</p>
                         </div>
                     </div>
@@ -353,7 +338,6 @@ $APPLICATION->SetTitle("Ремонт");
                             <li>замена всех требуемых узлов, запчастей, деталей</li>
                         </ul>
                         <p class="descr-banner">Гарантия на суперавтомат после капитального ремонта 30000 порций или 1 год.</p>
-                        <p class="descr-banner">Цена - 100 евро + запчасти</p>
                     </div>
                 </div>
             </div>
@@ -408,6 +392,22 @@ $APPLICATION->SetTitle("Ремонт");
 	),
 	false
 );?>
+        </div>
+
+        <div class="slider-clients-repair">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="section-title">
+                        <h2 class="title">Наши клиенты</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- slider of clients -->
+            <?$APPLICATION->IncludeComponent(
+                "wedo:clients",
+                "",
+                Array()
+            );?>
         </div>
     </div>
 

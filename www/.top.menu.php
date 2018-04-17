@@ -9,7 +9,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Аренда", 
-		"/lease/index.php", 
+		"/lease/",
 		Array(), 
 		Array(), 
 		"" 
