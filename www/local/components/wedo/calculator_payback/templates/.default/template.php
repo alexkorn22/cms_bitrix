@@ -73,7 +73,7 @@ extract($arResult);
                                 <div class="wrap-input srok-okupaemosti">
                                     <div class="form-group">
                                         <label for="fild-srok-okupaemosti">Срок окупаемости (месяцев)</label>
-                                        <input type="text" class="form-control custom-input" id="paybackPeriod" value="<?=$paybackPeriod?>">
+                                        <div class="custom-input" id="paybackPeriod"><?=$paybackPeriod?></div>
                                     </div>
                                     <p>
                                         <a class="" data-toggle="collapse" href="#open-table-calculate" role="button" aria-expanded="false" aria-controls="open-table-calculate">
