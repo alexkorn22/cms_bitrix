@@ -5,6 +5,8 @@ var lesstext     = "Скрыть";
 $( document ).ready(function() {
     setVideoDimensions();
     loadClientsSlider();
+    loadBwmf();
+    loadBcms();
     loadProductSlider();
     loadSimilarProductsSlider();
     loadModelForRentSlider ();
@@ -17,8 +19,6 @@ $( document ).ready(function() {
     var navbarData = startNav();
     $(window).scroll(function(){stickyMenu(navbarData);});
     $('.burger').on('click', clickBurger );
-    $( ".block.wmf" ).hover(blockWMFHoverIn,blockWMFHoverOut);
-    $( ".block.cms" ).hover(blockCMSHoverIn,blockCMSHoverOut);
     $(window).on('resize',function() {
         if ($(window).width() != windowWidth) {
             windowWidth = $(window).width();
@@ -252,23 +252,50 @@ function loadClientsSlider(){
     });
 }
 
-function blockWMFHoverIn(){
-    $('.block.wmf').addClass('big-section');
-    $('.block.cms').addClass('small-section');
-}
-function blockWMFHoverOut(){
-    $('.block.wmf').removeClass('big-section');
-    $('.block.cms').removeClass('small-section');
-}
-
-function blockCMSHoverIn(){
-    $('.block.cms').addClass('big-section');
-    $('.block.wmf').addClass('small-section');
-}
-
-function blockCMSHoverOut(){
-    $('.block.cms').removeClass('big-section');
-    $('.block.wmf').removeClass('small-section');
+function loadBwmf(){
+    $('.b-wmf').slick({
+        infinite: true,
+        slidesToShow: 2,
+        speed: 500,
+        autoplay: false,
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+}function loadBcms(){
+    $('.b-cms').slick({
+        infinite: true,
+        slidesToShow: 2,
+        speed: 500,
+        autoplay: false,
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
 }
 
 function startNav(){
