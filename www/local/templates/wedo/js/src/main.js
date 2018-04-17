@@ -117,15 +117,51 @@ CalculatorPayback = function (urlAjax, productId,view) {
             },
             success : function (html) {
                 $("#result").html(html);
-                $('#monthIncome').val( Math.round($('#monthIncomeTable').html()));
-                if($('#paybackPeriodTable') !== null){
-                    $('#paybackPeriod').val( Math.round($('#paybackPeriodTable').html()));
+                if($('#paybackPeriodTable') !== null){ // страница  КМ
+
+                    animateValue = Math.round($('#paybackPeriodTable').html());
+                    animateNumbers(animateValue, $("#paybackPeriodTable"),1000);
+                    animateNumbers(animateValue, $('#paybackPeriod'),1000);
                 }
+
+                animateValue = Math.round($('#monthIncomeTable').html());
+                animateNumbers(animateValue, $("#monthIncomeTable"),1000);
+                animateNumbers(animateValue, $('#monthIncome'),1000);
+
             }
         });
     };
     this.constructor();
 };
+
+function animateNumbers(animateValue,elementSelector,time){
+        var $el = elementSelector,
+            value = animateValue;
+            time = time || 1000 ;
+
+        $({percentage: 0}).stop(true).animate({percentage: value}, {
+            duration : time,
+            easing: "easeOutExpo",
+            step: function () {
+                // percentage with 1 decimal;
+                var percentageVal = Math.round(this.percentage);
+
+                $el.text(percentageVal);
+            }
+        }).promise().done(function () {
+            // hard set the value after animation is done to be
+            // sure the value is correct
+            $el.text(value);
+        });
+
+        setTimeout(function () {
+            $el.animate({color: 'red','font-size':'28px'}, 'slow');
+        },time);
+
+        setTimeout(function () {
+            $el.animate({color: 'black','font-size':'26px'}, 'slow');
+        },time*2)
+}
 
 function loadSimilarProductsSlider (){
     $('.slider-similar-products').slick({

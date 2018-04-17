@@ -90,7 +90,7 @@ extract($arResult);
                     <div class="wrap-input srok-okupaemosti">
                         <div class="form-group">
                             <label for="fild-srok-okupaemosti">Маржинальный доход в месяц (грн)</label>
-                            <input type="text" class="form-control custom-input" id="monthIncome" value="<?=$arResult['marga']?>">
+                            <div class="custom-input" id="monthIncome"><?=$arResult['marga']?></div>
                         </div>
                         <p>
                             <a class="" data-toggle="collapse" href="#open-table-calculate" role="button" aria-expanded="false" aria-controls="open-table-calculate">
