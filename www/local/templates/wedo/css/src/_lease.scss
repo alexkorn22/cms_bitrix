@@ -55,18 +55,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 10%;
+  padding: 10% 0;
 }
 
 .title-lease, .title-repair {
   @include media-breakpoint-down(md){
-    padding-top: 25%;
+    padding: 25% 0 0 0;
   }
 }
 
 .form-lease, .form-repair {
   @include media-breakpoint-down(md){
-    padding-top: 10%;
+    padding: 10% 0 0 0;
   }
 }
 
@@ -90,7 +90,7 @@
     }
   }
   @include media-breakpoint-down(sm){
-    p {
+    h1 {
       font-size: 40px;
       line-height: 44px;
       padding: 0;
@@ -147,7 +147,8 @@
           }
         }
         input, textarea {
-          width: 300px;
+          max-width: 300px;
+          width: 100%;
         }
       }
     }

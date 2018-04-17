@@ -97,36 +97,6 @@ $APPLICATION->SetTitle("Аренда");
 			</div>
 		</div>
 
-		<div id="models-for-rent">
-			<div class="row justify-content-center">
-				<div class="col-lg-10">
-					<div class="section-title">
-						<h2 class="title">Мы предлагаем самые востребованные кофемашины в аренду </h2>
-					</div>
-				</div>
-			</div>
-
-            <!-- popular cms -->
-
-            <?$APPLICATION->IncludeComponent(
-                "wedo:popular_cm",
-                ".default",
-                array(
-                    "COMPONENT_TEMPLATE" => ".default",
-                    "IBLOCK_ID" => App::$config->coffeeMachineIblockId,
-                ),
-                false
-            );?>
-            
-			<div class="row">
-				<div class="col">
-					<div class="descr-model-for-rent">
-						<p>Профессиональная кофемашина в аренду должна полностью отвечать задачам вашего бизнеса, приносить прибыль и минимизировать затраты. Наши консультанты подберут комплектацию, учитывающую эти требования.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
 		<div id="rent-terms">
 			<div class="row justify-content-center">
 				<div class="col-lg-10">
@@ -187,10 +157,6 @@ $APPLICATION->SetTitle("Аренда");
                 "PRODUCT_ID" => 0
             )
         );?>
-        <div class="comment-table">
-            <p>* Рекомендованные значения для данной модели кофемашины</p>
-        </div>
-
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="form-lease">

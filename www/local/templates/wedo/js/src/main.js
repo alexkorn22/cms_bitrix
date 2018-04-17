@@ -2,10 +2,11 @@ var breakpointMD =767;
 var ellipsestext = "...";
 var moretext     = "Подробнее";
 var lesstext     = "Скрыть";
-
 $( document ).ready(function() {
     setVideoDimensions();
     loadClientsSlider();
+    loadBwmf();
+    loadBcms();
     loadProductSlider();
     loadSimilarProductsSlider();
     loadModelForRentSlider ();
@@ -14,13 +15,10 @@ $( document ).ready(function() {
     validateForm();
     CustomSlideCircle();
     TagsBlog();
-    Preloader();
     var windowWidth = $(window).width();
     var navbarData = startNav();
     $(window).scroll(function(){stickyMenu(navbarData);});
     $('.burger').on('click', clickBurger );
-    $( ".block.wmf" ).hover(blockWMFHoverIn,blockWMFHoverOut);
-    $( ".block.cms" ).hover(blockCMSHoverIn,blockCMSHoverOut);
     $(window).on('resize',function() {
         if ($(window).width() != windowWidth) {
             windowWidth = $(window).width();
@@ -41,7 +39,47 @@ $( document ).ready(function() {
     $(window).on('scroll',showUpButton);
     $('#upbutton').on('click',goUp);
 
+// hide filter form  :
+    $(document).on('submit','#filterForm',filterHide);
+
+// filter options :
+    $(document).on('click','#modalWindowBtn',disableOptions);
+    $(document).on('change','#cubsOnDay',disableOptions);
+
+// click on menu links at same page :
+    $('.menuLink').on('click',function () {
+        closeMenu();
+        goUp();
+    });
+    $('.menuLinkService').on('click',closeMenu);
+
 });
+
+Preloader();
+
+function closeMenu(){
+    $('.top-fixed-line').removeClass('open');
+    $('.container-line-menu').removeClass('open');
+    $('.burger').removeClass('open');
+    $('.overlay').removeClass('open');
+}
+
+function filterHide() {
+    $('#hideModal').click();
+}
+
+function disableOptions(){
+    var options = $('#cubsOnHour').find('option');
+    options.each(function () {
+        if(parseInt($(this).val()) > parseInt($('#cubsOnDay').val())){
+            if(parseInt($(this).val()) !== 5000){
+                $(this).prop("disabled", true);
+            }
+        }else{
+            $(this).prop("disabled", false);
+        }
+    });
+}
 
 CalculatorPayback = function (urlAjax, productId,view) {
     this.cmServings = $('#cmServings');
@@ -60,6 +98,8 @@ CalculatorPayback = function (urlAjax, productId,view) {
 
     this.changeProduct = function (e) {
         self.cmServings.val( self.productId.find(':selected').data('servings'));
+        // поменять Рекомендованное количество порций
+        $('#recommendedCubsDay').html(self.productId.find(':selected').data('servings'));
         self.changeValue(e)
     };
 
@@ -77,15 +117,51 @@ CalculatorPayback = function (urlAjax, productId,view) {
             },
             success : function (html) {
                 $("#result").html(html);
-                $('#monthIncome').val( Math.round($('#monthIncomeTable').html()));
-                if($('#paybackPeriodTable') !== null){
-                    $('#paybackPeriod').val( Math.round($('#paybackPeriodTable').html()));
+                if($('#paybackPeriodTable') !== null){ // страница  КМ
+
+                    animateValue = Math.round($('#paybackPeriodTable').html());
+                    animateNumbers(animateValue, $("#paybackPeriodTable"),1000);
+                    animateNumbers(animateValue, $('#paybackPeriod'),1000);
                 }
+
+                animateValue = Math.round($('#monthIncomeTable').html());
+                animateNumbers(animateValue, $("#monthIncomeTable"),1000);
+                animateNumbers(animateValue, $('#monthIncome'),1000);
+
             }
         });
     };
     this.constructor();
 };
+
+function animateNumbers(animateValue,elementSelector,time){
+        var $el = elementSelector,
+            value = animateValue;
+            time = time || 1000 ;
+
+        $({percentage: 0}).stop(true).animate({percentage: value}, {
+            duration : time,
+            easing: "easeOutExpo",
+            step: function () {
+                // percentage with 1 decimal;
+                var percentageVal = Math.round(this.percentage);
+
+                $el.text(percentageVal);
+            }
+        }).promise().done(function () {
+            // hard set the value after animation is done to be
+            // sure the value is correct
+            $el.text(value);
+        });
+
+        setTimeout(function () {
+            $el.animate({color: 'red','font-size':'28px'}, 'slow');
+        },time);
+
+        setTimeout(function () {
+            $el.animate({color: 'black','font-size':'26px'}, 'slow');
+        },time*2)
+}
 
 function loadSimilarProductsSlider (){
     $('.slider-similar-products').slick({
@@ -212,23 +288,50 @@ function loadClientsSlider(){
     });
 }
 
-function blockWMFHoverIn(){
-    $('.block.wmf').addClass('big-section');
-    $('.block.cms').addClass('small-section');
-}
-function blockWMFHoverOut(){
-    $('.block.wmf').removeClass('big-section');
-    $('.block.cms').removeClass('small-section');
-}
-
-function blockCMSHoverIn(){
-    $('.block.cms').addClass('big-section');
-    $('.block.wmf').addClass('small-section');
-}
-
-function blockCMSHoverOut(){
-    $('.block.cms').removeClass('big-section');
-    $('.block.wmf').removeClass('small-section');
+function loadBwmf(){
+    $('.b-wmf').slick({
+        infinite: true,
+        slidesToShow: 2,
+        speed: 500,
+        autoplay: false,
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+}function loadBcms(){
+    $('.b-cms').slick({
+        infinite: true,
+        slidesToShow: 2,
+        speed: 500,
+        autoplay: false,
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
 }
 
 function startNav(){
@@ -491,8 +594,54 @@ function TagsBlog() {
 
 function Preloader() {
     $(window).on('load', function () {
-        var $preloader = $('.preloader');
-        $preloader.delay(400).fadeOut('slow');
+
+
+        var width = 100,
+            perfData = window.performance.timing, // The PerformanceTiming interface represents timing-related performance information for the given page.
+            EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart),
+            time = parseInt((EstimatedTime/1000)%60)*20;
+
+// Loadbar Animation
+        $(".loadbar").animate({
+            width: width + "%"
+        }, time);
+
+        // Loadbar Glow Animation
+        $(".glow").animate({
+            width: width + "%"
+        }, time);
+
+
+// Percentage Increment Animation
+        var PercentageID = $("#precent"),
+            start = 0,
+            end = 100,
+            durataion = time;
+        animateValue(PercentageID, start, end, durataion);
+
+        function animateValue(id, start, end, duration) {
+
+            var range = end - start,
+                current = start,
+                increment = end > start? 1 : -1,
+                stepTime = Math.abs(Math.floor(duration / range)),
+                obj = $(id);
+
+            var timer = setInterval(function() {
+                current += increment;
+                $(obj).text(current + "%");
+                //obj.innerHTML = current;
+                if (current == end) {
+                    clearInterval(timer);
+                }
+            }, stepTime);
+        }
+
+// Fading Out Loadbar on Finised
+        setTimeout(function(){
+            $('.preloader-wrap').fadeOut(300);
+        }, time);
+
     });
 }
 

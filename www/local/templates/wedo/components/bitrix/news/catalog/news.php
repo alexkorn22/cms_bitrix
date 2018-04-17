@@ -36,7 +36,7 @@ $APPLICATION->IncludeComponent(
         "IBLOCK_TYPE" => "catalogs",
         "PAGER_PARAMS_NAME" => "arrPager",
         "POPUP_POSITION" => "left",
-        "SAVE_IN_SESSION" => "N",
+        "SAVE_IN_SESSION" => "Y",
         "SECTION_CODE" => "",
         "SECTION_CODE_PATH" => "",
         "SECTION_DESCRIPTION" => "-",
