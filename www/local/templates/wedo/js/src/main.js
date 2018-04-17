@@ -5,6 +5,8 @@ var lesstext     = "Скрыть";
 $( document ).ready(function() {
     setVideoDimensions();
     loadClientsSlider();
+    loadBwmf();
+    loadBcms();
     loadProductSlider();
     loadSimilarProductsSlider();
     loadModelForRentSlider ();
@@ -243,6 +245,52 @@ function loadClientsSlider(){
             // You can unslick at a given breakpoint now by adding:
             // settings: "unslick"
             // instead of a settings object
+        ]
+    });
+}
+
+function loadBwmf(){
+    $('.b-wmf').slick({
+        infinite: true,
+        slidesToShow: 2,
+        speed: 500,
+        autoplay: false,
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+}function loadBcms(){
+    $('.b-cms').slick({
+        infinite: true,
+        slidesToShow: 2,
+        speed: 500,
+        autoplay: false,
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
         ]
     });
 }
