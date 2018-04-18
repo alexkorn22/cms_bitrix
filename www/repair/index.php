@@ -363,7 +363,6 @@ $APPLICATION->SetTitle("Ремонт");
 
     <!--Modal order-consultation-->
     <div class="modal fade" id="order-diagnostics" tabindex="-1" role="dialog" aria-labelledby="order-diagnostics" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered custom-modal-dialog" role="document">
                 <?
                 $APPLICATION->IncludeComponent(
                     "wedo:forms",
@@ -373,7 +372,6 @@ $APPLICATION->SetTitle("Ремонт");
                     )
                 );
                 ?>
-        </div>
     </div>
 
 
