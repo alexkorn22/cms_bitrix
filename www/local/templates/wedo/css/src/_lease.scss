@@ -104,6 +104,7 @@
 .form-lease, .form-repair {
   form.lease, form.repair {
     width: 430px;
+    min-width: 430px;
     padding: 30px 40px;
     border-radius: 4px;
     box-shadow: 2px 5px 7px 0 rgba($black, 0.3);

@@ -29,7 +29,9 @@ $APPLICATION->SetTitle("Ремонт");
                     $APPLICATION->IncludeComponent(
                         "wedo:forms",
                         "repair_form",
-                        Array()
+                        Array(
+                            "form"=>"first"
+                        )
                     );
                     ?>
                     <div class="btn-order d-block d-lg-none">
@@ -260,7 +262,7 @@ $APPLICATION->SetTitle("Ремонт");
                         "wedo:forms",
                         "repair_form",
                         Array(
-                            'background'=>'red'
+                            'form'=>'second'
                         )
                     );
                     ?>
@@ -363,15 +365,21 @@ $APPLICATION->SetTitle("Ремонт");
 
     <!--Modal order-consultation-->
     <div class="modal fade" id="order-diagnostics" tabindex="-1" role="dialog" aria-labelledby="order-diagnostics" aria-hidden="true">
-                <?
-                $APPLICATION->IncludeComponent(
-                    "wedo:forms",
-                    "repair_form",
-                    Array(
-                        'background'=>'red'
-                    )
-                );
-                ?>
+        <div class="modal-dialog" role="document">
+            <div class="modal-repair">
+                <div class="modal-content">
+                    <?
+                    $APPLICATION->IncludeComponent(
+                        "wedo:forms",
+                        "repair_form",
+                        Array(
+                            'form'=>'modal'
+                        )
+                    );
+                    ?>
+                </div>
+            </div>
+        </div>
     </div>
 
 

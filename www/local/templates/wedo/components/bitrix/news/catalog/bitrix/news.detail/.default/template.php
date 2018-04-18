@@ -92,7 +92,7 @@ $isRent         = $arResult['PROPERTIES']['RENT']['VALUE_XML_ID'] == 'RENT_TRUE'
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form class="consultation" novalidate>
+            <form class="consultation">
                 <div class="modal-body custom-modal-body">
                     <div class="form-group">
                         <input type="text" class="form-control custom-input" id="name" placeholder="Имя" required>

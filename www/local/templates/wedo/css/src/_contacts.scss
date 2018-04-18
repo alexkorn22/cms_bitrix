@@ -108,3 +108,24 @@
   }
 }
 
+#thankMessage{
+  text-align: center;
+  width: 100%;
+  img{
+    margin-bottom: 20px;
+  }
+  p{
+    font-size: 20px;
+    color: $white;
+  }
+}
+
+[id*="_msg"]{
+  width: 100%;
+  position: absolute;
+  display: none;
+  left: 43%;
+  top: 30%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%)
+}

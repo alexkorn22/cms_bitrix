@@ -97,7 +97,9 @@ $APPLICATION->AddChainItem("Контакты", "/about/contacts");
                     $APPLICATION->IncludeComponent(
                         "wedo:forms",
                         "contacts_form",
-                        Array()
+                        Array(
+                            "form"=>"contacts_form"
+                        )
                     );
                     ?>
 		</div>
