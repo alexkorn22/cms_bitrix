@@ -1,6 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Кофемашины");
+$APPLICATION->SetPageProperty("title", "Профессиональные кофемашины WMF | Coffee Machine Service");
+$APPLICATION->SetTitle("Кофемашины ");
 ?><section id="cards-section">
 <div class="container-fluid">
 	<div class="row justify-content-center">
