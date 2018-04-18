@@ -30,7 +30,7 @@
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH .'/js/dist/main.js');
 
     ?>
-	<title><?$APPLICATION->ShowTitle()?></title
+	<title><?$APPLICATION->ShowTitle()?></title>
 </head>
 <body>
 <div class="preloader-wrap">
