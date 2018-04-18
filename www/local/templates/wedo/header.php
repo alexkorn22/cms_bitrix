@@ -15,8 +15,8 @@
     // CSS
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/libs/bootstrap/bootstrap.min.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/libs/jqueryui/jquery-ui.min.css');
-    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/libs/slick/slick.css');
-    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/libs/slick/slick-theme.css');
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/libs/slick/slick.min.css');
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/libs/slick/slick-theme.min.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/dist/main.css');
 
     if (App::$config->debug) {
