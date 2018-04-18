@@ -68,7 +68,7 @@ $( document ).ready(function() {
             },
             success: function (html) {
                 $('#'+formId+'_msg').css('display','block');
-                $("#content"+formId).css('opacity','.1');
+                $("#content"+formId).css('opacity','.0');
                 // disable inputs
                 $("#"+formId+" :input").prop('readonly', true);
                 $("#"+formId+" :submit").prop('disabled', true);
