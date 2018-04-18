@@ -367,6 +367,10 @@
       }
     }
   }
+
+  @include media-breakpoint-down(sm){
+    padding-top: 90px;
+  }
 }
 //END cards-section
 
