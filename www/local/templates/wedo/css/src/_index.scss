@@ -624,6 +624,9 @@
 }
 .slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
   background: $white;
+  @include media-breakpoint-down(sm){
+    background: transparent;
+  }
 }
 //конец стрелочки на слайдере
 //END clients-slider
