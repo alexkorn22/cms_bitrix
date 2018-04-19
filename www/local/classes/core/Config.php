@@ -17,6 +17,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
  * @property string youtubeLink;
  * @property string apiKeyMainOfficeMap;
  * @property string apiKeyOtherOfficesMap;
+ * @property string telegramChatId;
+ * @property string telegramToken;
  * @property array officesList;
  * @property array mainOffice;
  */
@@ -25,6 +27,8 @@ class Config
     protected $data = [];
     public $debug = false;
     protected $default = [
+        'telegramChatId' =>'',
+        'telegramToken' =>'',
         'coffeeMachineIblockId' => 12,
         'newsIblockId' => 13,
         'pricesHighBlockId' => 1,

@@ -12,25 +12,25 @@
                         </div>
                         <div class="modal-body custom-modal-body">
                             <div class="form-group">
-                                <input type="text" class="form-control custom-input" id="name3" placeholder="Имя" required>
+                                <input type="text" class="form-control custom-input" id="name3" name="userName" placeholder="Имя" required>
                                 <div class="invalid-feedback">
                                     Вы не указали имя!
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control custom-input" id="phone3" placeholder="Телефон" required>
+                                <input type="text" class="form-control custom-input" id="phone3" name="phone" placeholder="Телефон" required>
                                 <div class="invalid-feedback">
                                     Вы не указали телефон!
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control custom-input" id="city3" placeholder="Город" required>
+                                <input type="text" class="form-control custom-input" id="city3" name="city" placeholder="Город" required>
                                 <div class="invalid-feedback">
                                     Вы не указали город!
                                 </div>
                             </div>
                             <div class="form-group custom-form-group">
-                                <textarea class="form-control custom-textarea" id="comment3" rows="3" placeholder="Комментарий"></textarea>
+                                <textarea class="form-control custom-textarea" id="comment3" name="comment" rows="3" placeholder="Комментарий"></textarea>
                             </div>
                         </div>
                         <div class="modal-footer custom-modal-footer">

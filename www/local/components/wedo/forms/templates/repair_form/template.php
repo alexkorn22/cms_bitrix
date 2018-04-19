@@ -20,13 +20,13 @@
                         </div>
                     </div>
                     <div class="form-group custom-form-group">
-                        <input type="text" class="form-control custom-input" id="city" placeholder="Город" required>
+                        <input type="text" class="form-control custom-input" name="city" id="city" placeholder="Город" required>
                         <div class="invalid-feedback">
                             Вы не указали город!
                         </div>
                     </div>
                     <div class="form-group custom-form-group">
-                        <textarea class="form-control custom-textarea" id="comment" rows="3" placeholder="Комментарий"></textarea>
+                        <textarea class="form-control custom-textarea" id="comment" name="comment" rows="3" placeholder="Комментарий"></textarea>
                     </div>
                 </div>
                 <div class="form-footer">
@@ -57,13 +57,13 @@
                         </div>
                     </div>
                     <div class="form-group custom-form-group">
-                        <input type="text" class="form-control custom-input" id="city" placeholder="Город" required>
+                        <input type="text" class="form-control custom-input" id="city" name="city" placeholder="Город" required>
                         <div class="invalid-feedback">
                             Вы не указали город!
                         </div>
                     </div>
                     <div class="form-group custom-form-group">
-                        <textarea class="form-control custom-textarea" id="comment" rows="3" placeholder="Комментарий"></textarea>
+                        <textarea class="form-control custom-textarea" id="comment" rows="3" name="comment" placeholder="Комментарий"></textarea>
                     </div>
                 </div>
                 <div class="form-footer">

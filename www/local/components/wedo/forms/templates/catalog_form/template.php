@@ -17,19 +17,19 @@
                     </div>
                     <div class="modal-body custom-modal-body">
                         <div class="form-group">
-                            <input type="text" class="form-control custom-input" id="name" placeholder="Имя" required>
+                            <input type="text" class="form-control custom-input" id="name" name="userName" placeholder="Имя" required>
                             <div class="invalid-feedback">
                                 Вы не указали имя!
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control custom-input" id="phone" placeholder="Телефон" required>
+                            <input type="text" class="form-control custom-input" id="phone" name="phone" placeholder="Телефон" required>
                             <div class="invalid-feedback">
                                 Вы не указали телефон!
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control custom-input" id="city" placeholder="Город" required>
+                            <input type="text" class="form-control custom-input" id="city" placeholder="Город" name="city" required>
                             <div class="invalid-feedback">
                                 Вы не указали город!
                             </div>

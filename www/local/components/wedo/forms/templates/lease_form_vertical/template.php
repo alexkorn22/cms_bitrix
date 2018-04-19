@@ -7,25 +7,25 @@
             </div>
             <div class="form-content">
                 <div class="form-group custom-form-group">
-                    <input type="text" class="form-control custom-input" id="name" placeholder="Имя" required>
+                    <input type="text" class="form-control custom-input" id="name" name="userName" placeholder="Имя" required>
                     <div class="invalid-feedback">
                         Вы не указали имя!
                     </div>
                 </div>
                 <div class="form-group custom-form-group">
-                    <input type="text" class="form-control custom-input" id="phone" placeholder="Телефон" required>
+                    <input type="text" class="form-control custom-input" id="phone" name="phone" placeholder="Телефон" required>
                     <div class="invalid-feedback">
                         Вы не указали телефон!
                     </div>
                 </div>
                 <div class="form-group custom-form-group">
-                    <input type="text" class="form-control custom-input" id="city" placeholder="Город" required>
+                    <input type="text" class="form-control custom-input" id="city" name="city" placeholder="Город" required>
                     <div class="invalid-feedback">
                         Вы не указали город!
                     </div>
                 </div>
                 <div class="form-group custom-form-group">
-                    <textarea class="form-control custom-textarea" id="comment" rows="3" placeholder="Комментарий"></textarea>
+                    <textarea class="form-control custom-textarea" id="comment" rows="3" name="comment" placeholder="Комментарий"></textarea>
                 </div>
             </div>
             <div class="form-footer">
