@@ -563,7 +563,6 @@ function TagsBlog() {
         availableSpace = $vlinks.width() - 10;
         numOfVisibleItems = $vlinks.children().length;
         requiredSpace = breakWidths[numOfVisibleItems - 1];
-
         // Not enough space
         if (requiredSpace > availableSpace) {
             $vlinks.children().last().prependTo($hlinks);
