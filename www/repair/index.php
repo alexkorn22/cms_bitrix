@@ -364,23 +364,15 @@ $APPLICATION->SetTitle("Ремонт");
     </div>
 
     <!--Modal order-consultation-->
-    <div class="modal fade" id="order-diagnostics" tabindex="-1" role="dialog" aria-labelledby="order-diagnostics" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-repair">
-                <div class="modal-content">
-                    <?
-                    $APPLICATION->IncludeComponent(
-                        "wedo:forms",
-                        "repair_form",
-                        Array(
-                            'form'=>'modal'
-                        )
-                    );
-                    ?>
-                </div>
-            </div>
-        </div>
-    </div>
+        <?
+        $APPLICATION->IncludeComponent(
+            "wedo:forms",
+            "repair_form",
+            Array(
+                'form'=>'modal'
+            )
+        );
+        ?>
 
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
