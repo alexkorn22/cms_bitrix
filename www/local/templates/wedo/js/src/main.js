@@ -54,7 +54,6 @@ $( document ).ready(function() {
     $('.menuLinkService').on('click',closeMenu);
 
 // forms handeling :
-
  $('form').on('submit', function (e) {
     e.preventDefault();
     var formData = $(this).serializeArray();
@@ -66,7 +65,7 @@ $( document ).ready(function() {
                 action:'formSubmit',
                 data : formData
             },
-            success: function (html) {
+            success: function () {
                 $("#content"+formId).css('opacity','0');
                 $('#'+formId+'_loader').fadeIn(1000).fadeOut(1500);
                 setTimeout(function(){
@@ -76,6 +75,7 @@ $( document ).ready(function() {
             }
         });
  });
+
 
 });
 

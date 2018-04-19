@@ -27,7 +27,7 @@ $APPLICATION->SetTitle("Аренда");
 				<div class="col-lg-6 col-xl-5">
                     <?$APPLICATION->IncludeComponent(
                         "wedo:forms",
-                        "lease_form",
+                        "lease_form_vertical",
                         Array(
                             "form"=>"vertical"
                         )
@@ -132,7 +132,7 @@ $APPLICATION->SetTitle("Аренда");
             <div class="col-lg-8">
                 <? $APPLICATION->IncludeComponent(
                         "wedo:forms",
-                        "lease_form",
+                        "lease_form_horizontal",
                         Array(
                             "form"=>'horizontal'
                         )
@@ -166,7 +166,7 @@ $APPLICATION->SetTitle("Аренда");
 	</div>
     <?$APPLICATION->IncludeComponent(
         "wedo:forms",
-        "lease_form",
+        "lease_form_modal",
         Array(
            "form"=>"modal"
         )

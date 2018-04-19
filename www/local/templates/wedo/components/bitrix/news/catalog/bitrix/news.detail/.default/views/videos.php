@@ -47,10 +47,20 @@
                 <? endforeach; ?>
             </div>
         </div>
+        <!-- include component modal-->
         <div class="row">
             <div class="col">
                 <div class="order-consultation">
-                    <button type="button" class="btn btn_black btn_small-mobile" data-toggle="modal" data-target="#order-consultation">Заказать консультацию</button>
+                    <?
+                    $APPLICATION->IncludeComponent(
+                        "wedo:forms",
+                        "catalog_form",
+                        Array(
+                            'form' => 'modalVideo',
+                            'btnColor' =>'black'
+                        )
+                    );
+                    ?>
                 </div>
             </div>
         </div>

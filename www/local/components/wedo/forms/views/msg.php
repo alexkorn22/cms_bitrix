@@ -1,10 +1,16 @@
 <div id="<?=$arParams['form']?>_msg">
+    <?
+        $clockImgSrc = IMAGES_PATH.'/clock.png';
+        if($arParams['form'] == 'vertical' ||$arParams['form'] == 'horizontal' ){
+            $clockImgSrc = IMAGES_PATH.'/clockWhite.png';
+        }
+    ?>
     <div id="thankMessage">
-        <img src="<?= IMAGES_PATH ?>/clock.png" class="contacts-icons" alt="">
-        <p>Спасибо, мы свяжемся <br>с вами в течения <br>рабочего дня</p>
+        <img src="<?=$clockImgSrc?>" class="contacts-icons" alt="">
+        <p>Спасибо, мы свяжемся <br>с вами в течении <br>рабочего дня</p>
     </div>
 </div>
 
 <div id="<?=$arParams['form']?>_loader">
-    <img class="imgLoader" src="<?=IMAGES_PATH?>/loader.png">
+    <div class="loader"></div>
 </div>

@@ -367,12 +367,13 @@ $APPLICATION->SetTitle("Ремонт");
         <?
         $APPLICATION->IncludeComponent(
             "wedo:forms",
-            "repair_form",
+            "repair_form_modal",
             Array(
                 'form'=>'modal'
             )
         );
         ?>
+
 
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
