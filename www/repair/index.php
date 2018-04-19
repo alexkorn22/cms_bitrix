@@ -1,7 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Ремонт");
-$name=1;
+$modalNumber=1;
 ?>
 
     <div class="head-banner head-banner_repair">
@@ -138,7 +138,7 @@ $name=1;
                                     <p>Заполните заявку, и мы свяжемся с Вами для решения проблемы.</p>
                                 </div>
                                 <div class="footer">
-                                    <a href="#<?=$name?>order-diagnostics" data-toggle="modal" data-target="#<?=$name?>order-diagnostics" role="button">Заказать диагностику</a><? $name++;?>
+                                    <a href="#<?=$modalNumber?>order-diagnostics" data-toggle="modal" data-target="#<?=$modalNumber?>order-diagnostics" role="button">Заказать диагностику</a><? $modalNumber++;?>
                                 </div>
                                 <a class="right-arrow-circle">
                                     <img src="<?=IMAGES_PATH?>/icons/btn-arrow-right.png" alt="Right">
@@ -189,7 +189,7 @@ $name=1;
                                     <p>Мы обеспечим ежемесячную поддержку и контроль работы кофеавтомата у вас на месте после проведенного ремонта. Сервис включает в себя визит техников 1-2 раза в месяц, проверку и настройку технических/технологических параметров и датчиков, текущий ремонт кофемашины согласно рекомендаций производителя.</p>
                                 </div>
                                 <div class="footer">
-                                    <a href="#<?=$name?>order-diagnostics" data-toggle="modal" data-target="#<?=$name?>order-diagnostics" role="button">Заказать диагностику</a><? $name++;?>
+                                    <a href="#<?=$modalNumber?>order-diagnostics" data-toggle="modal" data-target="#<?=$modalNumber?>order-diagnostics" role="button">Заказать диагностику</a><? $modalNumber++;?>
                                 </div>
                                 <a class="left-arrow-circle">
                                     <img src="<?=IMAGES_PATH?>/icons/btn-arrow-left.png" alt="Left">
@@ -220,7 +220,7 @@ $name=1;
                 <div class="tab-pane content-tabs-mobile fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-home-tab">
                     <p class="title">Заявка на диагностику</p>
                     <p class="descr">Заполните заявку, и мы свяжемся с Вами для решения проблемы.</p>
-                    <a href="#<?=$name?>order-diagnostics" data-toggle="modal" data-target="#<?=$name?>order-diagnostics" role="button">Заказать диагностику</a><? $name++;?>
+                    <a href="#<?=$modalNumber?>order-diagnostics" data-toggle="modal" data-target="#<?=$modalNumber?>order-diagnostics" role="button">Заказать диагностику</a><? $modalNumber++;?>
                 </div>
                 <div class="tab-pane content-tabs-mobile fade" id="pills-2" role="tabpanel" aria-labelledby="pills-profile-tab">
                     <p class="title">Диагностика</p>
@@ -233,7 +233,7 @@ $name=1;
                 <div class="tab-pane content-tabs-mobile fade" id="pills-4" role="tabpanel" aria-labelledby="pills-contact-tab">
                     <p class="title">Сервисное обслуживание</p>
                     <p class="descr">Мы обеспечим ежемесячную поддержку и контроль работы кофеавтомата у вас на месте после проведенного ремонта. Сервис включает в себя визит техников 1-2 раза в месяц, проверку и настройку технических/технологических параметров и датчиков, текущий ремонт кофемашины согласно рекомендаций производителя.</p>
-                    <a href="#<?=$name?>order-diagnostics" data-toggle="modal" data-target="#<?=$name?>order-diagnostics" role="button">Заказать диагностику</a><? $name++;?>
+                    <a href="#<?=$modalNumber?>order-diagnostics" data-toggle="modal" data-target="#<?=$modalNumber?>order-diagnostics" role="button">Заказать диагностику</a><? $modalNumber++;?>
                 </div>
             </div>
         </div>
@@ -370,7 +370,7 @@ $name=1;
         </div>
     </div>
         <?
-           for ($i=1; $i<=$name ; $i++){
+           for ($i=1; $i<=$modalNumber ; $i++){
                $APPLICATION->IncludeComponent(
                    "wedo:forms",
                    "repair_form_modal",
