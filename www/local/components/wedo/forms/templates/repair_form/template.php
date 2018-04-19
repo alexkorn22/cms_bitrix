@@ -1,6 +1,6 @@
 <? if($arParams['form'] == 'first'):?>
     <div class="form-repair d-none d-lg-block">
-        <form class="repair repair_bg-red<?if($arParams['form']=='second' || $arParams['form']=='modal' ):?>-opacity1<?endif;?> check-valid"  id="<?=$arParams['form']?>">
+        <form class="repair repair_bg-red check-valid"  id="<?=$arParams['form']?>">
             <? require $_SERVER["DOCUMENT_ROOT"].'/local/components/wedo/forms/views/msg.php';?>
             <div id="content<?=$arParams['form']?>">
                 <div class="form-titile">
@@ -37,7 +37,7 @@
     </div>
 <? elseif ($arParams['form'] == 'second'):?>
     <div class="form-repair d-none d-lg-block">
-        <form class="repair repair_bg-red<?if($arParams['form']=='second' || $arParams['form']=='modal' ):?>-opacity1<?endif;?> check-valid"  id="<?=$arParams['form']?>">
+        <form class="repair repair_bg-red-opacity1 check-valid"  id="<?=$arParams['form']?>">
             <? require $_SERVER["DOCUMENT_ROOT"].'/local/components/wedo/forms/views/msg.php';?>
             <div id="content<?=$arParams['form']?>">
                 <div class="form-titile">
@@ -74,7 +74,7 @@
     </div>
 <?else: ?>
     <div class="form-repair d-none d-lg-block">
-        <form class="repair repair_bg-red<?if($arParams['form']=='second' || $arParams['form']=='modal' ):?>-opacity1<?endif;?> check-valid"  id="<?=$arParams['form']?>">
+        <form class="repair repair_bg-red-opacity1 check-valid"  id="<?=$arParams['form']?>">
             <? require $_SERVER["DOCUMENT_ROOT"].'/local/components/wedo/forms/views/msg.php';?>
             <div id="content<?=$arParams['form']?>">
                 <div class="form-titile">

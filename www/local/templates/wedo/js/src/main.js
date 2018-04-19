@@ -67,11 +67,12 @@ $( document ).ready(function() {
                 data : formData
             },
             success: function (html) {
-                $('#'+formId+'_msg').css('display','block');
-                $("#content"+formId).css('opacity','.0');
-                // disable inputs
-                $("#"+formId+" :input").prop('readonly', true);
-                $("#"+formId+" :submit").prop('disabled', true);
+                $("#content"+formId).css('opacity','0');
+                $('#'+formId+'_loader').fadeIn(1000).fadeOut(1500);
+                setTimeout(function(){
+                    $('#'+formId+'_msg').fadeIn(2500);
+                },1500);
+                $("#"+formId+" :input").prop('disabled', true);
             }
         });
  });

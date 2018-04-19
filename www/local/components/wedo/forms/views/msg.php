@@ -4,3 +4,7 @@
         <p>Спасибо, мы свяжемся <br>с вами в течения <br>рабочего дня</p>
     </div>
 </div>
+
+<div id="<?=$arParams['form']?>_loader">
+    <img class="imgLoader" src="<?=IMAGES_PATH?>/loader.png">
+</div>

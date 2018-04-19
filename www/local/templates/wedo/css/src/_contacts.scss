@@ -130,3 +130,17 @@
   display: none;
   position: absolute;
 }
+
+[id*="_loader"]{
+  left: 0;
+  right: 0;
+  top:30%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 122px;
+  display: none;
+  position: absolute;
+  .imgLoader{
+    width: 100px;
+  }
+}
