@@ -62,12 +62,15 @@ $( document ).ready(function() {
             type: 'POST',
             url: '/local/components/wedo/forms/ajax.php',
             data: formData,
-            success: function () {
+            beforeSend:function () {
                 $("#content"+formId).css('opacity','0');
-                $('#'+formId+'_loader').fadeIn(1000).fadeOut(1500);
+                $('#'+formId+'_loader').fadeIn(1000);
+            },
+            success: function () {
+                $('#'+formId+'_loader').fadeOut(1000);
                 setTimeout(function(){
                     $('#'+formId+'_msg').fadeIn(2500);
-                },1500);
+                },1000);
                 $("#"+formId+" :input").prop('disabled', true);
             },
             error: function () {
