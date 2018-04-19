@@ -61,10 +61,7 @@ $( document ).ready(function() {
         $.ajax({
             type: 'POST',
             url: '/local/components/wedo/forms/ajax.php',
-            data: {
-                action:'formSubmit',
-                data : formData
-            },
+            data: formData,
             success: function () {
                 $("#content"+formId).css('opacity','0');
                 $('#'+formId+'_loader').fadeIn(1000).fadeOut(1500);
@@ -72,6 +69,9 @@ $( document ).ready(function() {
                     $('#'+formId+'_msg').fadeIn(2500);
                 },1500);
                 $("#"+formId+" :input").prop('disabled', true);
+            },
+            error: function () {
+                console.log('Error 404');
             }
         });
  });

@@ -7,7 +7,7 @@
                     <p class="descr-banner">Подписывайтесь!</p>
 
                     <form class="subscribe check-valid" novalidate>
-                        <div class="row">
+                        <div class="row"><?=bitrix_sessid_post()?>
                             <div class="col-sm-6 col-lg-6">
                                 <div class="form-group custom-form-group">
                                     <input type="email" class="form-control custom-input" id="phone" placeholder="Email" required>

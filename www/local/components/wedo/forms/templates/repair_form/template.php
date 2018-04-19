@@ -5,7 +5,7 @@
             <div id="content<?=$arParams['form']?>">
                 <div class="form-titile">
                     <p>Заявка на диагностику</p>
-                </div>
+                </div><?=bitrix_sessid_post()?>
                 <div class="form-content">
                     <div class="form-group custom-form-group">
                         <input type="text" class="form-control custom-input" id="name" name="userName" placeholder="Имя" required>
@@ -42,7 +42,7 @@
             <div id="content<?=$arParams['form']?>">
                 <div class="form-titile">
                     <p>Заявка на диагностику</p>
-                </div>
+                </div><?=bitrix_sessid_post()?>
                 <div class="form-content">
                     <div class="form-group custom-form-group">
                         <input type="text" class="form-control custom-input" id="name" name="userName" placeholder="Имя" required>

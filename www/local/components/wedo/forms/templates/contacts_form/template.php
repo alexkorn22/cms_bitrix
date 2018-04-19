@@ -1,10 +1,11 @@
 <div class="form-repair">
-    <form class="repair repair_bg-red-opacity1 check-valid" id="<?=$arParams['form']?>">
+    <form class="repair repair_bg-red-opacity1 check-valid" id="<?=$arParams['form']?>" >
         <? require $_SERVER["DOCUMENT_ROOT"].'/local/components/wedo/forms/views/msg.php';?>
         <div id="content<?=$arParams['form']?>">
             <div class="form-titile">
                 <p>Связаться с нами</p>
             </div>
+            <?=bitrix_sessid_post()?>
             <div class="form-group">
                 <input type="text" class="form-control custom-input" id="name" name="userName" placeholder="Имя" required="">
                 <div class="invalid-feedback">

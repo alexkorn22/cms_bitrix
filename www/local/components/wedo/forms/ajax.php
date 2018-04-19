@@ -4,8 +4,10 @@ $request = \Bitrix\Main\Application::getInstance()->getContext()->getRequest();
 if (!$request->isAjaxRequest()) {
     return;
 }
-if ($request->getPost('action') == 'formSubmit') {
+if (check_bitrix_sessid()) {
     require 'views/msg.php';
+}else{
+    die(header("HTTP/1.0 404 Not Found"));
 }
 
 ?>

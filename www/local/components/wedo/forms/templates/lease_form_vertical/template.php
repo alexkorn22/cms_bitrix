@@ -1,8 +1,8 @@
 <div class="form-lease d-none d-lg-block">
-    <form class="lease lease_bg-black check-valid" id="<?=$arParams['form']?>">
+    <form class="lease lease_bg-black check-valid" id="<?=$arParams['form']?>"><?=bitrix_sessid_post()?>
         <? require $_SERVER["DOCUMENT_ROOT"].'/local/components/wedo/forms/views/msg.php';?>
         <div id="content<?=$arParams['form']?>">
-            <div class="form-titile">
+            <div class="form-titile"><?=bitrix_sessid_post()?>
                 <p>Заявка на аренду</p>
             </div>
             <div class="form-content">

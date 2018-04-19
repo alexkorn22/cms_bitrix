@@ -1,7 +1,7 @@
 <div class="modal fade" id="order-lease" tabindex="-1" role="dialog" aria-labelledby="order-lease" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered custom-modal-dialog" role="document">
             <div class="modal-content custom-modal-content custom-modal-content_bg-red">
-                <form class="repair check-valid" id="<?=$arParams['form']?>">
+                <form class="repair check-valid" id="<?=$arParams['form']?>"><?=bitrix_sessid_post()?>
                     <? require $_SERVER["DOCUMENT_ROOT"].'/local/components/wedo/forms/views/msg.php';?>
                     <div id="content<?=$arParams['form']?>">
                         <div class="modal-header custom-modal-header">
