@@ -48,6 +48,13 @@
     }
   }
 
+  &_transparent {
+    background-color: transparent;
+    color: $black;
+    border: none;
+    padding: 0;
+  }
+
   &_big {
     text-transform: uppercase;
     font-family: $Semibold;
