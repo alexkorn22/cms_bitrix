@@ -1,4 +1,10 @@
-<div class="modal fade" id="order-diagnostics" tabindex="-1" role="dialog" aria-labelledby="order-lease" aria-hidden="true">
+<? if($arParams['form'] == 'modalMain'):?>
+    <div class="btn-order d-block d-lg-none">
+        <button type="button" class="btn btn_red btn_small-mobile" data-toggle="modal" data-target="#<?=$arParams['form']?>order-diagnostics">Заказать диагностику</button>
+    </div>
+<?endif;?>
+
+<div class="modal fade" id="<?=$arParams['form']?>order-diagnostics" tabindex="-1" role="dialog" aria-labelledby="order-lease" aria-hidden="true" style="z-index: 15000;">
     <div class="modal-dialog modal-dialog-centered custom-modal-dialog" role="document">
         <div class="modal-content custom-modal-content custom-modal-content_bg-red">
             <form class="repair check-valid" id="<?=$arParams['form']?>">

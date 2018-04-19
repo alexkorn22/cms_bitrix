@@ -1,6 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Ремонт");
+$name=1;
 ?>
 
     <div class="head-banner head-banner_repair">
@@ -34,9 +35,15 @@ $APPLICATION->SetTitle("Ремонт");
                         )
                     );
                     ?>
-                    <div class="btn-order d-block d-lg-none">
-                        <button type="button" class="btn btn_red btn_small-mobile" data-toggle="modal" data-target="#order-diagnostics">Заказать диагностику</button>
-                    </div>
+                    <?
+                    $APPLICATION->IncludeComponent(
+                        "wedo:forms",
+                        "repair_form_modal",
+                        Array(
+                            'form'=>'modalMain'
+                        )
+                    );
+                    ?>
                 </div>
             </div>
         </div>
@@ -131,7 +138,7 @@ $APPLICATION->SetTitle("Ремонт");
                                     <p>Заполните заявку, и мы свяжемся с Вами для решения проблемы.</p>
                                 </div>
                                 <div class="footer">
-                                    <a href="#order-diagnostics" data-toggle="modal" data-target="#order-diagnostics" role="button">Заказать диагностику</a>
+                                    <a href="#<?=$name?>order-diagnostics" data-toggle="modal" data-target="#<?=$name?>order-diagnostics" role="button">Заказать диагностику</a><? $name++;?>
                                 </div>
                                 <a class="right-arrow-circle">
                                     <img src="<?=IMAGES_PATH?>/icons/btn-arrow-right.png" alt="Right">
@@ -182,7 +189,7 @@ $APPLICATION->SetTitle("Ремонт");
                                     <p>Мы обеспечим ежемесячную поддержку и контроль работы кофеавтомата у вас на месте после проведенного ремонта. Сервис включает в себя визит техников 1-2 раза в месяц, проверку и настройку технических/технологических параметров и датчиков, текущий ремонт кофемашины согласно рекомендаций производителя.</p>
                                 </div>
                                 <div class="footer">
-                                    <a href="#order-diagnostics" data-toggle="modal" data-target="#order-diagnostics" role="button">Заказать диагностику</a>
+                                    <a href="#<?=$name?>order-diagnostics" data-toggle="modal" data-target="#<?=$name?>order-diagnostics" role="button">Заказать диагностику</a><? $name++;?>
                                 </div>
                                 <a class="left-arrow-circle">
                                     <img src="<?=IMAGES_PATH?>/icons/btn-arrow-left.png" alt="Left">
@@ -213,7 +220,7 @@ $APPLICATION->SetTitle("Ремонт");
                 <div class="tab-pane content-tabs-mobile fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-home-tab">
                     <p class="title">Заявка на диагностику</p>
                     <p class="descr">Заполните заявку, и мы свяжемся с Вами для решения проблемы.</p>
-                    <a href="#order-diagnostics" data-toggle="modal" data-target="#order-diagnostics" role="button">Заказать диагностику</a>
+                    <a href="#<?=$name?>order-diagnostics" data-toggle="modal" data-target="#<?=$name?>order-diagnostics" role="button">Заказать диагностику</a><? $name++;?>
                 </div>
                 <div class="tab-pane content-tabs-mobile fade" id="pills-2" role="tabpanel" aria-labelledby="pills-profile-tab">
                     <p class="title">Диагностика</p>
@@ -226,7 +233,7 @@ $APPLICATION->SetTitle("Ремонт");
                 <div class="tab-pane content-tabs-mobile fade" id="pills-4" role="tabpanel" aria-labelledby="pills-contact-tab">
                     <p class="title">Сервисное обслуживание</p>
                     <p class="descr">Мы обеспечим ежемесячную поддержку и контроль работы кофеавтомата у вас на месте после проведенного ремонта. Сервис включает в себя визит техников 1-2 раза в месяц, проверку и настройку технических/технологических параметров и датчиков, текущий ремонт кофемашины согласно рекомендаций производителя.</p>
-                    <a href="#order-diagnostics" data-toggle="modal" data-target="#order-diagnostics" role="button">Заказать диагностику</a>
+                    <a href="#<?=$name?>order-diagnostics" data-toggle="modal" data-target="#<?=$name?>order-diagnostics" role="button">Заказать диагностику</a><? $name++;?>
                 </div>
             </div>
         </div>
@@ -362,18 +369,17 @@ $APPLICATION->SetTitle("Ремонт");
             );?>
         </div>
     </div>
-
-    <!--Modal order-consultation-->
         <?
-        $APPLICATION->IncludeComponent(
-            "wedo:forms",
-            "repair_form_modal",
-            Array(
-                'form'=>'modal'
-            )
-        );
+           for ($i=1; $i<=$name ; $i++){
+               $APPLICATION->IncludeComponent(
+                   "wedo:forms",
+                   "repair_form_modal",
+                   Array(
+                       'form'=>$i
+                   )
+               );
+           }
         ?>
-
 
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
