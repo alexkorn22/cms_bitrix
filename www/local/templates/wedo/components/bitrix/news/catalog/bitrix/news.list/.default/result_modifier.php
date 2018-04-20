@@ -21,8 +21,11 @@ foreach ($arResult['ITEMS'] as &$item){
         }
     }
 
+// resize images catalog :
+
+    $resizedImg = CFile::ResizeImageGet($item["PREVIEW_PICTURE"]["ID"], array('width'=>300, 'height'=>300), BX_RESIZE_IMAGE_PROPORTIONAL_ALT, true);
     $item['IMG']=[
-        'SRC'=>$item["PREVIEW_PICTURE"]["SRC"],
+        'SRC'=>$resizedImg["src"],
         'ALT'=>$item['IPROPERTY_VALUES']['ELEMENT_PREVIEW_PICTURE_FILE_ALT'],
         'TITLE'=>$item['IPROPERTY_VALUES']['ELEMENT_PREVIEW_PICTURE_FILE_TITLE']
     ];
