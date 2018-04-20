@@ -16,7 +16,7 @@
                         <div class="product-img-preview">
                             <? foreach($arResult['MAIN_IMAGES'] as $img):?>
                                 <div class="preview">
-                                    <img src="<?=$img['SRC']?>" class="img-fluid" alt="<?=$img['ALT']?>" title="<?=$img['TITLE']?>">
+                                    <img src="<?=$img['SRC']?>" class="img-fluid" alt="<?=$img['ALT']?>" title="<?=$img['TITLE']?>" itemprop="image">
                                 </div>
                             <? endforeach;?>
                         </div>
@@ -38,8 +38,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="product-price">
-                    <p><?=$arResult['PRICE_UAH']?> грн. <span>*</span></p>
+                <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                     <div class="product-price">
+                         <p><div itemprop="price"><?=$arResult['PRICE_UAH']?></div> <span itemprop="priceCurrency">грн.</span> <span>*</span></p>
+                    </div>
                 </div>
                 <div class="product-button">
                     <button type="button" class="btn btn_red btn_small-mobile" data-toggle="modal" data-target="#order-consultation">Заказать консультацию</button>
@@ -55,7 +57,7 @@
         <div class="row">
             <div class="col">
                 <p class="title">Описание</p>
-                <p class="text toggle-text"><?=$arResult['PREVIEW_TEXT']?></p>
+                <p class="text toggle-text" itemprop="description" ><?=$arResult['PREVIEW_TEXT']?></p>
             </div>
         </div>
     </div>
