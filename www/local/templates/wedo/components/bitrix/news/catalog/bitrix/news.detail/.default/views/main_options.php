@@ -1,4 +1,6 @@
-<div id="osnovnoe">
+<div itemscope itemtype="http://schema.org/Product">
+    <p itemprop="name" class="d-none"><?=$arResult['TITLE_H1']?></p>
+    <div id="osnovnoe">
     <div class="row">
         <div class="col-lg-6">
             <div class="image-product">
@@ -64,4 +66,5 @@
         </div>
     </div>
 
+</div>
 </div>
