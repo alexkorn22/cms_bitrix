@@ -86,7 +86,9 @@ $APPLICATION->AddChainItem("Контакты", "/about/contacts");
                             <?=$office['address']?>
                         </div>
                         <div class="phone">
-                            <a href="tel:<?=$office['phone']?>">т. <?=$office['phone']?></a>
+                            <? foreach ($office['phone'] as $phone):?>
+                                <a href="tel:<?=$phone?>">т. <?=$phone?></a><br/>
+                            <? endforeach; ?>
                         </div>
                     </div>
                 <?endforeach;?>
