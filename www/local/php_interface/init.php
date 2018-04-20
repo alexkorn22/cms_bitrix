@@ -57,6 +57,24 @@ function getArClasses($path,$arResult = array()){
     }
     return $arResult;
 }
+
+
+AddEventHandler("main", "OnEndBufferContent", "ChangeMyContent");
+
+function ChangeMyContent(&$content)
+{
+    global $USER;
+    if(!$USER->IsAdmin()) {
+        $content = sanitize_output($content);
+    }
+}
+
+function sanitize_output($buffer)
+{
+    return preg_replace('~>\s*\n\s*<~', '><', $buffer);
+}
+
+
 App::Init();
 include_once $_SERVER['DOCUMENT_ROOT'] . '/local/files/events.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/local/files/functions.php';
