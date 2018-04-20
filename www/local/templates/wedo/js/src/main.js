@@ -71,10 +71,8 @@ function filterHide() {
 function disableOptions(){
     var options = $('#cubsOnHour').find('option');
     options.each(function () {
-        if(parseInt($(this).val()) > parseInt($('#cubsOnDay').val())){
-            if(parseInt($(this).val()) !== 5000){
+        if(parseInt($(this).val()) > parseInt($('#cubsOnDay').val()) && parseInt($('#cubsOnDay').val()) !== 0){
                 $(this).prop("disabled", true);
-            }
         }else{
             $(this).prop("disabled", false);
         }
