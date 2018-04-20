@@ -16,7 +16,7 @@
                         <div class="product-img-preview">
                             <? foreach($arResult['MAIN_IMAGES'] as $img):?>
                                 <div class="preview">
-                                    <img src="<?=$img['SRC']?>" class="img-fluid" alt="<?=$img['ALT']?>" title="<?=$img['TITLE']?>" itemprop="image">
+                                    <img src="<?=$img['SRC']?>" class="img-fluid" alt="<?=$img['ALT']?>" title="<?=$img['TITLE']?>"  itemprop="image">
                                 </div>
                             <? endforeach;?>
                         </div>
@@ -40,7 +40,9 @@
                 </div>
                 <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                      <div class="product-price">
-                         <p><div itemprop="price"><?=$arResult['PRICE_UAH']?></div> <span itemprop="priceCurrency">грн.</span> <span>*</span></p>
+                         <p><?=$arResult['PRICE_UAH']?> грн.<span>*</span></p>
+                         <span itemprop="price" class="d-none"><?=$arResult['PRICE_UAH']?></span>
+                         <span itemprop="priceCurrency" class="d-none">UAH</span>
                     </div>
                 </div>
                 <div class="product-button">
