@@ -48,8 +48,8 @@
       line-height:24px;
 
       .img-in-text img{
-        height: 200px;
-        width: auto;
+        height: auto;
+        width: 100%;
       }
     }
     @include media-breakpoint-down(xs){
@@ -62,11 +62,10 @@
 .img-in-text {
   margin: 20px 0;
   display: flex;
-  justify-content: center ;
-
+  justify-content: center;
   img {
     height: 350px;
-    width: 48%;
+    width: 100%;
     margin: 10px 0px;
     padding: 5px;
   }
