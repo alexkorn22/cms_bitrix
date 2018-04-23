@@ -111,10 +111,14 @@
 
 .custom-dropdown-tag {
   .btn_transparent {
-    &:after {
-      content: "\2022 \2022 \2022";
-      border: 0;
-      vertical-align: 0;
+    #meatBalls{
+      font-size: 32px;
+      font-family: $Bold ;
+      vertical-align: bottom;
+      margin-left: 5px;
+    }
+    &:after{
+     display: none;
     }
   }
   .dropdown-menu-tag {
@@ -301,4 +305,8 @@
     padding: 6px 40px;
     margin-top: 3px;
   }
+}
+
+.redColor{
+  color: red;
 }
