@@ -57,12 +57,15 @@
 }
 
 .img-in-text {
-  text-align: center;
   margin: 20px 0;
+  display: flex;
+  justify-content: center ;
+
   img {
     height: 350px;
-    width: auto;
+    width : 380px;
     margin: 10px 0px;
+    padding: 5px;
   }
 }
 
