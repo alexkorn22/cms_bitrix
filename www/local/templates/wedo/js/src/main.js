@@ -53,10 +53,19 @@ $( document ).ready(function() {
     });
     $('.menuLinkService').on('click',closeMenu);
 
+    BX.onCustomEvent = function(eventObject, eventName){
+        if(eventName == 'onAjaxSuccess'){
+            TagsBlog();
+        }
+    } ;
+
+
 });
 
 Preloader();
-
+function debugMsg() {
+    alert('hi');
+}
 function closeMenu(){
     $('.top-fixed-line').removeClass('open');
     $('.container-line-menu').removeClass('open');
