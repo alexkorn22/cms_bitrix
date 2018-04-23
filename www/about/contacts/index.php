@@ -9,7 +9,7 @@ $APPLICATION->AddChainItem("Контакты", "/about/contacts");
             </div>
         </div>
     </div>
-	<div class="row">
+	<div class="row container-fluid">
 		<div class="col-md-7">
 			<div class="main-contacts container">
 				<div class="main-office">
@@ -29,7 +29,7 @@ $APPLICATION->AddChainItem("Контакты", "/about/contacts");
 				</div>
 			</div>
 		</div>
-        <div class="col-md-4 col-sm-12 col-xs-12 contact-us first-form-contacts">
+        <div class="col-md-5 col-sm-12 col-xs-12 contact-us first-form-contacts">
             <div class="modal-dialog modal-dialog-centered custom-modal-dialog" role="document">
                 <div class="modal-content custom-modal-content custom-modal-content_bg-red">
                     <div class="modal-header custom-modal-header">
