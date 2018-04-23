@@ -108,3 +108,13 @@
   }
 }
 
+.first-form-contacts{
+  margin-top: -70px;
+}
+
+@include media-breakpoint-down(xs){
+  .first-form-contacts{
+    margin-top: -5px;;
+  }
+}
+
