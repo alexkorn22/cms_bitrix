@@ -63,9 +63,6 @@ $( document ).ready(function() {
 });
 
 Preloader();
-function debugMsg() {
-    alert('hi');
-}
 function closeMenu(){
     $('.top-fixed-line').removeClass('open');
     $('.container-line-menu').removeClass('open');
