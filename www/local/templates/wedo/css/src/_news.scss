@@ -41,28 +41,21 @@
       margin-bottom: 1rem;
       padding-left: 40px;
     }
-    p {
-      font-size: 22px;
-      line-height:28px;
-      margin: 0;
-    }
+
 
     @include media-breakpoint-down(sm){
-      p {
-        font-size: 18px;
-        line-height:24px;
-      }
+      font-size: 18px;
+      line-height:24px;
+
       .img-in-text img{
         height: 200px;
         width: auto;
       }
     }
     @include media-breakpoint-down(xs){
-      p {
-        font-size: 16px;
-        line-height:22px;
-      }
-    }
+      font-size: 16px;
+      line-height:22px;
+  }
   }
 }
 
