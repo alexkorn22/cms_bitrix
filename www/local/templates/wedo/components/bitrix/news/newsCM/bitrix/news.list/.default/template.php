@@ -94,3 +94,6 @@ $banner = true;
 <div class="container-fluid">
    <?=$arResult['NAV_STRING']?>
 </div>
+<script>
+    TagsBlog();
+</script>
