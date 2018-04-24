@@ -12,11 +12,6 @@ $APPLICATION->AddChainItem("Контакты", "/about/contacts");
 	<div class="row container-fluid">
 		<div class="col-md-7">
 			<div class="main-contacts container">
-				<div class="main-office">
- <img src="<?= IMAGES_PATH ?>/contacts_icons/home-icon.png" class="contacts-icons" alt="">
-					<h2 class="main-office-text">
-					</h2>
-				</div>
 				<div class="other-contacts">
  <img src="<?= IMAGES_PATH ?>/contacts_icons/phone-icon.png" class="contacts-icons" alt=""> <a href="tel: <?=App::$config->telephone?>" class="other-contacts-text"> Телефон, Viber, Telegram<br/><?=App::$config->telephone?> </a>
 				</div>
