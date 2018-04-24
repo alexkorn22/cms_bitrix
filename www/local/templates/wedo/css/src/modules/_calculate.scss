@@ -1,7 +1,6 @@
 .calculate-raschet {
   .wrap-input, .wrap-select {
     text-align: center;
-
     label {
       font-size: 20px;
       margin-bottom: 25px;
@@ -77,6 +76,19 @@
         }
       }
     }
+  }
+  .wrap-input .form-group &__label {
+    margin-bottom: 5px;
+  }
+  &__form-group {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__wrap-input {
+    height: 100%;
+    padding-bottom: 2.6rem;
   }
 }
 .wrapp-table {
