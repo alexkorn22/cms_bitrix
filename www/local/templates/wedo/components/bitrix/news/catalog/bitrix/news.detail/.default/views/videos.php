@@ -56,7 +56,6 @@
                         "wedo:forms",
                         "catalog_form",
                         Array(
-                            'form' => 'modalVideo',
                             'btnColor' =>'black'
                         )
                     );
