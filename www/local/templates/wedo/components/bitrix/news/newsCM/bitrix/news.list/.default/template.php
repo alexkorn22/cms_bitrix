@@ -32,7 +32,7 @@ $banner = true;
                 <nav class="priority-nav">
                     <ul class='tags-blog'>
                         <? foreach ($arResult['TAGS'] as $name => $link):?>
-                            <li><a class="<?if($arResult['CURR_TAG'] == $name):?> active-tag <?endif;?> " href='<?=$link?>'> <?=$name?> </a><a href="<?=$arParams['SECTION_URL']?>" class="<?if($arResult['CURR_TAG'] == $name):?> close-tag <?endif;?>"></a></li>
+                            <li><a class="tagLink<?if($arResult['CURR_TAG'] == $name):?> active-tag <?endif;?> " href='<?=$link?>'> <?=$name?> </a><a href="<?=$arParams['SECTION_URL']?>" class="<?if($arResult['CURR_TAG'] == $name):?> close-tag <?endif;?>"></a></li>
                         <? endforeach;?>
                     </ul>
                     <button class="more-tags">... Ещё</button>
@@ -94,3 +94,6 @@ $banner = true;
 <div class="container-fluid">
    <?=$arResult['NAV_STRING']?>
 </div>
+<script>
+    TagsBlog();
+</script>
