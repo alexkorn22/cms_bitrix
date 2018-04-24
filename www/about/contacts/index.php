@@ -35,21 +35,13 @@ $APPLICATION->AddChainItem("Контакты", "/about/contacts");
 			</div>
 		</div>
 		<div class="col-md-4">
-			<div class="map-main-office">
-				 <?$APPLICATION->IncludeComponent(
-	"bitrix:map.google.view",
-	"",
-	Array(
-		"API_KEY" => App::$config->apiKeyMainOfficeMap,
-		"CONTROLS" => array("SMALL_ZOOM_CONTROL","TYPECONTROL","SCALELINE"),
-		"INIT_MAP_TYPE" => "ROADMAP",
-		"MAP_DATA" => "a:4:{s:10:\"google_lat\";d:47.83633326052939;s:10:\"google_lon\";d:35.14422888858121;s:12:\"google_scale\";i:17;s:10:\"PLACEMARKS\";a:1:{i:0;a:3:{s:4:\"TEXT\";s:15:\"coffee machines\";s:3:\"LON\";d:35.14456148249906;s:3:\"LAT\";d:47.8364376856332;}}}",
-		"MAP_HEIGHT" => "380",
-		"MAP_ID" => "G_MAP_MAIN_OFFICE",
-		"MAP_WIDTH" => "100%",
-		"OPTIONS" => array("ENABLE_KEYBOARD")
-	)
-);?>
+            <?
+            $APPLICATION->IncludeComponent(
+                "wedo:forms",
+                "contacts_form",
+                Array()
+            );
+            ?>
 			</div>
 		</div>
 	</div>

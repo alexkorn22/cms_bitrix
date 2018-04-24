@@ -55,7 +55,6 @@
                         "wedo:forms",
                         "catalog_form",
                         Array(
-                            'form'=>'modalMain',
                             'btnColor' =>'red'
                         )
                     );

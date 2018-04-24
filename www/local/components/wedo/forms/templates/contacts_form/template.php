@@ -1,7 +1,7 @@
 <div class="form-repair">
-    <form class="repair repair_bg-red-opacity1 check-valid" id="<?=$arParams['form']?>" >
+    <form class="repair repair_bg-red-opacity1 check-valid" id="<?=$arParams['FORM_ID']?>" >
         <? require $_SERVER["DOCUMENT_ROOT"].'/local/components/wedo/forms/views/msg.php';?>
-        <div id="content<?=$arParams['form']?>">
+        <div id="content<?=$arParams['FORM_ID']?>">
             <div class="form-titile">
                 <p>Связаться с нами</p>
             </div>

@@ -1,14 +1,14 @@
 
 
-<button type="button" class="btn btn_<?=$arParams['btnColor']?> btn_small-mobile" data-toggle="modal" data-target="#<?=$arParams['form']?>order-consultation">Заказать консультацию</button>
+<button type="button" class="btn btn_<?=$arParams['btnColor']?> btn_small-mobile" data-toggle="modal" data-target="#<?=$arParams['FORM_ID']?>order-consultation">Заказать консультацию</button>
 
-<div class="modal fade" id="<?=$arParams['form']?>order-consultation" tabindex="-1" role="dialog" aria-labelledby="order-consultation" aria-hidden="true">
+<div class="modal fade" id="<?=$arParams['FORM_ID']?>order-consultation" tabindex="-1" role="dialog" aria-labelledby="order-consultation" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered custom-modal-dialog" role="document">
         <div class="modal-content custom-modal-content custom-modal-content_bg-red">
             <?=bitrix_sessid_post()?>
-            <form class="consultation" id="<?=$arParams['form']?>"><?=bitrix_sessid_post()?>
+            <form class="consultation" id="<?=$arParams['FORM_ID']?>"><?=bitrix_sessid_post()?>
                 <? require $_SERVER["DOCUMENT_ROOT"].'/local/components/wedo/forms/views/msg.php';?>
-                <div id="content<?=$arParams['form']?>">
+                <div id="content<?=$arParams['FORM_ID']?>">
                     <div class="modal-header custom-modal-header">
                         <h5 class="modal-title custom-modal-title">Заявка на консультацию</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
