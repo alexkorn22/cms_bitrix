@@ -8,6 +8,14 @@ $arComponentParameters = array(
 		
 	),
 	"PARAMETERS" => array(
+        "FORM_ID" => [
+            "NAME" => GetMessage("WEDO_FORM_ID_NAME"),
+            "TYPE" => "STRING",
+        ],
+         "FORM_TYPE" => [
+            "NAME" => GetMessage("WEDO_FORM_ID_TYPE"),
+            "TYPE" => "STRING",
+        ]
 	),
 );
 ?>

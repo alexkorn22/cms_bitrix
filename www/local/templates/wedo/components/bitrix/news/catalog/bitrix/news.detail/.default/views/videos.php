@@ -55,10 +55,7 @@
                     $APPLICATION->IncludeComponent(
                         "wedo:forms",
                         "catalog_form",
-                        Array(
-                            'form' => 'modalVideo',
-                            'btnColor' =>'black'
-                        )
+                        Array('btnColor' =>'black')
                     );
                     ?>
                 </div>

@@ -30,9 +30,7 @@ $modalNumber=1;
                     $APPLICATION->IncludeComponent(
                         "wedo:forms",
                         "repair_form",
-                        Array(
-                            "form"=>"first"
-                        )
+                        Array()
                     );
                     ?>
                     <?
@@ -374,9 +372,7 @@ $modalNumber=1;
                $APPLICATION->IncludeComponent(
                    "wedo:forms",
                    "repair_form_modal",
-                   Array(
-                       'form'=>$i
-                   )
+                   Array()
                );
            }
         ?>

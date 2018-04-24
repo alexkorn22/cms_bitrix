@@ -1,7 +1,7 @@
-<div id="<?=$arParams['form']?>_msg">
+<div id="<?=$arParams['FORM_ID']?>_msg">
     <?
         $clockImgSrc = IMAGES_PATH.'/clock.png';
-        if($arParams['form'] == 'vertical' ||$arParams['form'] == 'horizontal' ){
+        if($arParams['FORM_TYPE'] == 'whiteClock'){
             $clockImgSrc = IMAGES_PATH.'/clockWhite.png';
         }
     ?>
@@ -11,6 +11,6 @@
     </div>
 </div>
 
-<div id="<?=$arParams['form']?>_loader">
+<div id="<?=$arParams['FORM_ID']?>_loader">
     <div class="loader"></div>
 </div>

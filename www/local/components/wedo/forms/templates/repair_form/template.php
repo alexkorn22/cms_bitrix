@@ -1,8 +1,8 @@
-<? if($arParams['form'] == 'first'):?>
+<? if($arParams['FORM_ID'] == 'first'):?>
     <div class="form-repair d-none d-lg-block">
-        <form class="repair repair_bg-red check-valid"  id="<?=$arParams['form']?>">
+        <form class="repair repair_bg-red check-valid"  id="<?=$arParams['FORM_ID']?>">
             <? require $_SERVER["DOCUMENT_ROOT"].'/local/components/wedo/forms/views/msg.php';?>
-            <div id="content<?=$arParams['form']?>">
+            <div id="content<?=$arParams['FORM_ID']?>">
                 <div class="form-titile">
                     <p>Заявка на диагностику</p>
                 </div><?=bitrix_sessid_post()?>
@@ -35,11 +35,11 @@
             </div>
         </form>
     </div>
-<? elseif ($arParams['form'] == 'second'):?>
+<? elseif ($arParams['FORM_ID'] == 'second'):?>
     <div class="form-repair d-none d-lg-block">
-        <form class="repair repair_bg-red-opacity1 check-valid"  id="<?=$arParams['form']?>">
+        <form class="repair repair_bg-red-opacity1 check-valid"  id="<?=$arParams['FORM_ID']?>">
             <? require $_SERVER["DOCUMENT_ROOT"].'/local/components/wedo/forms/views/msg.php';?>
-            <div id="content<?=$arParams['form']?>">
+            <div id="content<?=$arParams['FORM_ID']?>">
                 <div class="form-titile">
                     <p>Заявка на диагностику</p>
                 </div><?=bitrix_sessid_post()?>
