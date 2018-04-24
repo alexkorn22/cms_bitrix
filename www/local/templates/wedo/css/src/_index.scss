@@ -367,6 +367,10 @@
       }
     }
   }
+
+  @include media-breakpoint-down(sm){
+    padding-top: 90px;
+  }
 }
 //END cards-section
 
@@ -620,6 +624,9 @@
 }
 .slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
   background: $white;
+  @include media-breakpoint-down(sm){
+    background: transparent;
+  }
 }
 //конец стрелочки на слайдере
 //END clients-slider

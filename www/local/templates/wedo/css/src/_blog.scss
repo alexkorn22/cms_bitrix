@@ -43,7 +43,7 @@
     li {
       display: flex;
       padding: 1rem;
-
+      white-space: nowrap;
       a {
         color: $black;
         font-size: 18px;
@@ -108,6 +108,51 @@
     }
   }
 }
+
+.custom-dropdown-tag {
+  .btn_transparent {
+    #meatBalls{
+      font-size: 32px;
+      font-family: $Bold ;
+      vertical-align: bottom;
+      margin-left: 5px;
+    }
+    &:after{
+     display: none;
+    }
+  }
+  .dropdown-menu-tag {
+    border-radius: 0;
+  }
+  .dropdown-item-tag {
+    a {
+      color: $black;
+    }
+    &.active {
+      background-color: $red;
+      a {
+        color: $white;
+      }
+    }
+  }
+
+  .close-tag {
+    padding-left: 10px;
+    &:before {
+      content: '\00d7';
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      border-radius: 100%;
+      text-align: center;
+      font-size: 20px;
+      line-height: 20px;
+      font-family: $Bold;
+    }
+  }
+
+}
+
 
 .news-line {
   padding: 50px 0;
@@ -260,4 +305,8 @@
     padding: 6px 40px;
     margin-top: 3px;
   }
+}
+
+.redColor{
+  color: red;
 }

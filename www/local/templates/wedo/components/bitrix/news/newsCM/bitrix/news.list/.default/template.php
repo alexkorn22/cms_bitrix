@@ -27,7 +27,7 @@ $banner = true;
         </div>
     </div>
     <div class="tag-line">
-        <div class="row">
+        <div class="row d-none d-md-block">
             <div class="col">
                 <nav class="priority-nav">
                     <ul class='tags-blog'>
@@ -38,6 +38,24 @@ $banner = true;
                     <button class="more-tags">... Ещё</button>
                     <ul class='hidden-tags-blog hidden'></ul>
                 </nav>
+            </div>
+        </div>
+        <div class="row d-block d-md-none">
+            <div class="col">
+                <div class="dropdown custom-dropdown-tag">
+                    <button class="btn btn_transparent dropdown-toggle" type="button" id="dropdownMenuTag" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Темы <span id="meatBalls" <?if(!empty($arResult['CURR_TAG'])):?>class="redColor"<?endif;?> >...</span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-tag" aria-labelledby="dropdownMenuTag">
+                        <? foreach ($arResult['TAGS'] as $name => $link):?>
+                            <li class="dropdown-item dropdown-item-tag<?if($arResult['CURR_TAG'] == $name):?> active <?endif;?>"><a href='<?=$link?>'> <?=$name?></a>
+                                <?if($arResult['CURR_TAG'] == $name):?>
+                                    <a href="<?=$arParams['SECTION_URL']?>" class="close-tag"></a>
+                                <?endif;?>
+                            </li>
+                        <? endforeach;?>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -76,3 +94,6 @@ $banner = true;
 <div class="container-fluid">
    <?=$arResult['NAV_STRING']?>
 </div>
+<script>
+    TagsBlog();
+</script>

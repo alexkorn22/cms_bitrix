@@ -98,10 +98,8 @@ function filterHide() {
 function disableOptions(){
     var options = $('#cubsOnHour').find('option');
     options.each(function () {
-        if(parseInt($(this).val()) > parseInt($('#cubsOnDay').val())){
-            if(parseInt($(this).val()) !== 5000){
+        if(parseInt($(this).val()) > parseInt($('#cubsOnDay').val()) && parseInt($('#cubsOnDay').val()) !== 0){
                 $(this).prop("disabled", true);
-            }
         }else{
             $(this).prop("disabled", false);
         }
@@ -589,7 +587,6 @@ function TagsBlog() {
         availableSpace = $vlinks.width() - 10;
         numOfVisibleItems = $vlinks.children().length;
         requiredSpace = breakWidths[numOfVisibleItems - 1];
-
         // Not enough space
         if (requiredSpace > availableSpace) {
             $vlinks.children().last().prependTo($hlinks);

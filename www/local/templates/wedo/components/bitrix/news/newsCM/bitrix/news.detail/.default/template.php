@@ -42,7 +42,7 @@ $this->setFrameMode(true);
                     <nav class="priority-nav">
                         <ul class='tags-blog'>
                             <? foreach ($arResult['TAGS'] as $name => $link):?>
-                                <li><a href='<?=$link?>'> <?=$name?> </a></li>
+                                <li><a href='<?=$link?>' onclick="#"> <?=$name?> </a></li>
                             <? endforeach;?>
                         </ul>
                         <button class="more-tags">... Ещё</button>
