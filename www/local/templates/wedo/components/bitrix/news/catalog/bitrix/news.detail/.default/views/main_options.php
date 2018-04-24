@@ -49,17 +49,22 @@
                     </div>
                 </div>
                 <div class="product-button">
-
+<<<<<<< HEAD
                     <?
                     $APPLICATION->IncludeComponent(
                         "wedo:forms",
                         "catalog_form",
                         Array(
+                            'form'=>'modalMain',
                             'btnColor' =>'red'
                         )
                     );
                     ?>
-
+=======
+                    <button type="button" class="btn btn_red btn_small-mobile" data-toggle="modal"
+                            data-target="#order-consultation">Заказать консультацию
+                    </button>
+>>>>>>> 67102dc497325a29e7beb596f556b2789d2ba7e2
                 </div>
                 <div class="price-comment">
                     <p><span>*</span> Цена за базовую модель 1</p>

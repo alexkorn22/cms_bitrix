@@ -79,6 +79,14 @@
       }
     }
   }
+  &_blog {
+    border: 1px solid $black;
+    color: $black;
+    &:focus {
+      color: $black;
+      border-color: $black;
+    }
+  }
 }
 
 .custom-select.is-invalid, .form-control.is-invalid, .was-validated .custom-select:invalid, .was-validated .form-control:invalid {

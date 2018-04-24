@@ -9,41 +9,63 @@ $APPLICATION->AddChainItem("Контакты", "/about/contacts");
             </div>
         </div>
     </div>
-	<div class="row">
+	<div class="row container-fluid">
 		<div class="col-md-7">
 			<div class="main-contacts container">
 				<div class="main-office">
  <img src="<?= IMAGES_PATH ?>/contacts_icons/home-icon.png" class="contacts-icons" alt="">
 					<h2 class="main-office-text">
-						 Главный офис<span class="red-star"> *</span>
 					</h2>
 				</div>
 				<div class="other-contacts">
- <img src="<?= IMAGES_PATH ?>/contacts_icons/maps-icon.png" class="contacts-icons" alt="">
-						<div class="other-contacts-text"><?=App::$config->mainOffice['city']?><br/><?=App::$config->mainOffice['address']?></div>
-				</div>
-				<div class="other-contacts">
- <img src="<?= IMAGES_PATH ?>/contacts_icons/phone-icon.png" class="contacts-icons" alt=""> <a href="tel: <?=App::$config->telephone?>" class="other-contacts-text"> <?=App::$config->telephone?> </a>
+ <img src="<?= IMAGES_PATH ?>/contacts_icons/phone-icon.png" class="contacts-icons" alt=""> <a href="tel: <?=App::$config->telephone?>" class="other-contacts-text"> Телефон, Viber, Telegram<br/><?=App::$config->telephone?> </a>
 				</div>
 				<div class="other-contacts">
  <img src="<?= IMAGES_PATH ?>/contacts_icons/message-icon.png" class="contacts-icons-message" alt=""> <a href="mailto:<?=App::$config->email?>" class="other-contacts-text"><?=App::$config->email?> </a>
 				</div>
 				<div class="note">
- <span class="red-star">*</span> Сервисное обслуживание осуществляется на територии<br>
+                     Сервисное обслуживание осуществляется на територии<br>
 					 Заказчика в любом городе Украины
 				</div>
 			</div>
 		</div>
-		<div class="col-md-4">
-            <?
-            $APPLICATION->IncludeComponent(
-                "wedo:forms",
-                "contacts_form",
-                Array()
-            );
-            ?>
-			</div>
-		</div>
+        <div class="col-md-5 col-sm-12 col-xs-12 contact-us first-form-contacts">
+            <div class="modal-dialog modal-dialog-centered custom-modal-dialog" role="document">
+                <div class="modal-content custom-modal-content custom-modal-content_bg-red">
+                    <div class="modal-header custom-modal-header">
+                        <h5 class="modal-title custom-modal-title">Связаться с нами</h5>
+                    </div>
+                    <form class="contact check-valid" novalidate="">
+                        <div class="modal-body custom-modal-body">
+                            <div class="form-group">
+                                <input type="text" class="form-control custom-input" id="name" placeholder="Имя" required="">
+                                <div class="invalid-feedback">
+                                    Вы не указали имя!
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control custom-input" id="phone" placeholder="Телефон" required="">
+                                <div class="invalid-feedback">
+                                    Вы не указали телефон!
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control custom-input" id="city" placeholder="Город" required="">
+                                <div class="invalid-feedback">
+                                    Вы не указали город!
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <textarea rows="2" class="form-control custom-input" id="city" placeholder="Комментарий"></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer custom-modal-footer">
+                            <button type="submit" class="btn btn_black btn_small-mobile btn_font-small">Заказать обратный звонок</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 	</div>
 </div>
 <div class="googleMap">
@@ -78,7 +100,9 @@ $APPLICATION->AddChainItem("Контакты", "/about/contacts");
                             <?=$office['address']?>
                         </div>
                         <div class="phone">
-                            <a href="tel:<?=$office['phone']?>">т. <?=$office['phone']?></a>
+                            <? foreach ($office['phone'] as $phone):?>
+                                <a href="tel:<?=$phone?>">т. <?=$phone?></a><br/>
+                            <? endforeach; ?>
                         </div>
                     </div>
                 <?endforeach;?>
@@ -89,7 +113,9 @@ $APPLICATION->AddChainItem("Контакты", "/about/contacts");
                     $APPLICATION->IncludeComponent(
                         "wedo:forms",
                         "contacts_form",
-                        Array()
+                        Array(
+                            "form"=>"contacts_form"
+                        )
                     );
                     ?>
 		</div>

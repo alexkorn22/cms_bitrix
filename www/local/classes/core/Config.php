@@ -15,10 +15,10 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
  * @property string facebookLink;
  * @property string instagramLink;
  * @property string youtubeLink;
- * @property string apiKeyMainOfficeMap;
- * @property string apiKeyOtherOfficesMap;
  * @property string telegramChatId;
  * @property string telegramToken;
+ * @property string apiKeyMainOfficeMap;
+ * @property string apiKeyOtherOfficesMap;
  * @property array officesList;
  * @property array mainOffice;
  */

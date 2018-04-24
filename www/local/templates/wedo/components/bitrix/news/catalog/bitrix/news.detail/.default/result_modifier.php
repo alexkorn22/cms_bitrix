@@ -3,8 +3,10 @@
 // main images
 foreach ($arResult['PROPERTIES']['IMAGES']['VALUE'] as $id){
     $img = CFile::GetFileArray($id);
+// resize image :
+    $resizedImg = CFile::ResizeImageGet( $img['ID'],array('width'=>600, 'height'=>600), BX_RESIZE_IMAGE_PROPORTIONAL_ALT, true);
     $arResult['MAIN_IMAGES'][] = [
-        'SRC'       => $img['SRC'],
+        'SRC'       => $resizedImg['src'],
         'ID'        => $img['ID'],
         'FILE_NAME' => $img['FILE_NAME'],
         'ALT'       => $arResult['IPROPERTY_VALUES']['ELEMENT_DETAIL_PICTURE_FILE_ALT'],

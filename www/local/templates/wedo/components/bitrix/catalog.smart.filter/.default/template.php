@@ -12,8 +12,8 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 
-$cubsOnDay  = $_SESSION['arrFilter'][0]['arrFilter_63_MAX'];
-$cubsOnHour = $_SESSION['arrFilter'][0]['arrFilter_77_MAX'];
+$cubsOnDay  = $_SESSION['arrFilter'][0]['arrFilter_63_MIN'];
+$cubsOnHour = $_SESSION['arrFilter'][0]['arrFilter_77_MIN'];
 
 global $arrFilter;
 ?>
@@ -91,42 +91,42 @@ global $arrFilter;
                                                     <input
                                                             class="min-price"
                                                             type="hidden"
-                                                            name="<?echo $arItem["VALUES"]["MIN"]["CONTROL_NAME"]?>"
-                                                            id="<?echo $arItem["VALUES"]["MIN"]["CONTROL_ID"]?>"
-                                                            value="0"
+                                                            name="<?echo $arItem["VALUES"]["MAX"]["CONTROL_NAME"]?>"
+                                                            id="<?echo $arItem["VALUES"]["MAX"]["CONTROL_ID"]?>"
+                                                            value="5000"
                                                             size="5"
                                                     />
                                                     <div class="form-group">
                                                         <label for="cubsOnDay"><?=$arItem["NAME"]?> : </label>
-                                                        <select class="form-control custom-select" name="<?echo $arItem["VALUES"]["MAX"]["CONTROL_NAME"]?>" id="cubsOnDay">
-                                                            <option value="5000">Не указано</option>
-                                                            <option value="81" <?if($cubsOnDay == 81):?>selected<?endif;?> >до 80</option>
-                                                            <option value="151" <?if($cubsOnDay == 151):?>selected<?endif;?> >до 150</option>
-                                                            <option value="181" <?if($cubsOnDay == 181):?>selected<?endif;?> >до 180</option>
-                                                            <option value="251" <?if($cubsOnDay == 251):?>selected<?endif;?> >до 250</option>
-                                                            <option value="301" <?if($cubsOnDay == 301):?>selected<?endif;?> >до 300</option>
-                                                            <option value="351" <?if($cubsOnDay == 351):?>selected<?endif;?> >до 350</option>
+                                                        <select class="form-control custom-select" name="<?echo $arItem["VALUES"]["MIN"]["CONTROL_NAME"]?>" id="cubsOnDay">
+                                                            <option value="0">Не указано</option>
+                                                            <option value="80" <?if($cubsOnDay == 80):?>selected<?endif;?> > 80</option>
+                                                            <option value="150" <?if($cubsOnDay == 150):?>selected<?endif;?> > 150</option>
+                                                            <option value="180" <?if($cubsOnDay == 180):?>selected<?endif;?> > 180</option>
+                                                            <option value="250" <?if($cubsOnDay == 250):?>selected<?endif;?> > 250</option>
+                                                            <option value="300" <?if($cubsOnDay == 300):?>selected<?endif;?> > 300</option>
+                                                            <option value="350" <?if($cubsOnDay == 350):?>selected<?endif;?> > 350</option>
                                                         </select>
                                                     </div>
                                                 <?elseif ($arItem["VALUES"]["MIN"]["CONTROL_NAME"] == 'arrFilter_77_MIN'):?>
                                                     <input
                                                             class="min-price"
                                                             type="hidden"
-                                                            name="<?echo $arItem["VALUES"]["MIN"]["CONTROL_NAME"]?>"
-                                                            id="<?echo $arItem["VALUES"]["MIN"]["CONTROL_ID"]?>"
-                                                            value="0"
+                                                            name="<?echo $arItem["VALUES"]["MAX"]["CONTROL_NAME"]?>"
+                                                            id="<?echo $arItem["VALUES"]["MAX"]["CONTROL_ID"]?>"
+                                                            value="5000"
                                                             size="5"
                                                     />
                                                     <div class="form-group">
                                                         <label for="cubsOnHour"><?=$arItem["NAME"]?> : </label>
-                                                        <select class="form-control custom-select" name="<?echo $arItem["VALUES"]["MAX"]["CONTROL_NAME"]?>" id="cubsOnHour">
-                                                            <option value="5000">Не указано</option>
-                                                            <option value="81" <?if($cubsOnHour == 81):?>selected<?endif;?> >до 80</option>
-                                                            <option value="151" <?if($cubsOnHour == 151):?>selected<?endif;?> >до 150</option>
-                                                            <option value="181" <?if($cubsOnHour == 181):?>selected<?endif;?> >до 180</option>
-                                                            <option value="251" <?if($cubsOnHour == 251):?>selected<?endif;?> >до 250</option>
-                                                            <option value="301" <?if($cubsOnHour == 301):?>selected<?endif;?> >до 300</option>
-                                                            <option value="351" <?if($cubsOnHour == 351):?>selected<?endif;?> >до 350</option>
+                                                        <select class="form-control custom-select" name="<?echo $arItem["VALUES"]["MIN"]["CONTROL_NAME"]?>" id="cubsOnHour">
+                                                            <option value="0">Не указано</option>
+                                                            <option value="80" <?if($cubsOnHour == 80):?>selected<?endif;?> > 80</option>
+                                                            <option value="150" <?if($cubsOnHour == 150):?>selected<?endif;?> > 150</option>
+                                                            <option value="180" <?if($cubsOnHour == 180):?>selected<?endif;?> > 180</option>
+                                                            <option value="250" <?if($cubsOnHour == 250):?>selected<?endif;?> > 250</option>
+                                                            <option value="300" <?if($cubsOnHour == 300):?>selected<?endif;?> > 300</option>
+                                                            <option value="350" <?if($cubsOnHour == 351):?>selected<?endif;?> > 350</option>
                                                         </select>
                                                     </div>
                                                 <?endif;?>

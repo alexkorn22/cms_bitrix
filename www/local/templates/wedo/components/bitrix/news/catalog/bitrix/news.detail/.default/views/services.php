@@ -105,7 +105,10 @@
                     $APPLICATION->IncludeComponent(
                         "wedo:forms",
                         "catalog_form",
-                        Array('btnColor' =>'red')
+                        Array(
+                            'form' => 'modalService',
+                            'btnColor' =>'red'
+                        )
                     );
                     ?>
                 </div>

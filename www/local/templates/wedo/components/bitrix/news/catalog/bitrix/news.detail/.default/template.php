@@ -16,12 +16,13 @@ $documentsExist = !empty($arResult['PROPERTIES']['DOCUMENTS']['VALUE']);
 $videosExist    = !empty($arResult['PROPERTIES']['VIDEO']['VALUE'][0]);
 $isRent         = $arResult['PROPERTIES']['RENT']['VALUE_XML_ID'] == 'RENT_TRUE';
 ?>
+<div itemscope itemtype="http://schema.org/Product">
     <div class="container-fluid product">
         <div class="row">
             <div class="col">
                 <div class="title-product">
                     <div class="title">
-                        <h1><?=$arResult['TITLE_H1']?></h1>
+                        <h1 itemprop="name"><?=$arResult['TITLE_H1']?></h1>
                     </div>
                     <div class="sub-title">
                         <p><?=$arResult['PROPERTIES']['SLOGAN']['VALUE']?></p>
@@ -52,13 +53,12 @@ $isRent         = $arResult['PROPERTIES']['RENT']['VALUE_XML_ID'] == 'RENT_TRUE'
         </div>
         <!-- require main oprions -->
         <?  require ROOT.$this->GetFolder() .'/views/main_options.php' ?>
-
         <div id="accordion-on-mobile">
             <!-- Расчёт окупаемости -->
             <?  require ROOT.$this->GetFolder() .'/views/calculations.php' ?>
 
             <? if($arResult['PROPERTIES']['SIMILAR_PRODUCTS']['VALUE'] != FALSE):?>
-            <!-- похожие товары -->
+                <!-- похожие товары -->
                 <?  require ROOT.$this->GetFolder() .'/views/similar_products.php' ?>
             <? endif; ?>
             <!-- Сервисное обслуживание -->
@@ -79,7 +79,7 @@ $isRent         = $arResult['PROPERTIES']['RENT']['VALUE_XML_ID'] == 'RENT_TRUE'
                 <?  require ROOT.$this->GetFolder() .'/views/arenda.php' ?>
             <?endif;?>
         </div>
-
     </div>
+</div>
 
 <!--Modal order-consultation-->
