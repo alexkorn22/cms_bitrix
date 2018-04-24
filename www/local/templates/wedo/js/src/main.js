@@ -51,6 +51,7 @@ $( document ).ready(function() {
         closeMenu();
         goUp();
     });
+    $('.menuLinkService').on('click',closeMenu);
 
 });
 
