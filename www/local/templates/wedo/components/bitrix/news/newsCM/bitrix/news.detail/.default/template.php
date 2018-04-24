@@ -51,7 +51,7 @@ $this->setFrameMode(true);
                 </div>
                 <div class="col-cm-12 col-lg-3">
                     <div class="back-to-news-list">
-                        <a href="<?=$arParams['SECTION_URL']?>" class="btn btn_red btn_small-mobile btn_font-small">К списку новостей</a>
+                        <a onclick="#" href="<?=$arParams['SECTION_URL']?>" class="btn btn_red btn_small-mobile btn_font-small">К списку новостей</a>
                     </div>
                 </div>
             </div>
