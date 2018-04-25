@@ -129,11 +129,18 @@
   width: 220px;
   display: none;
   position: absolute;
+  @media(min-width: 1500px){
+      right: 44% ;
+      top: 35% ;
+  }
 }
 
 [id*="_loader"]{
   left: 0;
   right: 0;
+  @media(min-width: 1500px){
+    right: 44% ;
+  }
   top:50%;
   margin-left: auto;
   margin-right: auto;
