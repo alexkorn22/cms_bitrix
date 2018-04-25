@@ -57,7 +57,8 @@ $APPLICATION->AddChainItem("Контакты", "/about/contacts");
 		"MAP_ID" => "GOOGLE_MAP",
 		"MAP_WIDTH" => "100%",
 		"OPTIONS" => array(
-			0 => "ENABLE_KEYBOARD",
+			0 => "ENABLE_DRAGGING",
+			1 => "ENABLE_KEYBOARD",
 		),
 		"COMPONENT_TEMPLATE" => ".default"
 	),
