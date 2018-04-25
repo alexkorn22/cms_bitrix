@@ -121,23 +121,95 @@
 }
 
 [id*="_msg"]{
-  top:35%;
-  width: 250px;
+  left: 0;
+  right: 0;
+  top:30%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 220px;
   display: none;
   position: absolute;
-  left: 136px;
-  @media(min-width: 2200px){
-    left: 173px;
+
+}
+
+.lease{
+  [id*="_msg"]{
+    @media(min-width: 1440px){
+      margin-left: 0;
+      margin-right: 0;
+      left:167px;
+    }
+    @media(min-width: 2200px){
+      margin-left: 0;
+      margin-right: 0;
+      left:184px;
+    }
+  }
+
+  [id*="_loader"]{
+    @media(min-width: 1440px){
+      margin-left: 0;
+      margin-right: 0;
+      left:167px;
+    }
+    @media(min-width: 2200px){
+      margin-left: 0;
+      margin-right: 0;
+      left:184px;
+    }
+  }
+}
+
+.repair{
+  [id*="_msg"]{
+    @media(min-width: 1440px){
+      margin-left: 0;
+      margin-right: 0;
+      left:167px;
+    }
+    @media(min-width: 2200px){
+      margin-left: 0;
+      margin-right: 0;
+      left:184px;
+    }
+  }
+
+  [id*="_loader"]{
+    @media(min-width: 1440px){
+      margin-left: 0;
+      margin-right: 0;
+      left:167px;
+    }
+    @media(min-width: 2200px){
+      margin-left: 0;
+      margin-right: 0;
+      left:184px;
+    }
+  }
+}
+
+.modal-content{
+  .repair{
+    [id*="_msg"]{
+      @media (min-width: 2200px){
+        left:146px;
+      }
+    }
+    [id*="_loader"]{
+      @media (min-width: 2200px){
+        left:146px;
+      }
+    }
   }
 }
 
 [id*="_loader"]{
-  left: 136px;
-  @media(min-width: 2200px){
-    left: 173px;
-  }
+  left: 0;
+  right: 0;
   top:50%;
-  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 220px;
   display: none;
   position: absolute;
   .loader {
