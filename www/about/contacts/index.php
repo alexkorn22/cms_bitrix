@@ -39,7 +39,7 @@ $APPLICATION->AddChainItem("Контакты", "/about/contacts");
 </div>
 <div class="googleMap">
 	<div class="map-heading" id="service-centers">
-		 <h2>Сервисные центры по ремонту кофемашин WMF в Украине</h2>
+		 <h2>Официальный представитель WMF в Украине</h2>
 	</div>
 	 <?$APPLICATION->IncludeComponent(
 	"bitrix:map.google.view", 
