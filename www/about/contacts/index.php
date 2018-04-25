@@ -24,42 +24,16 @@ $APPLICATION->AddChainItem("Контакты", "/about/contacts");
 				</div>
 			</div>
 		</div>
-        <div class="col-md-5 col-sm-12 col-xs-12 contact-us first-form-contacts">
-            <div class="modal-dialog modal-dialog-centered custom-modal-dialog" role="document">
-                <div class="modal-content custom-modal-content custom-modal-content_bg-red">
-                    <div class="modal-header custom-modal-header">
-                        <h5 class="modal-title custom-modal-title">Связаться с нами</h5>
-                    </div>
-                    <form class="contact check-valid" novalidate="">
-                        <div class="modal-body custom-modal-body">
-                            <div class="form-group">
-                                <input type="text" class="form-control custom-input" id="name" placeholder="Имя" required="">
-                                <div class="invalid-feedback">
-                                    Вы не указали имя!
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control custom-input" id="phone" placeholder="Телефон" required="">
-                                <div class="invalid-feedback">
-                                    Вы не указали телефон!
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control custom-input" id="city" placeholder="Город" required="">
-                                <div class="invalid-feedback">
-                                    Вы не указали город!
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <textarea rows="2" class="form-control custom-input" id="city" placeholder="Комментарий"></textarea>
-                            </div>
-                        </div>
-                        <div class="modal-footer custom-modal-footer">
-                            <button type="submit" class="btn btn_black btn_small-mobile btn_font-small">Заказать обратный звонок</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+        <div class="col-md-5 col-sm-10 col-xs-10 first-form-contacts">
+            <?
+            $APPLICATION->IncludeComponent(
+                "wedo:forms",
+                "contacts_form",
+                Array(
+                   "orderType" => "Заказ обратный звонок"
+                )
+            );
+            ?>
         </div>
 	</div>
 </div>
@@ -84,7 +58,7 @@ $APPLICATION->AddChainItem("Контакты", "/about/contacts");
 </div>
 <div class="other-offices">
 	<div class="row">
-		<div class="col-md-8 col-sm-12 col-xs-12">
+		<div class="col-md-7 col-sm-12 col-xs-12">
 			<div class="row">
                 <?foreach (App::$config->officesList as $office):?>
                     <div class="col-md-5 offices-data">
@@ -103,42 +77,16 @@ $APPLICATION->AddChainItem("Контакты", "/about/contacts");
                 <?endforeach;?>
 			</div>
 		</div>
-		<div class="col-md-4 col-sm-12 col-xs-12 contact-us">
-			<div class="modal-dialog modal-dialog-centered custom-modal-dialog" role="document">
-				<div class="modal-content custom-modal-content custom-modal-content_bg-red">
-					<div class="modal-header custom-modal-header">
-						<h5 class="modal-title custom-modal-title">Связаться с нами</h5>
-					</div>
-					<form class="contact check-valid" novalidate="">
-						<div class="modal-body custom-modal-body">
-							<div class="form-group">
- <input type="text" class="form-control custom-input" id="name" placeholder="Имя" required="">
-								<div class="invalid-feedback">
-									 Вы не указали имя!
-								</div>
-							</div>
-							<div class="form-group">
- <input type="text" class="form-control custom-input" id="phone" placeholder="Телефон" required="">
-								<div class="invalid-feedback">
-									 Вы не указали телефон!
-								</div>
-							</div>
-							<div class="form-group">
- <input type="text" class="form-control custom-input" id="city" placeholder="Город" required="">
-								<div class="invalid-feedback">
-									 Вы не указали город!
-								</div>
-							</div>
-							<div class="form-group">
- <textarea rows="2" class="form-control custom-input" id="city" placeholder="Комментарий"></textarea>
-							</div>
-						</div>
-						<div class="modal-footer custom-modal-footer">
- <button type="submit" class="btn btn_black btn_small-mobile btn_font-small">Заказать обратный звонок</button>
-						</div>
-					</form>
-				</div>
-			</div>
+		<div class="col-md-5 col-sm-10 col-xs-10 ">
+                    <?
+                    $APPLICATION->IncludeComponent(
+                        "wedo:forms",
+                        "contacts_form",
+                        Array(
+                           "orderType" => "Заказ обратный звонок"
+                        )
+                    );
+                    ?>
 		</div>
 	</div>
 </div>

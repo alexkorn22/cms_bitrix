@@ -53,6 +53,32 @@ $( document ).ready(function() {
     });
     $('.menuLinkService').on('click',closeMenu);
 
+// forms handeling :
+    $('.consultForms').on('submit', function (e) {
+        e.preventDefault();
+        var formData = $(this).serializeArray();
+        var formId   = this.id;
+        $.ajax({
+            type: 'POST',
+            url: '/local/components/wedo/forms/ajax.php',
+            data: formData,
+            beforeSend:function () {
+                $("#content"+formId).css('opacity','0');
+                $('#'+formId+'_loader').fadeIn(1000);
+                $('.email-form-text').css('opacity','0');
+            },
+            success: function () {
+                $('#'+formId+'_loader').fadeOut(1000);
+                setTimeout(function(){
+                    $('#'+formId+'_msg').fadeIn(2500);
+                },1000);
+                $("#"+formId+" :input").prop('disabled', true);
+            },
+            error: function () {
+                console.log('Error 404');
+            }
+        });
+    });
 });
 
 Preloader();
@@ -125,7 +151,6 @@ CalculatorPayback = function (urlAjax, productId,view) {
                 animateValue = Math.round($('#monthIncomeTable').html());
                 animateNumbers(animateValue, $("#monthIncomeTable"),1000);
                 animateNumbers(animateValue, $('#monthIncome'),1000);
-
             }
         });
     };

@@ -1,6 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Ремонт");
+$modalNumber = 100 ;
 ?>
 
     <div class="head-banner head-banner_repair">
@@ -25,42 +26,23 @@ $APPLICATION->SetTitle("Ремонт");
                     </div>
                 </div>
                 <div class="col-lg-5">
-                    <div class="form-repair d-none d-lg-block">
-                        <form class="repair repair_bg-red check-valid" novalidate>
-                            <div class="form-titile">
-                                <p>Заявка на диагностику</p>
-                            </div>
-                            <div class="form-content">
-                                <div class="form-group custom-form-group">
-                                    <input type="text" class="form-control custom-input" id="name" placeholder="Имя" required>
-                                    <div class="invalid-feedback">
-                                        Вы не указали имя!
-                                    </div>
-                                </div>
-                                <div class="form-group custom-form-group">
-                                    <input type="text" class="form-control custom-input" id="phone" placeholder="Телефон" required>
-                                    <div class="invalid-feedback">
-                                        Вы не указали телефон!
-                                    </div>
-                                </div>
-                                <div class="form-group custom-form-group">
-                                    <input type="text" class="form-control custom-input" id="city" placeholder="Город" required>
-                                    <div class="invalid-feedback">
-                                        Вы не указали город!
-                                    </div>
-                                </div>
-                                <div class="form-group custom-form-group">
-                                    <textarea class="form-control custom-textarea" id="comment" rows="3" placeholder="Комментарий"></textarea>
-                                </div>
-                            </div>
-                            <div class="form-footer">
-                                <button type="submit" class="btn btn_black btn_small-mobile btn_font-small">Заказать диагностику</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="btn-order d-block d-lg-none">
-                        <button type="button" class="btn btn_red btn_small-mobile" data-toggle="modal" data-target="#order-diagnostics">Заказать диагностику</button>
-                    </div>
+                    <?
+                    $APPLICATION->IncludeComponent(
+                        "wedo:forms",
+                        "repair_form",
+                        Array("orderType"=>"Заказ диагностику")
+                    );
+                    ?>
+                    <?
+                    $APPLICATION->IncludeComponent(
+                        "wedo:forms",
+                        "repair_form_modal",
+                        Array(
+                            'FORM_ID'=>'modalMain',
+                            "orderType"=>"Заказ диагностику"
+                        )
+                    );
+                    ?>
                 </div>
             </div>
         </div>
@@ -155,7 +137,7 @@ $APPLICATION->SetTitle("Ремонт");
                                     <p>Заполните заявку, и мы свяжемся с Вами для решения проблемы.</p>
                                 </div>
                                 <div class="footer">
-                                    <a href="#order-diagnostics" data-toggle="modal" data-target="#order-diagnostics" role="button">Заказать диагностику</a>
+                                    <a href="#<?=$modalNumber?>order-diagnostics" data-toggle="modal" data-target="#<?=$modalNumber?>order-diagnostics" role="button">Заказать диагностику</a><? $modalNumber++;?>
                                 </div>
                                 <a class="right-arrow-circle">
                                     <img src="<?=IMAGES_PATH?>/icons/btn-arrow-right.png" alt="Right">
@@ -206,7 +188,7 @@ $APPLICATION->SetTitle("Ремонт");
                                     <p>Мы обеспечим ежемесячную поддержку и контроль работы кофеавтомата у вас на месте после проведенного ремонта. Сервис включает в себя визит техников 1-2 раза в месяц, проверку и настройку технических/технологических параметров и датчиков, текущий ремонт кофемашины согласно рекомендаций производителя.</p>
                                 </div>
                                 <div class="footer">
-                                    <a href="#order-diagnostics" data-toggle="modal" data-target="#order-diagnostics" role="button">Заказать диагностику</a>
+                                    <a href="#<?=$modalNumber?>order-diagnostics" data-toggle="modal" data-target="#<?=$modalNumber?>order-diagnostics" role="button">Заказать диагностику</a><? $modalNumber++;?>
                                 </div>
                                 <a class="left-arrow-circle">
                                     <img src="<?=IMAGES_PATH?>/icons/btn-arrow-left.png" alt="Left">
@@ -237,7 +219,7 @@ $APPLICATION->SetTitle("Ремонт");
                 <div class="tab-pane content-tabs-mobile fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-home-tab">
                     <p class="title">Заявка на диагностику</p>
                     <p class="descr">Заполните заявку, и мы свяжемся с Вами для решения проблемы.</p>
-                    <a href="#order-diagnostics" data-toggle="modal" data-target="#order-diagnostics" role="button">Заказать диагностику</a>
+                    <a href="#<?=$modalNumber?>order-diagnostics" data-toggle="modal" data-target="#<?=$modalNumber?>order-diagnostics" role="button">Заказать диагностику</a><? $modalNumber++;?>
                 </div>
                 <div class="tab-pane content-tabs-mobile fade" id="pills-2" role="tabpanel" aria-labelledby="pills-profile-tab">
                     <p class="title">Диагностика</p>
@@ -250,7 +232,7 @@ $APPLICATION->SetTitle("Ремонт");
                 <div class="tab-pane content-tabs-mobile fade" id="pills-4" role="tabpanel" aria-labelledby="pills-contact-tab">
                     <p class="title">Сервисное обслуживание</p>
                     <p class="descr">Мы обеспечим ежемесячную поддержку и контроль работы кофеавтомата у вас на месте после проведенного ремонта. Сервис включает в себя визит техников 1-2 раза в месяц, проверку и настройку технических/технологических параметров и датчиков, текущий ремонт кофемашины согласно рекомендаций производителя.</p>
-                    <a href="#order-diagnostics" data-toggle="modal" data-target="#order-diagnostics" role="button">Заказать диагностику</a>
+                    <a href="#<?=$modalNumber?>order-diagnostics" data-toggle="modal" data-target="#<?=$modalNumber?>order-diagnostics" role="button">Заказать диагностику</a><? $modalNumber++;?>
                 </div>
             </div>
         </div>
@@ -281,39 +263,16 @@ $APPLICATION->SetTitle("Ремонт");
                     </div>
                 </div>
                 <div class="col-lg-5">
-                    <div class="form-repair">
-                        <form class="repair repair_bg-red-opacity1 check-valid" novalidate>
-                            <div class="form-titile">
-                                <p>Заявка на диагностику</p>
-                            </div>
-                            <div class="form-content">
-                                <div class="form-group custom-form-group">
-                                    <input type="text" class="form-control custom-input" id="name2" placeholder="Имя" required>
-                                    <div class="invalid-feedback">
-                                        Вы не указали имя!
-                                    </div>
-                                </div>
-                                <div class="form-group custom-form-group">
-                                    <input type="text" class="form-control custom-input" id="phone2" placeholder="Телефон" required>
-                                    <div class="invalid-feedback">
-                                        Вы не указали телефон!
-                                    </div>
-                                </div>
-                                <div class="form-group custom-form-group">
-                                    <input type="text" class="form-control custom-input" id="city2" placeholder="Город" required>
-                                    <div class="invalid-feedback">
-                                        Вы не указали город!
-                                    </div>
-                                </div>
-                                <div class="form-group custom-form-group">
-                                    <textarea class="form-control custom-textarea" id="comment2" rows="3" placeholder="Комментарий"></textarea>
-                                </div>
-                            </div>
-                            <div class="form-footer">
-                                <button type="submit" class="btn btn_black btn_small-mobile btn_font-small">Заказать диагностику</button>
-                            </div>
-                        </form>
-                    </div>
+                    <?
+                    $APPLICATION->IncludeComponent(
+                        "wedo:forms",
+                        "repair_form",
+                        Array(
+                            "Background" => "-opacity1",
+                            "orderType"=>"Заказ диагностику"
+                        )
+                    );
+                    ?>
                 </div>
             </div>
         </div>
@@ -410,48 +369,18 @@ $APPLICATION->SetTitle("Ремонт");
             );?>
         </div>
     </div>
-
-    <!--Modal order-consultation-->
-    <div class="modal fade" id="order-diagnostics" tabindex="-1" role="dialog" aria-labelledby="order-diagnostics" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered custom-modal-dialog" role="document">
-            <div class="modal-content custom-modal-content custom-modal-content_bg-red">
-                <div class="modal-header custom-modal-header">
-                    <h5 class="modal-title custom-modal-title">Заявка на диагностику</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <form class="repair check-valid" novalidate>
-                    <div class="modal-body custom-modal-body">
-                        <div class="form-group">
-                            <input type="text" class="form-control custom-input" id="name3" placeholder="Имя" required>
-                            <div class="invalid-feedback">
-                                Вы не указали имя!
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control custom-input" id="phone3" placeholder="Телефон" required>
-                            <div class="invalid-feedback">
-                                Вы не указали телефон!
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control custom-input" id="city3" placeholder="Город" required>
-                            <div class="invalid-feedback">
-                                Вы не указали город!
-                            </div>
-                        </div>
-                        <div class="form-group custom-form-group">
-                            <textarea class="form-control custom-textarea" id="comment3" rows="3" placeholder="Комментарий"></textarea>
-                        </div>
-                    </div>
-                    <div class="modal-footer custom-modal-footer">
-                        <button type="submit" class="btn btn_black btn_small-mobile ">Заказать диагностику</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+        <?
+           for ($i=100; $i<=$modalNumber ; $i++){
+               $APPLICATION->IncludeComponent(
+                   "wedo:forms",
+                   "repair_form_modal",
+                   Array(
+                       "FORM_ID" => $i,
+                       "orderType"=>"Заказ диагностику"
+                   )
+               );
+           }
+        ?>
 
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
