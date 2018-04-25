@@ -330,27 +330,27 @@ $modalNumber = 100 ;
         </div>
         <div class="map-service-center">
             <?$APPLICATION->IncludeComponent(
-	"bitrix:map.google.view",
-	".default",
-	array(
-		"API_KEY" => App::$config->apiKeyOtherOfficesMap,
-		"CONTROLS" => array(
-			0 => "SMALL_ZOOM_CONTROL",
-			1 => "TYPECONTROL",
-			2 => "SCALELINE",
-		),
-		"INIT_MAP_TYPE" => "ROADMAP",
-		"MAP_DATA" => "a:4:{s:10:\"google_lat\";d:50.3576782;s:10:\"google_lon\";d:30.613006499999983;s:12:\"google_scale\";i:13;s:10:\"PLACEMARKS\";a:2:{i:0;a:3:{s:4:\"TEXT\";s:14:\"coffe machines\";s:3:\"LON\";d:23.88194061166996;s:3:\"LAT\";d:49.834717563792175;}i:1;a:3:{s:4:\"TEXT\";s:15:\"coffee machines\";s:3:\"LON\";d:30.619872955078108;s:3:\"LAT\";d:50.34513664681679;}}}",
-		"MAP_HEIGHT" => "600",
-		"MAP_ID" => "GOOGLE_MAP",
-		"MAP_WIDTH" => "100%",
-		"OPTIONS" => array(
-			0 => "ENABLE_DRAGGING",
-		),
-		"COMPONENT_TEMPLATE" => ".default"
-	),
-	false
-);?>
+                "bitrix:map.google.view",
+                ".default",
+                array(
+                    "API_KEY" => App::$config->apiKeyOtherOfficesMap,
+                    "CONTROLS" => array(
+                        0 => "SMALL_ZOOM_CONTROL",
+                        1 => "TYPECONTROL",
+                        2 => "SCALELINE",
+                    ),
+                    "INIT_MAP_TYPE" => "ROADMAP",
+                    "MAP_DATA" => "a:4:{s:10:\"google_lat\";d:50.108314617701055;s:10:\"google_lon\";d:34.889345354049055;s:12:\"google_scale\";i:5;s:10:\"PLACEMARKS\";a:5:{i:0;a:3:{s:4:\"TEXT\";s:37:\"Coffee machines service  г. Киев\";s:3:\"LON\";d:30.521539848537486;s:3:\"LAT\";d:50.41490388593943;}i:1;a:3:{s:4:\"TEXT\";s:55:\"Coffee machine service г .Краматорск###RN###\";s:3:\"LON\";d:37.588037248391856;s:3:\"LAT\";d:48.75664257371441;}i:2;a:3:{s:4:\"TEXT\";s:41:\"Coffee machine service г. Харьков\";s:3:\"LON\";d:36.26530605152061;s:3:\"LAT\";d:49.98400088866017;}i:3;a:3:{s:4:\"TEXT\";s:46:\"Coffee machines service г. Днепр###RN###\";s:3:\"LON\";d:35.05841257976226;s:3:\"LAT\";d:48.44904157907147;}i:4;a:3:{s:4:\"TEXT\";s:45:\"Coffee machine service г. Запорожье\";s:3:\"LON\";d:35.10988533179648;s:3:\"LAT\";d:47.839747189313705;}}}",
+                    "MAP_HEIGHT" => "600",
+                    "MAP_ID" => "GOOGLE_MAP",
+                    "MAP_WIDTH" => "100%",
+                    "OPTIONS" => array(
+                        0 => "ENABLE_KEYBOARD",
+                    ),
+                    "COMPONENT_TEMPLATE" => ".default"
+                ),
+                false
+            );?>
         </div>
 
         <div class="slider-clients-repair">
