@@ -30,9 +30,7 @@ $modalNumber=1;
                     $APPLICATION->IncludeComponent(
                         "wedo:forms",
                         "repair_form",
-                        Array(
-                            "form"=>"first"
-                        )
+                        Array()
                     );
                     ?>
                     <?
@@ -40,7 +38,7 @@ $modalNumber=1;
                         "wedo:forms",
                         "repair_form_modal",
                         Array(
-                            'form'=>'modalMain'
+                            'FORM_ID'=>'modalMain'
                         )
                     );
                     ?>
@@ -269,7 +267,7 @@ $modalNumber=1;
                         "wedo:forms",
                         "repair_form",
                         Array(
-                            'form'=>'second'
+                            "Background" => "-opacity1"
                         )
                     );
                     ?>

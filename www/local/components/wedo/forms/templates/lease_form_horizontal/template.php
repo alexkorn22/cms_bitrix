@@ -1,5 +1,5 @@
 <div class="form-lease">
-    <form class="lease lease_horizontal check-valid" id="<?=$arParams['FORM_ID']?>"><?=bitrix_sessid_post()?>
+    <form class="consultForms lease lease_horizontal check-valid" id="<?=$arParams['FORM_ID']?>"><?=bitrix_sessid_post()?>
         <? require $_SERVER["DOCUMENT_ROOT"].'/local/components/wedo/forms/views/msg.php';?>
 
         <div id="content<?=$arParams['FORM_ID']?>">

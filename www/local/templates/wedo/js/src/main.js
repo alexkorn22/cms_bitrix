@@ -54,7 +54,7 @@ $( document ).ready(function() {
     $('.menuLinkService').on('click',closeMenu);
 
 // forms handeling :
-    $('form').on('submit', function (e) {
+    $('.consultForms').on('submit', function (e) {
         e.preventDefault();
         var formData = $(this).serializeArray();
         var formId   = this.id;
