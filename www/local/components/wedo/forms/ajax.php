@@ -12,15 +12,16 @@ if (check_bitrix_sessid()) {
         'name'    => $request->getPost('userName'),
         'phone'   => $request->getPost('phone'),
         'city'    => $request->getPost('city'),
-        'comment' => $request->getPost('comment')
+        'comment' => $request->getPost('comment'),
+        'orderType' => $request->getPost('orderType')
     ];
     $alert = new Alert($MsgData);
-    $pattern  = "Сообщение !";
+    $pattern  = "(%orderType%)";
     $pattern .= "\n\n";
     $pattern .="Имя:  %name%\n";
     $pattern .= "Телефон: %phone%\n";
     $pattern .= "Город: %city%\n";
-    $pattern .= "Сообщение: %comment%\n";
+    $pattern .= "Коммент: %comment%\n";
     $alert->parseText($pattern);
     $alert->sendTelegram($idChat);
 }else{

@@ -1,6 +1,9 @@
 <div class="form-lease d-none d-lg-block">
     <form class="consultForms lease lease_bg-black check-valid" id="<?=$arParams['FORM_ID']?>"><?=bitrix_sessid_post()?>
         <? require $_SERVER["DOCUMENT_ROOT"].'/local/components/wedo/forms/views/msg.php';?>
+        <? if( isset($arParams['orderType'])):?>
+            <input type="hidden" name="orderType" value="<?=$arParams['orderType']?>">
+        <? endif; ?>
         <div id="content<?=$arParams['FORM_ID']?>">
             <div class="form-titile"><?=bitrix_sessid_post()?>
                 <p>Заявка на аренду</p>

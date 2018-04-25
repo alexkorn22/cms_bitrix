@@ -9,7 +9,13 @@
         <div class="modal-content custom-modal-content custom-modal-content_bg-red">
             <form class="consultForms repair check-valid" id="<?=$arParams['FORM_ID']?>"><?=bitrix_sessid_post()?>
                 <? require $_SERVER["DOCUMENT_ROOT"].'/local/components/wedo/forms/views/msg.php';?>
+                <? if( isset($arParams['orderType'])):?>
+                    <input type="hidden" name="orderType" value="<?=$arParams['orderType']?>">
+                <? endif; ?>
                 <div id="content<?=$arParams['FORM_ID']?>">
+                    <? if( isset($arParams['orderType'])):?>
+                        <input type="hidden" name="orderType" value="<?=$arParams['orderType']?>">
+                    <? endif; ?>
                     <div class="modal-header custom-modal-header">
                         <h5 class="modal-title custom-modal-title">Заявка на диагностику</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">

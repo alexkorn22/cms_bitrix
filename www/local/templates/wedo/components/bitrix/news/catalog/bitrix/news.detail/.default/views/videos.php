@@ -56,7 +56,8 @@
                         "wedo:forms",
                         "catalog_form",
                         Array(
-                            'btnColor' =>'black'
+                            'btnColor' =>'black',
+                            "orderType" => "Заявка на консультацию (".$arResult['NAME'].")"
                         )
                     );
                     ?>

@@ -13,7 +13,11 @@ $arComponentParameters = array(
             "TYPE" => "STRING",
         ],
          "FORM_TYPE" => [
-            "NAME" => GetMessage("WEDO_FORM_ID_TYPE"),
+            "NAME" => GetMessage("WEDO_FORM_TYPE"),
+            "TYPE" => "STRING",
+        ],
+         "ORDER_TYPE" => [
+            "NAME" => GetMessage("WEDO_ORDER_TYPE_NAME"),
             "TYPE" => "STRING",
         ]
 	),

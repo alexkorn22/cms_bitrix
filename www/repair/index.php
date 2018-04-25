@@ -30,7 +30,7 @@ $modalNumber=1;
                     $APPLICATION->IncludeComponent(
                         "wedo:forms",
                         "repair_form",
-                        Array()
+                        Array("orderType"=>"Заказ диагностику")
                     );
                     ?>
                     <?
@@ -38,7 +38,8 @@ $modalNumber=1;
                         "wedo:forms",
                         "repair_form_modal",
                         Array(
-                            'FORM_ID'=>'modalMain'
+                            'FORM_ID'=>'modalMain',
+                            "orderType"=>"Заказ диагностику"
                         )
                     );
                     ?>
@@ -267,7 +268,8 @@ $modalNumber=1;
                         "wedo:forms",
                         "repair_form",
                         Array(
-                            "Background" => "-opacity1"
+                            "Background" => "-opacity1",
+                            "orderType"=>"Заказ диагностику"
                         )
                     );
                     ?>
@@ -372,7 +374,7 @@ $modalNumber=1;
                $APPLICATION->IncludeComponent(
                    "wedo:forms",
                    "repair_form_modal",
-                   Array()
+                   Array("orderType"=>"Заказ диагностику")
                );
            }
         ?>

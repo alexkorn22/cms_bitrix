@@ -1,6 +1,9 @@
 <div class="form-repair d-none d-lg-block">
     <form class="consultForms repair repair_bg-red<?=$arParams['Background']?> check-valid" id="<?= $arParams['FORM_ID'] ?>">
         <? require $_SERVER["DOCUMENT_ROOT"] . '/local/components/wedo/forms/views/msg.php'; ?>
+        <? if( isset($arParams['orderType'])):?>
+            <input type="hidden" name="orderType" value="<?=$arParams['orderType']?>">
+        <? endif; ?>
         <div id="content<?= $arParams['FORM_ID'] ?>">
             <div class="form-titile">
                 <p>Заявка на диагностику</p>

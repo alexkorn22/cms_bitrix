@@ -29,7 +29,8 @@ $APPLICATION->SetTitle("Аренда");
                         "wedo:forms",
                         "lease_form_vertical",
                         Array(
-                            "FORM_TYPE"=>"whiteClock"
+                            "FORM_TYPE"=>"whiteClock",
+                            "orderType" => "Заявка на аренду"
                         )
                     );?>
 				</div>
@@ -134,7 +135,8 @@ $APPLICATION->SetTitle("Аренда");
                         "wedo:forms",
                         "lease_form_horizontal",
                         Array(
-                            "FORM_TYPE"=>"whiteClock"
+                            "FORM_TYPE"=>"whiteClock",
+                            "orderType" => "Заявка на аренду"
                         )
                 );
                 ?>
@@ -167,7 +169,7 @@ $APPLICATION->SetTitle("Аренда");
     <?$APPLICATION->IncludeComponent(
         "wedo:forms",
         "lease_form_modal",
-        Array()
+        Array("orderType" => "Заявка на аренду")
     );
     ?>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

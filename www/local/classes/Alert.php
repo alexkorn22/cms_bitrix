@@ -4,12 +4,6 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 class Alert {
     protected $data;
     protected $text;
-    public $formType ;
-
-    const LEASE       = 'Заявка на аренду';
-    const CONTACT     = 'Заказ обратный звонок';
-    const REPAIR      = 'Заказ диагностику';
-    const CONSULT_KM  = 'Заявка на консультацию';
 
     public function __construct($data = []) {
         $this->data = $data;

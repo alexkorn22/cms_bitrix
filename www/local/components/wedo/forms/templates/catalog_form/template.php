@@ -8,6 +8,9 @@
             <?=bitrix_sessid_post()?>
             <form class="consultForms consultation" id="<?=$arParams['FORM_ID']?>"><?=bitrix_sessid_post()?>
                 <? require $_SERVER["DOCUMENT_ROOT"].'/local/components/wedo/forms/views/msg.php';?>
+                <? if( isset($arParams['orderType'])):?>
+                    <input type="hidden" name="orderType" value="<?=$arParams['orderType']?>">
+                <? endif; ?>
                 <div id="content<?=$arParams['FORM_ID']?>">
                     <div class="modal-header custom-modal-header">
                         <h5 class="modal-title custom-modal-title">Заявка на консультацию</h5>

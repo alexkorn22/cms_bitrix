@@ -34,7 +34,9 @@ $APPLICATION->AddChainItem("Контакты", "/about/contacts");
             $APPLICATION->IncludeComponent(
                 "wedo:forms",
                 "contacts_form",
-                Array()
+                Array(
+                   "orderType" => "Заказ обратный звонок"
+                )
             );
             ?>
         </div>
@@ -85,7 +87,9 @@ $APPLICATION->AddChainItem("Контакты", "/about/contacts");
                     $APPLICATION->IncludeComponent(
                         "wedo:forms",
                         "contacts_form",
-                        Array()
+                        Array(
+                           "orderType" => "Заказ обратный звонок"
+                        )
                     );
                     ?>
 		</div>

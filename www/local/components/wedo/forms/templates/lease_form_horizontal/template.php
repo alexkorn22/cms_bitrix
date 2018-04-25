@@ -1,7 +1,9 @@
 <div class="form-lease">
     <form class="consultForms lease lease_horizontal check-valid" id="<?=$arParams['FORM_ID']?>"><?=bitrix_sessid_post()?>
         <? require $_SERVER["DOCUMENT_ROOT"].'/local/components/wedo/forms/views/msg.php';?>
-
+        <? if( isset($arParams['orderType'])):?>
+            <input type="hidden" name="orderType" value="<?=$arParams['orderType']?>">
+        <? endif; ?>
         <div id="content<?=$arParams['FORM_ID']?>">
             <div class="container-fluid">
                 <div class="row">

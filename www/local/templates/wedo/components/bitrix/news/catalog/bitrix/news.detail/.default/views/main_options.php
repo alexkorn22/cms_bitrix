@@ -56,7 +56,8 @@
                         "catalog_form",
                         Array(
                             'form'=>'modalMain',
-                            'btnColor' =>'red'
+                            'btnColor' =>'red',
+                            "orderType" => "Заявка на консультацию (".$arResult['NAME'].")"
                         )
                     );
                     ?>
