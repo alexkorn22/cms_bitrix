@@ -65,6 +65,7 @@ $( document ).ready(function() {
             beforeSend:function () {
                 $("#content"+formId).css('opacity','0');
                 $('#'+formId+'_loader').fadeIn(1000);
+                $('.email-form-text').css('opacity','0');
             },
             success: function () {
                 $('#'+formId+'_loader').fadeOut(1000);

@@ -3,24 +3,19 @@
         <div class="row">
             <div class="col-12 col-lg-6 offset-lg-1">
                 <div class="banner-text">
-                    <p class="title-banner">Хотите получать свежие обзоры и советы каждый четверг?</p>
-                    <p class="descr-banner">Подписывайтесь!</p>
+                    <p class="title-banner email-form-text">Хотите получать свежие обзоры и советы каждый четверг?</p>
+                    <p class="descr-banner email-form-text">Подписывайтесь!</p>
 
-                    <form class="subscribe check-valid" novalidate>
-                        <div class="row"><?=bitrix_sessid_post()?>
-                            <div class="col-sm-6 col-lg-6">
-                                <div class="form-group custom-form-group">
-                                    <input type="email" class="form-control custom-input" id="phone" placeholder="Email" required>
-                                    <div class="invalid-feedback">
-                                        Вы не указали Email!
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-6">
-                                <button type="submit" class="btn btn_red btn_small-mobile btn_font-small">Подписаться</button>
-                            </div>
-                        </div>
-                    </form>
+                    <?
+                    $APPLICATION->IncludeComponent(
+                        "wedo:forms",
+                        "email_form",
+                        Array(
+                            "orderType" => "EMAIL_FORM",
+                            "FORM_TYPE"=>"whiteClock"
+                        )
+                    );
+                    ?>
 
                 </div>
             </div>
