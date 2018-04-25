@@ -24,7 +24,7 @@ $APPLICATION->AddChainItem("Контакты", "/about/contacts");
 				</div>
 			</div>
 		</div>
-        <div class="col-md-5 col-sm-12 col-xs-12 first-form-contacts">
+        <div class="col-md-5 col-sm-10 col-xs-10 first-form-contacts">
             <?
             $APPLICATION->IncludeComponent(
                 "wedo:forms",
@@ -58,7 +58,7 @@ $APPLICATION->AddChainItem("Контакты", "/about/contacts");
 </div>
 <div class="other-offices">
 	<div class="row">
-		<div class="col-md-8 col-sm-12 col-xs-12">
+		<div class="col-md-7 col-sm-12 col-xs-12">
 			<div class="row">
                 <?foreach (App::$config->officesList as $office):?>
                     <div class="col-md-5 offices-data">
@@ -77,7 +77,7 @@ $APPLICATION->AddChainItem("Контакты", "/about/contacts");
                 <?endforeach;?>
 			</div>
 		</div>
-		<div class="col-lg-3 col-sm-10 col-xs-10">
+		<div class="col-md-5 col-sm-10 col-xs-10 ">
                     <?
                     $APPLICATION->IncludeComponent(
                         "wedo:forms",

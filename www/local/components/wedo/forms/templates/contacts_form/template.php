@@ -1,5 +1,5 @@
 <div class="form-repair">
-    <form class="consultForms repair repair_bg-red-opacity1 check-valid" id="<?=$arParams['FORM_ID']?>" >
+    <form class="consultForms contacts_form_mob repair repair_bg-red-opacity1 check-valid" id="<?=$arParams['FORM_ID']?>" >
         <? require $_SERVER["DOCUMENT_ROOT"].'/local/components/wedo/forms/views/msg.php';?>
         <? if( isset($arParams['orderType'])):?>
             <input type="hidden" name="orderType" value="<?=$arParams['orderType']?>">
