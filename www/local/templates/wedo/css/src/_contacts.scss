@@ -165,7 +165,7 @@
     @media(min-width: 1440px){
       margin-left: 0;
       margin-right: 0;
-      left:167px;
+      left: 152px;
     }
     @media(min-width: 2200px){
       margin-left: 0;
@@ -178,7 +178,7 @@
     @media(min-width: 1440px){
       margin-left: 0;
       margin-right: 0;
-      left:167px;
+      left: 152px;
     }
     @media(min-width: 2200px){
       margin-left: 0;
@@ -227,7 +227,7 @@
 
 .lease_horizontal{
   [id*="_msg"]{
-    @media (min-width: 2200px){
+    @media (min-width: 1440px){
       left: 0;
       right: 0;
       top:38%;
@@ -236,7 +236,7 @@
     }
   }
   [id*="_loader"]{
-    @media (min-width: 2200px){
+    @media (min-width: 1440px){
       left: 0;
       right: 0;
       top:50%;
