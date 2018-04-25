@@ -1,7 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Ремонт");
-$modalNumber=1;
+$modalNumber = 100 ;
 ?>
 
     <div class="head-banner head-banner_repair">
@@ -370,11 +370,14 @@ $modalNumber=1;
         </div>
     </div>
         <?
-           for ($i=1; $i<=$modalNumber ; $i++){
+           for ($i=100; $i<=$modalNumber ; $i++){
                $APPLICATION->IncludeComponent(
                    "wedo:forms",
                    "repair_form_modal",
-                   Array("orderType"=>"Заказ диагностику")
+                   Array(
+                       "FORM_ID" => $i,
+                       "orderType"=>"Заказ диагностику"
+                   )
                );
            }
         ?>

@@ -7,7 +7,7 @@ class FormsComponent extends CBitrixComponent{
 
 		if ($this->startResultCache()){
 
-		    if( $this->arParams['FORM_ID'] != 'modalMain'){
+		    if(!isset($this->arParams['FORM_ID'])){
                 $this->arParams['FORM_ID']  = App::$ds->formNumber;
                 App::$ds->formNumber++;
             }
