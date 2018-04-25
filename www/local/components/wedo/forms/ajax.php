@@ -6,16 +6,13 @@ if (!$request->isAjaxRequest()) {
 }
 if (check_bitrix_sessid()) {
     require 'views/msg.php';
-    // get Form Data :
-    $postData = $request->getPostList();
-
     // send telegram message  :
     $idChat   = App::$config->telegramChatId;
     $MsgData = [
-        'name'    =>$postData['userName'],
-        'phone'   => $postData['phone'],
-        'city'   => $postData['city'],
-        'comment' => $postData['comment']
+        'name'    => $request->getPost('userName'),
+        'phone'   => $request->getPost('phone'),
+        'city'    => $request->getPost('city'),
+        'comment' => $request->getPost('comment')
     ];
     $alert = new Alert($MsgData);
     $pattern  = "Сообщение !";
