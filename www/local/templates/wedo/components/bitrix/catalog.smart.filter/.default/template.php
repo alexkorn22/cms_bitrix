@@ -265,14 +265,14 @@ global $arrFilter;
                                     <div class="bx-filter-block">
                                         <div class="bx-filter-parameters-box-container">
                                             <input
-                                                    class="btn btn_black btn_small-mobile btn_font-small"
+                                                    class="btn-filter btn btn_black btn_small-mobile btn_font-small"
                                                     type="submit"
                                                     id="set_filter"
                                                     name="set_filter"
                                                     value="Подобрать"
                                             />
                                             <input
-                                                    class="btn btn_black btn_small-mobile btn_font-small"
+                                                    class="btn-filter btn btn_black btn_small-mobile btn_font-small"
                                                     type="submit"
                                                     id="del_filter"
                                                     name="del_filter"

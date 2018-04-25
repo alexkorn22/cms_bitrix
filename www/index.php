@@ -7,7 +7,7 @@ $APPLICATION->SetTitle("Кофемашины ");
 	<div class="row justify-content-center">
 		<div class="col-lg-10">
 			<div class="section-title">
-				<h1 class="title">Профессиональные кофемашины WMF от официального дилера Coffee Machine Service</h1>
+				<h1 class="title">Профессиональные кофемашины WMF от официального представителя Coffee Machine Service</h1>
 			</div>
 		</div>
 	</div>
@@ -116,7 +116,7 @@ $APPLICATION->SetTitle("Кофемашины ");
                 <div class="b-cms">
                     <div class="slide">
                         <div class="b-cms__text d-none d-md-flex">
-                            <p class="b-cms__text__title"><span class="firm">Coffee Machine Service</span> официальный партнёр компании WMF в Украине</p>
+                            <p class="b-cms__text__title"><span class="firm">Coffee Machine Service</span> официальный представитель компании WMF в Украине</p>
                             <div class="b-cms__text__descr">
                                 <ul>
                                     <li>подбор кофеавтомата под ваши задачи</li>
@@ -129,11 +129,11 @@ $APPLICATION->SetTitle("Кофемашины ");
                         <div class="b-cms__img d-flex d-md-none">
                             <img src="<?=IMAGES_PATH?>/cms-logo-circle.png" alt="CMS">
                         </div>
-                        <p class="b-cms__text__title d-block d-md-none"><span class="firm">Coffee Machine Service</span> официальный партнёр компании WMF в Украине</p>
+                        <p class="b-cms__text__title d-block d-md-none"><span class="firm">Coffee Machine Service</span> официальный представитель компании WMF в Украине</p>
                     </div>
                     <div class="slide">
                         <div class="b-cms__text d-flex d-md-none">
-                            <p class="b-cms__text__title"><span class="firm">Coffee Machine Service</span> официальный партнёр компании WMF в Украине</p>
+                            <p class="b-cms__text__title"><span class="firm">Coffee Machine Service</span> официальный представитель компании WMF в Украине</p>
                             <div class="b-cms__text__descr">
                                 <ul>
                                     <li>подбор кофеавтомата под ваши задачи</li>

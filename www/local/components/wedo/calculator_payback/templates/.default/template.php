@@ -46,26 +46,26 @@ extract($arResult);
                             </div>
                         <? endif; ?>
                             <div class="col-lg-3">
-                                <div class="wrap-input">
-                                    <div class="form-group">
-                                        <label for="fild-coffee">Цена 1 кг. кофе (грн) *</label>
+                                <div class="wrap-input calculate-raschet__wrap-input">
+                                    <div class="form-group calculate-raschet__form-group">
+                                        <label for="fild-coffee" class="calculate-raschet__label">Цена 1 кг. кофе (грн) *</label>
                                         <input type="text" class="form-control custom-input" id="priceCofee" value="<?=$priceCofee?>">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-3">
-                                <div class="wrap-input">
-                                    <div class="form-group">
-                                        <label for="fild-realizaciy">Цена реализации (грн) *</label>
+                                <div class="wrap-input calculate-raschet__wrap-input">
+                                    <div class="form-group calculate-raschet__form-group">
+                                        <label for="fild-realizaciy" class="calculate-raschet__label">Цена реализации (грн) *</label>
                                         <input type="text" class="form-control custom-input" id="priceSale" value="<?=$priceSale?>">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-3">
-                                <div class="wrap-input">
-                                    <div class="form-group">
-                                        <label for="fild-porcii">Количество порций в день *</label>
-                                        <input type="text" class="form-control custom-input" id="cmServings" value="<?=$cmServings?>">
+                                <div class="wrap-input calculate-raschet__wrap-input">
+                                    <div class="form-group calculate-raschet__form-group">
+                                        <label for="fild-porcii" class="calculate-raschet__label">Количество порций в день *</label>
+                                        <input type="text" class="form-control custom-input" class="form-control custom-input" id="cmServings" value="<?=$cmServings?>">
                                     </div>
                                 </div>
                             </div>
