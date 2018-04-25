@@ -203,6 +203,28 @@
   }
 }
 
+.lease_horizontal{
+  [id*="_msg"]{
+    @media (min-width: 2200px){
+      left: 0;
+      right: 0;
+      top:38%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  [id*="_loader"]{
+    @media (min-width: 2200px){
+      left: 0;
+      right: 0;
+      top:50%;
+      margin-left: auto;
+      margin-right: auto;
+      width: 220px;
+    }
+  }
+}
+
 [id*="_loader"]{
   left: 0;
   right: 0;
