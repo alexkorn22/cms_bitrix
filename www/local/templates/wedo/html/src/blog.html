@@ -1,0 +1,151 @@
+//= layouts/header.html
+
+<div id="wrap">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="section-title blog">
+                    <h1 class="title">Блог</h1>
+                </div>
+            </div>
+        </div>
+        <div class="tag-line">
+            <div class="row d-none d-md-block">
+                <div class="col">
+                    <nav class="priority-nav">
+                        <ul class='tags-blog'>
+                            <li><a href='#'>Обзоры</a></li>
+                            <li><a href='#'>Рекомендации по эксплуатации</a></li>
+                            <li><a href='#' class="active-tag">Сравнения</a><a href="" class="close-tag"></a></li>
+                            <li><a href='#'>Инструкции по применению</a></li>
+                            <li><a href='#'>Обслуживание и ремонт</a></li>
+                        </ul>
+                        <button class="more-tags">... Ещё</button>
+                        <ul class='hidden-tags-blog hidden'></ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="row d-block d-md-none">
+                <div class="col">
+                    <div class="dropdown custom-dropdown-tag">
+                        <button class="btn btn_transparent dropdown-toggle" type="button" id="dropdownMenuTag" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Темы
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-tag" aria-labelledby="dropdownMenuTag">
+                            <li class="dropdown-item dropdown-item-tag"><a href='#'>Обзоры</a></li>
+                            <li class="dropdown-item dropdown-item-tag active"><a href='#'>Рекомендации по эксплуатации</a><a href="" class="close-tag"></a></li>
+                            <li class="dropdown-item dropdown-item-tag"><a href='#'>Сравнения</a></li>
+                            <li class="dropdown-item dropdown-item-tag"><a href='#'>Инструкции по применению</a></li>
+                            <li class="dropdown-item dropdown-item-tag"><a href='#'>Обслуживание и ремонт</a></li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="news-line">
+            <div class="row">
+                <!-- Начало первой новости -->
+                <div class="col-lg-6 col-xl d-none d-lg-block">
+                    //= templates/blog/main_news.html
+                </div>
+                <div class="col-lg-3 d-block d-lg-none">
+                    //= templates/blog/news.html
+                </div>
+                <!-- Конец первой новости -->
+                <div class="col-lg-3 col-xl">
+                    //= templates/blog/news.html
+                </div>
+                <div class="col-lg-3 col-xl">
+                    //= templates/blog/news.html
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap-banner blog">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 offset-lg-1">
+                    <div class="banner-text">
+                        <p class="title-banner">Хотите получать свежие обзоры и советы каждый четверг?</p>
+                        <p class="descr-banner">Подписывайтесь!</p>
+
+                        <form class="subscribe check-valid" novalidate>
+                            <div class="row">
+                                <div class="col-sm-6 col-lg-6">
+                                    <div class="form-group custom-form-group">
+                                        <input type="email" class="form-control custom-input" id="phone" placeholder="Email" required>
+                                        <div class="invalid-feedback">
+                                            Вы не указали Email!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-6">
+                                    <button type="submit" class="btn btn_red btn_small-mobile btn_font-small">Подписаться</button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block">
+                    <div class="wrap-banner-img">
+                        <div class="banner-img">
+                            <img src="../../images/banners/airplane.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="news-line">
+            <div class="row">
+                <div class="col-lg-3 col-xl">
+                    //= templates/blog/news.html
+                </div>
+                <div class="col-lg-3 col-xl">
+                    //= templates/blog/news.html
+                </div>
+                <!-- Начало главной новости -->
+                <div class="col-lg-6 col-xl d-none d-lg-block">
+                    //= templates/blog/main_news.html
+                </div>
+                <div class="col-lg-3 d-block d-lg-none">
+                    //= templates/blog/news.html
+                </div>
+                <!-- Конец главной новости -->
+            </div>
+        </div>
+        <div class="news-line">
+            <div class="row">
+                <!-- Начало первой новости -->
+                <div class="col-lg-6 col-xl d-none d-lg-block">
+                    //= templates/blog/main_news.html
+                </div>
+                <div class="col-lg-3 d-block d-lg-none">
+                    //= templates/blog/news.html
+                </div>
+                <!-- Конец первой новости -->
+                <div class="col-lg-3 col-xl">
+                    //= templates/blog/news.html
+                </div>
+                <div class="col-lg-3 col-xl">
+                    //= templates/blog/news.html
+                </div>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <!--<a href="#" class="pagination__prev"></a>-->
+            <span class="pagination__prev pagination__prev-no-active"></span>
+            <a href="#" class="pagination__page pagination__page-active">1</a>
+            <a href="#" class="pagination__page">2</a>
+            <a href="#" class="pagination__next"></a>
+        </div>
+
+    </div>
+</div>
+
+//= layouts/footer.html

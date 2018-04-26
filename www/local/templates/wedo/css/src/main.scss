@@ -1,0 +1,66 @@
+@import "../../../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../../../node_modules/bootstrap/scss/mixins/breakpoints";
+@import "fonts";
+@import "variable";
+@import "catalog";
+@import "index";
+@import "modules/main/buttons";
+@import "modules/banners";
+@import "modules/burger-menu";
+@import "modules/header-main";
+@import "modules/footer";
+@import "modules/pagination";
+@import "modules/calculate";
+@import "modules/main/modal";
+@import "modules/breadcrumb";
+@import "product";
+@import "lease";
+@import "repair";
+@import "contacts";
+@import "blog";
+@import "news";
+@import "404";
+
+body {
+  background: $white;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  font-family: $Regular;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding-right: 0px !important;
+  h1, h2, h3, h4, h5, h6 {
+    font: inherit;
+    font-size: 100%;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  section {
+    padding: 110px 0;
+    @include media-breakpoint-down(sm) {
+      padding: 50px 0;
+    }
+  }
+}
+#main {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-x: hidden;
+}
+#wrap {
+  flex: 1 1 auto;
+}
+@import "media";
+

@@ -1,36 +1,36 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Главная", 
-		"/", 
+		"Кофемашины", 
+		"/catalog/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Профиль", 
-		"/personal/", 
+		"Аренда", 
+		"/lease/",
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Контент", 
-		"/content/", 
+		"Ремонт", 
+		"/repair/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Магазин", 
-		"/e-store/", 
+		"Сервис", 
+		"/blog/servisnoe-obsluzhivanie-kofemashin-wmf/",
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Типовые примеры", 
-		"/examples/", 
+		"Комплексные решения", 
+		"/blog/kompleksnye-resheniya/",
 		Array(), 
 		Array(), 
 		"" 

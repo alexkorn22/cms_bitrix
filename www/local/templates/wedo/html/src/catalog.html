@@ -1,0 +1,157 @@
+//= layouts/header.html
+
+<div class="container-fluid catalog">
+    <div class="row">
+        <div class="col">
+            <div class="section-title">
+                <h1 class="title">Каталог кофемашин </h1>
+            </div>
+        </div>
+    </div>
+    <div class="wrap-filter">
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="left">
+                    <div class="catalog-text-head">
+                        <p>Какая кофемашина подойдет Вам?</p>
+                        <p>Не можете выбрать, какую профессиональную кофемашину купить для ваших задач? Воспользуйтесь сервисом подбора, который порекомендует вам нужную модель. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="right">
+                    <div class="catalog-btn-filter">
+                        <button type="button" class="btn btn_red btn_big btn_small-mobile" data-toggle="modal" data-target="#filter">Подобрать кофемашину</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    //= templates/catalog_product.html
+    //= templates/catalog_product.html
+
+</div>
+
+<div class="wrap-banner first">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-lg-6 offset-md-1">
+                <div class="banner-text">
+                    <p class="title-banner">Кофемашины <span>WMF</span> в аренду</p>
+                    <ul>
+                        <li>без стартовых затрат</li>
+                        <li>без ежемесячной платы</li>
+                        <li>бесплатный сервис</li>
+                    </ul>
+                    <button type="button" class="btn btn_red btn_small-mobile"><a href="#">Узнать подробности</a></button>
+                </div>
+            </div>
+            <div class="col-lg-5 d-none d-lg-block">
+                <div class="wrap-banner-img">
+                    <div class="banner-img">
+                        <img src="../../images/banners/banner-img1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid catalog">
+
+    //= templates/catalog_product.html
+    //= templates/catalog_product.html
+
+</div>
+
+<div class="wrap-banner second">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-lg-6 offset-md-1">
+                <div class="banner-text">
+                    <p class="title-banner">Комплексные решения для офисов и компаний</p>
+                    <p class="descr-banner">Установка и сервис <span>"под ключ"</span></p>
+                    <button type="button" class="btn btn_black btn_small-mobile"><a href="#">Узнать подробности</a></button>
+                </div>
+            </div>
+            <div class="col-lg-5 d-none d-lg-block">
+                <div class="wrap-banner-img">
+                    <div class="banner-img">
+                        <img src="../../images/banners/banner-img2.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid catalog">
+
+    //= templates/catalog_product.html
+    //= templates/catalog_product.html
+    //= templates/catalog_product.html
+
+</div>
+
+
+
+<!--Modal Filter-->
+<div class="modal fade" id="filter" tabindex="-1" role="dialog" aria-labelledby="filter" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom-modal-dialog" role="document">
+        <div class="modal-content custom-modal-content custom-modal-content_bg-red">
+            <div class="modal-header custom-modal-header">
+                <h5 class="modal-title custom-modal-title">Сервис подбора кофемашины</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body custom-modal-body">
+                <div class="form-group">
+                    <label for="select1">Я буду использовать кофемашину:</label>
+                    <select class="form-control custom-select" id="select1">
+                        <option>не указано</option>
+                        <option>для офиса компании, предприятия</option>
+                        <option>гостиницы и отеля</option>
+                        <option>фастфуда</option>
+                        <option>АЗС</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="select2">Количество порций в день:</label>
+                    <select class="form-control custom-select" id="select2">
+                        <option>не указано</option>
+                        <option>до 50</option>
+                        <option>до 100</option>
+                        <option>до 150</option>
+                        <option>до 180</option>
+                        <option>до 200</option>
+                        <option>до 350</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="select3">Производительность в часы пик, порций/час:</label>
+                    <select class="form-control custom-select" id="select3">
+                        <option>не указано</option>
+                        <option>60-80</option>
+                        <option>80-10</option>
+                        <option>120-140</option>
+                        <option>180-200</option>
+                    </select>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Хочу только новую кофемашину</label>
+                </div>
+            </div>
+            <div class="modal-footer custom-modal-footer">
+                <button type="button" class="btn btn_black btn_small-mobile btn_font-small">Подобрать</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+//= layouts/footer.html

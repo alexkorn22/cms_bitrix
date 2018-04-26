@@ -1,0 +1,332 @@
+.head-banner {
+  min-height: 85vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &_lease {
+    background-image: url(../../images/banners/bg-banner-lease.jpg);
+  }
+  &_repair {
+    background-image: url(../../images/banners/bg-banner-repair.jpg);
+  }
+}
+
+.tabs-lease-repair {
+  padding-right: 15px;
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0;
+    li {
+      text-align: center;
+      padding: 0 10px;
+      a {
+        text-decoration: none;
+        color: $white;
+        font-size: 18px;
+        line-height: 20px;
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        margin-bottom: 0.5em;
+        text-transform: uppercase;
+        &:after {
+          content: '';
+          display: block;
+          width: 0;
+          height: 2px;
+          background: $white;
+          margin: auto;
+          transition: all .5s ease;
+          margin-top: 5px;
+        }
+        &:hover::after,
+        &:focus::after{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.title-lease, .form-lease, .title-repair, .form-repair {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10% 6%;
+}
+
+.title-lease, .title-repair {
+  @include media-breakpoint-down(md){
+    padding: 25% 0 0 0;
+  }
+}
+
+.form-lease, .form-repair {
+  @include media-breakpoint-down(md){
+    padding: 10% 0 0 0;
+  }
+}
+
+.title-lease, .title-repair {
+  h1 {
+    font-size: 54px;
+    font-family: $Bold;
+    color: $white;
+    line-height: 64px;
+    padding: 0 30px;
+    .wmf {
+      font-size: 58px;
+      font-family: $Black;
+      font-style: italic;
+      &_red {
+        color: $red;
+      }
+      &_black {
+        color: $black;
+      }
+    }
+  }
+  @include media-breakpoint-down(sm){
+    h1 {
+      font-size: 40px;
+      line-height: 44px;
+      padding: 0;
+      .wmf {
+        font-size: 44px;
+      }
+    }
+  }
+}
+
+.form-lease, .form-repair {
+  form.lease, form.repair {
+    width: 430px;
+    min-width: 430px;
+    padding: 30px 40px;
+    border-radius: 4px;
+    box-shadow: 2px 5px 7px 0 rgba($black, 0.3);
+    &_bg-black {
+      background-color: $bgHead;
+    }
+    &_bg-red {
+      background-color: rgba($red, 0.7);
+    }
+    &_bg-red-opacity1 {
+      background-color: rgba($red, 0.9);
+    }
+    .form-titile {
+      text-align: center;
+      font-size: 24px;
+      color: $white;
+    }
+    .form-content {
+      .invalid-feedback {
+        color: $white;
+      }
+    }
+    .form-footer {
+      text-align: center;
+    }
+    &_horizontal {
+      width: 820px;
+      background-image: url(../../images/banners/bg-form-lease.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      .form-content {
+        .custom-form-group {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          .invalid-feedback {
+            color: $white;
+            width: 300px;
+          }
+        }
+        input, textarea {
+          max-width: 300px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+
+.btn-order {
+  padding-top: 20px;
+}
+
+#advantages-lease, #models-for-rent, #rent-terms, #payback-calculator, #clients-in-lease {
+  padding-top: 150px;
+  @include media-breakpoint-down(sm){
+    padding-top: 100px;
+  }
+}
+
+.item-advantages {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  img {
+    width: auto;
+    height: 75px;
+  }
+  p {
+    text-align: center;
+    padding: 0 55px;
+    margin: 0;
+    margin-top: 10px;
+  }
+  span {
+    color: $red;
+  }
+}
+
+#models-for-rent {
+  .slider-models-for-rent {
+    margin-top: 40px;
+    .models {
+     &:focus {
+       outline: 0;
+     }
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: inherit;
+        &:focus {
+          outline: 0;
+        }
+        img {
+          width: auto;
+          height: 350px;
+        }
+        p {
+          font-size: 26px;
+          font-family: $Light;
+        }
+      }
+    }
+
+    .slick-next, .slick-prev {
+      background-color: transparent;
+
+    }
+  }
+  .descr-model-for-rent {
+    padding-top: 25px;
+    font-size: 26px;
+    line-height: 36px;
+    font-family: $Light;
+    @include media-breakpoint-down(sm){
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+}
+
+#rent-terms {
+  .wrap-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    &:after {
+      content: '';
+      border-bottom: 1px dashed $red;
+      z-index: 0;
+      width: 100%;
+      position: absolute;
+      right: -50%;
+    }
+    @include media-breakpoint-down(md){
+      &:after {
+        height: 100%;
+        border-left: 1px dashed #dd2a1b;
+        border-bottom: 0;
+        top: 50%;
+      }
+
+    }
+    .circle {
+      border: 2px solid $red;
+      height: 250px;
+      width: 250px;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 6px 0 $bgHead;
+      background-color: $white;
+      z-index: 1;
+      .text {
+        p {
+          margin: 0;
+          text-align: center;
+          padding: 0 35px;
+          font-size: 18px;
+          line-height: 27px;
+        }
+      }
+    }
+  }
+  .not-dotted {
+    &:last-of-type {
+      .wrap-circle {
+        &:after {
+          border: 0;
+        }
+      }
+    }
+  }
+}
+
+#payback-calculator {
+  .calculate-raschet {
+    .wrap-input, .wrap-select {
+      label {
+        font-size: 18px;
+        margin-bottom: 0;
+        padding: 0 10px;
+        min-height: 65px;
+      }
+      &.srok-okupaemosti {
+        label {
+          margin-bottom: 0;
+        }
+        .custom-input {
+          font-size: 24px;
+        }
+      }
+    }
+    .wrap-select {
+      .form-group {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    @include media-breakpoint-down(md){
+
+      .wrap-select, .wrap-input {
+        .form-group {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
+
+#clients-in-lease {
+  padding-bottom: 100px;
+}

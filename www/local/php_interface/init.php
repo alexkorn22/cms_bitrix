@@ -1,4 +1,30 @@
 <?
+/*
+ <?
+// подключение служебной части пролога
+require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_before.php");
+
+// подключение визуальной части пролога
+require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_after.php");
+
+// проверка что пролог подключен
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+
+?>
+Содержимое страницы
+<?
+
+// подключение визуальной части эпилога
+require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/epilog_before.php");
+
+// подключение служебной части эпилога
+require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/epilog_after.php");
+?>
+ */
+
+define('ROOT', $_SERVER['DOCUMENT_ROOT']);
+define('IMAGES_PATH','/local/templates/wedo/images');
+
 //***** AUTOLOAD CLASSES *****
 $pathArtorgClasses = '/local/classes/';
 $arClasses = getArClasses($pathArtorgClasses);
@@ -31,6 +57,24 @@ function getArClasses($path,$arResult = array()){
     }
     return $arResult;
 }
+
+
+AddEventHandler("main", "OnEndBufferContent", "ChangeMyContent");
+
+function ChangeMyContent(&$content)
+{
+    global $USER;
+    if(!$USER->IsAdmin()) {
+        $content = sanitize_output($content);
+    }
+}
+
+function sanitize_output($buffer)
+{
+    return preg_replace('~>\s*\n\s*<~', '><', $buffer);
+}
+
+
 App::Init();
 include_once $_SERVER['DOCUMENT_ROOT'] . '/local/files/events.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/local/files/functions.php';

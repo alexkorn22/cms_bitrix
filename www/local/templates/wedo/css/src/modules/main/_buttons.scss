@@ -1,0 +1,106 @@
+/*Пример написания html
+<button type="button" class="btn btn_red btn_font-small"><a href="#">Узнать подробности</a></button>
+<button type="button" class="btn btn_black btn_font-small">Узнать подробности</button>
+<button type="button" class="btn btn_none-fill">Подробнее</button>
+<button type="button" class="btn btn_red btn_big">Подобрать кофемашину</button>
+<button type="button" class="btn btn_red btn_fix-size btn_font-small">Отправить</button> */
+
+.btn:focus {
+  box-shadow: none;
+}
+.btn a {
+  text-decoration: none;
+  color: inherit;
+}
+.btn-filter{
+  margin: 5px;
+}
+
+.btn {
+  padding: 15px 40px;
+  font-size: 24px;
+  border-radius: 5px;
+  font-family: $Regular;
+  transition: 0.4s;
+  
+  &_red {
+    background-color: $red;
+    color: $white;
+    &:hover {
+      background-color: $light-black;
+      color: $white;
+      text-decoration: none;
+    }
+  }
+  
+  &_black {
+    background-color: $light-black;
+    color: $white;
+    &:hover {
+      background-color: $red;
+    }
+  }
+  
+  &_none-fill {
+    background-color: transparent;
+    color: $red;
+    border: 2px solid $red;
+    &:hover {
+      background-color: $red;
+      color: $white;
+    }
+  }
+
+  &_transparent {
+    background-color: transparent;
+    color: $black;
+    border: none;
+    padding: 0;
+  }
+
+  &_big {
+    text-transform: uppercase;
+    font-family: $Semibold;
+  }
+
+  &_small-mobile {
+    @include media-breakpoint-down(xs){
+      padding: 10px 15px;
+      font-size: 18px;
+    }
+  }
+
+  &_fix-size {
+    max-width: 300px;
+    width: 100%;
+    height: 50px;
+    padding: 0;
+  }
+
+  &_font-small{
+    font-size:20px;
+  }
+}
+
+#upbutton {
+  background-image: url("../../images/icons/btn-arrow-up.png");
+  //background-color: $red;
+  background-color: rgba(221, 42, 27, 0.8);
+  background-position: center;
+  background-size: 40%;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  height: 50px;
+  width: 50px;
+  bottom: 25px;
+  right: 25px;
+  cursor: pointer;
+  display: none;
+  position: fixed;
+  z-index: 14;
+  transition: 0.5s;
+  &:hover {
+    box-shadow: 0 2px 15px 0px $gray;
+    background-color: rgba(221, 42, 27, 1);
+  }
+}

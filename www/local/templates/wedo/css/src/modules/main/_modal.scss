@@ -1,0 +1,122 @@
+.modal {
+
+}
+.invalid-feedback {
+  color: $black;
+}
+
+.custom-modal-dialog {
+  .custom-modal-content {
+    &_bg-red {
+      background-color: #d32d1f;
+    }
+    &_bg-black {
+      background-color: $light-black;
+    }
+    .custom-modal-header {
+      padding-top: 25px;
+      border: none;
+      .custom-modal-title {
+        color: $white;
+        font-size: 24px;
+        width: 100%;
+        text-align: center;
+      }
+      .close {
+        text-shadow: none;
+        font-size: 26px;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    .custom-modal-body {
+      padding: 15px 50px;
+      .form-group {
+        label {
+          color: $black;
+          font-size: 16px;
+        }
+      }
+    }
+    .custom-modal-footer {
+      padding-bottom: 30px;
+      border: 0;
+      justify-content: center;
+      .btn.btn_black{
+        &:hover {
+          background-color: $black;
+        }
+      }
+    }
+  }
+}
+
+.custom-form-group {
+  padding: 5px 0;
+}
+
+.custom-select, .custom-input, .custom-textarea {
+  background-color: transparent;
+  color: $white;
+  border: 2px solid $white;
+  font-size: 16px;
+  &:focus {
+    box-shadow: none;
+    background-color: transparent;
+    border-color: $white;
+    color: $white;
+  }
+  &::placeholder {
+    color: rgba($white, 0.7);
+  }
+  option {
+    background-color: $red;
+    color: $white;
+    span {
+      &:hover {
+        background-color: #fff;
+      }
+    }
+  }
+  &_blog {
+    border: 1px solid $black;
+    color: $black;
+    &:focus {
+      color: $black;
+      border-color: $black;
+    }
+  }
+}
+
+.custom-select.is-invalid, .form-control.is-invalid, .was-validated .custom-select:invalid, .was-validated .form-control:invalid {
+  border-color: $black;
+  &:focus {
+    border-color: $black;
+    box-shadow: none;
+  }
+}
+.custom-select.is-valid, .form-control.is-valid, .was-validated .custom-select:valid, .was-validated .form-control:valid {
+  border-color: $white;
+  &:focus {
+    border-color: $white;
+    box-shadow: none;
+  }
+}
+
+.custom-checkbox {
+  label {
+    color:$light-black;
+    font-size: 16px;
+  }
+  .custom-control-label {
+    &::before {
+      background-color: transparent !important;
+      border: 1px solid $white;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
