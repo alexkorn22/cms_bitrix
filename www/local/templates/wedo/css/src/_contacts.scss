@@ -134,7 +134,7 @@
 
 .lease{
   [id*="_msg"]{
-    @media(min-width: 1440px){
+    @media(min-width: 1300px){
       margin-left: 0;
       margin-right: 0;
       left:167px;
@@ -147,7 +147,7 @@
   }
 
   [id*="_loader"]{
-    @media(min-width: 1440px){
+    @media(min-width: 1300px){
       margin-left: 0;
       margin-right: 0;
       left:167px;
@@ -162,10 +162,11 @@
 
 .repair{
   [id*="_msg"]{
-    @media(min-width: 1440px){
+    @media(min-width: 1540px){
       margin-left: 0;
       margin-right: 0;
-      left: 152px;
+      left: 150px;
+
     }
     @media(min-width: 2200px){
       margin-left: 0;
@@ -175,10 +176,10 @@
   }
 
   [id*="_loader"]{
-    @media(min-width: 1440px){
+    @media(min-width: 1540px){
       margin-left: 0;
       margin-right: 0;
-      left: 152px;
+      left: 150px;
     }
     @media(min-width: 2200px){
       margin-left: 0;
@@ -205,7 +206,7 @@
 
 .contacts_form{
   [id*="_msg"]{
-    @media (min-width: 2200px){
+    @media (min-width: 1400px){
       left: 0;
       right: 0;
       top:38%;
@@ -214,7 +215,7 @@
     }
   }
   [id*="_loader"]{
-    @media (min-width: 2200px){
+    @media (min-width: 1400px){
       left: 0;
       right: 0;
       top:50%;
