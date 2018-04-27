@@ -30,7 +30,10 @@ $modalNumber = 100 ;
                     $APPLICATION->IncludeComponent(
                         "wedo:forms",
                         "repair_form",
-                        Array("orderType"=>"Заказ диагностику")
+                        Array(
+                            "orderType"=>"Заказ диагностику",
+                            "telegramChatId" => App::$config->telegramChatIdRepair
+                        )
                     );
                     ?>
                     <?
@@ -39,7 +42,8 @@ $modalNumber = 100 ;
                         "repair_form_modal",
                         Array(
                             'FORM_ID'=>'modalMain',
-                            "orderType"=>"Заказ диагностику"
+                            "orderType"=>"Заказ диагностику",
+                            "telegramChatId" => App::$config->telegramChatIdRepair
                         )
                     );
                     ?>
@@ -269,7 +273,8 @@ $modalNumber = 100 ;
                         "repair_form",
                         Array(
                             "Background" => "-opacity1",
-                            "orderType"=>"Заказ диагностику"
+                            "orderType"=>"Заказ диагностику",
+                            "telegramChatId" => App::$config->telegramChatIdRepair
                         )
                     );
                     ?>
@@ -403,7 +408,8 @@ $modalNumber = 100 ;
                    "repair_form_modal",
                    Array(
                        "FORM_ID" => $i,
-                       "orderType"=>"Заказ диагностику"
+                       "orderType"=>"Заказ диагностику",
+                       "telegramChatId" => App::$config->telegramChatIdRepair
                    )
                );
            }
