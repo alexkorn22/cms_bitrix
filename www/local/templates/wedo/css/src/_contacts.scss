@@ -195,9 +195,15 @@
       @media (min-width: 2200px){
         left:146px;
       }
+      @media (min-width: 1440px){
+        left:146px;
+      }
     }
     [id*="_loader"]{
       @media (min-width: 2200px){
+        left:146px;
+      }
+      @media (min-width: 1440px){
         left:146px;
       }
     }

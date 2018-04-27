@@ -19,6 +19,10 @@ $arComponentParameters = array(
          "ORDER_TYPE" => [
             "NAME" => GetMessage("WEDO_ORDER_TYPE_NAME"),
             "TYPE" => "STRING",
+        ],
+         "telegramChatId" => [
+            "NAME" => GetMessage("WEDO_FORMS_CHAT_ID_NAME"),
+            "TYPE" => "STRING",
         ]
 	),
 );

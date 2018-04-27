@@ -16,9 +16,12 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
  * @property string instagramLink;
  * @property string youtubeLink;
  * @property string telegramChatId;
+ * @property string telegramChatIdRepair;
  * @property string telegramToken;
  * @property string apiKeyMainOfficeMap;
  * @property string apiKeyOtherOfficesMap;
+ * @property string scriptYandexMetrica;
+ * @property string scriptGoogleAnalytics;
  * @property array officesList;
  * @property array mainOffice;
  */
@@ -30,6 +33,7 @@ class Config
         'telegramChatId' =>'',
         'telegramToken' =>'',
         'coffeeMachineIblockId' => 12,
+        'telegramChatIdRepair'=>'',
         'newsIblockId' => 13,
         'pricesHighBlockId' => 1,
         'priceCofeeKg' => 600, // цена за 1 кг. кофе
@@ -37,13 +41,15 @@ class Config
         'koeffForCostPriceCoffee' => 120, // коэффициент для расчета себестоимости одной чашки кофе
         'telephone' => '+38 (050) 449-06-00',
         'email' => 'cms@cms.com.ua',
-        'facebookLink' => '#',
-        'instagramLink' => '#',
-        'youtubeLink' => '#',
+        'facebookLink' => '',
+        'instagramLink' => '',
+        'youtubeLink' => '',
         'apiKeyMainOfficeMap'=>'AIzaSyDZWJcFQabrMDUPmXaiU7wlZ74dzm_virI',
         'apiKeyOtherOfficesMap'=>'AIzaSyAz1W2wSLUwOGipJpjwRI0HeZm69dSLeBE',
         'officesList'=>[],
-        'mainOffice'=>[]
+        'mainOffice'=>[],
+        'scriptYandexMetrica'=>'',
+        'scriptGoogleAnalytics'=>''
     ];
 
     public function __construct(){
@@ -72,6 +78,7 @@ class Config
 
 
     public function __get($name){
+
         if (!isset($this->data[$name])) {
             $this->data[$name] = COption::GetOptionString("grain.customsettings", $name);
         }
@@ -81,6 +88,14 @@ class Config
         return $this->data[$name];
     }
 
+    public function __isset($key)
+    {
+        if (isset($this->data[$key])) {
+            return (false === empty($this->data[$key]));
+        } else {
+            return true;
+        }
+    }
     public function setDebug($debug){
         $adminDebug = "N";
         if($debug){
