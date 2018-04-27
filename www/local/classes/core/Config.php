@@ -39,9 +39,9 @@ class Config
         'koeffForCostPriceCoffee' => 120, // коэффициент для расчета себестоимости одной чашки кофе
         'telephone' => '+38 (050) 449-06-00',
         'email' => 'cms@cms.com.ua',
-        'facebookLink' => '#',
-        'instagramLink' => '#',
-        'youtubeLink' => '#',
+        'facebookLink' => '',
+        'instagramLink' => '',
+        'youtubeLink' => '',
         'apiKeyMainOfficeMap'=>'AIzaSyDZWJcFQabrMDUPmXaiU7wlZ74dzm_virI',
         'apiKeyOtherOfficesMap'=>'AIzaSyAz1W2wSLUwOGipJpjwRI0HeZm69dSLeBE',
         'officesList'=>[],
@@ -76,6 +76,7 @@ class Config
 
 
     public function __get($name){
+
         if (!isset($this->data[$name])) {
             $this->data[$name] = COption::GetOptionString("grain.customsettings", $name);
         }
@@ -85,6 +86,14 @@ class Config
         return $this->data[$name];
     }
 
+    public function __isset($key)
+    {
+        if (isset($this->data[$key])) {
+            return (false === empty($this->data[$key]));
+        } else {
+            return true;
+        }
+    }
     public function setDebug($debug){
         $adminDebug = "N";
         if($debug){

@@ -106,9 +106,15 @@
                     <div class="wrap-social-icons normal-top">
                         <div class="social-icons">
                             <a class="phone black" href="tel:<?=App::$config->telephone?>"><?=App::$config->telephone?></a>
-                            <a href="<?=App::$config->facebookLink?>" class="social facebook  d-none d-sm-block"></a>
-                            <a href="<?=App::$config->instagramLink?>" class="social insta  d-none d-sm-block"></a>
-                            <a href="<?=App::$config->youtubeLink?>" class="social youtube  d-none d-sm-block"></a>
+                            <? if(!empty(App::$config->facebookLink)):?>
+                                <a href="<?=App::$config->facebookLink?>" class="social facebook  d-none d-sm-block"></a>
+                            <?endif;?>
+                            <? if(!empty(App::$config->instagramLink)):?>
+                                <a href="<?=App::$config->instagramLink?>" class="social insta  d-none d-sm-block"></a>
+                            <?endif;?>
+                            <? if(!empty(App::$config->youtubeLink)):?>
+                                <a href="<?=App::$config->youtubeLink?>" class="social youtube  d-none d-sm-block"></a>
+                            <?endif;?>
                             <div class="burger-menu">
                                 <div class="navigation after-head">
                                     <div class="burger after-head">
@@ -194,9 +200,15 @@
                     <div class="col col-lg-6">
                         <div class="social-icons">
                             <a class="phone" href="tel:<?=App::$config->telephone?>"><?=App::$config->telephone?></a>
-                            <a href="<?=App::$config->facebookLink?>" class="social facebook"></a>
-                            <a href="<?=App::$config->instagramLink?>" class="social insta"></a>
-                            <a href="<?=App::$config->youtubeLink?>" class="social youtube"></a>
+                            <? if(!empty(App::$config->facebookLink)):?>
+                                <a href="<?=App::$config->facebookLink?>" class="social facebook"></a>
+                            <?endif;?>
+                            <? if(!empty(App::$config->instagramLink)):?>
+                                <a href="<?=App::$config->instagramLink?>" class="social insta"></a>
+                            <?endif;?>
+                            <? if(!empty(App::$config->youtubeLink)):?>
+                                <a href="<?=App::$config->youtubeLink?>" class="social youtube"></a>
+                            <?endif;?>
                         </div>
                     </div>
                 </div>
@@ -221,9 +233,17 @@
                             <div class="wrap-social-icons normal-top">
                                 <div class="social-icons">
                                     <a class="phone black" href="tel:<?=App::$config->telephone?>"><?=App::$config->telephone?></a>
-                                    <a href="<?=App::$config->facebookLink?>" class="social facebook  d-none d-sm-block"></a>
-                                    <a href="<?=App::$config->instagramLink?>" class="social insta  d-none d-sm-block"></a>
-                                    <a href="<?=App::$config->youtubeLink?>" class="social youtube d-none d-sm-block"></a>
+
+                                    <? if(!empty(App::$config->facebookLink)):?>
+                                        <a href="<?=App::$config->facebookLink?>" class="social facebook  d-none d-sm-block"></a>
+                                    <?endif;?>
+                                    <? if(!empty(App::$config->instagramLink)):?>
+                                        <a href="<?=App::$config->instagramLink?>" class="social insta  d-none d-sm-block"></a>
+                                    <?endif;?>
+                                    <? if(!empty(App::$config->youtubeLink)):?>
+                                        <a href="<?=App::$config->youtubeLink?>" class="social youtube  d-none d-sm-block"></a>
+                                    <?endif;?>
+
                                     <div class="burger-menu">
                                         <div class="navigation after-head">
                                             <div class="burger after-head">
@@ -309,9 +329,15 @@
                             <div class="col col-lg-6">
                                 <div class="social-icons">
                                     <a class="phone" href="tel:<?=App::$config->telephone?>"><?=App::$config->telephone?></a>
-                                    <a href="<?=App::$config->facebookLink?>" class="social facebook"></a>
-                                    <a href="<?=App::$config->instagramLink?>" class="social insta"></a>
-                                    <a href="<?=App::$config->youtubeLink?>" class="social youtube"></a>
+                                    <? if(!empty(App::$config->facebookLink)):?>
+                                        <a href="<?=App::$config->facebookLink?>" class="social facebook "></a>
+                                    <?endif;?>
+                                    <? if(!empty(App::$config->instagramLink)):?>
+                                        <a href="<?=App::$config->instagramLink?>" class="social insta"></a>
+                                    <?endif;?>
+                                    <? if(!empty(App::$config->youtubeLink)):?>
+                                        <a href="<?=App::$config->youtubeLink?>" class="social youtube"></a>
+                                    <?endif;?>
                                 </div>
                             </div>
                         </div>
