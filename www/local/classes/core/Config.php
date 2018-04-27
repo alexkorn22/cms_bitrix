@@ -19,6 +19,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
  * @property string telegramToken;
  * @property string apiKeyMainOfficeMap;
  * @property string apiKeyOtherOfficesMap;
+ * @property string scriptYandexMetrica;
+ * @property string scriptGoogleAnalytics;
  * @property array officesList;
  * @property array mainOffice;
  */
@@ -43,7 +45,9 @@ class Config
         'apiKeyMainOfficeMap'=>'AIzaSyDZWJcFQabrMDUPmXaiU7wlZ74dzm_virI',
         'apiKeyOtherOfficesMap'=>'AIzaSyAz1W2wSLUwOGipJpjwRI0HeZm69dSLeBE',
         'officesList'=>[],
-        'mainOffice'=>[]
+        'mainOffice'=>[],
+        'scriptYandexMetrica'=>'',
+        'scriptGoogleAnalytics'=>''
     ];
 
     public function __construct(){

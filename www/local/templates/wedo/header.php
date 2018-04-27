@@ -2,7 +2,7 @@
 <!doctype html>
 <html>
 <head>
-
+    <?=App::$config->scriptGoogleAnalytics?>
     <?
     $APPLICATION->ShowHead();
     use Bitrix\Main\Page\Asset;
@@ -38,6 +38,7 @@
     ?>
 
 	<title><?$APPLICATION->ShowTitle()?></title>
+    <?=App::$config->scriptYandexMetrica?>
 </head>
 <body>
 <div class="preloader-wrap">
