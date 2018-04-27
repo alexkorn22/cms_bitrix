@@ -7,6 +7,9 @@
         <? if( isset($arParams['orderType'])):?>
             <input type="hidden" name="orderType" value="<?=$arParams['orderType']?>">
         <? endif; ?>
+        <? if( isset($arParams['telegramChatId'])):?>
+            <input type="hidden" name="telegramChatId" value="<?=$arParams['telegramChatId']?>">
+        <? endif; ?>
         <div id="content<?=$arParams['FORM_ID']?>">
             <div class="col-sm-12 col-lg-12">
                 <div class="form-group custom-form-group">
