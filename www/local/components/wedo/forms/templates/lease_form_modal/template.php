@@ -6,6 +6,9 @@
                     <? if( isset($arParams['orderType'])):?>
                         <input type="hidden" name="orderType" value="<?=$arParams['orderType']?>">
                     <? endif; ?>
+                    <? if( isset($arParams['telegramChatId'])):?>
+                        <input type="hidden" name="telegramChatId" value="<?=$arParams['telegramChatId']?>">
+                    <? endif; ?>
                     <div id="content<?=$arParams['FORM_ID']?>">
                         <div class="modal-header custom-modal-header">
                             <h5 class="modal-title custom-modal-title">Заявка на аренду</h5>

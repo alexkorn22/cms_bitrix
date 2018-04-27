@@ -16,6 +16,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
  * @property string instagramLink;
  * @property string youtubeLink;
  * @property string telegramChatId;
+ * @property string telegramChatIdRepair;
  * @property string telegramToken;
  * @property string apiKeyMainOfficeMap;
  * @property string apiKeyOtherOfficesMap;
@@ -32,6 +33,7 @@ class Config
         'telegramChatId' =>'',
         'telegramToken' =>'',
         'coffeeMachineIblockId' => 12,
+        'telegramChatIdRepair'=>'',
         'newsIblockId' => 13,
         'pricesHighBlockId' => 1,
         'priceCofeeKg' => 600, // цена за 1 кг. кофе

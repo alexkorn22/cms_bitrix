@@ -6,7 +6,12 @@ if (!$request->isAjaxRequest()) {
 }
 if (check_bitrix_sessid()) {
     require 'views/msg.php';
+    // получить чат ID с каждой формы :
     $idChat   = App::$config->telegramChatId;
+    $chatForm = $request->getPost('telegramChatId');
+    if(isset($chatForm)){
+        $idChat = $chatForm;
+    }
 
     if($request->getPost('orderType') == "EMAIL_FORM"){
         $MsgData = [
