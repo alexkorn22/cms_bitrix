@@ -51,6 +51,7 @@
       width: 35px;
       height: 34px;
       margin: 0 10px;
+      display: none;
       &.facebook {
         background-image: url(../../images/social.png);
         &:hover {
@@ -76,6 +77,7 @@
   @include media-breakpoint-down(sm) {
     //position: absolute;
     //top: -10px;
+    display: none;
     .social-icons {
       .social {
         margin: 0 4px;
@@ -115,6 +117,7 @@
       }
       .social {
         margin: 0 30px;
+        display: none !important;
       }
       .burger-menu {
         margin-left: 40px;
