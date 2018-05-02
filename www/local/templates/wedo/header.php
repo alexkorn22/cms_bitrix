@@ -36,6 +36,13 @@
         </script>
     ');
     ?>
+    <?
+        // resize logo images :
+        $logoFileArray = CFile::MakeFileArray(IMAGES_PATH.'/logo.png');
+        $logoBlackFileArray = CFile::MakeFileArray(IMAGES_PATH.'/logo_black.png');
+        CFile::ResizeImage($logoFileArray, array('width'=>95, 'height'=>75), BX_RESIZE_IMAGE_PROPORTIONAL);
+        CFile::ResizeImage($logoBlackFileArray, array('width'=>95, 'height'=>75), BX_RESIZE_IMAGE_PROPORTIONAL);
+    ?>
 
 	<title><?$APPLICATION->ShowTitle()?></title>
 </head>
@@ -127,6 +134,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="wrap-logo">
+                    <??>
                     <a href="/">
                         <img src="<?=IMAGES_PATH?>/logo.png" alt="CMS">
                     </a>
