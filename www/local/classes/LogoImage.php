@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: amarz
- * Date: 02.05.2018
- * Time: 15:33
- */
+if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 
 class LogoImage
 {
