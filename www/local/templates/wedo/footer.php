@@ -7,7 +7,7 @@
             <div class="col-sm-12 order-1 order-md-1 col-md-3">
                 <div class="f-logo">
                     <a href="/">
-                        <img src="<?=IMAGES_PATH?>/logoResized.png" alt="CMS">
+                        <img src="/upload/logo/logoResized.png" alt="CMS">
                     </a>
                 </div>
             </div>
