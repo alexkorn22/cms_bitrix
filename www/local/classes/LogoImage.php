@@ -7,32 +7,37 @@ class LogoImage
     protected  $resizedLogoBlackPath = '/upload/logo/logoBlackResized.png';
 
     public function getSrcResized () {
+        $logoSrc = $_SERVER["DOCUMENT_ROOT"].IMAGES_PATH.'/logo.png';
         $logoDestinationFile  = $_SERVER["DOCUMENT_ROOT"].$this->resizedLogoPath ;
-        // check if file exists :
-        if(file_exists ($logoDestinationFile)){
+        if($this->resizeImg($logoSrc,$logoDestinationFile)){
             return $this->resizedLogoPath ;
         }
-        CFile::ResizeImageFile(
-            $_SERVER["DOCUMENT_ROOT"].IMAGES_PATH.'/logo.png',
-            $logoDestinationFile,
-            array('width'=>95,'height'=>75),
-            BX_RESIZE_IMAGE_PROPORTIONAL
-        );
-        return $this->resizedLogoPath;
+        return IMAGES_PATH.'/logo.png' ;
     }
 
     public function getSrcBlackResized () {
-        $logoBlackDestinationFile = $_SERVER["DOCUMENT_ROOT"].$this->resizedLogoBlackPath ;
-        // check if file exists :
-        if(file_exists ($logoBlackDestinationFile)){
-            return $this->resizedLogoBlackPath ;
+        $logoSrc = $_SERVER["DOCUMENT_ROOT"].IMAGES_PATH.'/logo_black.png' ;
+        $logoDestinationFile = $_SERVER["DOCUMENT_ROOT"].$this->resizedLogoBlackPath ;
+        if($this->resizeImg($logoSrc,$logoDestinationFile)){
+            return $this->resizedLogoBlackPath;
         }
-        CFile::ResizeImageFile(
-            $_SERVER["DOCUMENT_ROOT"].IMAGES_PATH.'/logo_black.png',
-            $logoBlackDestinationFile,
+        return IMAGES_PATH.'/logo_black.png';
+    }
+
+    public function resizeImg($src,$destination){
+        if(file_exists ($destination)){
+            return true ;
+        }
+        $IsResized = CFile::ResizeImageFile(
+            $src,
+            $destination,
             array('width'=>95,'height'=>75),
             BX_RESIZE_IMAGE_PROPORTIONAL
         );
-        return $this->resizedLogoBlackPath ;
+
+        if($IsResized){
+            return true;
+        }
+        return false;
     }
 }
