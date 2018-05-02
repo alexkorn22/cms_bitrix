@@ -38,17 +38,19 @@
     ?>
     <?
         // resize logo images :
-        $logoFileArray      = CFile::MakeFileArray(IMAGES_PATH.'/logo.png');
-        $logoBlackFileArray = CFile::MakeFileArray(IMAGES_PATH.'/logo_black.png');
-        $logoResized        = CFile::ResizeImage($logoFileArray, array('width'=>95, 'height'=>75), BX_RESIZE_IMAGE_PROPORTIONAL);
-        $logoBlackResized   = CFile::ResizeImage($logoBlackFileArray, array('width'=>95, 'height'=>75), BX_RESIZE_IMAGE_PROPORTIONAL);
-            if($logoResized){
-                $resizedLogoPath  = CFile::GetPath(CFile::SaveFile($logoFileArray,'/tmp/logoResized'));
-            }
-            if($logoBlackResized){
-                $resizedLogoBlackPath = CFile::GetPath(CFile::SaveFile($logoBlackFileArray,'/tmp/logoResized'));
-            }
-        ?>
+        CFile::ResizeImageFile(
+            $sourceFile = $_SERVER["DOCUMENT_ROOT"].IMAGES_PATH.'/logo.png',
+            $destinationFile =$_SERVER["DOCUMENT_ROOT"]. IMAGES_PATH.'/logoResized.png',
+            $arSize = array('width'=>95,'height'=>75),
+            $resizeType = BX_RESIZE_IMAGE_PROPORTIONAL
+        );
+        CFile::ResizeImageFile(
+            $sourceFile = $_SERVER["DOCUMENT_ROOT"].IMAGES_PATH.'/logo_black.png',
+            $destinationFile =$_SERVER["DOCUMENT_ROOT"]. IMAGES_PATH.'/logo_blackResized.png',
+            $arSize = array('width'=>95,'height'=>75),
+            $resizeType = BX_RESIZE_IMAGE_PROPORTIONAL
+        );
+    ?>
 
 	<title><?$APPLICATION->ShowTitle()?></title>
 </head>
@@ -70,7 +72,7 @@
                 <div class="col">
                     <div class="wrap-logo">
                         <a href="/">
-                            <img src="<?=$resizedLogoPath?>" alt="CMS">
+                            <img src="<?=IMAGES_PATH?>/logoResized.png" alt="CMS">
                         </a>
                     </div>
                 </div>
@@ -110,7 +112,7 @@
                 <div class="col-4 col-sm-2 col-md-2 col-lg-2">
                     <div class="wrap-logo">
                         <a href="/">
-                            <img src="<?=$resizedLogoBlackPath?>" alt="CMS">
+                            <img src="<?=IMAGES_PATH?>/logo_blackResized.png" alt="CMS">
                         </a>
                     </div>
                 </div>
@@ -142,7 +144,7 @@
                 <div class="wrap-logo">
                     <??>
                     <a href="/">
-                        <img src="<?=$resizedLogoPath?>" alt="CMS">
+                        <img src="<?=IMAGES_PATH?>/logoResized.png" alt="CMS">
                     </a>
                 </div>
                 <div class="burger-menu in-menu">
@@ -226,7 +228,7 @@
                         <div class="col-4 col-sm-2 col-md-2 col-lg-2">
                             <div class="wrap-logo">
                                 <a href="/">
-                                    <img src="<?=$resizedLogoBlackPath?>" alt="CMS">
+                                    <img src="<?=IMAGES_PATH?>/logo_blackResized.png" alt="CMS">
                                 </a>
                             </div>
                         </div>
@@ -257,7 +259,7 @@
                     <div class="row">
                         <div class="wrap-logo">
                             <a href="/">
-                                <img src="<?=$resizedLogoPath?>" alt="CMS">
+                                <img src="<?=IMAGES_PATH?>/logoResized.png" alt="CMS">
                             </a>
                         </div>
                         <div class="burger-menu in-menu">
