@@ -41,13 +41,13 @@
     $logoBlackDestinationFile = $_SERVER["DOCUMENT_ROOT"].'/upload/logo/logoBlackResized.png' ;
         // resize logo images :
         CFile::ResizeImageFile(
-            $sourceFile = $_SERVER["DOCUMENT_ROOT"].IMAGES_PATH.'/logo.png',
+            $_SERVER["DOCUMENT_ROOT"].IMAGES_PATH.'/logo.png',
             $logoDestinationFile,
             array('width'=>95,'height'=>75),
             BX_RESIZE_IMAGE_PROPORTIONAL
         );
         CFile::ResizeImageFile(
-            $sourceFile = $_SERVER["DOCUMENT_ROOT"].IMAGES_PATH.'/logo_black.png',
+            $_SERVER["DOCUMENT_ROOT"].IMAGES_PATH.'/logo_black.png',
             $logoBlackDestinationFile,
             array('width'=>95,'height'=>75),
             BX_RESIZE_IMAGE_PROPORTIONAL
