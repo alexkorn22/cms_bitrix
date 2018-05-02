@@ -84,7 +84,7 @@ $APPLICATION->SetTitle("Кофемашины ");
                 <div class="b-wmf">
                     <div class="slide">
                         <div class="b-wmf__img">
-                            <img src="<?=IMAGES_PATH?>/wmf-logo.png" alt="WMF">
+                            <img src="<?=$resizedLogoPath?>" alt="WMF">
                         </div>
                         <p class="b-wmf__text__title d-block d-md-none"><span class="firm">WMF - </span><span>самые мощные профессиональные</span><span> кофемашины-суперавтоматы</span></p>
                     </div>
