@@ -16,7 +16,7 @@ class ImageResize
         return str_replace( $_SERVER['DOCUMENT_ROOT'],'',$fileName);
     }
 
-    protected function getResize($typeSize){
+    public function getResize($typeSize){
         $this->typeSize = $typeSize;
         $destination = $this->getDestinationPath();
         if(file_exists($destination) || $this->doResize($destination)){
@@ -25,7 +25,7 @@ class ImageResize
         return $this->inputFile;
     }
 
-    public function doResize($destination){
+    protected function doResize($destination){
         return CFile::ResizeImageFile(
             $this->inputFile,
             $destination,
