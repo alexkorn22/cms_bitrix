@@ -16,7 +16,7 @@ class ImageResize
         return str_replace( $_SERVER['DOCUMENT_ROOT'],'',$fileName);
     }
 
-    public function getResize($typeSize){
+    protected function getResize($typeSize){
         $this->typeSize = $typeSize;
         $destination = $this->getDestinationPath();
         if(file_exists($destination) || $this->doResize($destination)){
@@ -34,7 +34,7 @@ class ImageResize
         );
     }
 
-    public function getDestinationPath(){
+    protected function getDestinationPath(){
         $fileName = $_SERVER['DOCUMENT_ROOT'].'/upload/custom_resize';
         $encryptedFileName = md5_file($this->inputFile);
         $fileName .= '/'.substr($encryptedFileName,0,3);
