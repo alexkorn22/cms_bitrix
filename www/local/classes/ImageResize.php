@@ -4,6 +4,8 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 class ImageResize
 {
     const SIZE_LOGO = [95,75];
+    const SIZE_BTN_ARROW = [22,40];
+    const SIZE_REPAIR_ICON = [75,75];
     protected $inputFile;
     protected $typeSize;
 
