@@ -7,7 +7,7 @@
             <div class="col-sm-12 order-1 order-md-1 col-md-3">
                 <div class="f-logo">
                     <a href="/">
-                        <img src="<?=$logo->getSrcResized();?>" alt="CMS">
+                        <img src="<?=$logoPath;?>" alt="CMS">
                     </a>
                 </div>
             </div>

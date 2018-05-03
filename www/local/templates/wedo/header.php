@@ -35,7 +35,12 @@
             crossorigin="anonymous" >
         </script>
     ');
-    $logo = new LogoImage;
+
+    $logo          = new ImageResize(IMAGES_PATH.'/logo.png');
+    $blackLogo     = new ImageResize(IMAGES_PATH.'/logo_black.png');
+    $logoPath      = $logo->getLink(ImageResize::SIZE_LOGO);
+    $blackLogoPath = $blackLogo->getLink(ImageResize::SIZE_LOGO);
+
     ?>
 
 	<title><?$APPLICATION->ShowTitle()?></title>
@@ -58,7 +63,7 @@
                 <div class="col">
                     <div class="wrap-logo">
                         <a href="/">
-                            <img src="<?=$logo->getSrcResized();?>" alt="CMS">
+                            <img src="<?=$logoPath?>" alt="CMS">
                         </a>
                     </div>
                 </div>
@@ -98,7 +103,7 @@
                 <div class="col-4 col-sm-2 col-md-2 col-lg-2">
                     <div class="wrap-logo">
                         <a href="/">
-                            <img src="<?=$logo->getSrcBlackResized();?>" alt="CMS">
+                            <img src="<?=$blackLogoPath?>" alt="CMS">
                         </a>
                     </div>
                 </div>
@@ -130,7 +135,7 @@
                 <div class="wrap-logo">
                     <??>
                     <a href="/">
-                        <img src="<?=$logo->getSrcResized();?>" alt="CMS">
+                        <img src="<?=$logoPath?>" alt="CMS">
                     </a>
                 </div>
                 <div class="burger-menu in-menu">
@@ -214,7 +219,7 @@
                         <div class="col-4 col-sm-2 col-md-2 col-lg-2">
                             <div class="wrap-logo">
                                 <a href="/">
-                                    <img src="<?=$logo->getSrcBlackResized();?>" alt="CMS">
+                                    <img src="<?=$blackLogoPath?>" alt="CMS">
                                 </a>
                             </div>
                         </div>
@@ -245,7 +250,7 @@
                     <div class="row">
                         <div class="wrap-logo">
                             <a href="/">
-                                <img src="<?=$logo->getSrcResized();?>" alt="CMS">
+                                <img src="<?=$logoPath?>" alt="CMS">
                             </a>
                         </div>
                         <div class="burger-menu in-menu">
