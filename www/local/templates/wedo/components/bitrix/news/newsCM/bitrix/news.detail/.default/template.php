@@ -16,7 +16,7 @@ $this->setFrameMode(true);
     <div class="content-news">
         <div class="row">
             <div class="col">
-                <div class="main-news-img" style="background-image: url('<?=$arResult['DETAIL_PICTURE']['SRC']?>')">
+                <div class="main-news-img" style="background-image: url('<?=$arResult['IMG']['SRC']?>')">
                     <div class="date-news">
                         <p><?=$arResult['time']['day']?>:</p>
                         <p><?=$arResult['time']['month']?></p>
