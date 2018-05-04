@@ -8,6 +8,13 @@ foreach ($arResult['ITEMS'] as &$item){
         'month' => date('M', strtotime($item['TIMESTAMP_X'])),
         'day'   => date('d', strtotime($item['TIMESTAMP_X']))
     ];
+    // resize images :
+    $resizedImg = CFile::ResizeImageGet($item["PREVIEW_PICTURE"]["ID"], array('width'=>300, 'height'=>300), BX_RESIZE_IMAGE_PROPORTIONAL_ALT, true);
+    $item['IMG']=[
+        'SRC'=>$resizedImg["src"],
+        'ALT'=>$item['IPROPERTY_VALUES']['ELEMENT_PREVIEW_PICTURE_FILE_ALT'],
+        'TITLE'=>$item['IPROPERTY_VALUES']['ELEMENT_PREVIEW_PICTURE_FILE_TITLE']
+    ];
 }
 
 // Получить список доступные тегы :
@@ -20,6 +27,8 @@ while($enum_fields = $property_enums->GetNext())
 // current page tag :
 $req = Application::getInstance()->getContext()->getRequest();
 $arResult['CURR_TAG'] = $req->getQuery("tag");
+
+
 ?>
 
 
