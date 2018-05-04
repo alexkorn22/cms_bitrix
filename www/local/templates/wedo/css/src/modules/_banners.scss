@@ -19,6 +19,10 @@
 
 .wrap-banner.repair {
   background-image: url(../../images/banners/bg-banner-repair2.png);
+  @include media-breakpoint-down(sm){
+    background-image: url(../../images/banners/bg-banner-repair2_resized.png);
+  }
+
   margin-top: 100px;
 
   .wrap-banner-img {
