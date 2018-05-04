@@ -1,7 +1,7 @@
 <div class="col-lg-3 news-block">
     <div class="wrap-news">
     <a href="<?=$item['DETAIL_PAGE_URL']?>" onclick="#">
-        <div class="news" style="background-image: url('<?=$item['PREVIEW_PICTURE']['SRC']?>')">
+        <div class="news" style="background-image: url('<?=$item['IMG']['SRC']?>')">
             <div class="date-news date-news_small">
                 <p><?=$item['time']['day']?>:</p>
                 <p><?=$item['time']['month']?></p>
