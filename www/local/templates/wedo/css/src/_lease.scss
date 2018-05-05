@@ -8,6 +8,9 @@
   }
   &_repair {
     background-image: url(../../images/banners/bg-banner-repair.jpg);
+    @include media-breakpoint-down(sm){
+      background-image: url(../../images/banners/bg-banner-repair_resized.jpg);
+    }
   }
 }
 

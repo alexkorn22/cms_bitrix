@@ -64,31 +64,36 @@ $modalNumber = 100 ;
             <div class="row justify-content-center">
                 <div class="col-md-6 col-lg">
                     <div class="adv-item">
-                        <img src="<?=IMAGES_PATH?>/icons/repair-icon1.png" alt="icon">
+                        <? $repairIcon = new ImageResize(IMAGES_PATH.'/icons/repair-icon1.png'); ?>
+                        <img src="<?=$repairIcon->getLink(ImageResize::SIZE_REPAIR_ICON)?>" alt="icon">
                         <p>5 аккредитованных сервисных центров в Украине</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg">
                     <div class="adv-item">
-                        <img src="<?=IMAGES_PATH?>/icons/repair-icon2.png" alt="icon">
+                        <? $repairIcon2 = new ImageResize(IMAGES_PATH.'/icons/repair-icon2.png'); ?>
+                        <img src="<?=$repairIcon2->getLink(ImageResize::SIZE_REPAIR_ICON)?>" alt="icon">
                         <p>Выезд техника для диагностики причины поломки</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg">
                     <div class="adv-item">
-                        <img src="<?=IMAGES_PATH?>/icons/repair-icon3.png" alt="icon">
+                        <? $repairIcon3 = new ImageResize(IMAGES_PATH.'/icons/repair-icon3.png'); ?>
+                        <img src="<?=$repairIcon3->getLink(ImageResize::SIZE_REPAIR_ICON)?>" alt="icon">
                         <p>Подбор и продажа оригинальных деталей</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg">
                     <div class="adv-item">
-                        <img src="<?=IMAGES_PATH?>/icons/repair-icon4.png" alt="icon">
+                        <? $repairIcon4 = new ImageResize(IMAGES_PATH.'/icons/repair-icon4.png'); ?>
+                        <img src="<?=$repairIcon4->getLink(ImageResize::SIZE_REPAIR_ICON)?>" alt="icon">
                         <p>Гарантия на узлы или кофеавтомат после ремонта</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg">
                     <div class="adv-item">
-                        <img src="<?=IMAGES_PATH?>/icons/repair-icon5.png" alt="icon">
+                        <? $repairIcon5 = new ImageResize(IMAGES_PATH.'/icons/repair-icon5.png'); ?>
+                        <img src="<?=$repairIcon5->getLink(ImageResize::SIZE_REPAIR_ICON)?>" alt="icon">
                         <p>Сервис и обслуживание после выполнения работ</p>
                     </div>
                 </div>
@@ -144,7 +149,8 @@ $modalNumber = 100 ;
                                     <a href="#<?=$modalNumber?>order-diagnostics" data-toggle="modal" data-target="#<?=$modalNumber?>order-diagnostics" role="button">Заказать диагностику</a><? $modalNumber++;?>
                                 </div>
                                 <a class="right-arrow-circle">
-                                    <img src="<?=IMAGES_PATH?>/icons/btn-arrow-right.png" alt="Right">
+                                    <? $btnArrow = new ImageResize(IMAGES_PATH.'/icons/btn-arrow-right.png'); ?>
+                                    <img src="<?=$btnArrow->getLink(ImageResize::SIZE_BTN_ARROW)?>" alt="Right">
                                 </a>
                             </div>
                             <div class="circle">
@@ -159,10 +165,11 @@ $modalNumber = 100 ;
                                     <a href="#"></a>
                                 </div>
                                 <a class="left-arrow-circle">
-                                    <img src="<?=IMAGES_PATH?>/icons/btn-arrow-left.png" alt="Left">
+                                    <? $btnArrowLeft = new ImageResize(IMAGES_PATH.'/icons/btn-arrow-left.png'); ?>
+                                    <img src="<?=$btnArrowLeft->getLink(ImageResize::SIZE_BTN_ARROW)?>" alt="Left">
                                 </a>
                                 <a class="right-arrow-circle">
-                                    <img src="<?=IMAGES_PATH?>/icons/btn-arrow-right.png" alt="Right">
+                                    <img src="<?=$btnArrow->getLink(ImageResize::SIZE_BTN_ARROW)?>" alt="Right">
                                 </a>
                             </div>
                             <div class="circle">
@@ -177,10 +184,10 @@ $modalNumber = 100 ;
                                     <a href="#"></a>
                                 </div>
                                 <a  class="left-arrow-circle">
-                                    <img src="<?=IMAGES_PATH?>/icons/btn-arrow-left.png" alt="Left">
+                                    <img src="<?=$btnArrowLeft->getLink(ImageResize::SIZE_BTN_ARROW)?>" alt="Left">
                                 </a>
                                 <a  class="right-arrow-circle">
-                                    <img src="<?=IMAGES_PATH?>/icons/btn-arrow-right.png" alt="Right">
+                                    <img src="<?=$btnArrow->getLink(ImageResize::SIZE_BTN_ARROW)?>" alt="Right">
                                 </a>
                             </div>
                             <div class="circle">
@@ -195,7 +202,7 @@ $modalNumber = 100 ;
                                     <a href="#<?=$modalNumber?>order-diagnostics" data-toggle="modal" data-target="#<?=$modalNumber?>order-diagnostics" role="button">Заказать диагностику</a><? $modalNumber++;?>
                                 </div>
                                 <a class="left-arrow-circle">
-                                    <img src="<?=IMAGES_PATH?>/icons/btn-arrow-left.png" alt="Left">
+                                    <img src="<?=$btnArrowLeft->getLink(ImageResize::SIZE_BTN_ARROW)?>" alt="Left">
                                 </a>
                             </div>
                         </div>
@@ -289,7 +296,7 @@ $modalNumber = 100 ;
                 <div class="col-lg-5 d-none d-lg-block">
                     <div class="wrap-banner-img">
                         <div class="banner-img">
-                            <img src="<?=IMAGES_PATH?>/banners/banner-img4.png" alt="">
+                            <img src="<?=IMAGES_PATH?>/banners/banner-img4.png" alt="banner">
                         </div>
                     </div>
                 </div>
