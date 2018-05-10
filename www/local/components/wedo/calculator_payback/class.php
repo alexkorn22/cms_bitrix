@@ -76,6 +76,7 @@ class CCalculatorPaybackComponent extends CBitrixComponent{
             $product['NAME'] = $prod->fields['NAME'];
             $props = $prod->GetProperties(false,[]);
             $product['servings'] = $props['NUM_SERVINGS']['VALUE'];
+            $product['RENT'] = $props['RENT']['VALUE_XML_ID'];
             $this->arResult['products'][] = $product;
         }
 
