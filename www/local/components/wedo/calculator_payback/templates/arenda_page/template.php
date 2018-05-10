@@ -47,15 +47,17 @@ extract($arResult);
                                     <label for="productId">Кофемашина</label>
                                     <select class="form-control custom-select" id="productId">
                                         <? foreach ($arResult['products'] as $item): ?>
-                                            <option
-                                                    value="<?= $item['ID'] ?>"
-                                                <? if ($item['ID'] == $product['ID']): ?>
-                                                    selected
-                                                <? endif; ?>
-                                                    data-servings="<?= $item['servings'] ?>"
-                                            >
-                                                <?= $item['NAME'] ?>
-                                            </option>
+                                            <? if($item['RENT'] == 'RENT_TRUE'):?>
+                                                <option
+                                                        value="<?= $item['ID'] ?>"
+                                                    <? if ($item['ID'] == $product['ID']): ?>
+                                                        selected
+                                                    <? endif; ?>
+                                                        data-servings="<?= $item['servings'] ?>"
+                                                >
+                                                    <?= $item['NAME'] ?>
+                                                </option>
+                                            <?endif;?>
                                         <? endforeach; ?>
                                     </select>
                                 </div>
