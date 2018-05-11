@@ -50,7 +50,7 @@ extract($arResult);
                                             <? if($item['RENT'] == 'RENT_TRUE'):?>
                                                 <option
                                                         value="<?= $item['ID'] ?>"
-                                                    <? if ($item['ID'] == $product['ID']): ?>
+                                                    <? if ($item['ID'] == $product['ID'] || $_GET['CM'] == $item['NAME']): ?>
                                                         selected
                                                     <? endif; ?>
                                                         data-servings="<?= $item['servings'] ?>"
