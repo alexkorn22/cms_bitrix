@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col">
                 <div class="order-consultation">
-                    <a class="btn btn_red btn_font-small btn_small-mobile" href="/lease">Подробнее об условиях аренды</a>
+                    <a class="btn btn_red btn_font-small btn_small-mobile" href="/lease?CM=<?=$arResult['NAME']?>">Подробнее об условиях аренды</a>
                 </div>
             </div>
         </div>
