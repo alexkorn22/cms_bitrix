@@ -2,11 +2,26 @@
 use Bitrix\Main\Application;
 
 foreach ($arResult['ITEMS'] as &$item){
-    // time of the news
+    // Date :
+    $similarProductsOb = CIBlockElement::GetProperty(
+        App::$config->newsIblockId,
+        $item['ID'],
+        array(),
+        array(
+            'CODE'=>'DATE'
+        )
+    );
+    while ($property = $similarProductsOb->GetNext())
+    {
+        $date = explode('.',$property['VALUE']);
+    }
+    $month = date("F", mktime(0, 0, 0, $date[1], 10));
+    $day   = $date[0];
+    $year  = $date[2];
     $item['time']=[
-        'year'  => date('Y', strtotime($item['TIMESTAMP_X'])),
-        'month' => date('M', strtotime($item['TIMESTAMP_X'])),
-        'day'   => date('d', strtotime($item['TIMESTAMP_X']))
+        'year'  => $year,
+        'month' => $month,
+        'day'   => $day
     ];
     // resize images :
     $resizedImg = CFile::ResizeImageGet($item["PREVIEW_PICTURE"]["ID"], array('width'=>300, 'height'=>300), BX_RESIZE_IMAGE_PROPORTIONAL_ALT, true);

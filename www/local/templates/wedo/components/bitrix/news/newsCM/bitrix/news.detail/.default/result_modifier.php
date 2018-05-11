@@ -1,8 +1,12 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+$date  = explode('.',$arResult['PROPERTIES']['DATE']['VALUE']);
+$month = date("F", mktime(0, 0, 0, $date[1], 10));
+$day   = $date[0];
+$year  = $date[2];
 $arResult['time']=[
-    'year'  => date('Y', strtotime($arResult['TIMESTAMP_X'])),
-    'month' => date('M', strtotime($arResult['TIMESTAMP_X'])),
-    'day'   => date('d', strtotime($arResult['TIMESTAMP_X']))
+    'year'  => $year,
+    'month' => $month,
+    'day'   => $day
 ];
 $res = CIBlockElement::GetProperty(App::$config->newsIblockId, $arResult['ID'], "sort", "asc", array("CODE" => "TAGS"));
 while ($ob = $res->GetNext())
