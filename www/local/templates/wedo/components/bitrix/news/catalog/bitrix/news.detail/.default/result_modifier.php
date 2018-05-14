@@ -42,4 +42,4 @@ $request = Application::getInstance()->getContext()->getRequest();
 $uri = new Uri('/lease');
 $uri->addParams($request->getQueryList()->toArray());
 $uri->addParams(array("cm" => $arResult['ID']));
-$arResult['leaseLink']= $uri->getUri();;
+$arResult['leaseLink']= $uri->getUri();
