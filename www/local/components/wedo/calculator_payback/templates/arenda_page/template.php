@@ -1,4 +1,5 @@
 <?
+use Bitrix\Main\Application;
 /**
  * @var $arResult
  * @var CBitrixComponentTemplate $this
@@ -23,6 +24,7 @@ $help = '
                     $paybackPeriod - срок окупаемости
                 ';
 extract($arResult);
+$req = Application::getInstance()->getContext()->getRequest();
 
 ?>
 
@@ -50,7 +52,7 @@ extract($arResult);
                                             <? if($item['RENT'] == 'RENT_TRUE'):?>
                                                 <option
                                                         value="<?= $item['ID'] ?>"
-                                                    <? if ($item['ID'] == $product['ID'] || $_GET['CM'] == $item['NAME']): ?>
+                                                    <? if ($item['ID'] == $product['ID'] || $req->getQuery('CM') == $item['ID']): ?>
                                                         selected
                                                     <? endif; ?>
                                                         data-servings="<?= $item['servings'] ?>"

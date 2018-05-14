@@ -13,15 +13,13 @@ foreach ($arResult['ITEMS'] as &$item){
     );
     while ($property = $similarProductsOb->GetNext())
     {
-        $date = explode('.',$property['VALUE']);
+        $date = new DateTime($property['VALUE']);
     }
-    $month = date("F", mktime(0, 0, 0, $date[1], 10));
-    $day   = $date[0];
-    $year  = $date[2];
+
     $item['time']=[
-        'year'  => $year,
-        'month' => $month,
-        'day'   => $day
+        'year'  => $date->format("Y"),
+        'month' => $date->format("M"),
+        'day'   => $date->format("d")
     ];
     // resize images :
     $resizedImg = CFile::ResizeImageGet($item["PREVIEW_PICTURE"]["ID"], array('width'=>300, 'height'=>300), BX_RESIZE_IMAGE_PROPORTIONAL_ALT, true);
