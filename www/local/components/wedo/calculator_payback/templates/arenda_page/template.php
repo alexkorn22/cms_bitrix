@@ -23,7 +23,6 @@ $help = '
                     $paybackPeriod - срок окупаемости
                 ';
 extract($arResult);
-
 ?>
 
 <div id="payback-calculator" >
@@ -47,17 +46,15 @@ extract($arResult);
                                     <label for="productId">Кофемашина</label>
                                     <select class="form-control custom-select" id="productId">
                                         <? foreach ($arResult['products'] as $item): ?>
-                                            <? if($item['RENT'] == 'RENT_TRUE'):?>
                                                 <option
                                                         value="<?= $item['ID'] ?>"
-                                                    <? if ($item['ID'] == $product['ID'] || $_GET['CM'] == $item['NAME']): ?>
+                                                    <? if ($item['ID'] == $product['ID']): ?>
                                                         selected
                                                     <? endif; ?>
                                                         data-servings="<?= $item['servings'] ?>"
                                                 >
                                                     <?= $item['NAME'] ?>
                                                 </option>
-                                            <?endif;?>
                                         <? endforeach; ?>
                                     </select>
                                 </div>

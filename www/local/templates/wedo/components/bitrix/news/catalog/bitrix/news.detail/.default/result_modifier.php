@@ -1,4 +1,6 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+use Bitrix\Main\Application,
+    Bitrix\Main\Web\Uri;
 
 // main images
 foreach ($arResult['PROPERTIES']['IMAGES']['VALUE'] as $id){
@@ -34,3 +36,10 @@ $arResult['TITLE_H1'] = $arResult['NAME'];
 if(!empty($arResult['IPROPERTY_VALUES']['ELEMENT_PAGE_TITLE'])){
     $arResult['TITLE_H1'] = $arResult['IPROPERTY_VALUES']['ELEMENT_PAGE_TITLE'];
 }
+
+// Ссылка на страницу аренда :
+$request = Application::getInstance()->getContext()->getRequest();
+$uri = new Uri('/lease');
+$uri->addParams($request->getQueryList()->toArray());
+$uri->addParams(array("cm" => $arResult['ID']));
+$arResult['leaseLink']= $uri->getUri();
