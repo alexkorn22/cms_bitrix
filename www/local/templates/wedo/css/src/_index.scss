@@ -213,7 +213,7 @@
           img {
             opacity: 0;
           }
-          >div {
+          .m-card__items {
             span {
               color: $red;
             }
@@ -227,7 +227,7 @@
           .wrap {
             top: 10%;
             img {  opacity: 1;  }
-            div {
+            .m-card__items {
               span {
                 color: $white;
               }
@@ -264,7 +264,7 @@
           opacity: 1;
           transition: .6s;
         }
-        div {
+        .m-card__items {
           position: relative;
           display: block;
           width: 100%;
@@ -355,7 +355,7 @@
           img {
             width: 15%;
           }
-          div {
+          .m-card__items {
             .meta {
               opacity: 1;
               .more-info {
