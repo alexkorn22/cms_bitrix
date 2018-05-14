@@ -1,7 +1,7 @@
 <div class="m-card third">
     <div class="wrap">
         <img src="<?=IMAGES_PATH?>/icon-repairs.png" alt="repairs">
-        <div>
+        <div class="m-card__items">
             <span>Ремонт</span>
             <div class="meta">
                 <ul>

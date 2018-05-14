@@ -1,7 +1,7 @@
 <div class="m-card first">
 	<div class="wrap">
  <img alt="sale" src="<?=IMAGES_PATH?>/icon-sale.png">
-		<div>
+		<div class="m-card__items">
             <span>Продажа</span>
 			<div class="meta">
 				<ul>

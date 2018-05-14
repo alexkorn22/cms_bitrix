@@ -1,7 +1,7 @@
 <div class="m-card fourth">
 	<div class="wrap">
  <img alt="service" src="<?=IMAGES_PATH?>/icon-service.png">
-		<div>
+		<div class="m-card__items">
 			 Сервис
 			<div class="meta">
 				<ul>
