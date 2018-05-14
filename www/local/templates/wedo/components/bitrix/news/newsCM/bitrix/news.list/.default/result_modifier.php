@@ -1,6 +1,5 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 use Bitrix\Main\Application;
-
 foreach ($arResult['ITEMS'] as &$item){
     // Date :
     $similarProductsOb = CIBlockElement::GetProperty(
@@ -11,12 +10,8 @@ foreach ($arResult['ITEMS'] as &$item){
             'CODE'=>'DATE'
         )
     );
-    $date = new DateTime('0001-01-01');
-    while ($property = $similarProductsOb->GetNext())
-    {
-        $date = new DateTime($property['VALUE']);
-    }
 
+    $date = new DateTime($item['PROPERTIES']['DATE']['VALUE']);
     $item['time']=[
         'year'  => $date->format("Y"),
         'month' => $date->format("M"),
