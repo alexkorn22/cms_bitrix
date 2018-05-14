@@ -48,7 +48,7 @@ extract($arResult);
                                         <? foreach ($arResult['products'] as $item): ?>
                                                 <option
                                                         value="<?= $item['ID'] ?>"
-                                                    <? if ($item['ID'] == $product['ID'] || $arResult['curCM'] == $item['ID']): ?>
+                                                    <? if ($item['ID'] == $product['ID']): ?>
                                                         selected
                                                     <? endif; ?>
                                                         data-servings="<?= $item['servings'] ?>"

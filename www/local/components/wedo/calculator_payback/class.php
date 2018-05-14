@@ -72,6 +72,10 @@ class CCalculatorPaybackComponent extends CBitrixComponent{
             if (!$id) {
                 $id = $prod->fields['ID'];
             }
+            if(!empty($this->request->getQuery('cm'))){
+                $id = $this->request->getQuery('cm');
+            }
+
             $product['ID'] = $prod->fields['ID'];
             $product['NAME'] = $prod->fields['NAME'];
             $props = $prod->GetProperties(false,[]);
@@ -149,8 +153,6 @@ class CCalculatorPaybackComponent extends CBitrixComponent{
 		//$this->generateArOrder();
 		//$this->generateArFilter();
 		//$this->generateArSelect();
-        // get param :
-        $this->arResult['curCM'] = $this->request->getQuery('cm');
         $this->getDataCoffeMachine();
         $this->arResult['priceCofee'] = $this->getPriceCoffee();
         $this->arResult['priceSale'] = $this->getPriceSale();
