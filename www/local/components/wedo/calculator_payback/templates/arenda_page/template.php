@@ -1,5 +1,4 @@
 <?
-use Bitrix\Main\Application;
 /**
  * @var $arResult
  * @var CBitrixComponentTemplate $this
