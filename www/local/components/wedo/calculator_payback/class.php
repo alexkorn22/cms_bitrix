@@ -148,6 +148,8 @@ class CCalculatorPaybackComponent extends CBitrixComponent{
 		//$this->generateArOrder();
 		//$this->generateArFilter();
 		//$this->generateArSelect();
+        // get param :
+        $this->arResult['curCM'] = $this->request->getQuery('cm');
         $this->getDataCoffeMachine();
         $this->arResult['priceCofee'] = $this->getPriceCoffee();
         $this->arResult['priceSale'] = $this->getPriceSale();

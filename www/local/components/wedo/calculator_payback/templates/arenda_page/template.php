@@ -24,8 +24,6 @@ $help = '
                     $paybackPeriod - срок окупаемости
                 ';
 extract($arResult);
-$req = Application::getInstance()->getContext()->getRequest();
-
 ?>
 
 <div id="payback-calculator" >
@@ -52,7 +50,7 @@ $req = Application::getInstance()->getContext()->getRequest();
                                             <? if($item['RENT'] == 'RENT_TRUE'):?>
                                                 <option
                                                         value="<?= $item['ID'] ?>"
-                                                    <? if ($item['ID'] == $product['ID'] || $req->getQuery('CM') == $item['ID']): ?>
+                                                    <? if ($item['ID'] == $product['ID'] || $arResult['curCM'] == $item['ID']): ?>
                                                         selected
                                                     <? endif; ?>
                                                         data-servings="<?= $item['servings'] ?>"
