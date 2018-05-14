@@ -2,15 +2,6 @@
 use Bitrix\Main\Application;
 foreach ($arResult['ITEMS'] as &$item){
     // Date :
-    $similarProductsOb = CIBlockElement::GetProperty(
-        App::$config->newsIblockId,
-        $item['ID'],
-        array(),
-        array(
-            'CODE'=>'DATE'
-        )
-    );
-
     $date = new DateTime($item['PROPERTIES']['DATE']['VALUE']);
     $item['time']=[
         'year'  => $date->format("Y"),
