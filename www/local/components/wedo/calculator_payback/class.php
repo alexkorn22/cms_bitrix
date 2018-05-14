@@ -67,15 +67,11 @@ class CCalculatorPaybackComponent extends CBitrixComponent{
             'ACTIVE'=> 'Y'
         ];
         $res = CIBlockElement::GetList([],$filter,false,false);
-        $id = 0;
+        $id = $this->request->getQuery('cm');
         while ($prod = $res->GetNextElement()) {
             if (!$id) {
                 $id = $prod->fields['ID'];
             }
-            if(!empty($this->request->getQuery('cm'))){
-                $id = $this->request->getQuery('cm');
-            }
-
             $product['ID'] = $prod->fields['ID'];
             $product['NAME'] = $prod->fields['NAME'];
             $props = $prod->GetProperties(false,[]);
