@@ -13,7 +13,10 @@ foreach ($arResult['ITEMS'] as &$item){
     );
     while ($property = $similarProductsOb->GetNext())
     {
-        $date = new DateTime($property['VALUE']) ?? date();
+        $date = new DateTime($property['VALUE']);
+        if($date->getTimestamp() <= 0){
+            $date = new DateTime();
+        }
     }
 
     $item['time']=[
