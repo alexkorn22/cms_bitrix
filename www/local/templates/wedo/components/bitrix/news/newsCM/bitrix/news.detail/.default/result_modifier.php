@@ -1,9 +1,6 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 
 $date = new DateTime($arResult['PROPERTIES']['DATE']['VALUE']);
-if($date->getTimestamp() <= 0){
-    $date = new DateTime();
-}
 $arResult['time']=[
     'year'  => $date->format("Y"),
     'month' => $date->format("M"),

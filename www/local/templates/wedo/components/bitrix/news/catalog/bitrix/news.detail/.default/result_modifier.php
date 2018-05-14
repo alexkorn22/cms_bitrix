@@ -41,5 +41,5 @@ if(!empty($arResult['IPROPERTY_VALUES']['ELEMENT_PAGE_TITLE'])){
 $request = Application::getInstance()->getContext()->getRequest();
 $uri = new Uri('/lease');
 $uri->addParams($request->getQueryList()->toArray());
-$uri->addParams(array("foo" => "bar"));
+$uri->addParams(array("cm" => $arResult['ID']));
 $arResult['LeaseLink']= $uri->getUri();;
