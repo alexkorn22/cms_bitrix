@@ -110,7 +110,7 @@
                 <div class="col-8 col-sm-10 col-md-10 col-lg-10">
                     <div class="wrap-social-icons normal-top">
                         <div class="social-icons">
-                            <a class="phone black" href="tel:<?=App::$config->telephone?>"><?=App::$config->telephone?></a>
+                            <a class="phone black" href="tel:<?=str_replace(' ','',App::$config->telephone)?>"><?=App::$config->telephone?></a>
                             <? if(!empty(App::$config->facebookLink)):?>
                                 <a href="<?=App::$config->facebookLink?>" class="social facebook  d-none d-sm-block"></a>
                             <?endif;?>
@@ -205,7 +205,7 @@
                 <div class="wrap-social-icons">
                     <div class="col col-lg-6">
                         <div class="social-icons">
-                            <a class="phone" href="tel:<?=App::$config->telephone?>"><?=App::$config->telephone?></a>
+                            <a class="phone" href="tel:<?=str_replace(' ','',App::$config->telephone)?>"><?=App::$config->telephone?></a>
                             <? if(!empty(App::$config->facebookLink)):?>
                                 <a href="<?=App::$config->facebookLink?>" class="social facebook"></a>
                             <?endif;?>
@@ -238,7 +238,7 @@
                         <div class="col col-sm-10 col-md-10 col-lg-10">
                             <div class="wrap-social-icons normal-top">
                                 <div class="social-icons">
-                                    <a class="phone black" href="tel:<?=App::$config->telephone?>"><?=App::$config->telephone?></a>
+                                    <a class="phone black" href="tel:<?=str_replace(' ','',App::$config->telephone)?>"><?=App::$config->telephone?></a>
 
                                     <? if(!empty(App::$config->facebookLink)):?>
                                         <a href="<?=App::$config->facebookLink?>" class="social facebook  d-none d-sm-block"></a>
@@ -334,7 +334,7 @@
                         <div class="wrap-social-icons">
                             <div class="col col-lg-6">
                                 <div class="social-icons">
-                                    <a class="phone" href="tel:<?=App::$config->telephone?>"><?=App::$config->telephone?></a>
+                                    <a class="phone" href="tel:<?=str_replace(' ','',App::$config->telephone)?>"><?=App::$config->telephone?></a>
                                     <? if(!empty(App::$config->facebookLink)):?>
                                         <a href="<?=App::$config->facebookLink?>" class="social facebook "></a>
                                     <?endif;?>
