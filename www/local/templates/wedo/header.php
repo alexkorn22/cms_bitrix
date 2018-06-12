@@ -7,7 +7,6 @@
     $APPLICATION->ShowHead();
     use Bitrix\Main\Page\Asset;
     Asset::getInstance()->addString('<link rel="shortcut icon" href="' . SITE_TEMPLATE_PATH .'/images/favicon.png" type="image/x-icon">');
-    Asset::getInstance()->addString('<meta charset="UTF-8">');
     Asset::getInstance()->addString('<meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">');
     Asset::getInstance()->addString('<meta http-equiv="X-UA-Compatible" content="ie=edge">');
