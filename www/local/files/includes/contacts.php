@@ -1,7 +1,7 @@
 <div class="f-contact">
     <div class="wrap-social-icons footer">
         <div class="social-icons footer">
-            <a class="phone d-none d-sm-block" href="tel:<?=App::$config->telephone?>"><?=App::$config->telephone?></a>
+            <a class="phone d-none d-sm-block" href="tel:<?=str_replace(' ','',App::$config->telephone)?>"><?=App::$config->telephone?></a>
             <a class="email d-none d-sm-block" href="mailto:<?=App::$config->email?>"><?=App::$config->email?></a>
             <div class="icon">
                 <? if(!empty(App::$config->facebookLink)):?>
