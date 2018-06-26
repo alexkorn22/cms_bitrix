@@ -172,13 +172,18 @@
         width: 100%;
         line-height: 30px;
         padding: 10px 0;
-        a {
+        a,span {
           text-decoration: none;
           color: $white;
           font-size: 36px;
           transition: all 0.5s ease;
           width: 100%;
           &:hover {
+            color: $red;
+          }
+        }
+        &.active {
+          a,span {
             color: $red;
           }
         }
@@ -190,7 +195,7 @@
         .item {
           line-height: 22px;
           padding: 10px 0;
-          a {
+          a , span{
             font-size: 30px;
           }
         }
@@ -209,7 +214,7 @@
         padding: 0;
         .item {
           padding: 5px 0;
-          a {
+          a, span {
             font-size: 20px;
           }
         }

@@ -1,17 +1,24 @@
 <?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 <?if (!empty($arResult)):?>
-<? $curPage = $APPLICATION->GetCurPage(); ?>
 
     <div class="f-menu left">
         <ul>
             <? foreach($arResult as $arItem):?>
-                <? if($curPage == $arItem["LINK"]) :?>
-                    <li class="item"><a class="menuLink" href="#"><?=$arItem["TEXT"]?></a></li>
-                <? elseif($arItem["LINK"]=='/about/contacts/#service-centers'):?>
-                    <li class="item"><a class="menuLinkService" href="/about/contacts/#service-centers"><?=$arItem["TEXT"]?></a></li>
-                <?else:?>
-                    <li class="item"><a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a></li>
-                <?endif;?>
+                <?php
+                $aClass = '';
+                if ($arItem["LINK"]=='/about/contacts/#service-centers') {
+                    $aClass = 'menuLinkService';
+                }
+                ?>
+                <li class="item <?if ($arItem["SELECTED"]):?>active<?endif;?>">
+                    <? if($arItem["SELECTED"]) :?>
+                        <span><?=$arItem["TEXT"]?></span>
+                    <?else:?>
+<!--                        menuLink-->
+                        <a class="<?=$aClass?>" href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
+                    <?endif;?>
+                </li>
+
             <?endforeach?>
         </ul>
     </div>
