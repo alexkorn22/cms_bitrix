@@ -2,8 +2,10 @@
 <!doctype html>
 <html>
 <head>
-    <?=App::$config->scriptGoogleAnalytics?>
-    <?
+    <? if (!App::$config->debug):?>
+    <?=App::$config->scriptGoogleAnalytics;?>
+    <?endif;?>
+    <?php
     $APPLICATION->ShowHead();
     use Bitrix\Main\Page\Asset;
     Asset::getInstance()->addString('<link rel="shortcut icon" href="' . SITE_TEMPLATE_PATH .'/images/favicon.png" type="image/x-icon">');
@@ -27,13 +29,7 @@
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH .'/js/libs/jquery-ui.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH .'/js/libs/slick.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH .'/js/dist/main.js');
-    Asset::getInstance()->addString('
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous" >
-        </script>
-    ');
+    Asset::getInstance()->addJs("https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js");
 
     $logo          = new ImageResize(IMAGES_PATH.'/logo.png');
     $blackLogo     = new ImageResize(IMAGES_PATH.'/logo_black.png');
@@ -43,7 +39,9 @@
     ?>
 
 	<title><?$APPLICATION->ShowTitle()?></title>
-    <?=App::$config->scriptYandexMetrica?>
+    <? if (!App::$config->debug):?>
+        <?=App::$config->scriptYandexMetrica;?>
+    <?endif;?>
 </head>
 <body>
 <div class="preloader-wrap">
