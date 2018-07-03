@@ -22,8 +22,8 @@ $help = '
                     $marga - маржа в месяц
                     $paybackPeriod - срок окупаемости
                 ';
-extract($arResult);
 
+extract($arResult);
 ?>
 <div id="calculator-payback">
                 <div class="calculate-raschet">
@@ -44,6 +44,8 @@ extract($arResult);
                                         <? endforeach; ?>
                                     </select>
                             </div>
+                        <? elseif(isset($arParams['PRODUCT_ID'])):?>
+                            <input type="hidden" id="productId" value="<?=$arParams['PRODUCT_ID']?>">
                         <? endif; ?>
                             <div class="col-lg-3">
                                 <div class="wrap-input calculate-raschet__wrap-input">
