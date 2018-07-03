@@ -22,8 +22,8 @@ $help = '
                     $marga - маржа в месяц
                     $paybackPeriod - срок окупаемости
                 ';
-extract($arResult);
 
+extract($arResult);
 ?>
 <div id="calculator-payback">
                 <div class="calculate-raschet">
@@ -44,11 +44,13 @@ extract($arResult);
                                         <? endforeach; ?>
                                     </select>
                             </div>
+                        <? elseif(isset($arParams['PRODUCT_ID'])):?>
+                            <input type="hidden" id="productId" value="<?=$arParams['PRODUCT_ID']?>">
                         <? endif; ?>
                             <div class="col-lg-3">
                                 <div class="wrap-input calculate-raschet__wrap-input">
                                     <div class="form-group calculate-raschet__form-group">
-                                        <label for="fild-coffee" class="calculate-raschet__label">Цена 1 кг. кофе (грн) *</label>
+                                        <label for="fild-coffee" class="calculate-raschet__label">Цена 1 кг. кофе (грн)</label>
                                         <input type="text" class="form-control custom-input" id="priceCofee" value="<?=$priceCofee?>">
                                     </div>
                                 </div>
@@ -56,7 +58,7 @@ extract($arResult);
                             <div class="col-lg-3">
                                 <div class="wrap-input calculate-raschet__wrap-input">
                                     <div class="form-group calculate-raschet__form-group">
-                                        <label for="fild-realizaciy" class="calculate-raschet__label">Цена реализации (грн) *</label>
+                                        <label for="fild-realizaciy" class="calculate-raschet__label">Цена реализации (грн)</label>
                                         <input type="text" class="form-control custom-input" id="priceSale" value="<?=$priceSale?>">
                                     </div>
                                 </div>

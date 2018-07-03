@@ -10,7 +10,6 @@ $APPLICATION->SetTitle("Аренда");
 					<div class="col">
 						<ul>
 							<li><a href="#advantages-lease">Преимущества</a></li>
-							<li><a href="#models-for-rent">Модели для аренды</a></li>
 							<li><a href="#rent-terms">Условия аренды</a></li>
 							<li><a href="#payback-calculator">Калькулятор окупаемости</a></li>
 							<li><a href="#clients-in-lease">Наши клиенты</a></li>

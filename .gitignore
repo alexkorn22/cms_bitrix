@@ -1,4 +1,5 @@
 www/bitrix/
+www/.well-known/
 www/bitrix
 www/bitrix/*.php
 www/bitrix/*.log
@@ -93,3 +94,4 @@ www/bitrix/managed_cache
 www/bitrix/stack_cache
 
 www/local/bxApi/*
+www/local/bxApi

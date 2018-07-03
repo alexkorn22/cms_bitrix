@@ -1,7 +1,7 @@
 <div class="m-card second">
     <div class="wrap">
         <img src="<?=IMAGES_PATH?>/icon-lease.png" alt="lease">
-        <div>
+        <div class="m-card__items">
             <span>Аренда</span>
             <div class="meta">
                 <ul>

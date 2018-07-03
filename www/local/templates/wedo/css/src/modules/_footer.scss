@@ -26,12 +26,17 @@ footer {
       li {
         line-height: 20px;
         padding: 5px 0;
-        a {
+        a,span {
           text-decoration: none;
           color: $white;
           font-size: 24px;
           transition: 0.5s;
           &:hover {
+            color: $red;
+          }
+        }
+        &.active {
+          a,span {
             color: $red;
           }
         }
@@ -88,7 +93,7 @@ footer {
       text-align: center;
       ul {
         width: 100%;
-        li a {
+        li a, li span {
           font-size: 18px;
         }
       }

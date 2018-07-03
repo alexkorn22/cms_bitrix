@@ -1,8 +1,10 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+
+$date = new DateTime($arResult['PROPERTIES']['DATE']['VALUE']);
 $arResult['time']=[
-    'year'  => date('Y', strtotime($arResult['TIMESTAMP_X'])),
-    'month' => date('M', strtotime($arResult['TIMESTAMP_X'])),
-    'day'   => date('d', strtotime($arResult['TIMESTAMP_X']))
+    'year'  => $date->format("Y"),
+    'month' => $date->format("M"),
+    'day'   => $date->format("d")
 ];
 $res = CIBlockElement::GetProperty(App::$config->newsIblockId, $arResult['ID'], "sort", "asc", array("CODE" => "TAGS"));
 while ($ob = $res->GetNext())

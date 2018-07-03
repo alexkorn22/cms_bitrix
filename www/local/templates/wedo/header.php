@@ -2,12 +2,13 @@
 <!doctype html>
 <html>
 <head>
-    <?=App::$config->scriptGoogleAnalytics?>
-    <?
+    <? if (!App::$config->debug):?>
+    <?=App::$config->scriptGoogleAnalytics;?>
+    <?endif;?>
+    <?php
     $APPLICATION->ShowHead();
     use Bitrix\Main\Page\Asset;
     Asset::getInstance()->addString('<link rel="shortcut icon" href="' . SITE_TEMPLATE_PATH .'/images/favicon.png" type="image/x-icon">');
-    Asset::getInstance()->addString('<meta charset="UTF-8">');
     Asset::getInstance()->addString('<meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">');
     Asset::getInstance()->addString('<meta http-equiv="X-UA-Compatible" content="ie=edge">');
@@ -28,13 +29,7 @@
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH .'/js/libs/jquery-ui.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH .'/js/libs/slick.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH .'/js/dist/main.js');
-    Asset::getInstance()->addString('
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous" >
-        </script>
-    ');
+    Asset::getInstance()->addJs("https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js");
 
     $logo          = new ImageResize(IMAGES_PATH.'/logo.png');
     $blackLogo     = new ImageResize(IMAGES_PATH.'/logo_black.png');
@@ -44,7 +39,9 @@
     ?>
 
 	<title><?$APPLICATION->ShowTitle()?></title>
-    <?=App::$config->scriptYandexMetrica?>
+    <? if (!App::$config->debug):?>
+        <?=App::$config->scriptYandexMetrica;?>
+    <?endif;?>
 </head>
 <body>
 <div class="preloader-wrap">
@@ -111,7 +108,7 @@
                 <div class="col-8 col-sm-10 col-md-10 col-lg-10">
                     <div class="wrap-social-icons normal-top">
                         <div class="social-icons">
-                            <a class="phone black" href="tel:<?=App::$config->telephone?>"><?=App::$config->telephone?></a>
+                            <a class="phone black" href="tel:<?=str_replace(' ','',App::$config->telephone)?>"><?=App::$config->telephone?></a>
                             <? if(!empty(App::$config->facebookLink)):?>
                                 <a href="<?=App::$config->facebookLink?>" class="social facebook  d-none d-sm-block"></a>
                             <?endif;?>
@@ -206,7 +203,7 @@
                 <div class="wrap-social-icons">
                     <div class="col col-lg-6">
                         <div class="social-icons">
-                            <a class="phone" href="tel:<?=App::$config->telephone?>"><?=App::$config->telephone?></a>
+                            <a class="phone" href="tel:<?=str_replace(' ','',App::$config->telephone)?>"><?=App::$config->telephone?></a>
                             <? if(!empty(App::$config->facebookLink)):?>
                                 <a href="<?=App::$config->facebookLink?>" class="social facebook"></a>
                             <?endif;?>
@@ -239,7 +236,7 @@
                         <div class="col col-sm-10 col-md-10 col-lg-10">
                             <div class="wrap-social-icons normal-top">
                                 <div class="social-icons">
-                                    <a class="phone black" href="tel:<?=App::$config->telephone?>"><?=App::$config->telephone?></a>
+                                    <a class="phone black" href="tel:<?=str_replace(' ','',App::$config->telephone)?>"><?=App::$config->telephone?></a>
 
                                     <? if(!empty(App::$config->facebookLink)):?>
                                         <a href="<?=App::$config->facebookLink?>" class="social facebook  d-none d-sm-block"></a>
@@ -335,7 +332,7 @@
                         <div class="wrap-social-icons">
                             <div class="col col-lg-6">
                                 <div class="social-icons">
-                                    <a class="phone" href="tel:<?=App::$config->telephone?>"><?=App::$config->telephone?></a>
+                                    <a class="phone" href="tel:<?=str_replace(' ','',App::$config->telephone)?>"><?=App::$config->telephone?></a>
                                     <? if(!empty(App::$config->facebookLink)):?>
                                         <a href="<?=App::$config->facebookLink?>" class="social facebook "></a>
                                     <?endif;?>

@@ -1,12 +1,12 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 use Bitrix\Main\Application;
-
 foreach ($arResult['ITEMS'] as &$item){
-    // time of the news
+    // Date :
+    $date = new DateTime($item['PROPERTIES']['DATE']['VALUE']);
     $item['time']=[
-        'year'  => date('Y', strtotime($item['TIMESTAMP_X'])),
-        'month' => date('M', strtotime($item['TIMESTAMP_X'])),
-        'day'   => date('d', strtotime($item['TIMESTAMP_X']))
+        'year'  => $date->format("Y"),
+        'month' => $date->format("M"),
+        'day'   => $date->format("d")
     ];
     // resize images :
     $resizedImg = CFile::ResizeImageGet($item["PREVIEW_PICTURE"]["ID"], array('width'=>300, 'height'=>300), BX_RESIZE_IMAGE_PROPORTIONAL_ALT, true);

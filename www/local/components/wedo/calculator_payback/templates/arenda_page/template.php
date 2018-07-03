@@ -23,7 +23,6 @@ $help = '
                     $paybackPeriod - срок окупаемости
                 ';
 extract($arResult);
-
 ?>
 
 <div id="payback-calculator" >
@@ -47,15 +46,15 @@ extract($arResult);
                                     <label for="productId">Кофемашина</label>
                                     <select class="form-control custom-select" id="productId">
                                         <? foreach ($arResult['products'] as $item): ?>
-                                            <option
-                                                    value="<?= $item['ID'] ?>"
-                                                <? if ($item['ID'] == $product['ID']): ?>
-                                                    selected
-                                                <? endif; ?>
-                                                    data-servings="<?= $item['servings'] ?>"
-                                            >
-                                                <?= $item['NAME'] ?>
-                                            </option>
+                                                <option
+                                                        value="<?= $item['ID'] ?>"
+                                                    <? if ($item['ID'] == $product['ID']): ?>
+                                                        selected
+                                                    <? endif; ?>
+                                                        data-servings="<?= $item['servings'] ?>"
+                                                >
+                                                    <?= $item['NAME'] ?>
+                                                </option>
                                         <? endforeach; ?>
                                     </select>
                                 </div>
@@ -65,7 +64,7 @@ extract($arResult);
                 <div class="col-12 col-lg">
                     <div class="wrap-input">
                         <div class="form-group">
-                            <label for="fild-coffee">Цена 1 кг. кофе (грн)*</label>
+                            <label for="fild-coffee">Цена 1 кг. кофе (грн)</label>
                             <input type="text" class="form-control custom-input" id="priceCofee" value="<?=$priceCofee?>">
                         </div>
                     </div>
@@ -73,7 +72,7 @@ extract($arResult);
                 <div class="col-12 col-lg">
                     <div class="wrap-input">
                         <div class="form-group">
-                            <label for="fild-realizaciy">Цена реализации (грн)*</label>
+                            <label for="fild-realizaciy">Цена реализации (грн)</label>
                             <input type="text" class="form-control custom-input" id="priceSale" value="<?=$priceSale?>">
                         </div>
                     </div>
