@@ -14,9 +14,9 @@
     .burger {
       top: 20px;
       right: 30px;
-      &.small-top {
-        //top: 10px;
-      }
+      // &.small-top {
+      //   //top: 10px;
+      // }
     }
     @include media-breakpoint-down(sm){
       .burger {
