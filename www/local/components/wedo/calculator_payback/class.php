@@ -156,7 +156,7 @@ class CCalculatorPaybackComponent extends CBitrixComponent{
         $this->arResult['marga'] = $this->getMargin();
         $this->arResult['paybackPeriod'] = $this->arResult['cmPriceResult'] / $this->arResult['marga'];
         // round
-        $this->arResult['paybackPeriod'] = round($this->arResult['paybackPeriod']);
+        $this->arResult['paybackPeriod'] = ceil($this->arResult['paybackPeriod']);
 
         $this->includeComponentTemplate();
 //		if ($this->startResultCache()){
