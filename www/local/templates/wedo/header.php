@@ -44,9 +44,7 @@
     <?endif;?>
 </head>
 <body>
-<div class="preloader-wrap">
-    <div class="percentage" id="precent"></div>
-</div>
+
 <div id="main">
 <?$APPLICATION->ShowPanel();?>
 <? if($APPLICATION->GetCurPage() == '/'):?>
