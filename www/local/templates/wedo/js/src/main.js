@@ -635,11 +635,11 @@ function Preloader() {
 
 
 // Percentage Increment Animation
-        var PercentageID = $("#precent"),
-            start = 0,
-            end = 100,
-            durataion = time;
-        animateValue(PercentageID, start, end, durataion);
+//         var PercentageID = $("#precent"),
+//             start = 0,
+//             end = 100,
+//             durataion = time;
+//         animateValue(PercentageID, start, end, durataion);
 
         function animateValue(id, start, end, duration) {
 

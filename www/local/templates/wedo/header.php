@@ -35,6 +35,8 @@
     $blackLogo     = new ImageResize(IMAGES_PATH.'/logo_black.png');
     $logoPath      = $logo->getLink(ImageResize::SIZE_LOGO);
     $blackLogoPath = $blackLogo->getLink(ImageResize::SIZE_LOGO);
+    $logoPathWithoutResize = IMAGES_PATH.'/logo.png';
+    $blackLogoPathWithoutResize = IMAGES_PATH.'/logo_black.png';
 
     ?>
 
@@ -44,9 +46,7 @@
     <?endif;?>
 </head>
 <body>
-<div class="preloader-wrap">
-    <div class="percentage" id="precent"></div>
-</div>
+
 <div id="main">
 <?$APPLICATION->ShowPanel();?>
 <? if($APPLICATION->GetCurPage() == '/'):?>
@@ -61,7 +61,7 @@
                 <div class="col">
                     <div class="wrap-logo">
                         <a href="/">
-                            <img src="<?=$logoPath?>" alt="CMS">
+                            <img src="<?=$logoPathWithoutResize?>" alt="CMS">
                         </a>
                     </div>
                 </div>
@@ -101,7 +101,7 @@
                 <div class="col-4 col-sm-2 col-md-2 col-lg-2">
                     <div class="wrap-logo">
                         <a href="/">
-                            <img src="<?=$blackLogoPath?>" alt="CMS">
+                            <img src="<?=$blackLogoPathWithoutResize?>" alt="CMS">
                         </a>
                     </div>
                 </div>
@@ -139,7 +139,7 @@
                 <div class="wrap-logo">
                     <??>
                     <a href="/">
-                        <img src="<?=$logoPath?>" alt="CMS">
+                        <img src="<?=$logoPathWithoutResize?>" alt="CMS">
                     </a>
                 </div>
                 <div class="burger-menu in-menu">
@@ -229,7 +229,7 @@
                         <div class="col-4 col-sm-2 col-md-2 col-lg-2">
                             <div class="wrap-logo">
                                 <a href="/">
-                                    <img src="<?=$blackLogoPath?>" alt="CMS">
+                                    <img src="<?=$blackLogoPathWithoutResize?>" alt="CMS">
                                 </a>
                             </div>
                         </div>
@@ -268,7 +268,7 @@
                     <div class="row">
                         <div class="wrap-logo">
                             <a href="/">
-                                <img src="<?=$logoPath?>" alt="CMS">
+                                <img src="<?=$logoPathWithoutResize?>" alt="CMS">
                             </a>
                         </div>
                         <div class="burger-menu in-menu">
