@@ -11,9 +11,13 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+$view = new ViewTemplate($this);
 ?>
 <div class="procurement_group__detail">
     <div class="row">
+        <div class="col-md-6">
+            <?=$view->render('main-info', ['arItem' => $arResult])?>
+        </div>
         <div class="col-md-6">
             <img
                     class="img-fluid"
@@ -21,9 +25,6 @@ $this->setFrameMode(true);
                     alt="<?=$arResult["DETAIL_PICTURE"]["ALT"]?>"
                     title="<?=$arResult["DETAIL_PICTURE"]["TITLE"]?>"
             />
-        </div>
-        <div class="col-md-6">
-
         </div>
     </div>
 </div>

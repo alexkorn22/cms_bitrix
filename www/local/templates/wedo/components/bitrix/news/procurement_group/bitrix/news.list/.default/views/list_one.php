@@ -1,5 +1,6 @@
 <?
 /** @var array $areaId */
+/** @var ViewTemplate $this */
 /** @var array $arParams */
 /** @var array $arItem */
 ?>
