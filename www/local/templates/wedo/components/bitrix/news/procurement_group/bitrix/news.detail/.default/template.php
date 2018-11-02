@@ -12,6 +12,25 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
+<div class="procurement_group__detail">
+    <div class="row">
+        <div class="col-md-6">
+            <img
+                    class="img-fluid"
+                    src="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>"
+                    alt="<?=$arResult["DETAIL_PICTURE"]["ALT"]?>"
+                    title="<?=$arResult["DETAIL_PICTURE"]["TITLE"]?>"
+            />
+        </div>
+        <div class="col-md-6">
+
+        </div>
+    </div>
+</div>
+<hr>
+<hr>
+<hr>
+<hr>
 <div class="news-detail">
 	<?if($arParams["DISPLAY_PICTURE"]!="N" && is_array($arResult["DETAIL_PICTURE"])):?>
 		<img
