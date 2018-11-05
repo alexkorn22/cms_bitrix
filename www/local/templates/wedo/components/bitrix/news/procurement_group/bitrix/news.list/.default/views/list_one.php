@@ -20,13 +20,23 @@ ProcurementGroup::findById($arItem['ID']);
         <div class="col-md-8">
             <p><?=$arItem["NAME"]?></p>
             <p><?=$arItem["PREVIEW_TEXT"]?></p>
-            <p><a href="javascript:void(0)"
-                  class="procurement-group__check-link"
-                  data-id_group="<?=$arItem['ID']?>"
-                >
-                    Войти
-                </a>
-            </p>
+            <? if (ProcurementGroup::issetGroupInSession($arItem['ID'])):?>
+                <p><a href="<?=$arItem['DETAIL_PAGE_URL']?>"
+                      class=""
+                    >
+                        Войти
+                    </a>
+                </p>
+            <? else:?>
+                <p><a href="javascript:void(0)"
+                      class="procurement-group__check-link"
+                      data-id_group="<?=$arItem['ID']?>"
+                    >
+                        Войти
+                    </a>
+                </p>
+            <? endif;?>
+
             <p><a href="#">Принять участие</a></p>
             <p><a href="<?=$arItem['DETAIL_PAGE_URL']?>">Принять участие</a></p>
         </div>

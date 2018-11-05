@@ -3,11 +3,11 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
 class ProcurementGroup
 {
+    const NAME_SESSION = 'procurementGroupValid';
     public $id;
     public $password;
     public $link;
     protected $iblockId = '';
-
 
     public static function findById($id)
     {
@@ -35,6 +35,17 @@ class ProcurementGroup
         return $model;
     }
 
+    public function addToSession()
+    {
+        $_SESSION[App::NAME_SESSION][ProcurementGroup::NAME_SESSION][] = $this->id;
+    }
 
+    public static function issetGroupInSession($groupId)
+    {
+        if (!isset($_SESSION[App::NAME_SESSION][self::NAME_SESSION])) {
+            return false;
+        }
+        return in_array($groupId, $_SESSION[App::NAME_SESSION][self::NAME_SESSION]);
+    }
 
 }

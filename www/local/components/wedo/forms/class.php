@@ -24,7 +24,7 @@ class FormsComponent extends CBitrixComponent{
         if (!empty($model->password) && $model->password == $request->getPost('password')) {
             $result['success'] = true;
             $result['link'] = $model->link;
-            $_SESSION['procurementGroupCheck'][] = $model->id;
+            $model->addToSession();
         } else {
             $result['message'] = '<p>Неправильный пароль</p>';
         }
