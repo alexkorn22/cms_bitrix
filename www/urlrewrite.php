@@ -60,6 +60,12 @@ $arUrlRewrite = array(
 		"ID" => "bitrix:news",
 		"PATH" => "/blog/index.php",
 	),
+    array(
+        "CONDITION" => "#^/procurement_group/#",
+        "RULE" => "",
+        "ID" => "bitrix:news",
+        "PATH" => "/procurement_group/index.php",
+    ),
 );
 
 ?>

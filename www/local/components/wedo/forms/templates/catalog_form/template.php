@@ -7,7 +7,8 @@
         <div class="modal-content custom-modal-content custom-modal-content_bg-red">
             <?=bitrix_sessid_post()?>
             <form class="consultForms consultation" id="<?=$arParams['FORM_ID']?>"><?=bitrix_sessid_post()?>
-                <? require $_SERVER["DOCUMENT_ROOT"].'/local/components/wedo/forms/views/msg.php';?>
+                <div id="thankMessage">
+                </div>
                 <? if( isset($arParams['orderType'])):?>
                     <input type="hidden" name="orderType" value="<?=$arParams['orderType']?>">
                 <? endif; ?>

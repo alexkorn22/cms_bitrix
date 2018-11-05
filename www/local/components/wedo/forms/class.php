@@ -14,5 +14,21 @@ class FormsComponent extends CBitrixComponent{
             $this->includeComponentTemplate();
         }
 	}
+
+    public static function procurementGroupCheckAjax(\Bitrix\Main\HttpRequest $request)
+    {
+        $result = [];
+        $result['FORM_TYPE'] = $request->getPost('FORM_TYPE');
+        $result['success'] = false;
+        $model = ProcurementGroup::findById($request->getPost('id_group'));
+        if (!empty($model->password) && $model->password == $request->getPost('password')) {
+            $result['success'] = true;
+            $result['link'] = $model->link;
+            $_SESSION['procurementGroupCheck'][] = $model->id;
+        } else {
+            $result['message'] = '<p>Неправильный пароль</p>';
+        }
+        return $result;
+	}
 }
 ?>

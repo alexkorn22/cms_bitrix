@@ -7,7 +7,7 @@
     ?>
     <div id="thankMessage">
         <img src="<?=$clockImgSrc?>" class="contacts-icons" alt="">
-        <p>Спасибо, мы свяжемся <br>с вами в течение <br>рабочего дня</p>
+        <p >Спасибо, мы свяжемся <br>с вами в течение <br>рабочего дня</p>
     </div>
 </div>
 
