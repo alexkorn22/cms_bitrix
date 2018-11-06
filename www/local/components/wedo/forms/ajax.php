@@ -11,6 +11,13 @@ if (check_bitrix_sessid()) {
         echo json_encode($result);
         return;
     }
+    if ($request->getPost('FORM_TYPE') == 'procurement_group_query') {
+        CBitrixComponent::includeComponentClass("wedo:forms");
+        $formComponent = new FormsComponent();
+        $result = $formComponent->procurementGroupQueryAjax();
+        echo json_encode($result);
+        return;
+    }
     echo json_encode(['success' => true]);
     // получить чат ID с каждой формы :
     $idChat   = App::$config->telegramChatId;
@@ -49,7 +56,6 @@ if (check_bitrix_sessid()) {
         $pattern .= "Город: %city%\n";
         $pattern .= "Коммент: %comment%\n";
         $alert->parseText($pattern);
-        return;
         $alert->sendTelegram($idChat);
 }else{
     die(header("HTTP/1.0 404 Not Found"));

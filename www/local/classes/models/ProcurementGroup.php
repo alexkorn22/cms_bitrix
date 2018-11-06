@@ -7,6 +7,7 @@ class ProcurementGroup
     public $id;
     public $password;
     public $link;
+    public $name;
     protected $iblockId = '';
 
     public static function findById($id)
@@ -17,7 +18,7 @@ class ProcurementGroup
            // 'IBLOCK_ID ' =>$arParams['IBLOCK_ID'],
             'ID' => $id
         );
-        $arSelect = array('ID','IBLOCK_ID', 'DETAIL_PAGE_URL',"PROPERTY_*");
+        $arSelect = array('ID','IBLOCK_ID','NAME', 'DETAIL_PAGE_URL',"PROPERTY_*");
         $res = CIBlockElement::GetList(
             array(),
             $arFilter,
@@ -31,6 +32,7 @@ class ProcurementGroup
             $model->id = $arFields['ID'];
             $model->link = $arFields['DETAIL_PAGE_URL'];
             $model->password = $arProps['password_enter']['VALUE'];
+            $model->name = $arFields['NAME'];
         }
         return $model;
     }

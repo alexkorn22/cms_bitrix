@@ -46,7 +46,9 @@ $view = new ViewTemplate($this);
         "FORM_ID" => "procurement_group_check",
         "FORM_TYPE" => "procurement_group_check",
         "ORDER_TYPE" => "",
-        "telegramChatId" => ""
+        "telegramChatId" => "-226178797"
     )
 );?>
+
+
 
