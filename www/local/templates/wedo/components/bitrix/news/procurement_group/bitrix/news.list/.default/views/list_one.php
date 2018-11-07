@@ -10,7 +10,7 @@ ProcurementGroup::findById($arItem['ID']);
 
 <div class="procurement_group-list__item" id="<?=$areaId;?>">
     <div class="row">
-        <div class="col-6 justify-content-center">
+        <div class="col-sm-6 justify-content-center">
             <div class="procurement_group-list__wrap-image">
                 <img
                         class="img-fluid"
@@ -20,7 +20,7 @@ ProcurementGroup::findById($arItem['ID']);
                 />
             </div>
         </div>
-        <div class="col-6">
+        <div class="col-sm-6">
             <div class="procurement_group-list__wrap-desc">
                 <div class="procurement_group-list__wrap-desc-content">
                     <div class="procurement_group-list__item-title">
@@ -32,7 +32,7 @@ ProcurementGroup::findById($arItem['ID']);
                 </div>
                 <div class="procurement_group-list__item-buttons">
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-xl-6">
                             <? if (ProcurementGroup::issetGroupInSession($arItem['ID'])):?>
                                 <a href="<?=$arItem['DETAIL_PAGE_URL']?>"
                                    class="btn btn_none-fill btn_small-mobile"
@@ -49,7 +49,7 @@ ProcurementGroup::findById($arItem['ID']);
                                 </a>
                             <? endif;?>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-xl-6">
                             <?$APPLICATION->IncludeComponent(
                                 "wedo:forms",
                                 "procurement_group_query",

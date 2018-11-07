@@ -44,6 +44,7 @@
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
+    margin-top: 15px;
     @include media-breakpoint-up(lg){
       padding-right: 10px;
     }
@@ -51,7 +52,7 @@
       width: 100%;
       padding: 5px 0;
       font-size: 18px;
-      @include media-breakpoint-down(md){
+      @include media-breakpoint-down(lg){
         margin-bottom: 10px;
       }
     }
