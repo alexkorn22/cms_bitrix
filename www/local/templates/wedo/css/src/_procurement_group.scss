@@ -61,3 +61,27 @@
   &__item {}
 
 }
+
+.procurement-group-detail {
+  font-size: 18px;
+  margin-bottom: 30px;
+  &__title {
+    font-size: 38px;
+  }
+  &__comment {
+    font-size: 14px;
+    line-height: 7px;
+    font-weight: 300;
+    color: #555555;
+  }
+  &__name-block {
+    font-size: 24px;
+    &_bold {
+      font-family: $Bold;
+    }
+  }
+  &__wrap-info{
+    margin-bottom: 30px;
+  }
+  &__wrap-info{}
+}
