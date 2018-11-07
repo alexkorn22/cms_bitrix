@@ -17,7 +17,7 @@ class ViewTemplate
         extract($vars);
         ob_start();
         if (is_file($fileView)){
-            require_once $fileView;
+            require $fileView;
         } else {
             echo ("<p>Не найден вид <b>$fileView</b></p>");
         }

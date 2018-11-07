@@ -1,6 +1,6 @@
 
 
-<button type="button" class="btn btn_<?=$arParams['btnColor']?> btn_small-mobile" data-toggle="modal" data-target="#<?=$arParams['FORM_ID']?>order-consultation">Принять участие</button>
+<button type="button" class="btn btn_<?=$arParams['btnColor']?> btn_small-mobile" data-toggle="modal" data-target="#<?=$arParams['FORM_ID']?>order-consultation">Участвовать</button>
 
 <div class="modal fade" id="<?=$arParams['FORM_ID']?>order-consultation" tabindex="-1" role="dialog" aria-labelledby="order-consultation" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered custom-modal-dialog" role="document">

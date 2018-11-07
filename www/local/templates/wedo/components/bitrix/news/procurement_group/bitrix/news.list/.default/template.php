@@ -16,24 +16,24 @@ $view = new ViewTemplate($this);
 
 <div class="procurement_group-list">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-lg-6">
+            <img src="<?= $this->GetFolder() . '/img/list.png'?>" alt="Группы" class="img-fluid">
+        </div>
+        <div class="col-lg-6">
             <?foreach($arResult["ITEMS"] as $arItem):?>
+
                 <?
                 $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
                 $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
-                echo $view->render('list_one',
+                echo  $view->render('list_one',
                     [
                         'arItem' => $arItem,
                         'arParams' => $arParams,
                         'areaId' => $this->GetEditAreaId($arItem['ID']),
-                    ])
+                    ]);
                 ?>
 
             <?endforeach;?>
-        </div>
-
-        <div class="col-md-6">
-            <img src="<?= $this->GetFolder() . '/img/list.png'?>" alt="Группы" class="img-fluid">
         </div>
     </div>
 </div>
