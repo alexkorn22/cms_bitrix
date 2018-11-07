@@ -5,6 +5,7 @@
 /** @var array $arItem */
 global $APPLICATION;
 ProcurementGroup::findById($arItem['ID']);
+$preview = new ImageResize($arItem["PREVIEW_PICTURE"]["SRC"]);
 ?>
 <!--<a href="--><?//=$arItem['DETAIL_PAGE_URL']?><!--"></a>-->
 
@@ -14,7 +15,7 @@ ProcurementGroup::findById($arItem['ID']);
             <div class="procurement_group-list__wrap-image">
                 <img
                         class="img-fluid"
-                        src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>"
+                        src="<?=$preview->getLink(ImageResize::SIZE_PROCUREMENT_GROUP)?>"
                         alt="<?=$arItem["PREVIEW_PICTURE"]["ALT"]?>"
                         title="<?=$arItem["PREVIEW_PICTURE"]["TITLE"]?>"
                 />
