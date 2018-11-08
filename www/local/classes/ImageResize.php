@@ -6,7 +6,8 @@ class ImageResize
     const SIZE_LOGO = [95,75];
     const SIZE_BTN_ARROW = [22,40];
     const SIZE_REPAIR_ICON = [75,75];
-    protected $inputFile;
+    const SIZE_PROCUREMENT_GROUP = [300,300];
+    public $inputFile;
     protected $typeSize;
 
     public function __construct($imagePath){

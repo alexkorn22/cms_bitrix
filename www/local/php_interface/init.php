@@ -31,6 +31,9 @@ $arClasses = getArClasses($pathArtorgClasses);
 $pathArtorgClasses = '/local/classes/core/';
 $arClasses = getArClasses($pathArtorgClasses,$arClasses);
 
+$pathArtorgClasses = '/local/classes/models/';
+$arClasses = getArClasses($pathArtorgClasses,$arClasses);
+
 CModule::AddAutoloadClasses(
     '', // не указываем имя модуля
     // массив: ключ - имя класса, значение - путь относительно корня сайта к файлу с классом
