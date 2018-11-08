@@ -3,6 +3,7 @@
 /** @var array $arItem */
 
 $props = $arItem['DISPLAY_PROPERTIES'];
+
 ?>
 <div class="procurement-group-detail__wrap-info">
     <span class="procurement-group-detail__name-block procurement-group-detail__name-block_bold">Количество оборудования:</span>

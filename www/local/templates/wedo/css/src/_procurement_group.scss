@@ -24,6 +24,9 @@
 
   &__item-title {
     font-size: 30px;
+    @include media-breakpoint-down(xs) {
+      font-size: 20px;
+    }
     font-family: ProximaNovaBold,sans-serif;
     line-height: 30px;
     margin-bottom: 15px;
@@ -31,7 +34,9 @@
 
   &__item-desc {
     font-size: 18px;
-
+    @include media-breakpoint-down(xs) {
+      font-size: 12px;
+    }
   }
 
   &__wrap-desc-content {
@@ -64,12 +69,21 @@
 
 .procurement-group-detail {
   font-size: 18px;
+  @include media-breakpoint-down(xs) {
+    font-size: 12px;
+  }
   margin-bottom: 30px;
   &__title {
     font-size: 38px;
+    @include media-breakpoint-down(xs) {
+      font-size: 24px;
+    }
   }
   &__comment {
     font-size: 14px;
+    @include media-breakpoint-down(xs) {
+      font-size: 10px;
+    }
     font-style: italic;
     line-height: 7px;
     font-weight: 300;
@@ -77,6 +91,9 @@
   }
   &__name-block {
     font-size: 24px;
+    @include media-breakpoint-down(xs) {
+      font-size: 16px;
+    }
     &_bold {
       font-family: $Bold;
     }
