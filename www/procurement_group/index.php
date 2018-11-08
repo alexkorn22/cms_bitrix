@@ -38,6 +38,7 @@ $APPLICATION->SetTitle("Закупочные группы");?>
 			3 => "period_formation",
 			4 => "current_situation",
 			5 => "participants",
+			5 => "equipment_desc",
 			6 => "",
 		),
 		"DETAIL_SET_CANONICAL_URL" => "N",

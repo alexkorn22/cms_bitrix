@@ -16,7 +16,7 @@ $props = $arItem['DISPLAY_PROPERTIES'];
 </div>
 
 <div class="procurement-group-detail__wrap-info">
-    <span class="procurement-group-detail__name-block procurement-group-detail__name-block_bold">Граничный срок:</span>
+    <span class="procurement-group-detail__name-block procurement-group-detail__name-block_bold">Граничный срок: </span>
     <span class="procurement-group-detail__name-block"><?=$props['period_formation']['VALUE']?></span>
     <div class="procurement-group-detail__comment">до которого выполняется сбор участников</div>
 </div>

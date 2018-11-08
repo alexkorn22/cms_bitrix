@@ -70,6 +70,7 @@
   }
   &__comment {
     font-size: 14px;
+    font-style: italic;
     line-height: 7px;
     font-weight: 300;
     color: #555555;
@@ -88,6 +89,7 @@
   /* SLIDER begin*/
 
   .image-product {
+    margin-bottom: 30px;
     .product-img-main {
       width: 100%;
       .img-main {

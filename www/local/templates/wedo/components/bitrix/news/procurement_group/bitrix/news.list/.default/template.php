@@ -15,6 +15,7 @@ $view = new ViewTemplate($this);
 ?>
 
 <div class="procurement_group-list">
+
     <div class="row">
         <div class="col-lg-6">
             <img src="<?= $this->GetFolder() . '/img/list.png'?>" alt="Группы" class="img-fluid">

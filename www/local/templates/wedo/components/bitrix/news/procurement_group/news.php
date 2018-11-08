@@ -13,6 +13,14 @@
 $this->setFrameMode(true);
 ?>
 
+<div class="row">
+	<div class="col">
+		<div class="section-title">
+			<h1 class="title">Закупочные группы</h1>
+		</div>
+	</div>
+</div>
+
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"",

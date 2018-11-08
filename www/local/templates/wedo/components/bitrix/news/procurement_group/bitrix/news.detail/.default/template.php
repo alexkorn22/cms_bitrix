@@ -12,6 +12,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 $view = new ViewTemplate($this);
+$props = $arResult['DISPLAY_PROPERTIES'];
 ?>
 <div class="procurement-group-detail">
     <div class="row">
@@ -25,6 +26,12 @@ $view = new ViewTemplate($this);
         </div>
         <div class="col-lg-6">
             <?=$view->render('images', ['arItem' => $arResult])?>
+
+            <div class="procurement-group-detail__wrap-info">
+                <div class="procurement-group-detail__name-block procurement-group-detail__name-block_bold">Оборудование: </div>
+                <div><?=$props['equipment_desc']['DISPLAY_VALUE']?></div>
+            </div>
+
         </div>
     </div>
 </div>
