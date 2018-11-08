@@ -2,6 +2,7 @@
 <!doctype html>
 <html>
 <head>
+    <? App::Header()?>
     <? if (!App::$config->debug):?>
     <?=App::$config->scriptGoogleAnalytics;?>
     <?endif;?>

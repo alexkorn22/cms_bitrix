@@ -56,6 +56,7 @@ $( document ).ready(function() {
 // forms handeling :
     $('.consultForms').on('submit', function (e) {
         e.preventDefault();
+        console.log('test');
         var formData = $(this).serializeArray();
         var formId   = this.id;
         $.ajax({
@@ -67,12 +68,22 @@ $( document ).ready(function() {
                 $('#'+formId+'_loader').fadeIn(1000);
                 $('.email-form-text').css('opacity','0');
             },
-            success: function () {
+            success: function (result) {
+                console.log(result);
+                var dataRes = JSON.parse(result);
+                if (dataRes.FORM_TYPE === 'procurement_group_check') {
+                    if (dataRes.success) {
+                        document.location.href = dataRes.link;
+                        return;
+                    } else {
+                        $('#'+formId+'_msg #thankMessage').html(dataRes.message);
+                    }
+                }
                 $('#'+formId+'_loader').fadeOut(1000);
                 setTimeout(function(){
                     $('#'+formId+'_msg').fadeIn(2500);
                 },1000);
-                $("#"+formId+" :input").prop('disabled', true);
+                //$("#"+formId+" :input").prop('disabled', true);
             },
             error: function () {
                 console.log('Error 404');
@@ -333,7 +344,8 @@ function loadBwmf(){
             }
         ]
     });
-}function loadBcms(){
+}
+function loadBcms(){
     $('.b-cms').slick({
         infinite: true,
         slidesToShow: 2,
@@ -666,4 +678,18 @@ function Preloader() {
 
     });
 }
+
+$( document ).ready(function () {
+    $(".procurement-group__check-link").on('click',function (e) {
+        e.preventDefault();
+        var modal = $("#procurement_group_check");
+        $('#procurement_group_check_msg').hide();
+        $('#contentprocurement_group_check').css('opacity','1');
+        modal.find('[name=id_group]').val($(this).attr('data-id_group'));
+        modal.find('[name=password]').val("");
+        modal.modal('show');
+    });
+});
+
+
 

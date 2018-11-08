@@ -95,3 +95,5 @@ www/bitrix/stack_cache
 
 www/local/bxApi/*
 www/local/bxApi
+
+error_log

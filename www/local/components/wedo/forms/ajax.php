@@ -5,7 +5,20 @@ if (!$request->isAjaxRequest()) {
     return;
 }
 if (check_bitrix_sessid()) {
-    require 'views/msg.php';
+    if ($request->getPost('FORM_TYPE') == 'procurement_group_check') {
+        CBitrixComponent::includeComponentClass("wedo:forms");
+        $result = FormsComponent::procurementGroupCheckAjax($request);
+        echo json_encode($result);
+        return;
+    }
+    if ($request->getPost('FORM_TYPE') == 'procurement_group_query') {
+        CBitrixComponent::includeComponentClass("wedo:forms");
+        $formComponent = new FormsComponent();
+        $result = $formComponent->procurementGroupQueryAjax();
+        echo json_encode($result);
+        return;
+    }
+    echo json_encode(['success' => true]);
     // получить чат ID с каждой формы :
     $idChat   = App::$config->telegramChatId;
     $chatForm = $request->getPost('telegramChatId');

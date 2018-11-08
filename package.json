@@ -36,7 +36,7 @@
     "rimraf": "2.6.2"
   },
   "dependencies": {
-    "bootstrap": "4.0.0",
+    "bootstrap": "4.1.2",
     "bootstrap-tabcollapse": "0.2.6",
     "gulp-rimraf": "0.2.2",
     "imagemin-pngquant": "5.0.1",
