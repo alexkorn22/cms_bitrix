@@ -9,7 +9,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Аренда", 
-		"/lease/",
+		"/lease/", 
 		Array(), 
 		Array(), 
 		"" 
@@ -22,15 +22,22 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
+		"Закупочные группы", 
+		"/procurement_group/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
 		"Сервис", 
-		"/blog/servisnoe-obsluzhivanie-kofemashin-wmf/",
+		"/blog/servisnoe-obsluzhivanie-kofemashin-wmf/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Комплексные решения", 
-		"/blog/kompleksnye-resheniya/",
+		"/blog/kompleksnye-resheniya/", 
 		Array(), 
 		Array(), 
 		"" 

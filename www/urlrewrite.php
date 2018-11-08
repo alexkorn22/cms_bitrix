@@ -19,6 +19,18 @@ $arUrlRewrite = array(
 		"PATH" => "/e-store/xml_catalog/index.php",
 	),
 	array(
+		"CONDITION" => "#^/procurement_group/#",
+		"RULE" => "",
+		"ID" => "bitrix:news",
+		"PATH" => "/procurement_group/index.php",
+	),
+	array(
+		"CONDITION" => "#^/procurement_group/#",
+		"RULE" => "",
+		"ID" => "bitrix:news",
+		"PATH" => "/test.php",
+	),
+	array(
 		"CONDITION" => "#^/content/articles/#",
 		"RULE" => "",
 		"ID" => "bitrix:news",
@@ -60,12 +72,6 @@ $arUrlRewrite = array(
 		"ID" => "bitrix:news",
 		"PATH" => "/blog/index.php",
 	),
-    array(
-        "CONDITION" => "#^/procurement_group/#",
-        "RULE" => "",
-        "ID" => "bitrix:news",
-        "PATH" => "/procurement_group/index.php",
-    ),
 );
 
 ?>
