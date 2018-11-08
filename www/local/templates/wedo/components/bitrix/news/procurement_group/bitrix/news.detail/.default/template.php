@@ -20,16 +20,11 @@ $view = new ViewTemplate($this);
         </div>
     </div>
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-lg-6">
             <?=$view->render('main-info', ['arItem' => $arResult])?>
         </div>
-        <div class="col-md-6">
-            <img
-                    class="img-fluid"
-                    src="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>"
-                    alt="<?=$arResult["DETAIL_PICTURE"]["ALT"]?>"
-                    title="<?=$arResult["DETAIL_PICTURE"]["TITLE"]?>"
-            />
+        <div class="col-lg-6">
+            <?=$view->render('images', ['arItem' => $arResult])?>
         </div>
     </div>
 </div>
