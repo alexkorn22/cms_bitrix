@@ -89,16 +89,23 @@
 //END social
 
 //section line-menu
+.logo-center {
+  &__link {
+
+  }
+  &__img {
+  }
+};
 #line-menu {
   height: 115px;
   display: flex;
   align-items: center;
   .wrap-logo {
-    max-width: 90px;
+    //max-width: 90px;
     height: auto;
     img {
-      width: 100%;
-      height: 100%;
+      //width: 100%;
+      //height: 100%;
     }
   }
 
@@ -112,6 +119,22 @@
       justify-content: flex-end;
       .phone {
         margin: 0 30px;
+        &__span{
+          @include media-breakpoint-down(md) {
+            display: none;
+          }
+        }
+        &__icon{
+          font-size: 45px;
+          display: none;
+          @include media-breakpoint-down(md) {
+            display: inline;
+          }
+          @include media-breakpoint-down(sm) {
+            font-size: 35px;
+          }
+        }
+
       }
       .social {
         margin: 0 30px;
@@ -124,7 +147,7 @@
   @include media-breakpoint-down(sm) {
     height: 80px;
     .wrap-logo {
-      max-width: 70px;
+      //max-width: 70px;
     }
     .wrap-social-icons {
       .social-icons {
