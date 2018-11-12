@@ -71,20 +71,42 @@ $this->setFrameMode(true);
                     </div>
                     <div class="col-6 order-3 order-lg-3 col-md-6 col-lg-3">
                         <div class="wrap-price">
-                            <div class="rpice">
-                                <p><?= $arItem['PRICE_UAH']?> грн.</p>
-                            </div>
+                            <? if ($arItem['PROPERTIES']['isSale']):?>
+                                <div class="rpice">
+                                    <p><?= $arItem['PRICE_UAH']?> грн.</p>
+                                </div>
+                            <? else:?>
+                                <div class="rpice price_null">
+                                </div>
+                            <? endif;?>
+
+
                             <div class="btn-more-info">
                                 <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" onclick="#" class="btn btn_none-fill btn_small-mobile">Подробнее</a>
                             </div>
+                            <? if ($arItem['PROPERTIES']['isRent']):?>
+                                <div class="btn-more-info btn-more-info_rent">
+                                    <a href="<?=$arItem["leaseLink"]?>"
+                                       onclick="#"
+                                       class="btn btn_none-fill btn_small-mobile"
+                                    >
+                                        Аренда
+                                    </a>
+                                </div>
+                            <? endif;?>
                         </div>
                     </div>
                 </div>
             </div>
         <!-- Banners -->
             <?if($countCMachines %2 == 0 ):?>
-                        <?  include ROOT.$this->GetFolder() .'/banners/'.($countBanners).'.php' ?>
-                <? $countBanners++; ?>
+                <?
+                    $file = ROOT.$this->GetFolder() .'/banners/'.($countBanners).'.php';
+                    if (file_exists($file)) {
+                        include $file;
+                    }
+                    $countBanners++;
+                ?>
             <?endif;?>
             <? $countCMachines++; ?>
         <?endforeach;?>
