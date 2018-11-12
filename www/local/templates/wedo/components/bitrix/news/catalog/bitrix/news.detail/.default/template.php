@@ -15,6 +15,7 @@ CUtil::InitJSCore(array('fx'));
 $documentsExist = !empty($arResult['PROPERTIES']['DOCUMENTS']['VALUE']);
 $videosExist    = !empty($arResult['PROPERTIES']['VIDEO']['VALUE'][0]);
 $isRent         = $arResult['PROPERTIES']['RENT']['VALUE_XML_ID'] == 'RENT_TRUE';
+$isSale         = $arResult['PROPERTIES']['isSale']['VALUE_XML_ID'] == 'Y';
 ?>
 <div itemscope itemtype="http://schema.org/Product">
     <div class="container-fluid product">
@@ -35,7 +36,9 @@ $isRent         = $arResult['PROPERTIES']['RENT']['VALUE_XML_ID'] == 'RENT_TRUE'
                 <div class="col">
                     <ul>
                         <li><a href="#osnovnoe">Основное</a></li>
-                        <li><a href="#raschet-okup">Расчёт окупаемости</a></li>
+                        <?if($isSale):?>
+                            <li><a href="#raschet-okup">Расчёт окупаемости</a></li>
+                        <? endif; ?>
                         <li><a href="#pohozchie-tovari">Похожие товары</a></li>
                         <li><a href="#service-maintenance">Сервисное обслуживание</a></li>
                         <?if($documentsExist):?>
@@ -55,8 +58,9 @@ $isRent         = $arResult['PROPERTIES']['RENT']['VALUE_XML_ID'] == 'RENT_TRUE'
         <?  require ROOT.$this->GetFolder() .'/views/main_options.php' ?>
         <div id="accordion-on-mobile">
             <!-- Расчёт окупаемости -->
-            <?  require ROOT.$this->GetFolder() .'/views/calculations.php' ?>
-
+            <?if($isSale):?>
+                <?  require ROOT.$this->GetFolder() .'/views/calculations.php' ?>
+            <?endif;?>
             <? if($arResult['PROPERTIES']['SIMILAR_PRODUCTS']['VALUE'] != FALSE):?>
                 <!-- похожие товары -->
                 <?  require ROOT.$this->GetFolder() .'/views/similar_products.php' ?>

@@ -42,11 +42,18 @@
                     </div>
                 </div>
                 <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                    <div class="product-price">
-                        <p><?= $arResult['PRICE_UAH'] ?> грн.<span>*</span></p>
-                        <span itemprop="price" class="d-none"><?= $arResult['PRICE_UAH'] ?></span>
-                        <span itemprop="priceCurrency" class="d-none">UAH</span>
-                    </div>
+                    <? if ($isSale):?>
+                        <div class="product-price">
+                            <p><?= $arResult['PRICE_UAH'] ?> грн.<span>*</span></p>
+                            <span itemprop="price" class="d-none"><?= $arResult['PRICE_UAH'] ?></span>
+                            <span itemprop="priceCurrency" class="d-none">UAH</span>
+                        </div>
+                    <? else:?>
+                        <div class="product-price product-price_null">
+
+                        </div>
+                    <? endif;?>
+
                 </div>
                 <div class="product-button">
 
@@ -62,10 +69,16 @@
                     );
                     ?>
                 </div>
-                <div class="price-comment">
-                    <p><span>*</span> Цена за базовую модель 1</p>
-                    <p>Цена на другие модели может отличаться</p>
-                </div>
+                <? if ($isSale):?>
+                    <div class="price-comment">
+                        <p><span>*</span> Цена за базовую модель 1</p>
+                        <p>Цена на другие модели может отличаться</p>
+                    </div>
+                <? else:?>
+                    <div class="price-comment price-comment_null">
+                    </div>
+                <? endif;?>
+
             </div>
         </div>
     </div>

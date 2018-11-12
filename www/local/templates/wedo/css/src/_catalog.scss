@@ -109,16 +109,32 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      .price_null{
+        height: 75px;
+        @include media-breakpoint-down(xs) {
+          height: 55px;
+        }
+      }
       .rpice {
         width: 100%;
         text-align: center;
         p {
           font-size: 40px;
         }
+
       }
       .btn-more-info {
         width: 100%;
         text-align: center;
+        &_rent {
+          margin-top: 15px;
+        }
+        .btn {
+          min-width: 130px;
+          @include media-breakpoint-up(sm) {
+            min-width: 210px;
+          }
+        }
       }
       @include media-breakpoint-down(sm){
         .rpice p {
