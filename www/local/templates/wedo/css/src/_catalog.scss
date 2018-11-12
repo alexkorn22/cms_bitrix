@@ -119,6 +119,15 @@
       .btn-more-info {
         width: 100%;
         text-align: center;
+        &_rent {
+          margin-top: 15px;
+        }
+        .btn {
+          min-width: 130px;
+          @include media-breakpoint-up(sm) {
+            min-width: 210px;
+          }
+        }
       }
       @include media-breakpoint-down(sm){
         .rpice p {

@@ -77,6 +77,15 @@ $this->setFrameMode(true);
                             <div class="btn-more-info">
                                 <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" onclick="#" class="btn btn_none-fill btn_small-mobile">Подробнее</a>
                             </div>
+                            <? if ($arItem['PROPERTIES']['isRent']):?>
+                                <div class="btn-more-info btn-more-info_rent">
+                                    <a href="<?=$arItem["leaseLink"]?>"
+                                       onclick="#"
+                                       class="btn btn_none-fill btn_small-mobile"
+                                    >
+                                        Аренда
+                                    </a>
+                            <? endif;?>
                         </div>
                     </div>
                 </div>
