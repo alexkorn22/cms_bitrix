@@ -24,6 +24,7 @@ foreach ($arResult['ITEMS'] as &$item){
         }
     }
     $item['PROPERTIES']['isRent'] = $props['RENT']['VALUE_XML_ID'] == 'RENT_TRUE';
+    $item['PROPERTIES']['isSale'] = $props['isSale']['VALUE_XML_ID'] == 'Y';
 
 // resize images catalog :
 
