@@ -1,4 +1,7 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+<?
+$logoFooter = IMAGES_PATH.'/logos/logoFooter.png';
+?>
 </div>
 <footer>
     <div id="upbutton"></div>
@@ -7,7 +10,7 @@
             <div class="col-sm-12 order-1 order-md-1 col-md-3">
                 <div class="f-logo">
                     <a href="/">
-                        <img src="<?=$logoPath;?>" alt="CMS">
+                        <img src="<?=$logoFooter;?>" alt="CMS">
                     </a>
                 </div>
             </div>
