@@ -50,50 +50,16 @@
 <div id="main">
 <?$APPLICATION->ShowPanel();?>
 <? if($APPLICATION->GetCurPage() == '/'):?>
-    <section id="header-main">
-    <div class="container-fluid">
-        <div id='container-video' class="d-none d-sm-block">
-            <div class="mask-color"></div>
-            <video src="<?=IMAGES_PATH?>/cms_video1.mp4" autoplay muted loop></video>
-        </div>
-        <div class="top-fixed-line">
-            <div class="row top-line">
-                <div class="col">
-                    <div class="wrap-logo">
-                        <a href="/">
-                            <img src="<?=$logoPathWithoutResize?>" alt="CMS">
-                        </a>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="burger-menu">
-                        <div class="navigation">
-                            <div class="burger">
-                                <span class="burger_global top_bun"></span>
-                                <span class="burger_global patty"></span>
-                                <span class="burger_global bottom_bun"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row bottom-line">
-            <div class="col-12 col-lg-11">
-                <div class="wrap-title">
-                    <p class="title-header">
-                        Кофемашины <br><span>WMF</span> в Украине
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-1 d-none d-lg-block">
-                <div class="scroll-indicator">
-                    <img src="<?=IMAGES_PATH?>/mouse.png" alt="scroll">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    <?$APPLICATION->IncludeComponent(
+        "bitrix:main.include",
+        "",
+        Array(
+            "AREA_FILE_SHOW" => "file",
+            "AREA_FILE_SUFFIX" => "inc",
+            "EDIT_TEMPLATE" => "standard.php",
+            "PATH" => "/local/files/includes/header/section-header-main.php"
+        )
+    );?>
     <div class="container-line-menu">
         <?$APPLICATION->IncludeComponent(
             "bitrix:main.include",
