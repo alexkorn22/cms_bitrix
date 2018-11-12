@@ -52,5 +52,12 @@ $logoCMS = IMAGES_PATH.'/logos/LogoCMS.png';
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="line-add d-md-none">
+                    <div class="line-add__label text-center">официальный сервис WMF в Украине</div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

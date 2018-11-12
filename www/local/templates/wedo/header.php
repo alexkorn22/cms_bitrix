@@ -33,9 +33,9 @@
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH .'/js/dist/main.js');
     Asset::getInstance()->addJs("https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js");
 
-    $logo          = new ImageResize(IMAGES_PATH.'/logo.png');
+    $logo          = new ImageResize(IMAGES_PATH.'/logos/LogoCMS.png');
     $logoPath      = $logo->getLink(ImageResize::SIZE_LOGO);
-    $logoPathWithoutResize = IMAGES_PATH.'/logo.png';
+    $logoPathWithoutResize = IMAGES_PATH.'/logos/logoFooter.png';
     $logoFooter = IMAGES_PATH.'/logos/logoFooter.png';
 
     ?>
