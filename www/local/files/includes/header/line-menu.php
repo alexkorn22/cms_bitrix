@@ -16,7 +16,7 @@ $logoCMS = IMAGES_PATH.'/logos/LogoCMS.png';
                 <div class="wrap-logo">
                     <div class="d-flex justify-content-center align-content-center logo-center">
                         <a href="/" class="logo-center__link">
-                            <img class="img-fluid logo-center__img" src="<?=$logoCMS?>" alt="WMF">
+                            <img class="img-fluid logo-center__img" src="<?=$logoCMS?>" alt="CMS">
                         </a>
                     </div>
 
