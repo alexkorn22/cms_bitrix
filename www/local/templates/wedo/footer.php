@@ -1,5 +1,7 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
-
+<?
+$logoFooter = IMAGES_PATH.'/logos/logoFooter.png';
+?>
 </div>
 <footer>
     <div id="upbutton"></div>
