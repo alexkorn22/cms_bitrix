@@ -100,8 +100,13 @@ $this->setFrameMode(true);
             </div>
         <!-- Banners -->
             <?if($countCMachines %2 == 0 ):?>
-                        <?  include ROOT.$this->GetFolder() .'/banners/'.($countBanners).'.php' ?>
-                <? $countBanners++; ?>
+                <?
+                    $file = ROOT.$this->GetFolder() .'/banners/'.($countBanners).'.php';
+                    if (file_exists($file)) {
+                        include $file;
+                    }
+                    $countBanners++;
+                ?>
             <?endif;?>
             <? $countCMachines++; ?>
         <?endforeach;?>

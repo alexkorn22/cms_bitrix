@@ -39,7 +39,7 @@ foreach ($arResult['ITEMS'] as &$item){
     $request = Application::getInstance()->getContext()->getRequest();
     $uri = new Uri('/lease');
     $uri->addParams($request->getQueryList()->toArray());
-    $uri->addParams(array("cm" => $arResult['ID']));
+    $uri->addParams(array("cm" => $item['ID']));
     $item['leaseLink']= $uri->getUri();
 
 }
