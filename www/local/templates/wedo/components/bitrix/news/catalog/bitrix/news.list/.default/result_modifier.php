@@ -37,7 +37,7 @@ foreach ($arResult['ITEMS'] as &$item){
 
     // Ссылка на страницу аренда :
     $request = Application::getInstance()->getContext()->getRequest();
-    $uri = new Uri('/lease');
+    $uri = new Uri('/lease/');
     $uri->addParams($request->getQueryList()->toArray());
     $uri->addParams(array("cm" => $item['ID']));
     $item['leaseLink']= $uri->getUri();
