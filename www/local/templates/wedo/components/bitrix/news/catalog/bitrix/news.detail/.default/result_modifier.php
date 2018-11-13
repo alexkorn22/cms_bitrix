@@ -43,7 +43,7 @@ if(!empty($arResult['IPROPERTY_VALUES']['ELEMENT_PAGE_TITLE'])){
 
 // Ссылка на страницу аренда :
 $request = Application::getInstance()->getContext()->getRequest();
-$uri = new Uri('/lease');
+$uri = new Uri('/lease/');
 $uri->addParams($request->getQueryList()->toArray());
 $uri->addParams(array("cm" => $arResult['ID']));
 $arResult['leaseLink']= $uri->getUri();
