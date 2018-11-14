@@ -59,7 +59,7 @@ $preview = new ImageResize($arItem["PREVIEW_PICTURE"]["SRC"]);
                                     "FORM_ID" => "procurement_group_query",
                                     "FORM_TYPE" => "procurement_group_query",
                                     "ORDER_TYPE" => "",
-                                    "telegramChatId" => "-226178797",
+                                    "telegramChatId" => App::$config->telegramChatIdProcurementGroup,
                                     "groupId" => $arItem['ID'],
                                     "btnColor" => 'none-fill',
                                 )
