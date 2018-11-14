@@ -24,6 +24,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
  * @property string scriptGoogleAnalytics;
  * @property array officesList;
  * @property array mainOffice;
+ * @property string telegramChatIdProcurementGroup;
  */
 class Config
 {
@@ -50,7 +51,8 @@ class Config
         'officesList'=>[],
         'mainOffice'=>[],
         'scriptYandexMetrica'=>'',
-        'scriptGoogleAnalytics'=>''
+        'scriptGoogleAnalytics'=>'',
+        'telegramChatIdProcurementGroup'=>'-250422765',
     ];
 
     public function __construct(){
