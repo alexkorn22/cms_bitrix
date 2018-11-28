@@ -29,6 +29,9 @@
   padding-top: 20px;
   display: flex;
   align-items: center;
+  @include media-breakpoint-down(md){
+    justify-content: center;
+  }
   .other-contacts-text{
     font-size: 22px;
     display: inline-block;
@@ -57,6 +60,9 @@
 .note{
   padding-top: 25px;
   font-size: 16px;
+  @include media-breakpoint-down(md) {
+    text-align: center;
+  }
 }
 
 .map-main-office{
