@@ -10,7 +10,7 @@ $APPLICATION->AddChainItem("Контакты", "/about/contacts");
         </div>
     </div>
 	<div class="row container-fluid">
-		<div class="col-md-7">
+		<div class="col-lg-7 col-md-12">
 			<div class="main-contacts container">
 				<div class="other-contacts">
  <img src="<?= IMAGES_PATH ?>/contacts_icons/phone-icon.png" class="contacts-icons" alt=""> <a href="tel: <?=App::$config->telephone?>" class="other-contacts-text"> Телефон, Viber, Telegram<br/><?=App::$config->telephone?> </a>
@@ -24,7 +24,7 @@ $APPLICATION->AddChainItem("Контакты", "/about/contacts");
 				</div>
 			</div>
 		</div>
-        <div class="col-md-5 col-sm-10 col-xs-10 first-form-contacts">
+        <div class="col-lg-5 col-md-12 col-sm-12 col-xs-10 first-form-contacts">
             <?
             $APPLICATION->IncludeComponent(
                 "wedo:forms",
@@ -95,7 +95,7 @@ $APPLICATION->AddChainItem("Контакты", "/about/contacts");
 </div>
 <div class="other-offices">
 	<div class="row">
-		<div class="col-md-7 col-sm-12 col-xs-12">
+		<div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
 			<div class="row">
                 <?foreach (App::$config->officesList as $office):?>
                     <div class="col-md-5 offices-data">
@@ -114,7 +114,7 @@ $APPLICATION->AddChainItem("Контакты", "/about/contacts");
                 <?endforeach;?>
 			</div>
 		</div>
-		<div class="col-md-5 col-sm-10 col-xs-10 ">
+		<div class="col-lg-5 col-md-12 col-sm-10 col-xs-10 ">
                     <?
                     $APPLICATION->IncludeComponent(
                         "wedo:forms",
