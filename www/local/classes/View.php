@@ -22,4 +22,19 @@ class View
         return $content;
     }
 
+    public static function bxInclude($view,$vars = []) {
+        global $APPLICATION;
+        extract($vars);
+        $APPLICATION->IncludeComponent(
+            "bitrix:main.include",
+            "",
+            Array(
+                "AREA_FILE_SHOW" => "file",
+                "AREA_FILE_SUFFIX" => "inc",
+                "EDIT_TEMPLATE" => "standard.php",
+                "PATH" => "/local/files/includes/{$view}.php"
+            )
+        );
+    }
+
 }
