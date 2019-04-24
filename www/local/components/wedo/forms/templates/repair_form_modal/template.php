@@ -27,7 +27,7 @@
                     </div>
                     <div class="modal-body custom-modal-body">
                         <div class="form-group">
-                            <input type="text" class="form-control custom-input" id="name3" name="userName" placeholder="Имя" required>
+                            <input type="text" class="form-control custom-input" id="name3" name="userName" placeholder="Имя (название, номер объекта)" required>
                             <div class="invalid-feedback">
                                 Вы не указали имя!
                             </div>
@@ -39,7 +39,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control custom-input" id="city3" name="city" placeholder="Город" required>
+                            <input type="text" class="form-control custom-input" id="city3" name="city" placeholder="Город (адрес)" required>
                             <div class="invalid-feedback">
                                 Вы не указали город!
                             </div>
@@ -49,7 +49,7 @@
                         </div>
                     </div>
                     <div class="modal-footer custom-modal-footer">
-                        <button type="submit" class="btn btn_black btn_small-mobile">Заказать диагностику</button>
+                        <button type="submit" class="btn btn_black btn_small-mobile">Заказать диагностику (ремонт)</button>
                     </div>
                 </div>
             </form>
