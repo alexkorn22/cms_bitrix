@@ -45,7 +45,7 @@
                             </div>
                         </div>
                         <div class="form-group custom-form-group">
-                            <textarea class="form-control custom-textarea" id="comment3" rows="3" name="comment" placeholder="Комментарий"></textarea>
+                            <textarea class="form-control custom-textarea" id="comment3" rows="3" name="comment" placeholder="Комментарий (краткое описание неисправности)"></textarea>
                         </div>
                     </div>
                     <div class="modal-footer custom-modal-footer">
