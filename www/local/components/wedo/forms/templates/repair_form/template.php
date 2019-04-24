@@ -13,7 +13,7 @@
             </div><?= bitrix_sessid_post() ?>
             <div class="form-content">
                 <div class="form-group custom-form-group">
-                    <input type="text" class="form-control custom-input" id="name" name="userName" placeholder="Имя"
+                    <input type="text" class="form-control custom-input" id="name" name="userName" placeholder="Имя (название, номер объекта)"
                            required>
                     <div class="invalid-feedback">
                         Вы не указали имя!
@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <div class="form-group custom-form-group">
-                    <input type="text" class="form-control custom-input" name="city" id="city" placeholder="Город"
+                    <input type="text" class="form-control custom-input" name="city" id="city" placeholder="Город (адрес)"
                            required>
                     <div class="invalid-feedback">
                         Вы не указали город!
@@ -35,11 +35,11 @@
                 </div>
                 <div class="form-group custom-form-group">
                     <textarea class="form-control custom-textarea" id="comment" name="comment" rows="3"
-                              placeholder="Комментарий"></textarea>
+                              placeholder="Комментарий (краткое описание неисправности)"></textarea>
                 </div>
             </div>
             <div class="form-footer">
-                <button type="submit" class="btn btn_black btn_small-mobile btn_font-small">Заказать диагностику
+                <button type="submit" class="btn btn_black btn_small-mobile btn_font-small">Заказать диагностику (ремонт)
                 </button>
             </div>
         </div>
